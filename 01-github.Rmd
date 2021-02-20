@@ -1,13 +1,18 @@
 # Version Control & GitHub {#github}
 
-You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. Visualisations or using R Markdown are better starting points than version control if you're new to scripting and R.
+You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're new to scripting and R, visualisations or using R Markdown are better starting points than version control.
 
 These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
 
 You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
 ```{r message=FALSE, warning=FALSE}
+# Load functions for Sheffield areas from a public scc-pi repository 
 source("https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R")
-head(shef_lsoa_codes(), 5)
+
+# Call one of our Sheffield area functions that returns LSOA codes 
+shef_lsoa_codes() %>% 
+  head(5) %>% #only display the first 5 records
+  knitr::kable() #display them in a nice table 
 ```
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
