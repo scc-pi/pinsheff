@@ -202,8 +202,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. Visualisations or using R Markdown are better starting points than version control if you’re new to scripting and R.</p>
 <p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.</p>
 <p>You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="github.html#cb1-1"></a><span class="co">#source(&quot;https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R&quot;)</span></span>
-<span id="cb1-2"><a href="github.html#cb1-2"></a><span class="co">#head(shef_lsoa_codes(), 5)</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="github.html#cb1-1"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R&quot;</span>)</span>
+<span id="cb1-2"><a href="github.html#cb1-2"></a><span class="kw">head</span>(<span class="kw">shef_lsoa_codes</span>(), <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Table&quot;</code></pre>
+<pre><code>## [90m# A tibble: 5 x 2[39m
+##   LSOA11CD  LSOA11NM      
+##   [3m[90m&lt;chr&gt;[39m[23m     [3m[90m&lt;chr&gt;[39m[23m         
+## [90m1[39m E01008124 Sheffield 012F
+## [90m2[39m E01008125 Sheffield 009G
+## [90m3[39m E01007917 Sheffield 071B
+## [90m4[39m E01033273 Sheffield 042F
+## [90m5[39m E01007967 Sheffield 045B</code></pre>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="version-control" class="section level2">
 <h2><span class="header-section-number">2.1</span> Version Control</h2>

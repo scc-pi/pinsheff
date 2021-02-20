@@ -216,20 +216,20 @@ block will run first e.g. to make sure your libraries are loaded first.</p>
 <div id="bookdown" class="section level2">
 <h2><span class="header-section-number">4.4</span> Bookdown</h2>
 <p>These notes are written using the <strong>bookdown</strong> package <span class="citation">(<span class="citeproc-not-found" data-reference-id="R-bookdown"><strong>???</strong></span>)</span>, which was built on to The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="rmd.html#cb2-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb2-2"><a href="rmd.html#cb2-2"></a><span class="co"># or the development version</span></span>
-<span id="cb2-3"><a href="rmd.html#cb2-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb4-2"><a href="rmd.html#cb4-2"></a><span class="co"># or the development version</span></span>
+<span id="cb4-3"><a href="rmd.html#cb4-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="publishing" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Publishing</h3>
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e" class="uri">https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e</a> However, I did a lot of the git bash commands manually and there were two fixes I had to make to the <code>deploy_bookdown.yaml</code> file:</p>
 <p>1. Under …</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="rmd.html#cb3-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="rmd.html#cb5-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
 <p>… added …</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
-<span id="cb4-2"><a href="rmd.html#cb4-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
-<span id="cb4-3"><a href="rmd.html#cb4-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="rmd.html#cb6-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
+<span id="cb6-2"><a href="rmd.html#cb6-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
+<span id="cb6-3"><a href="rmd.html#cb6-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
 <p>2. Used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as this is what is now used by <a href="https://github.com/Cecilapp/GitHub-Pages-deploy">GitHub-Pages-deploy</a>.</p>
 </div>
 </div>

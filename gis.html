@@ -207,8 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>It’s not good practice to include login details in code, so for my
 Portal login I’m going to use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/">securing
 credentials</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="gis.html#cb5-1"></a>portal_id =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_id&quot;</span>)</span>
-<span id="cb5-2"><a href="gis.html#cb5-2"></a>portal_pwd =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="gis.html#cb7-1"></a>portal_id =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_id&quot;</span>)</span>
+<span id="cb7-2"><a href="gis.html#cb7-2"></a>portal_pwd =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span></code></pre></div>
 <p>Then, within a Python code chunk, we’re going to <a href="https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/">login to our
 Portal</a>.</p>
 </div>
