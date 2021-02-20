@@ -4,6 +4,12 @@
 
 _TODO_
 
+## R Markdown Tips
+
+Naming a code block `setup` means that after you restart RStudio and
+execute any code in the middle of your markdown document, the `setup`
+block will run first e.g. to make sure your libraries are loaded first.
+
 ## Notebooks
 
 _TODO_
