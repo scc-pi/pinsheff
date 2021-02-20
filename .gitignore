@@ -11,3 +11,5 @@ libs/
 .Rhistory
 .RData
 .Ruserdata
+# bookdown log file
+*.log

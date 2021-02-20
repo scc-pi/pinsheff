@@ -1,4 +1,4 @@
-# R & R Studio {#r}
+# R & RStudio {#r}
 
 ## Getting Started
 
@@ -10,7 +10,7 @@
 ## Styleguide
 
 
-## R Studio
+## RStudio
 
 
 - Renviron
