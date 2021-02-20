@@ -22,9 +22,7 @@ To use the `arcpy` or `arcgis` packages we first need to specify the
 [ArcGIS Python
 environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
 
-```{python}
-print("test")
-```
+
 
 ### ArcPy
 
