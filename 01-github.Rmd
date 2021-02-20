@@ -6,12 +6,11 @@ These notes are public, but to contribute i.e. [edit them](https://github.com/sc
 
 You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
 ```{r message=FALSE, warning=FALSE}
-#source("https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R")
-#head(shef_lsoa_codes(), 5)
+source("https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R")
+head(shef_lsoa_codes(), 5)
 ```
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
-
 
 
 ## Version Control
