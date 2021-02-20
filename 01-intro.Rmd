@@ -1,21 +1,36 @@
-# Introduction {#intro}
+# R Markdown {#markdown}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+## R Markdown vs Markdown
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
+## Bookdown
+
+These notes are written using the **bookdown** package [@R-bookdown], which was built on to
+The **bookdown** package can be installed from CRAN or Github:
+
+```{r eval=FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
 ```
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+### Publishing
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+These notes are published on GitHub Pages with GitHub Actions. The GitHub Action is triggered by a push to the master branch. The action first renders the repository's R Markdown files to HTML and deploys the HTML files as a static website to a branch called gh-pages. Alternatives to using GitHub Actions include Travis or Jekyll.
+
+I used the steps outlined in the following blog post: 
+<https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e> 
+However, I did a lot of the git bash commands manually and there were two fixes I had to make to deploy_bookdown.yaml:
+
+       with:
+          build_dir: _book/
+          email: ${{ secrets.EMAIL }}
+
+under
+
+uses: Cecilapp/GitHub-Pages-deploy@master
+
+and GITHUB_TOKEN rather than GH_PAT as this is what GitHub-Pages-deploy now uses
+<https://github.com/Cecilapp/GitHub-Pages-deploy>
