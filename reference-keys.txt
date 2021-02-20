@@ -1,7 +1,8 @@
-fig:nice-fig
-tab:nice-tab
 prerequisites
-intro
+markdown
+r-markdown-vs-markdown
+bookdown
+publishing
 literature
 methods
 applications
