@@ -144,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R &amp; RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#why-script"><i class="fa fa-check"></i><b>3.1</b> Why Script?</a></li>
-<li class="chapter" data-level="3.2" data-path="r.html"><a href="r.html#styleguide"><i class="fa fa-check"></i><b>3.2</b> Styleguide</a></li>
+<li class="chapter" data-level="3.2" data-path="r.html"><a href="r.html#style-guide"><i class="fa fa-check"></i><b>3.2</b> Style Guide</a></li>
 <li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#rstudio-security-data-protection"><i class="fa fa-check"></i><b>3.3</b> RStudio Security &amp; Data Protection</a></li>
 <li class="chapter" data-level="3.4" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>3.4</b> Getting Started</a></li>
 <li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio Tips</a></li>
@@ -199,6 +199,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="github" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Version Control &amp; GitHub</h1>
+<p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. Visualisations or using R Markdown are better place to start with scripting than version control.</p>
+<p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly from GitHub via your browser.</p>
+<p>You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="github.html#cb1-1"></a><span class="co">#source(&quot;https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R&quot;)</span></span>
+<span id="cb1-2"><a href="github.html#cb1-2"></a><span class="co">#head(shef_lsoa_codes(), 5)</span></span></code></pre></div>
+<p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="version-control" class="section level2">
 <h2><span class="header-section-number">2.1</span> Version Control</h2>
 </div>
@@ -255,8 +261,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/scc-pi/notes/01-github.Rmd",
-"text": "Edit"
+"link": null,
+"text": null
 },
 "history": {
 "link": null,
@@ -266,7 +272,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["notes.pdf", "notes.epub"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

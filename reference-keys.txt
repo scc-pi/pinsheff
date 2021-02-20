@@ -6,7 +6,7 @@ github-1
 security-data-protection
 r
 why-script
-styleguide
+style-guide
 rstudio-security-data-protection
 getting-started
 rstudio-tips
