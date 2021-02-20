@@ -22,7 +22,7 @@ Each Rmd file contains one and only one chapter, and a chapter is defined by the
 
 ### Publishing
 
-These notes are published on [GitHub Pages](https://pages.github.com/) with [GitHub Actions](https://github.com/features/actions). The GitHub Action is triggered by a push to the [master branch](https://github.com/scc-pi/notes). The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called `gh-pages`. Alternatives to using GitHub Actions include Travis and Jekyll.
+These notes are published on [GitHub Pages](https://pages.github.com/) with [GitHub Actions](https://github.com/features/actions). A GitHub Action has been configured to start when there's a push to the [master branch](https://github.com/scc-pi/notes). The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called `gh-pages`. Alternatives to using GitHub Actions include Travis and Jekyll.
 
 I used the steps outlined in the following blog post: [https://medium.com/\@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e](https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e){.uri} However, I did a lot of the git bash commands manually and there were two fixes I had to make to the `deploy_bookdown.yaml` file:
 
@@ -44,5 +44,5 @@ with:
 
 ## Further Resources  
 
-
+[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
 
