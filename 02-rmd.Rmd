@@ -1,0 +1,48 @@
+# R Markdown {#rmd}
+
+## R Markdown vs Markdown
+
+_TODO_
+
+## Notebooks
+
+_TODO_
+
+## Bookdown
+
+These notes are written using the **bookdown** package [@R-bookdown], which was built on to The **bookdown** package can be installed from CRAN or Github:
+
+```{r eval=FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+### Publishing
+
+These notes are published on [GitHub Pages](https://pages.github.com/) with [GitHub Actions](https://github.com/features/actions). The GitHub Action is triggered by a push to the [master branch](https://github.com/scc-pi/notes). The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called `gh-pages`. Alternatives to using GitHub Actions include Travis and Jekyll.
+
+I used the steps outlined in the following blog post: [https://medium.com/\@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e](https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e){.uri} However, I did a lot of the git bash commands manually and there were two fixes I had to make to the `deploy_bookdown.yaml` file:
+
+1\. Under ...
+
+``` {.yaml}
+uses: Cecilapp/GitHub-Pages-deploy@master
+```
+
+... added ...
+
+``` {.yaml}
+with:       
+  build_dir: _book/       
+  email: ${{ secrets.EMAIL }}
+```
+
+2\. Used `GITHUB_TOKEN` rather than `GH_PAT`, as this is what is now used by [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy).
+
+## Further Resources  
+
+
+
