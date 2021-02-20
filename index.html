@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes on Performance &amp; Intelligence Work</title>
-  <meta name="description" content="Some notes, examples, lessons learned and further respources." />
+  <title>Notes</title>
+  <meta name="description" content="Some notes, examples, lessons learnt and further respources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes on Performance &amp; Intelligence Work" />
+  <meta property="og:title" content="Notes" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Some notes, examples, lessons learned and further respources." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta property="og:description" content="Some notes, examples, lessons learnt and further respources." />
+  <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes on Performance &amp; Intelligence Work" />
+  <meta name="twitter:title" content="Notes" />
   
-  <meta name="twitter:description" content="Some notes, examples, lessons learned and further respources." />
+  <meta name="twitter:description" content="Some notes, examples, lessons learnt and further respources." />
   
 
 <meta name="author" content="Laurie Platt" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="markdown.html"/>
+<link rel="next" href="version-control-github.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -134,14 +134,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>2</b> R Markdown</a><ul>
-<li class="chapter" data-level="2.1" data-path="markdown.html"><a href="markdown.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>2.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="2.2" data-path="markdown.html"><a href="markdown.html#bookdown"><i class="fa fa-check"></i><b>2.2</b> Bookdown</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="markdown.html"><a href="markdown.html#publishing"><i class="fa fa-check"></i><b>2.2.1</b> Publishing</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="version-control-github.html"><a href="version-control-github.html"><i class="fa fa-check"></i><b>2</b> Version Control &amp; GitHub</a><ul>
+<li class="chapter" data-level="2.1" data-path="version-control-github.html"><a href="version-control-github.html#version-control"><i class="fa fa-check"></i><b>2.1</b> Version Control</a></li>
+<li class="chapter" data-level="2.2" data-path="version-control-github.html"><a href="version-control-github.html#git"><i class="fa fa-check"></i><b>2.2</b> GIT</a></li>
+<li class="chapter" data-level="2.3" data-path="version-control-github.html"><a href="version-control-github.html#github"><i class="fa fa-check"></i><b>2.3</b> GitHub</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="version-control-github.html"><a href="version-control-github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; Data Protection</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="3" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>3</b> R Markdown</a><ul>
+<li class="chapter" data-level="3.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>3.1</b> R Markdown vs Markdown</a></li>
+<li class="chapter" data-level="3.2" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>3.2</b> Notebooks</a></li>
+<li class="chapter" data-level="3.3" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>3.3</b> Bookdown</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>3.3.1</b> Publishing</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>3.4</b> Further Resources</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
@@ -161,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes on Performance &amp; Intelligence Work</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes</a>
           </h1>
         </div>
 
@@ -170,19 +178,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Notes on Performance &amp; Intelligence Work</h1>
+<h1 class="title">Notes</h1>
 <p class="author"><em>Laurie Platt</em></p>
 <p class="date"><em>2021-02-20</em></p>
 </div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
+<div id="welcome" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
+<p>This is a place for ad-hoc notes, mainly to do with scripting and mainly R scripts. It is somewhere to store lessons learnt, a resource to remind yourself if you return to something after a while, or to smooth your path a little if it’s something new.</p>
+<p>There are many excellent online resources that this will point to and not attempt to replace. Overtime some notes may mature into package vignettes or become accepted as procedure and included in the <a href="https://laurie-platt.github.io/methods-manual/">Methods Manual</a>. Other notes may prove to be of little value.</p>
+<p>Hopefully others from the Performance &amp; Intelligence Team or elsewhere in Sheffield City Council will contribute to the notes. However, currently the contributions are from a single person and is orientated to one persons experience. This is ETL and spatial analysis, and lacks notes about modelling and visualisations.</p>
+<p>As well as the contributors and content, the purpose and scope is open to change. I hope you find this useful.</p>
 
 </div>
             </section>
@@ -191,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="markdown.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="version-control-github.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -241,20 +246,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

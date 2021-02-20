@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Literature | Notes on Performance &amp; Intelligence Work</title>
-  <meta name="description" content="Some notes, examples, lessons learned and further respources." />
+  <title>Chapter 3 R Markdown | Notes</title>
+  <meta name="description" content="Some notes, examples, lessons learnt and further respources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Literature | Notes on Performance &amp; Intelligence Work" />
+  <meta property="og:title" content="Chapter 3 R Markdown | Notes" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Some notes, examples, lessons learned and further respources." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta property="og:description" content="Some notes, examples, lessons learnt and further respources." />
+  <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Literature | Notes on Performance &amp; Intelligence Work" />
+  <meta name="twitter:title" content="Chapter 3 R Markdown | Notes" />
   
-  <meta name="twitter:description" content="Some notes, examples, lessons learned and further respources." />
+  <meta name="twitter:description" content="Some notes, examples, lessons learnt and further respources." />
   
 
 <meta name="author" content="Laurie Platt" />
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="markdown.html"/>
+<link rel="prev" href="version-control-github.html"/>
 <link rel="next" href="methods.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,14 +134,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>2</b> R Markdown</a><ul>
-<li class="chapter" data-level="2.1" data-path="markdown.html"><a href="markdown.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>2.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="2.2" data-path="markdown.html"><a href="markdown.html#bookdown"><i class="fa fa-check"></i><b>2.2</b> Bookdown</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="markdown.html"><a href="markdown.html#publishing"><i class="fa fa-check"></i><b>2.2.1</b> Publishing</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="version-control-github.html"><a href="version-control-github.html"><i class="fa fa-check"></i><b>2</b> Version Control &amp; GitHub</a><ul>
+<li class="chapter" data-level="2.1" data-path="version-control-github.html"><a href="version-control-github.html#version-control"><i class="fa fa-check"></i><b>2.1</b> Version Control</a></li>
+<li class="chapter" data-level="2.2" data-path="version-control-github.html"><a href="version-control-github.html#git"><i class="fa fa-check"></i><b>2.2</b> GIT</a></li>
+<li class="chapter" data-level="2.3" data-path="version-control-github.html"><a href="version-control-github.html#github"><i class="fa fa-check"></i><b>2.3</b> GitHub</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="version-control-github.html"><a href="version-control-github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; Data Protection</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="3" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>3</b> R Markdown</a><ul>
+<li class="chapter" data-level="3.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>3.1</b> R Markdown vs Markdown</a></li>
+<li class="chapter" data-level="3.2" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>3.2</b> Notebooks</a></li>
+<li class="chapter" data-level="3.3" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>3.3</b> Bookdown</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>3.3.1</b> Publishing</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>3.4</b> Further Resources</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
@@ -161,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes on Performance &amp; Intelligence Work</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes</a>
           </h1>
         </div>
 
@@ -169,17 +177,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Literature</h1>
-<p>Here is a review of existing methods.</p>
+<div id="rmd" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> R Markdown</h1>
+<div id="r-markdown-vs-markdown" class="section level2">
+<h2><span class="header-section-number">3.1</span> R Markdown vs Markdown</h2>
+<p><em>TODO</em></p>
+</div>
+<div id="notebooks" class="section level2">
+<h2><span class="header-section-number">3.2</span> Notebooks</h2>
+<p><em>TODO</em></p>
+</div>
+<div id="bookdown" class="section level2">
+<h2><span class="header-section-number">3.3</span> Bookdown</h2>
+<p>These notes are written using the <strong>bookdown</strong> package <span class="citation">(<span class="citeproc-not-found" data-reference-id="R-bookdown"><strong>???</strong></span>)</span>, which was built on to The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rmd.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb1-2"><a href="rmd.html#cb1-2"></a><span class="co"># or the development version</span></span>
+<span id="cb1-3"><a href="rmd.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
+<div id="publishing" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Publishing</h3>
+<p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
+<p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e" class="uri">https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e</a> However, I did a lot of the git bash commands manually and there were two fixes I had to make to the <code>deploy_bookdown.yaml</code> file:</p>
+<p>1. Under …</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="rmd.html#cb2-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
+<p>… added …</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="rmd.html#cb3-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
+<span id="cb3-2"><a href="rmd.html#cb3-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
+<span id="cb3-3"><a href="rmd.html#cb3-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
+<p>2. Used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as this is what is now used by <a href="https://github.com/Cecilapp/GitHub-Pages-deploy">GitHub-Pages-deploy</a>.</p>
+</div>
+</div>
+<div id="further-resources" class="section level2">
+<h2><span class="header-section-number">3.4</span> Further Resources</h2>
+<p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="markdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="version-control-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -211,7 +250,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-literature.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-rmd.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -230,20 +269,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
