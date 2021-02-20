@@ -1,19 +1,32 @@
 # R & RStudio {#r}
 
+## Why Script?
+
+I initially started scripting in Python to automate some spatial analysis tasks, but soon realised that reproducibility was it's main advantage. Iterating, improving a process incrementally and verifying  results by rerunning the script. 
+
+There's an element of self-documentation with scripting and with that an ability to return more easily to a scripted task or pick up a scripted task from a colleague. However this depends a lot on in-line comments and adherence to a style guide. Version control and collaboration are also easier with scripting than GUI tools.
+
+Scripting is not always better than using GUI tools. It's horses for courses, and some GUI workflow tools (e.g. FME, ModelBuilder in ArcGIS and Simul8) sit somewhere in the middle.
+
+## Styleguide
+
+Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from familiarity via tidyverse package documentation and supporting tools.
+
+Scripting to the same style guide makes it a lot easier to collaborate, which style guide is less important than consistently scripting to a single style guide.
+
+## RStudio Security & Data Protection
+
+
+
 ## Getting Started
 
 - RStudio essentials webinars
 - R for Data Science
+- Tidyverse
 - learnR
 
-
-## Styleguide
-
-
-## RStudio
-
+## RStudio Tips
 
 - Renviron
 - Write settings 
 
-### Security & Data Protection
