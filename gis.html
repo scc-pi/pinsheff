@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Notes</title>
+  <title>Chapter 7 GIS | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Notes" />
+  <meta property="og:title" content="Chapter 7 GIS | Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Notes" />
+  <meta name="twitter:title" content="Chapter 7 GIS | Notes" />
   
   <meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="geocoding.html"/>
-
+<link rel="prev" href="python.html"/>
+<link rel="next" href="geocoding.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -200,17 +200,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="gis" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> GIS</h1>
+<div id="arcgis-1" class="section level2">
+<h2><span class="header-section-number">7.1</span> ArcGIS</h2>
+</div>
+<div id="portal-login" class="section level2">
+<h2><span class="header-section-number">7.2</span> Portal Login</h2>
+<p>It’s not good practice to include login details in code, so for my
+Portal login I’m going to use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/">securing
+credentials</a>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="gis.html#cb4-1"></a>portal_id =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_id&quot;</span>)</span>
+<span id="cb4-2"><a href="gis.html#cb4-2"></a>portal_pwd =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span></code></pre></div>
+<p>Then, within a Python code chunk, we’re going to <a href="https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/">login to our
+Portal</a>.</p>
+</div>
+<div id="simple-features" class="section level2">
+<h2><span class="header-section-number">7.3</span> Simple Features</h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="geocoding.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="geocoding.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -241,7 +257,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-references.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-gis.Rmd",
 "text": "Edit"
 },
 "history": {

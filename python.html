@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Notes</title>
+  <title>Chapter 6 Python | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Notes" />
+  <meta property="og:title" content="Chapter 6 Python | Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Notes" />
+  <meta name="twitter:title" content="Chapter 6 Python | Notes" />
   
   <meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="geocoding.html"/>
-
+<link rel="prev" href="api.html"/>
+<link rel="next" href="gis.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -200,17 +200,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="python" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Python</h1>
+<div id="reticulate" class="section level2">
+<h2><span class="header-section-number">6.1</span> Reticulate</h2>
+</div>
+<div id="arcgis" class="section level2">
+<h2><span class="header-section-number">6.2</span> ArcGIS</h2>
+<p>We’re going to make use of the Council’s ArcGIS software from ESRI and
+Council spatial data held on our Portal. ArcGIS has a better integration
+with Python than R, so we’re going to leverage that via the
+<a href="https://rstudio.github.io/reticulate/">reticulate</a> R package.</p>
+<p>It’s worth highlighting that ESRI’s Python integration with ArcGIS is
+via two main packages. The <code>arcgis</code> package is what we’re going to use
+here to work with the Council’s web GIS infrastructure. The <code>arcpy</code>
+package would be used to leverage the ArcGIS desktop functionality. The
+distinction between web and desktop for <code>arcgis</code> and <code>arcpy</code> packages
+respectively is an oversimplification, but it serves a purpose. It’s
+also worth noting that the integration between the two packages isn’t as
+seamless as you might expect.</p>
+<p>To use the <code>arcpy</code> or <code>arcgis</code> packages we first need to specify the
+<a href="https://developers.arcgis.com/python/guide/install-and-set-up/">ArcGIS Python
+environment</a></p>
+<div id="arcpy" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> ArcPy</h3>
+</div>
+<div id="arcgis-api" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> ArcGIS API</h3>
+<p>We describe our methods in this chapter.</p>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="geocoding.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="api.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -241,7 +269,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-references.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-python.Rmd",
 "text": "Edit"
 },
 "history": {
