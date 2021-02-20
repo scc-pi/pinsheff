@@ -8,7 +8,7 @@ There's an element of self-documentation with scripting so it's easier to return
 
 Scripting is not always better than using GUI tools. It's horses for courses, and some GUI workflow tools (e.g. FME, ModelBuilder in ArcGIS and Simul8) sit somewhere in the middle.
 
-## Styleguide
+## Style Guide
 
 Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from familiarity via tidyverse package documentation and supporting tools.
 
