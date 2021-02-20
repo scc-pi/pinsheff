@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 R &amp; R Studio | Notes</title>
+  <title>Chapter 3 R &amp; RStudio | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 R &amp; R Studio | Notes" />
+  <meta property="og:title" content="Chapter 3 R &amp; RStudio | Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 R &amp; R Studio | Notes" />
+  <meta name="twitter:title" content="Chapter 3 R &amp; RStudio | Notes" />
   
   <meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources." />
   
@@ -131,7 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Notes</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -142,12 +142,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="github.html"><a href="github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; Data Protection</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R &amp; R Studio</a><ul>
-<li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>3.1</b> Getting Started</a></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R &amp; RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#why-script"><i class="fa fa-check"></i><b>3.1</b> Why Script?</a></li>
 <li class="chapter" data-level="3.2" data-path="r.html"><a href="r.html#styleguide"><i class="fa fa-check"></i><b>3.2</b> Styleguide</a></li>
-<li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#r-studio"><i class="fa fa-check"></i><b>3.3</b> R Studio</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="r.html"><a href="r.html#security-data-protection-1"><i class="fa fa-check"></i><b>3.3.1</b> Security &amp; Data Protection</a></li>
-</ul></li>
+<li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#rstudio-security-data-protection"><i class="fa fa-check"></i><b>3.3</b> RStudio Security &amp; Data Protection</a></li>
+<li class="chapter" data-level="3.4" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>3.4</b> Getting Started</a></li>
+<li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio Tips</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
 <li class="chapter" data-level="4.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown vs Markdown</a></li>
@@ -180,9 +180,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3" data-path="geocoding.html"><a href="geocoding.html#addresses"><i class="fa fa-check"></i><b>8.3</b> Addresses</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -201,28 +198,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="r" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> R &amp; R Studio</h1>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">3.1</span> Getting Started</h2>
-<ul>
-<li>RStudio essentials webinars</li>
-<li>R for Data Science</li>
-<li>learnR</li>
-</ul>
+<h1><span class="header-section-number">Chapter 3</span> R &amp; RStudio</h1>
+<div id="why-script" class="section level2">
+<h2><span class="header-section-number">3.1</span> Why Script?</h2>
+<p>I initially started scripting in Python to automate some spatial analysis tasks, but soon realised that reproducibility was it’s main advantage. Iterating, improving a process incrementally and verifying results by rerunning the script.</p>
+<p>There’s an element of self-documentation with scripting and with that an ability to return more easily to a scripted task or pick up a scripted task from a colleague. However this depends a lot on in-line comments and adherence to a style guide. Version control and collaboration are also easier with scripting than GUI tools.</p>
+<p>Scripting is not always better than using GUI tools. It’s horses for courses, and some GUI workflow tools (e.g. FME, ModelBuilder in ArcGIS and Simul8) sit somewhere in the middle.</p>
 </div>
 <div id="styleguide" class="section level2">
 <h2><span class="header-section-number">3.2</span> Styleguide</h2>
+<p>Something I need to pay more attention to is following the <a href="https://style.tidyverse.org/">tidyverse style guide</a>, which benefits from familiarity via tidyverse package documentation and supporting tools.</p>
+<p>Scripting to the same style guide makes it a lot easier to collaborate, which style guide is less important than consistently scripting to a single style guide.</p>
 </div>
-<div id="r-studio" class="section level2">
-<h2><span class="header-section-number">3.3</span> R Studio</h2>
+<div id="rstudio-security-data-protection" class="section level2">
+<h2><span class="header-section-number">3.3</span> RStudio Security &amp; Data Protection</h2>
+</div>
+<div id="getting-started" class="section level2">
+<h2><span class="header-section-number">3.4</span> Getting Started</h2>
+<ul>
+<li>RStudio essentials webinars</li>
+<li>R for Data Science</li>
+<li>Tidyverse</li>
+<li>learnR</li>
+</ul>
+</div>
+<div id="rstudio-tips" class="section level2">
+<h2><span class="header-section-number">3.5</span> RStudio Tips</h2>
 <ul>
 <li>Renviron</li>
 <li>Write settings</li>
 </ul>
-<div id="security-data-protection-1" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Security &amp; Data Protection</h3>
 
-</div>
 </div>
 </div>
             </section>
@@ -262,7 +268,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-r.Rmd",
+"link": "https://github.com/scc-pi/notes02-r.Rmd",
 "text": "Edit"
 },
 "history": {

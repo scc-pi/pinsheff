@@ -5,10 +5,11 @@ git
 github-1
 security-data-protection
 r
-getting-started
+why-script
 styleguide
-r-studio
-security-data-protection-1
+rstudio-security-data-protection
+getting-started
+rstudio-tips
 rmd
 r-markdown-vs-markdown
 r-markdown-tips
