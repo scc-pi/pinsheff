@@ -13,7 +13,8 @@ description: "Some notes, examples, lessons learnt and links to further resource
 ---
 
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
-#library(tidyverse); library(reticulate)
+library(tidyverse)
+
 ```
 
 # Welcome
