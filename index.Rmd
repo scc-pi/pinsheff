@@ -1,4 +1,4 @@
---- 
+---
 title: "Notes"
 author: "Laurie Platt"
 date: "`r Sys.Date()`"
@@ -12,9 +12,13 @@ github-repo: scc-pi/notes
 description: "Some notes, examples, lessons learnt and links to further resources."
 ---
 
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse); library(reticulate)
+```
+
 # Welcome
 
-This is a place for ad-hoc notes, mainly to do with scripting and mainly R scripts. It's somewhere to store lessons learnt and examples. A resource to remind yourself if you return to something after a while, or to smooth your path a little if it's something new.  
+This is a place for ad-hoc notes, mainly to do with scripting and mainly R scripts. It's somewhere to store lessons learnt and examples. A resource to remind yourself if you return to something after a while, or to smooth your path a little if it's something new.
 
 There are many excellent online resources that these notes will point to and will not attempt to replace. Overtime some notes may mature into package vignettes or become accepted as good practice and included in the [Methods Manual](https://laurie-platt.github.io/methods-manual/). Other notes may prove to be of little value.
 
