@@ -26,9 +26,11 @@ arcgis
 arcpy
 arcgis-api
 gis
+features
 arcgis-1
 portal-login
 simple-features
+coordinates-projections
 geocoding
 postcodes
 llpg

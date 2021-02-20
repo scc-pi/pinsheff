@@ -170,9 +170,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="gis.html"><a href="gis.html"><i class="fa fa-check"></i><b>7</b> GIS</a><ul>
-<li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.1</b> ArcGIS</a></li>
-<li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#portal-login"><i class="fa fa-check"></i><b>7.2</b> Portal Login</a></li>
-<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.3</b> Simple Features</a></li>
+<li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#features"><i class="fa fa-check"></i><b>7.1</b> Features</a></li>
+<li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.2</b> ArcGIS</a></li>
+<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#portal-login"><i class="fa fa-check"></i><b>7.3</b> Portal Login</a></li>
+<li class="chapter" data-level="7.4" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.4</b> Simple Features</a></li>
+<li class="chapter" data-level="7.5" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.5</b> Coordinates &amp; Projections</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>8</b> Postcodes &amp; Addresses</a><ul>
 <li class="chapter" data-level="8.1" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>8.1</b> Postcodes</a></li>
@@ -199,20 +201,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="github" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Version Control &amp; GitHub</h1>
-<p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. Visualisations or using R Markdown are better starting points than version control if you’re new to scripting and R.</p>
+<p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. If you’re new to scripting and R, visualisations or using R Markdown are better starting points than version control.</p>
 <p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.</p>
 <p>You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="github.html#cb1-1"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R&quot;</span>)</span>
-<span id="cb1-2"><a href="github.html#cb1-2"></a><span class="kw">head</span>(<span class="kw">shef_lsoa_codes</span>(), <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="github.html#cb1-1"></a><span class="co"># Load functions for Sheffield areas from a public scc-pi repository </span></span>
+<span id="cb1-2"><a href="github.html#cb1-2"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R&quot;</span>)</span>
+<span id="cb1-3"><a href="github.html#cb1-3"></a></span>
+<span id="cb1-4"><a href="github.html#cb1-4"></a><span class="co"># Call one of our Sheffield area functions that returns LSOA codes </span></span>
+<span id="cb1-5"><a href="github.html#cb1-5"></a><span class="kw">shef_lsoa_codes</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-6"><a href="github.html#cb1-6"></a><span class="st">  </span><span class="kw">head</span>(<span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#only display the first 5 records</span></span>
+<span id="cb1-7"><a href="github.html#cb1-7"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>() <span class="co">#display them in a nice table </span></span></code></pre></div>
 <pre><code>## [1] &quot;Table&quot;</code></pre>
-<pre><code>## [90m# A tibble: 5 x 2[39m
-##   LSOA11CD  LSOA11NM      
-##   [3m[90m&lt;chr&gt;[39m[23m     [3m[90m&lt;chr&gt;[39m[23m         
-## [90m1[39m E01008124 Sheffield 012F
-## [90m2[39m E01008125 Sheffield 009G
-## [90m3[39m E01007917 Sheffield 071B
-## [90m4[39m E01033273 Sheffield 042F
-## [90m5[39m E01007967 Sheffield 045B</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">LSOA11CD</th>
+<th align="left">LSOA11NM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">E01008124</td>
+<td align="left">Sheffield 012F</td>
+</tr>
+<tr class="even">
+<td align="left">E01008125</td>
+<td align="left">Sheffield 009G</td>
+</tr>
+<tr class="odd">
+<td align="left">E01007917</td>
+<td align="left">Sheffield 071B</td>
+</tr>
+<tr class="even">
+<td align="left">E01033273</td>
+<td align="left">Sheffield 042F</td>
+</tr>
+<tr class="odd">
+<td align="left">E01007967</td>
+<td align="left">Sheffield 045B</td>
+</tr>
+</tbody>
+</table>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="version-control" class="section level2">
 <h2><span class="header-section-number">2.1</span> Version Control</h2>

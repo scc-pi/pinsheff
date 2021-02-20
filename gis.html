@@ -170,9 +170,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="gis.html"><a href="gis.html"><i class="fa fa-check"></i><b>7</b> GIS</a><ul>
-<li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.1</b> ArcGIS</a></li>
-<li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#portal-login"><i class="fa fa-check"></i><b>7.2</b> Portal Login</a></li>
-<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.3</b> Simple Features</a></li>
+<li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#features"><i class="fa fa-check"></i><b>7.1</b> Features</a></li>
+<li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.2</b> ArcGIS</a></li>
+<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#portal-login"><i class="fa fa-check"></i><b>7.3</b> Portal Login</a></li>
+<li class="chapter" data-level="7.4" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.4</b> Simple Features</a></li>
+<li class="chapter" data-level="7.5" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.5</b> Coordinates &amp; Projections</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>8</b> Postcodes &amp; Addresses</a><ul>
 <li class="chapter" data-level="8.1" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>8.1</b> Postcodes</a></li>
@@ -199,21 +201,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="gis" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> GIS</h1>
+<div id="features" class="section level2">
+<h2><span class="header-section-number">7.1</span> Features</h2>
+<p>The term “feature” is useful to distinguish a record of data as “spatial”. By “spatial” we mean it is a point, line or polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons.</p>
+<p>Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield Secondary School features may be MULTIPOINT so that King Edward VII school can have one point for the Lower School near Crosspool and another point for the Upper School in Broomhill.</p>
+</div>
 <div id="arcgis-1" class="section level2">
-<h2><span class="header-section-number">7.1</span> ArcGIS</h2>
+<h2><span class="header-section-number">7.2</span> ArcGIS</h2>
 </div>
 <div id="portal-login" class="section level2">
-<h2><span class="header-section-number">7.2</span> Portal Login</h2>
+<h2><span class="header-section-number">7.3</span> Portal Login</h2>
 <p>It’s not good practice to include login details in code, so for my
 Portal login I’m going to use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/">securing
 credentials</a>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="gis.html#cb7-1"></a>portal_id =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_id&quot;</span>)</span>
-<span id="cb7-2"><a href="gis.html#cb7-2"></a>portal_pwd =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="gis.html#cb6-1"></a>portal_id =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_id&quot;</span>)</span>
+<span id="cb6-2"><a href="gis.html#cb6-2"></a>portal_pwd =<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span></code></pre></div>
 <p>Then, within a Python code chunk, we’re going to <a href="https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/">login to our
 Portal</a>.</p>
 </div>
 <div id="simple-features" class="section level2">
-<h2><span class="header-section-number">7.3</span> Simple Features</h2>
+<h2><span class="header-section-number">7.4</span> Simple Features</h2>
+</div>
+<div id="coordinates-projections" class="section level2">
+<h2><span class="header-section-number">7.5</span> Coordinates &amp; Projections</h2>
 
 </div>
 </div>
