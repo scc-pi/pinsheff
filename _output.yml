@@ -4,8 +4,6 @@ bookdown::gitbook:
     toc:
       before: |
         <li><a href="./">Notes</a></li>
-    edit: https://github.com/scc-pi/notes/%s
-    download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
