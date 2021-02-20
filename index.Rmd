@@ -9,15 +9,15 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: scc-pi/notes
-description: "Some notes, examples, lessons learnt and further respources."
+description: "Some notes, examples, lessons learnt and links to further resources."
 ---
 
 # Welcome
 
 This is a place for ad-hoc notes, mainly to do with scripting and mainly R scripts. It is somewhere to store lessons learnt, a resource to remind yourself if you return to something after a while, or to smooth your path a little if it's something new.  
 
-There are many excellent online resources that this will point to and not attempt to replace. Overtime some notes may mature into package vignettes or become accepted as procedure and included in the [Methods Manual](https://laurie-platt.github.io/methods-manual/). Other notes may prove to be of little value.
+There are many excellent online resources that these notes will point to and not attempt to replace. Overtime some notes may mature into package vignettes or become accepted as procedure and included in the [Methods Manual](https://laurie-platt.github.io/methods-manual/). Other notes may prove to be of little value.
 
-Hopefully others from the Performance & Intelligence Team or elsewhere in Sheffield City Council will contribute to the notes. However, currently the contributions are from a single person and is orientated to one persons experience. This is ETL and spatial analysis, and lacks notes about modelling and visualisations.
+Hopefully, others from the Performance & Intelligence Team, or elsewhere in Sheffield City Council, will contribute to these notes. However, currently it's just one person and is orientated to one persons experience: ETL and spatial analysis, notes about modelling and visualisations are lacking.
 
-As well as the contributors and content, the purpose and scope is open to change. I hope you find this useful.
+As well as the contributors and content, the purpose and scope is open to change. I hope you find the notes useful.

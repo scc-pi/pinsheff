@@ -1,0 +1,19 @@
+# R & R Studio {#r}
+
+## Getting Started
+
+- RStudio essentials webinars
+- R for Data Science
+- learnR
+
+
+## Styleguide
+
+
+## R Studio
+
+
+- Renviron
+- Write settings 
+
+### Security & Data Protection

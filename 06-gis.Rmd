@@ -1,0 +1,27 @@
+# GIS
+
+## ArcGIS
+
+## Portal Login
+
+It's not good practice to include login details in code, so for my
+Portal login I'm going to use the `.Renviron` file option for [securing
+credentials](https://db.rstudio.com/best-practices/managing-credentials/).
+
+```{r portal-credentials}
+portal_id = Sys.getenv("portal_id")
+portal_pwd = Sys.getenv("portal_pwd")
+```
+
+Then, within a Python code chunk, we're going to [login to our
+Portal](https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/).
+
+```{python, echo=TRUE, include=TRUE}
+from arcgis.gis import GIS
+from arcgis.features import GeoAccessor, GeoSeriesAccessor
+
+gis = GIS("https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/", r.portal_id, r.portal_pwd)
+```
+
+
+## Simple Features
