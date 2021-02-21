@@ -19,8 +19,8 @@ jobs:
         run: Rscript -e 'install.packages("tidyverse")'
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
-      - name: Install sf
-        run: Rscript -e 'install.packages("sf")'
+      - name: Install spatial
+        run: Rscript -e 'install.packages(c("sf","PostcodesioR"))'
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
       - name: Render Book
