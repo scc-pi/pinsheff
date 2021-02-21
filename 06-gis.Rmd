@@ -10,7 +10,7 @@ Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is
 
 _TODO_
 
-## Coordinates & Projections  
+## Coordinates & projections  
 
 _TODO_
 

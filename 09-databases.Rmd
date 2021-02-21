@@ -8,11 +8,22 @@ _TODO_
 
 _TODO_
 
-
 ## SQLite
 
-_TODO_
+Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.  
+
+SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular date types are handled particularly differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the `JD()` function from the insol package:   
+
+```{r eval=FALSE}
+# Convert dates we've read from a SQLite database
+mutate(date = JD(date, inverse = TRUE),
+       week_end = JD(week_end, inverse = TRUE))
+```
 
 ### SpatiaLite
 
-_TODO_
+SpatiaLite is an extension of SQLite. The [RSQLite](https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html) package includes the driver for our SpatiaLite database. 
+
+Robin Lovelace has a [chapter on spatial databases](https://geocompr.robinlovelace.net/read-write.html) in his book Geocomputation with R.
+
+After testing different options SpatiaLite is the best file based database for access to spatial data via tools such as R and Power BI without the complication of ArcGIS licenses, but it also provides reliable access for ArcGIS.

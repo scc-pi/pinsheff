@@ -12,7 +12,7 @@ Scripting is not always better than using GUI tools. It's horses for courses, an
 
 Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from supporting tools and familiarity via tidyverse package documentation.
 
-Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to a single style guide.
+Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
 
 ## RStudio security & data protection
 

@@ -12,7 +12,7 @@ If there's no UPRN, getting a location via the postcode is usually the easiest o
 
 Below is an example of using our `add_pcd_vars()` function that builds on the [PostcodesioR](https://docs.ropensci.org/PostcodesioR/) package, which itself is a wrapper for the [postcodes.io](https://postcodes.io/) API. Passing it a data frame with a postcode column, it will return the data frame with new columns based on the postcode.
 
-```{r add-pcd-vars}
+```{r add-pcd-vars, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
 df <- tribble(
   ~name,           ~postcode,

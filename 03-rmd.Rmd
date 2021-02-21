@@ -4,9 +4,9 @@
 
 *TODO*
 
-## R Markdown Tips
+## R Markdown tips
 
-Naming a code block `setup` means that after you restart RStudio and execute any code in the middle of your markdown document, the `setup` block will run first e.g. to make sure your libraries are loaded first:
+Naming a code block `setup` means that after you restart RStudio and execute any code in the middle of your markdown document, the `setup` block will run first. For example, to make sure your libraries are loaded first:
 
 ```{r, include=FALSE}
 # This will allow the chunk header below to be displayed in the output  
@@ -19,10 +19,10 @@ knitr::knit_hooks$set(wrapper = function(before, options) {
   
   if (before) {
     # add the header
-    sprintf('\n\n%s````\n```{r,%s}\n````\n', indent, opts)
+    sprintf('\n\n%s````\n```{r,%s}\n````', indent, opts)
   } else {
     # add the footer
-    sprintf('\n\n%s````\n```\n````\n', indent)
+    sprintf('\n%s````\n```\n````\n', indent)
   }
 })
 ```
@@ -76,6 +76,6 @@ with:
 
 2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy).
 
-## Further Resources
+## Further resources
 
 [Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
