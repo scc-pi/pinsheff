@@ -31,7 +31,7 @@ add_pcd_vars(df,
              .lat_long = TRUE,
              other_vars = c("admin_ward",
                             "msoa_code")) %>%
-  kable() #display them in a nice table
+  knitr::kable() #display them in a nice table
 ```
 
 
