@@ -22,7 +22,7 @@ jobs:
       - name: Install spatial
         run: Rscript -e 'install.packages(c("sf","PostcodesioR"))'
       - name: Install rmarkdown
-        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown","knitr"))'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/upload-artifact@v1
