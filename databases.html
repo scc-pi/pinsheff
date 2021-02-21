@@ -238,9 +238,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-3"><a href="databases.html#cb9-3"></a>       <span class="dt">week_end =</span> <span class="kw">JD</span>(week_end, <span class="dt">inverse =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
 <div id="spatialite" class="section level3">
 <h3><span class="header-section-number">10.3.1</span> SpatiaLite</h3>
-<p>SpatiaLite is an extension of SQLite. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for our SpatiaLite database.</p>
+<p><a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a> extends SQLite to support spatial data. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for our SpatiaLite database.</p>
 <p>Robin Lovelace has a <a href="https://geocompr.robinlovelace.net/read-write.html">chapter on spatial databases</a> in his book Geocomputation with R.</p>
-<p>After testing different options SpatiaLite is the best file based database for access to spatial data via tools such as R and Power BI without the complication of ArcGIS licenses, but it also provides reliable access for ArcGIS.</p>
+<p>After testing different options, SpatiaLite is the best file based database for access to spatial data via tools such as R and Power BI without the complication of ArcGIS licenses, but it also provides reliable access for ArcGIS. So far I’ve only tested <a href="https://desktop.arcgis.com/en/arcmap/10.3/analyze/arcpy-functions/createsqlitedb.htm">SpatiaLite databases created in ArcGIS</a></p>
 
 </div>
 </div>
