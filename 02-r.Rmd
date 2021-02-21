@@ -16,19 +16,19 @@ Scripting to the same style guide makes collaboration easier. Which style guide 
 
 ## RStudio security & data protection
 
-_TODO_
+_TODO_  
 
 ## Getting started
 
-_TODO_
-- RStudio essentials webinars
-- R for Data Science
-- Tidyverse
-- learnR
+_TODO_  
+- RStudio essentials webinars  
+- R for Data Science  
+- Tidyverse  
+- learnR  
 
 ## RStudio tips
 
-_TODO_
-- Renviron
-- Write settings 
+_TODO_  
+- Renviron  
+- Write settings  
 

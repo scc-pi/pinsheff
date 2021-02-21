@@ -22,14 +22,26 @@ Try raising an [issue](https://guides.github.com/features/issues/) if you spot a
 
 ## GitHub
 
-*TODO* - free account - scc-pi
+Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.  
 
-### Security & Data Protection
+### Security & data protection  
+
+Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we've not checked compliance with Information Governance so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects involving such information should be held in a private repository.  
+
+Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
+
+### Other features  
+
+GitHub now allows private repositories on [free organisation accounts](https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts), but not all GitHub features are available.
+
+_TODO_  
+- issues, projects, actions, pages, 
 
 ## Version control
 
-*TODO*
+_TODO_   
+- commit message  
 
 ## GIT
 
-*TODO*
+Git is an open-source distributed version-control system for tracking changes in source code during software development. GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
