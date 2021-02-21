@@ -42,6 +42,6 @@ _TODO_
 
 ## Addresses
 
-_TODO_
-- Portal LLPG Cascade Locator
-- OS Places ESRI integration
+_TODO_  
+- Portal LLPG Cascade Locator  
+- OS Places ESRI integration  
