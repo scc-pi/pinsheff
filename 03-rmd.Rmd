@@ -8,7 +8,26 @@
 
 Naming a code block `setup` means that after you restart RStudio and execute any code in the middle of your markdown document, the `setup` block will run first e.g. to make sure your libraries are loaded first:
 
-```{r setup, message = FALSE, warning = FALSE}
+```{r, include=FALSE}
+# This will allow the chunk header below to be displayed in the output  
+knitr::knit_hooks$set(wrapper = function(before, options) {
+  # the original chunk might be indented
+  if (is.null(indent <- options$indent)) indent <- ''
+  
+  # hide the wrapper=TRUE option
+  opts <- gsub(', wrapper=TRUE', '', options$params.src)
+  
+  if (before) {
+    # add the header
+    sprintf('\n\n%s````\n```{r,%s}\n````\n', indent, opts)
+  } else {
+    # add the footer
+    sprintf('\n\n%s````\n```\n````\n', indent)
+  }
+})
+```
+
+```{r, setup, message = FALSE, warning = FALSE, wrapper=TRUE}
 # Packages
 library(tidyverse)
 ```

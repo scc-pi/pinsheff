@@ -1,10 +1,39 @@
 # Postcodes & Addresses {#geocoding}
 
+A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents by Ward.
+
 ## UPRN  
 
 _TODO_
 
 ## Postcodes
+
+If there's no UPRN, getting a location via the postcode is usually the easiest option. It's not as accurate as a UPRN or a full address, but often it's accurate enough for what's required.
+
+Below is an example of using our `add_pcd_vars()` function that builds on the [PostcodesioR](https://docs.ropensci.org/PostcodesioR/) package, which itself is a wrapper for the [postcodes.io](https://postcodes.io/) API. Passing it a data frame with a postcode column, it will return the data frame with new columns based on the postcode.
+
+```{r add-pcd-vars}
+# Create a data frame with some example records
+df <- tribble(
+  ~name,           ~postcode,
+  "Bob Johnson",   "S1 2HH",
+  "Chris Wilder",  "S2 4SU",
+  "Neil Thompson", "S6 1SW"
+)
+
+# Load the function we need
+source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")
+
+# Add postcode related columns to our data frame
+add_pcd_vars(df,
+             pcd_name = "postcode",
+             .admin_district = FALSE,
+             .lat_long = TRUE,
+             other_vars = c("admin_ward",
+                            "msoa_code")) %>%
+  kable() #display them in a nice table
+```
+
 
 
 ### Split postcodes
