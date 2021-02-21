@@ -151,13 +151,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
 <li class="chapter" data-level="4.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.2</b> R Markdown Tips</a></li>
+<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.2</b> R Markdown tips</a></li>
 <li class="chapter" data-level="4.3" data-path="rmd.html"><a href="rmd.html#child-markdown-iteration"><i class="fa fa-check"></i><b>4.3</b> Child markdown iteration</a></li>
 <li class="chapter" data-level="4.4" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>4.4</b> Notebooks</a></li>
 <li class="chapter" data-level="4.5" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>4.5</b> Bookdown</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>4.5.1</b> Publishing</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.6</b> Further Resources</a></li>
+<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.6</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="api.html"><a href="api.html"><i class="fa fa-check"></i><b>5</b> APIs</a><ul>
 <li class="chapter" data-level="5.1" data-path="api.html"><a href="api.html#restful-apis"><i class="fa fa-check"></i><b>5.1</b> RESTful APIs</a></li>
@@ -173,7 +173,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="gis.html"><a href="gis.html"><i class="fa fa-check"></i><b>7</b> GIS</a><ul>
 <li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#features"><i class="fa fa-check"></i><b>7.1</b> Features</a></li>
 <li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.2</b> Simple Features</a></li>
-<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.3</b> Coordinates &amp; Projections</a></li>
+<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.3</b> Coordinates &amp; projections</a></li>
 <li class="chapter" data-level="7.4" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.4</b> ArcGIS</a></li>
 <li class="chapter" data-level="7.5" data-path="gis.html"><a href="gis.html#rasters"><i class="fa fa-check"></i><b>7.5</b> Rasters</a></li>
 </ul></li>
@@ -231,10 +231,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="sqlite" class="section level2">
 <h2><span class="header-section-number">10.3</span> SQLite</h2>
-<p><em>TODO</em></p>
+<p>Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.</p>
+<p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular date types are handled particularly differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="databases.html#cb9-1"></a><span class="co"># Convert dates we&#39;ve read from a SQLite database</span></span>
+<span id="cb9-2"><a href="databases.html#cb9-2"></a><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">JD</span>(date, <span class="dt">inverse =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb9-3"><a href="databases.html#cb9-3"></a>       <span class="dt">week_end =</span> <span class="kw">JD</span>(week_end, <span class="dt">inverse =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
 <div id="spatialite" class="section level3">
 <h3><span class="header-section-number">10.3.1</span> SpatiaLite</h3>
-<p><em>TODO</em></p>
+<p>SpatiaLite is an extension of SQLite. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for our SpatiaLite database.</p>
+<p>Robin Lovelace has a <a href="https://geocompr.robinlovelace.net/read-write.html">chapter on spatial databases</a> in his book Geocomputation with R.</p>
+<p>After testing different options SpatiaLite is the best file based database for access to spatial data via tools such as R and Power BI without the complication of ArcGIS licenses, but it also provides reliable access for ArcGIS.</p>
 
 </div>
 </div>

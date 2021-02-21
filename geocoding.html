@@ -151,13 +151,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
 <li class="chapter" data-level="4.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.2</b> R Markdown Tips</a></li>
+<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.2</b> R Markdown tips</a></li>
 <li class="chapter" data-level="4.3" data-path="rmd.html"><a href="rmd.html#child-markdown-iteration"><i class="fa fa-check"></i><b>4.3</b> Child markdown iteration</a></li>
 <li class="chapter" data-level="4.4" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>4.4</b> Notebooks</a></li>
 <li class="chapter" data-level="4.5" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>4.5</b> Bookdown</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>4.5.1</b> Publishing</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.6</b> Further Resources</a></li>
+<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.6</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="api.html"><a href="api.html"><i class="fa fa-check"></i><b>5</b> APIs</a><ul>
 <li class="chapter" data-level="5.1" data-path="api.html"><a href="api.html#restful-apis"><i class="fa fa-check"></i><b>5.1</b> RESTful APIs</a></li>
@@ -173,7 +173,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="gis.html"><a href="gis.html"><i class="fa fa-check"></i><b>7</b> GIS</a><ul>
 <li class="chapter" data-level="7.1" data-path="gis.html"><a href="gis.html#features"><i class="fa fa-check"></i><b>7.1</b> Features</a></li>
 <li class="chapter" data-level="7.2" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>7.2</b> Simple Features</a></li>
-<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.3</b> Coordinates &amp; Projections</a></li>
+<li class="chapter" data-level="7.3" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>7.3</b> Coordinates &amp; projections</a></li>
 <li class="chapter" data-level="7.4" data-path="gis.html"><a href="gis.html#arcgis-1"><i class="fa fa-check"></i><b>7.4</b> ArcGIS</a></li>
 <li class="chapter" data-level="7.5" data-path="gis.html"><a href="gis.html#rasters"><i class="fa fa-check"></i><b>7.5</b> Rasters</a></li>
 </ul></li>
@@ -239,23 +239,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-7"><a href="geocoding.html#cb8-7"></a>)</span>
 <span id="cb8-8"><a href="geocoding.html#cb8-8"></a></span>
 <span id="cb8-9"><a href="geocoding.html#cb8-9"></a><span class="co"># Load the function we need</span></span>
-<span id="cb8-10"><a href="geocoding.html#cb8-10"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R&quot;</span>)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;magrittr&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:purrr&#39;:
-## 
-##     set_names</code></pre>
-<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     extract</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="geocoding.html#cb12-1"></a><span class="co"># Add postcode related columns to our data frame</span></span>
-<span id="cb12-2"><a href="geocoding.html#cb12-2"></a><span class="kw">add_pcd_vars</span>(df,</span>
-<span id="cb12-3"><a href="geocoding.html#cb12-3"></a>             <span class="dt">pcd_name =</span> <span class="st">&quot;postcode&quot;</span>,</span>
-<span id="cb12-4"><a href="geocoding.html#cb12-4"></a>             <span class="dt">.admin_district =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb12-5"><a href="geocoding.html#cb12-5"></a>             <span class="dt">.lat_long =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb12-6"><a href="geocoding.html#cb12-6"></a>             <span class="dt">other_vars =</span> <span class="kw">c</span>(<span class="st">&quot;admin_ward&quot;</span>,</span>
-<span id="cb12-7"><a href="geocoding.html#cb12-7"></a>                            <span class="st">&quot;msoa_code&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb12-8"><a href="geocoding.html#cb12-8"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>() <span class="co">#display them in a nice table</span></span></code></pre></div>
+<span id="cb8-10"><a href="geocoding.html#cb8-10"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R&quot;</span>)</span>
+<span id="cb8-11"><a href="geocoding.html#cb8-11"></a></span>
+<span id="cb8-12"><a href="geocoding.html#cb8-12"></a><span class="co"># Add postcode related columns to our data frame</span></span>
+<span id="cb8-13"><a href="geocoding.html#cb8-13"></a><span class="kw">add_pcd_vars</span>(df,</span>
+<span id="cb8-14"><a href="geocoding.html#cb8-14"></a>             <span class="dt">pcd_name =</span> <span class="st">&quot;postcode&quot;</span>,</span>
+<span id="cb8-15"><a href="geocoding.html#cb8-15"></a>             <span class="dt">.admin_district =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb8-16"><a href="geocoding.html#cb8-16"></a>             <span class="dt">.lat_long =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb8-17"><a href="geocoding.html#cb8-17"></a>             <span class="dt">other_vars =</span> <span class="kw">c</span>(<span class="st">&quot;admin_ward&quot;</span>,</span>
+<span id="cb8-18"><a href="geocoding.html#cb8-18"></a>                            <span class="st">&quot;msoa_code&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb8-19"><a href="geocoding.html#cb8-19"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>() <span class="co">#display them in a nice table</span></span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
