@@ -2,27 +2,19 @@
 
 ## Reticulate
 
-## ArcGIS
+_TODO_
 
-We're going to make use of the Council's ArcGIS software from ESRI and
-Council spatial data held on our Portal. ArcGIS has a better integration
-with Python than R, so we're going to leverage that via the
 [reticulate](https://rstudio.github.io/reticulate/) R package.
 
-It's worth highlighting that ESRI's Python integration with ArcGIS is
-via two main packages. The `arcgis` package is what we're going to use
-here to work with the Council's web GIS infrastructure. The `arcpy`
-package would be used to leverage the ArcGIS desktop functionality. The
-distinction between web and desktop for `arcgis` and `arcpy` packages
-respectively is an oversimplification, but it serves a purpose. It's
-also worth noting that the integration between the two packages isn't as
-seamless as you might expect.
+## ArcGIS
 
-To use the `arcpy` or `arcgis` packages we first need to specify the
-[ArcGIS Python
-environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R.
 
+ESRI's Python integration with ArcGIS is via two main packages. The `arcgis` package is what we're going to use here to work with the Council's web based GIS infrastructure. The `arcpy` package would be used to leverage the ArcGIS desktop functionality. The distinction between web and desktop for `arcgis` and `arcpy` packages respectively is an oversimplification, but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
 
+To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/) 
+
+_TODO_
 
 ### ArcPy
 

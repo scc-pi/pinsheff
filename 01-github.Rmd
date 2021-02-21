@@ -4,7 +4,10 @@ You don't have to be familiar with version control, Git and GitHub to make use o
 
 These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
 
-You need a GitHub account and permissions to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
+![](images/github-edit.png)
+
+You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
+
 ```{r message=FALSE, warning=FALSE}
 # Load functions for Sheffield areas from a public scc-pi repository 
 source("https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R")
@@ -17,16 +20,16 @@ shef_lsoa_codes() %>%
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
 
+## GitHub
 
-## Version Control
+*TODO* - free account - scc-pi
+
+### Security & Data Protection
+
+## Version control
+
+*TODO*
 
 ## GIT
 
-
-## GitHub
-
-- free account
-- scc-pi
-Here is a review of existing methods.
-
-### Security & Data Protection
+*TODO*

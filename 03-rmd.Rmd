@@ -2,27 +2,36 @@
 
 ## R Markdown vs Markdown
 
-_TODO_
+*TODO*
 
 ## R Markdown Tips
 
-Naming a code block `setup` means that after you restart RStudio and
-execute any code in the middle of your markdown document, the `setup`
-block will run first e.g. to make sure your libraries are loaded first.
+Naming a code block `setup` means that after you restart RStudio and execute any code in the middle of your markdown document, the `setup` block will run first e.g. to make sure your libraries are loaded first:
+
+```{r setup, message = FALSE, warning = FALSE}
+# Packages
+library(tidyverse)
+```
+
+The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:
+
+![](images/rmd-editor.png "RStudio markdown visual editor")
+
+## Child markdown iteration
+
+*TODO*
+
+\- example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser base dashboards such as those provided via Power BI or Shiny
 
 ## Notebooks
 
-_TODO_
+*TODO*
+
+\- technical vs data exploration - don't add to github
 
 ## Bookdown
 
-These notes are written using the **bookdown** package [@R-bookdown], which was built on to The **bookdown** package can be installed from CRAN or Github:
-
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+These notes are written using the [bookdown](https://bookdown.org/) package , which was built on top of R Markdown and [knitr](https://yihui.org/knitr/).
 
 Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 
@@ -30,7 +39,7 @@ Each Rmd file contains one and only one chapter, and a chapter is defined by the
 
 These notes are published on [GitHub Pages](https://pages.github.com/) with [GitHub Actions](https://github.com/features/actions). A GitHub Action has been configured to start when there's a push to the [master branch](https://github.com/scc-pi/notes). The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called `gh-pages`. Alternatives to using GitHub Actions include Travis and Jekyll.
 
-I used the steps outlined in the following blog post: [https://medium.com/\@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e](https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e){.uri} However, I did a lot of the git bash commands manually and there were two fixes I had to make to the `deploy_bookdown.yaml` file:
+I used the steps outlined in the following blog post: [How to publish bookdown projects with GitHub Actions on GitHub Pages](https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e). However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the `deploy_bookdown.yaml` file:
 
 1\. Under ...
 
@@ -38,7 +47,7 @@ I used the steps outlined in the following blog post: [https://medium.com/\@delu
 uses: Cecilapp/GitHub-Pages-deploy@master
 ```
 
-... added ...
+... I added ...
 
 ``` {.yaml}
 with:       
@@ -46,9 +55,8 @@ with:
   email: ${{ secrets.EMAIL }}
 ```
 
-2\. Used `GITHUB_TOKEN` rather than `GH_PAT`, as this is what is now used by [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy).
+2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy).
 
-## Further Resources  
+## Further Resources
 
 [Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
-

@@ -1,0 +1,18 @@
+# Databases {#databases}
+
+## OSCAR
+
+_TODO_
+
+## Corporate Spatial Database
+
+_TODO_
+
+
+## SQLite
+
+_TODO_
+
+### SpatiaLite
+
+_TODO_

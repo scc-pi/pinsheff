@@ -2,31 +2,22 @@
 
 ## Features
 
-The term "feature" is useful to distinguish a record of data as "spatial". By "spatial" we mean it is a point, line or polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons.
+The term "feature" is useful to distinguish a record as "spatial". By "spatial" we mean it is a point, a line or a polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons.
 
-Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield Secondary School features may be MULTIPOINT so that King Edward VII school can have one point for the Lower School near Crosspool and another point for the Upper School in Broomhill.
-
-
-## ArcGIS
-
-## Portal Login
-
-It's not good practice to include login details in code, so for my
-Portal login I'm going to use the `.Renviron` file option for [securing
-credentials](https://db.rstudio.com/best-practices/managing-credentials/).
-
-```{r portal-credentials}
-portal_id = Sys.getenv("portal_id")
-portal_pwd = Sys.getenv("portal_pwd")
-
-```
-
-Then, within a Python code chunk, we're going to [login to our
-Portal](https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/).
-
+Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield secondary school features might be MULTIPOINT so that the feature for King Edward VII school can have one point for the Lower School near Crosspool, and another point for the Upper School in Broomhill.
 
 ## Simple Features
 
+_TODO_
 
 ## Coordinates & Projections  
 
+_TODO_
+
+## ArcGIS
+
+_TODO_
+
+## Rasters
+
+_TODO_

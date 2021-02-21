@@ -1,32 +1,34 @@
 # R & RStudio {#r}
 
-## Why Script?
+## Why script?
 
-I initially started scripting in Python to automate some spatial analysis tasks, but soon realised that reproducibility was the main advantage. Iterating, improving a process incrementally and verifying  results by re-running the script. 
+I initially started scripting in Python to automate some spatial analysis tasks, but soon realised that reproducibility was the main advantage. Iterating, improving a process incrementally and at the end verifying the results by re-running the script. 
 
-There's an element of self-documentation with scripting, so it's easier to return after a bit of time to a scripted task or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.
+There's an element of self-documentation with scripting, so it's easier to return after a bit of time to a scripted task, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.
 
-Scripting is not always better than using GUI tools. It's horses for courses, and some GUI workflow tools (e.g. FME, ModelBuilder in ArcGIS and Simul8) sit somewhere in the middle.
+Scripting is not always better than using GUI tools. It's horses for courses, and some GUI workflow tools (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.
 
-## Style Guide
+## Style guide
 
 Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from supporting tools and familiarity via tidyverse package documentation.
 
-Scripting to the same style guide makes it a lot easier to collaborate. Which style guide is less important than collaborators scripting to a single style guide.
+Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to a single style guide.
 
-## RStudio Security & Data Protection
+## RStudio security & data protection
 
+_TODO_
 
+## Getting started
 
-## Getting Started
-
+_TODO_
 - RStudio essentials webinars
 - R for Data Science
 - Tidyverse
 - learnR
 
-## RStudio Tips
+## RStudio tips
 
+_TODO_
 - Renviron
 - Write settings 
 
