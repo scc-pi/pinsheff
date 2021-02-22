@@ -136,12 +136,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>2</b> Version Control &amp; GitHub</a><ul>
-<li class="chapter" data-level="2.1" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>2.1</b> GitHub</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="github.html"><a href="github.html#security-data-protection"><i class="fa fa-check"></i><b>2.1.1</b> Security &amp; data protection</a></li>
-<li class="chapter" data-level="2.1.2" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>2.1.2</b> Other features</a></li>
+<li class="chapter" data-level="2.1" data-path="github.html"><a href="github.html#why-version-control"><i class="fa fa-check"></i><b>2.1</b> Why version control?</a></li>
+<li class="chapter" data-level="2.2" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>2.2</b> GIT</a></li>
+<li class="chapter" data-level="2.3" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>2.3</b> GitHub</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="github.html"><a href="github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; data protection</a></li>
+<li class="chapter" data-level="2.3.2" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>2.3.2</b> Other features</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="github.html"><a href="github.html#version-control"><i class="fa fa-check"></i><b>2.2</b> Version control</a></li>
-<li class="chapter" data-level="2.3" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>2.3</b> GIT</a></li>
+<li class="chapter" data-level="2.4" data-path="github.html"><a href="github.html#git-rstudio"><i class="fa fa-check"></i><b>2.4</b> Git &amp; RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R &amp; RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#why-script"><i class="fa fa-check"></i><b>3.1</b> Why script?</a></li>
@@ -266,29 +267,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
+<div id="why-version-control" class="section level2">
+<h2><span class="header-section-number">2.1</span> Why version control?</h2>
+<p>When scripting I take a backup of a file, so if the changes I make break what I’ve previously done, I can revert to the previous version. If I’m collating contributions to a document from different people I might use their initials to indicate who’s made contributions in what version e.g. “BI_Principles-GR.docx” and “BI_Principles-NM.docx”. These are both examples of manual version control.</p>
+<p>When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.</p>
+</div>
+<div id="git" class="section level2">
+<h2><span class="header-section-number">2.2</span> GIT</h2>
+<p>Git is an open-source distributed version control system for tracking changes in source code during software development.</p>
+</div>
 <div id="github-1" class="section level2">
-<h2><span class="header-section-number">2.1</span> GitHub</h2>
+<h2><span class="header-section-number">2.3</span> GitHub</h2>
+<p>GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
 <p>Our <a href="https://github.com/scc-pi">scc-pi</a> GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.</p>
 <div id="security-data-protection" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Security &amp; data protection</h3>
-<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects involving such information should be held in a private repository.</p>
+<h3><span class="header-section-number">2.3.1</span> Security &amp; data protection</h3>
+<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.</p>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
 </div>
 <div id="other-features" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Other features</h3>
+<h3><span class="header-section-number">2.3.2</span> Other features</h3>
 <p>GitHub now allows private repositories on <a href="https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts">free organisation accounts</a>, but not all GitHub features are available.</p>
 <p><em>TODO</em><br />
 - issues, projects, actions, pages,</p>
 </div>
 </div>
-<div id="version-control" class="section level2">
-<h2><span class="header-section-number">2.2</span> Version control</h2>
+<div id="git-rstudio" class="section level2">
+<h2><span class="header-section-number">2.4</span> Git &amp; RStudio</h2>
 <p><em>TODO</em><br />
-- commit message</p>
-</div>
-<div id="git" class="section level2">
-<h2><span class="header-section-number">2.3</span> GIT</h2>
-<p>Git is an open-source distributed version-control system for tracking changes in source code during software development. GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
+- SSH
+- <a href="https://happygitwithr.com/">Happy Git with R</a></p>
 
 </div>
 </div>

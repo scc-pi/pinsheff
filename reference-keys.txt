@@ -1,10 +1,11 @@
 welcome
 github
+why-version-control
+git
 github-1
 security-data-protection
 other-features
-version-control
-git
+git-rstudio
 r
 why-script
 style-guide
