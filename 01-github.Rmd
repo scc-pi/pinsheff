@@ -20,13 +20,25 @@ shef_lsoa_codes() %>%
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
 
+## Why version control?  
+
+When scripting I take a backup of a file, so if the changes I make break what I've previously done, I can revert to the previous version. If I'm collating contributions to a document from different people I might use their initials to indicate who's made contributions in what version e.g. "BI_Principles-GR.docx" and "BI_Principles-NM.docx". These are both examples of manual version control.
+
+When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.
+
+## GIT
+
+Git is an open-source distributed version control system for tracking changes in source code during software development.  
+
 ## GitHub
+
+GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
 
 Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.  
 
 ### Security & data protection  
 
-Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we've not checked compliance with Information Governance so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects involving such information should be held in a private repository.  
+Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we've not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.  
 
 Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
 
@@ -37,11 +49,14 @@ GitHub now allows private repositories on [free organisation accounts](https://d
 _TODO_  
 - issues, projects, actions, pages, 
 
-## Version control
+## Git & RStudio  
 
-_TODO_   
-- commit message  
+_TODO_  
+ - SSH
+ - [Happy Git with R](https://happygitwithr.com/)
 
-## GIT
 
-Git is an open-source distributed version-control system for tracking changes in source code during software development. GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
+
+
+
+
