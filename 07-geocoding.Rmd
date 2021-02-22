@@ -34,13 +34,13 @@ add_pcd_vars(df,
   knitr::kable() #display them in a nice table
 ```
 
-`admin_district` can be used to answer the questions: is the postcode in Sheffield? is it a valid postcode? You can anticipate values of `Sheffield` and `NA` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.   
+`admin_district` can be used to answer the questions: Is it the postcode invalid? Is the postcode in Sheffield?  You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.   
 
-Needing the coordinates of the postcode centroid is also common, so the function also has a `.lat_long` argument that if `positive `TRUE` returns a latitude column and a longitude column. 
+Needing the coordinates of the postcode centroid is also common, so the function also has a `.lat_long` argument that if `TRUE` returns both a latitude column and a longitude column. 
 
 _TODO: link to sf example & area stats_  
  
-Other columns are added by including their name in a character vector passed with the `other_vars` function argument. For example, `other_vars=c("ccg_code","lsoa_code")'. The list of valid `other_vars` is defined at [docs.ropensci.org/PostcodesioR/#examples](https://docs.ropensci.org/PostcodesioR/#examples). 
+Other columns are added by including their name in a character vector passed with the `other_vars` function argument. For example, `other_vars=c("ccg_code","lsoa_code")`. The list of valid `other_vars` is defined at [docs.ropensci.org/PostcodesioR/#examples](https://docs.ropensci.org/PostcodesioR/#examples). 
 
 The `pcd_name` function argument is used to specify the name of the data frame's postcode column when it isn't `postcode`. For example, `pcd_name="pupil_pcode"`.
 
