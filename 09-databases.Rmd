@@ -33,5 +33,4 @@ After testing different options, SpatiaLite is the best file based database for 
 
 ## Further resources  
 
-_TODO_  
 -   [Databases using R](https://db.rstudio.com/getting-started/connect-to-database/) from RStudio  
