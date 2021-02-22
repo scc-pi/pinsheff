@@ -201,11 +201,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>10</b> Databases</a><ul>
-<li class="chapter" data-level="10.1" data-path="databases.html"><a href="databases.html#oscar"><i class="fa fa-check"></i><b>10.1</b> OSCAR</a></li>
-<li class="chapter" data-level="10.2" data-path="databases.html"><a href="databases.html#corporate-spatial-database"><i class="fa fa-check"></i><b>10.2</b> Corporate Spatial Database</a></li>
+<li class="chapter" data-level="10.1" data-path="databases.html"><a href="databases.html#corporate-data-warehouse"><i class="fa fa-check"></i><b>10.1</b> Corporate data warehouse</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="databases.html"><a href="databases.html#oscar"><i class="fa fa-check"></i><b>10.1.1</b> OSCAR</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="databases.html"><a href="databases.html#corporate-spatial-database"><i class="fa fa-check"></i><b>10.2</b> Corporate spatial database</a></li>
 <li class="chapter" data-level="10.3" data-path="databases.html"><a href="databases.html#sqlite"><i class="fa fa-check"></i><b>10.3</b> SQLite</a><ul>
 <li class="chapter" data-level="10.3.1" data-path="databases.html"><a href="databases.html#spatialite"><i class="fa fa-check"></i><b>10.3.1</b> SpatiaLite</a></li>
 </ul></li>
+<li class="chapter" data-level="10.4" data-path="databases.html"><a href="databases.html#further-resources-1"><i class="fa fa-check"></i><b>10.4</b> Further resources</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
@@ -227,28 +230,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="databases" class="section level1">
 <h1><span class="header-section-number">Chapter 10</span> Databases</h1>
-<div id="oscar" class="section level2">
-<h2><span class="header-section-number">10.1</span> OSCAR</h2>
+<div id="corporate-data-warehouse" class="section level2">
+<h2><span class="header-section-number">10.1</span> Corporate data warehouse</h2>
+<div id="oscar" class="section level3">
+<h3><span class="header-section-number">10.1.1</span> OSCAR</h3>
 <p><em>TODO</em></p>
 </div>
+</div>
 <div id="corporate-spatial-database" class="section level2">
-<h2><span class="header-section-number">10.2</span> Corporate Spatial Database</h2>
+<h2><span class="header-section-number">10.2</span> Corporate spatial database</h2>
 <p><em>TODO</em></p>
 </div>
 <div id="sqlite" class="section level2">
 <h2><span class="header-section-number">10.3</span> SQLite</h2>
 <p>Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.</p>
-<p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular date types are handled particularly differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
+<p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular, date types are handled differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="databases.html#cb10-1"></a><span class="co"># Convert dates we&#39;ve read from a SQLite database</span></span>
 <span id="cb10-2"><a href="databases.html#cb10-2"></a><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">JD</span>(date, <span class="dt">inverse =</span> <span class="ot">TRUE</span>),</span>
 <span id="cb10-3"><a href="databases.html#cb10-3"></a>       <span class="dt">week_end =</span> <span class="kw">JD</span>(week_end, <span class="dt">inverse =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
 <div id="spatialite" class="section level3">
 <h3><span class="header-section-number">10.3.1</span> SpatiaLite</h3>
-<p><a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a> extends SQLite to support spatial data. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for our SpatiaLite database.</p>
+<p><a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a> extends SQLite to support spatial data. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for SpatiaLite.</p>
 <p>Robin Lovelace has a <a href="https://geocompr.robinlovelace.net/read-write.html">chapter on spatial databases</a> in his book Geocomputation with R.</p>
 <p>After testing different options, SpatiaLite is the best file based database for access to spatial data via tools such as R and Power BI without the complication of ArcGIS licenses, but it also provides reliable access for ArcGIS. So far I’ve only tested <a href="https://desktop.arcgis.com/en/arcmap/10.3/analyze/arcpy-functions/createsqlitedb.htm">SpatiaLite databases created in ArcGIS</a></p>
-
 </div>
+</div>
+<div id="further-resources-1" class="section level2">
+<h2><span class="header-section-number">10.4</span> Further resources</h2>
+<ul>
+<li><a href="https://db.rstudio.com/getting-started/connect-to-database/">Databases using R</a> from RStudio</li>
+</ul>
+
 </div>
 </div>
             </section>
