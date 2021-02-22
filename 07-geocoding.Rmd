@@ -46,7 +46,7 @@ The `pcd_name` function argument is used to specify the name of the data frame's
 
 Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:  
 
-```{r, extract-pcd, message=FLASE, warning=FALSE}
+```{r, extract-pcd, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
 df <- tribble(
   ~name,           ~address,

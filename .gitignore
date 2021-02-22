@@ -13,3 +13,5 @@ libs/
 .Ruserdata
 # bookdown log file
 *.log
+# cumulative bookdown markdown file left & useful for debugging if build fails 
+notes.Rmd
