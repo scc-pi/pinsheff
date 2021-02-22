@@ -14,12 +14,14 @@ getting-started
 rstudio-tips
 rmd
 r-markdown-vs-markdown
-r-markdown-tips
 child-markdown-iteration
 notebooks
 bookdown
 publishing
 further-resources
+r-markdown-tips
+markdown-visual-editor
+chunk-named-setup
 api
 restful-apis
 wrappers

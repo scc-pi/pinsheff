@@ -153,13 +153,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
 <li class="chapter" data-level="4.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.2</b> R Markdown tips</a></li>
-<li class="chapter" data-level="4.3" data-path="rmd.html"><a href="rmd.html#child-markdown-iteration"><i class="fa fa-check"></i><b>4.3</b> Child markdown iteration</a></li>
-<li class="chapter" data-level="4.4" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>4.4</b> Notebooks</a></li>
-<li class="chapter" data-level="4.5" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>4.5</b> Bookdown</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>4.5.1</b> Publishing</a></li>
+<li class="chapter" data-level="4.2" data-path="rmd.html"><a href="rmd.html#child-markdown-iteration"><i class="fa fa-check"></i><b>4.2</b> Child markdown iteration</a></li>
+<li class="chapter" data-level="4.3" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>4.3</b> Notebooks</a></li>
+<li class="chapter" data-level="4.4" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>4.4</b> Bookdown</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>4.4.1</b> Publishing</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.6</b> Further resources</a></li>
+<li class="chapter" data-level="4.5" data-path="rmd.html"><a href="rmd.html#further-resources"><i class="fa fa-check"></i><b>4.5</b> Further resources</a></li>
+<li class="chapter" data-level="4.6" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>4.6</b> R Markdown tips</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="rmd.html"><a href="rmd.html#markdown-visual-editor"><i class="fa fa-check"></i><b>4.6.1</b> Markdown visual editor</a></li>
+<li class="chapter" data-level="4.6.2" data-path="rmd.html"><a href="rmd.html#chunk-named-setup"><i class="fa fa-check"></i><b>4.6.2</b> Chunk named setup</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="api.html"><a href="api.html"><i class="fa fa-check"></i><b>5</b> APIs</a><ul>
 <li class="chapter" data-level="5.1" data-path="api.html"><a href="api.html#restful-apis"><i class="fa fa-check"></i><b>5.1</b> RESTful APIs</a></li>
@@ -228,47 +231,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.1</span> R Markdown vs Markdown</h2>
 <p><em>TODO</em></p>
 </div>
-<div id="r-markdown-tips" class="section level2">
-<h2><span class="header-section-number">4.2</span> R Markdown tips</h2>
-<p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
-<pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="co"># Packages</span></span>
-<span id="cb4-2"><a href="rmd.html#cb4-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>```</code></pre>
-<p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
-<p><img src="images/rmd-editor.png" title="RStudio markdown visual editor" /></p>
-</div>
 <div id="child-markdown-iteration" class="section level2">
-<h2><span class="header-section-number">4.3</span> Child markdown iteration</h2>
+<h2><span class="header-section-number">4.2</span> Child markdown iteration</h2>
 <p><em>TODO</em></p>
 <p>- example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser base dashboards such as those provided via Power BI or Shiny</p>
 </div>
 <div id="notebooks" class="section level2">
-<h2><span class="header-section-number">4.4</span> Notebooks</h2>
+<h2><span class="header-section-number">4.3</span> Notebooks</h2>
 <p><em>TODO</em></p>
 <p>- technical vs data exploration - don’t add to github</p>
 </div>
 <div id="bookdown" class="section level2">
-<h2><span class="header-section-number">4.5</span> Bookdown</h2>
+<h2><span class="header-section-number">4.4</span> Bookdown</h2>
 <p>These notes are written using the <a href="https://bookdown.org/">bookdown</a> package , which was built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="publishing" class="section level3">
-<h3><span class="header-section-number">4.5.1</span> Publishing</h3>
+<h3><span class="header-section-number">4.4.1</span> Publishing</h3>
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
 <p>1. Under …</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="rmd.html#cb6-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="rmd.html#cb3-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
 <p>… I added …</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="rmd.html#cb7-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
-<span id="cb7-2"><a href="rmd.html#cb7-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
-<span id="cb7-3"><a href="rmd.html#cb7-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
+<span id="cb4-2"><a href="rmd.html#cb4-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
+<span id="cb4-3"><a href="rmd.html#cb4-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
 <p>2. I used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as per a recent change to <a href="https://github.com/Cecilapp/GitHub-Pages-deploy">GitHub-Pages-deploy</a>.</p>
 </div>
 </div>
 <div id="further-resources" class="section level2">
-<h2><span class="header-section-number">4.6</span> Further resources</h2>
+<h2><span class="header-section-number">4.5</span> Further resources</h2>
 <p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
+</div>
+<div id="r-markdown-tips" class="section level2">
+<h2><span class="header-section-number">4.6</span> R Markdown tips</h2>
+<div id="markdown-visual-editor" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Markdown visual editor</h3>
+<p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
+<p><img src="images/rmd-editor.png" title="RStudio markdown visual editor" /></p>
+</div>
+<div id="chunk-named-setup" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> Chunk named setup</h3>
+<p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
+<pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rmd.html#cb6-1"></a><span class="co"># Packages</span></span>
+<span id="cb6-2"><a href="rmd.html#cb6-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>```</code></pre>
 
+</div>
 </div>
 </div>
             </section>
