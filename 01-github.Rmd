@@ -52,11 +52,5 @@ _TODO_
 ## Git & RStudio  
 
 _TODO_  
- - SSH
+ - SSH  
  - [Happy Git with R](https://happygitwithr.com/)
-
-
-
-
-
-
