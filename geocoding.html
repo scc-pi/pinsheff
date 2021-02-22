@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-02-21" />
+<meta name="date" content="2021-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>8</b> Postcodes &amp; Addresses</a><ul>
 <li class="chapter" data-level="8.1" data-path="geocoding.html"><a href="geocoding.html#uprn"><i class="fa fa-check"></i><b>8.1</b> UPRN</a></li>
 <li class="chapter" data-level="8.2" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>8.2</b> Postcodes</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>8.2.1</b> Split postcodes</a></li>
+<li class="chapter" data-level="8.2.1" data-path="geocoding.html"><a href="geocoding.html#pas-postcode-lookup"><i class="fa fa-check"></i><b>8.2.1</b> PAS Postcode Lookup</a></li>
+<li class="chapter" data-level="8.2.2" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>8.2.2</b> Split postcodes</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="geocoding.html"><a href="geocoding.html#addresses"><i class="fa fa-check"></i><b>8.3</b> Addresses</a></li>
 </ul></li>
@@ -230,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="postcodes" class="section level2">
 <h2><span class="header-section-number">8.2</span> Postcodes</h2>
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
-<p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. Passing it a data frame with a postcode column, it will return the data frame with new columns based on the postcode.</p>
+<p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="geocoding.html#cb8-1"></a><span class="co"># Create a data frame with some example records</span></span>
 <span id="cb8-2"><a href="geocoding.html#cb8-2"></a>df &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
 <span id="cb8-3"><a href="geocoding.html#cb8-3"></a>  <span class="op">~</span>name,           <span class="op">~</span>postcode,</span>
@@ -288,8 +289,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
+<p><code>admin_district</code> can be used to answer the questions: is the postcode in Sheffield? is it a valid postcode? You can anticipate values of <code>Sheffield</code> and <code>NA</code> respectively if the answers are yes. These are common questions so the function has an <code>.admin_district</code> argument.</p>
+<p>Needing the coordinates of the postcode centroid is also common, so the function also has a <code>.lat_long</code> argument that if <code>positive</code>TRUE` returns a latitude column and a longitude column.</p>
+<p><em>TODO: link to sf example &amp; area stats</em></p>
+<p>Other columns are added by including their name in a character vector passed with the <code>other_vars</code> function argument. For example, <code>other_vars=c("ccg_code","lsoa_code")'. The list of valid</code>other_vars` is defined at <a href="https://docs.ropensci.org/PostcodesioR/#examples">docs.ropensci.org/PostcodesioR/#examples</a>.</p>
+<p>The <code>pcd_name</code> function argument is used to specify the name of the data frame’s postcode column when it isn’t <code>postcode</code>. For example, <code>pcd_name="pupil_pcode"</code>.</p>
+<p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="geocoding.html#cb9-1"></a><span class="co"># Create a data frame with some example records</span></span>
+<span id="cb9-2"><a href="geocoding.html#cb9-2"></a>df &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
+<span id="cb9-3"><a href="geocoding.html#cb9-3"></a>  <span class="op">~</span>name,           <span class="op">~</span>address,</span>
+<span id="cb9-4"><a href="geocoding.html#cb9-4"></a>  <span class="st">&quot;Bob Johnson&quot;</span>,   <span class="st">&quot;Pinstone St, Sheffield City Centre, Sheffield S1 2HH&quot;</span>,</span>
+<span id="cb9-5"><a href="geocoding.html#cb9-5"></a>  <span class="st">&quot;Chris Wilder&quot;</span>,  <span class="st">&quot;Bramall Ln, Highfield, Sheffield S2 4SU&quot;</span>,</span>
+<span id="cb9-6"><a href="geocoding.html#cb9-6"></a>  <span class="st">&quot;Neil Thompson&quot;</span>, <span class="st">&quot;76 Penistone Rd N, Sheffield S6 1SW&quot;</span></span>
+<span id="cb9-7"><a href="geocoding.html#cb9-7"></a>)</span>
+<span id="cb9-8"><a href="geocoding.html#cb9-8"></a></span>
+<span id="cb9-9"><a href="geocoding.html#cb9-9"></a><span class="co"># Extract the postcode from the address into a separate column</span></span>
+<span id="cb9-10"><a href="geocoding.html#cb9-10"></a><span class="kw">mutate</span>(df, <span class="dt">postcode =</span> <span class="kw">word</span>(address, <span class="dv">-2</span>, <span class="dv">-1</span>, <span class="dt">sep =</span> <span class="st">&quot;[:space:]&quot;</span>))  <span class="op">%&gt;%</span></span>
+<span id="cb9-11"><a href="geocoding.html#cb9-11"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">address</th>
+<th align="left">postcode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bob Johnson</td>
+<td align="left">Pinstone St, Sheffield City Centre, Sheffield S1 2HH</td>
+<td align="left">S1 2HH</td>
+</tr>
+<tr class="even">
+<td align="left">Chris Wilder</td>
+<td align="left">Bramall Ln, Highfield, Sheffield S2 4SU</td>
+<td align="left">S2 4SU</td>
+</tr>
+<tr class="odd">
+<td align="left">Neil Thompson</td>
+<td align="left">76 Penistone Rd N, Sheffield S6 1SW</td>
+<td align="left">S6 1SW</td>
+</tr>
+</tbody>
+</table>
+<div id="pas-postcode-lookup" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> PAS Postcode Lookup</h3>
+<p>PAS, the Performance &amp; Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the <code>add_pcd_vars()</code> function.</p>
+<p><em>TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?</em></p>
+</div>
 <div id="split-postcodes" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> Split postcodes</h3>
+<h3><span class="header-section-number">8.2.2</span> Split postcodes</h3>
 <p><em>TODO</em></p>
 </div>
 </div>

@@ -36,6 +36,7 @@ rasters
 geocoding
 uprn
 postcodes
+pas-postcode-lookup
 split-postcodes
 addresses
 public-data

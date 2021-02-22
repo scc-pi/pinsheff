@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-02-21" />
+<meta name="date" content="2021-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>8</b> Postcodes &amp; Addresses</a><ul>
 <li class="chapter" data-level="8.1" data-path="geocoding.html"><a href="geocoding.html#uprn"><i class="fa fa-check"></i><b>8.1</b> UPRN</a></li>
 <li class="chapter" data-level="8.2" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>8.2</b> Postcodes</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>8.2.1</b> Split postcodes</a></li>
+<li class="chapter" data-level="8.2.1" data-path="geocoding.html"><a href="geocoding.html#pas-postcode-lookup"><i class="fa fa-check"></i><b>8.2.1</b> PAS Postcode Lookup</a></li>
+<li class="chapter" data-level="8.2.2" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>8.2.2</b> Split postcodes</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="geocoding.html"><a href="geocoding.html#addresses"><i class="fa fa-check"></i><b>8.3</b> Addresses</a></li>
 </ul></li>
@@ -234,9 +235,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">10.3</span> SQLite</h2>
 <p>Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.</p>
 <p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular date types are handled particularly differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="databases.html#cb9-1"></a><span class="co"># Convert dates we&#39;ve read from a SQLite database</span></span>
-<span id="cb9-2"><a href="databases.html#cb9-2"></a><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">JD</span>(date, <span class="dt">inverse =</span> <span class="ot">TRUE</span>),</span>
-<span id="cb9-3"><a href="databases.html#cb9-3"></a>       <span class="dt">week_end =</span> <span class="kw">JD</span>(week_end, <span class="dt">inverse =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="databases.html#cb10-1"></a><span class="co"># Convert dates we&#39;ve read from a SQLite database</span></span>
+<span id="cb10-2"><a href="databases.html#cb10-2"></a><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">JD</span>(date, <span class="dt">inverse =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb10-3"><a href="databases.html#cb10-3"></a>       <span class="dt">week_end =</span> <span class="kw">JD</span>(week_end, <span class="dt">inverse =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
 <div id="spatialite" class="section level3">
 <h3><span class="header-section-number">10.3.1</span> SpatiaLite</h3>
 <p><a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a> extends SQLite to support spatial data. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for our SpatiaLite database.</p>
