@@ -24,7 +24,7 @@ Hadley's recommendation also reduces the chances of inadvertently sharing PID in
 
 ### Passwords
 
-It's poor practice to include login details in code. I tend to use `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if I'm sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
+It's poor practice to include login details in code. I use the `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if I'm sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
 
 ```{r credentials, eval=FALSE}
 if(is.null(portal_pwd = Sys.getenv("portal_pwd"))){
@@ -41,11 +41,30 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 ## RStudio tips
 
+### Code display  
+
+*TODO*\  
+- Rainbow braces  
+- code line 80 
+
+
+### Document outline and headings
+
+
+
+### Pipe addin
+
+
+### Shortcuts
+
+Ctrl + Enter    run selected lines
+Ctrl + Alt + P    re-run previous  
+
+Ctrl + Alt + A    reformat code  
+
+Alt + -   assignment operator <-
+Ctrl + Shift + M    pipe operator %>%
+
+
 *TODO*\
 -   Write settings  
-
--   Pipe addin
-
--   Document outline and headings
-
--   Shortcuts
