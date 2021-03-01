@@ -14,17 +14,28 @@ Something I need to pay more attention to is following the [tidyverse style guid
 
 Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
 
-## RStudio security & data protection
+## RStudio security & data protection 
 
-*TODO*
+### Workspace {#workspace}
 
--   Preferences
+To encourage reproducible R scripts, Hadley Wickham recommends not preserving your workspace between sessions. This entails deselecting a couple of options to save and restore .Rdata (see [chapter 8 Workflow: projects](https://r4ds.had.co.nz/workflow-projects.html#what-is-real) in Hadley's R4DS book).
 
--   Renviron
+Hadley's recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, .Rdata should also be included in the [.gitignore](https://git-scm.com/docs/gitignore) file and the repository set to private.
+
+### Passwords
+
+It's poor practice to include login details in code. I tend to use `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if I'm sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
+
+```{r credentials, eval=FALSE}
+if(is.null(portal_pwd = Sys.getenv("portal_pwd"))){
+  portal_pwd = rstudioapi::askForPassword("Portal password")
+}
+```
+
 
 ## Getting started
 
-I'm not going to provide advice on getting started, other than signposting to the RStudio beginners page:
+I'm not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:
 
 [RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
 
