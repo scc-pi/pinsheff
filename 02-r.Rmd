@@ -27,11 +27,11 @@ Hadley's recommendation also reduces the chances of inadvertently sharing PID in
 It's poor practice to include login details in code. I use the `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if I'm sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
 
 ```{r credentials, eval=FALSE}
-if(is.null(portal_pwd = Sys.getenv("portal_pwd"))){
-  portal_pwd = rstudioapi::askForPassword("Portal password")
+portal_pwd <- Sys.getenv("portal_pwd")
+if(length(portal_pwd) == 0){
+  portal_pwd <- rstudioapi::askForPassword("Portal password")
 }
 ```
-
 
 ## Getting started
 
@@ -41,33 +41,61 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 ## RStudio tips
 
-### Code display  
+### Code display
 
-*TODO*\  
-- Rainbow braces  
-- code line 80 
+A few non-default Global Options, under Code and Display, make it a little easier for me to read and write code:
 
+-   Show margin (80)
+
+-   Highlight R function calls
+
+-   Rainbow parentheses (since RStudio v1.4)
+
+![](images/code-display.png)
 
 ### Document outline and headings
 
-*TODO*\  
+Code sections and subsections are useful, especially when combined with the document outline pane:![](images/doc-outline.png)
 
-### Pipe addin
+### ViewPipeSteps addin
 
-*TODO*\  
+The pipe `%>%` is useful for reading and writing code, but can make debugging tricky. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
+
+```{r, eval=FALSE}
+devtools::install_github("daranzolin/ViewPipeSteps")
+library(ViewPipeSteps)
+```
+
+To use:
+
+![](images/view-pipe-steps.png)
 
 ### Shortcuts
 
-Ctrl + Enter    run selected lines
-Ctrl + Alt + P    re-run previous  
+RStudio has lots of shortcuts and since v1.4 you can also assign your own shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are shortcuts I've found most useful:
 
-Ctrl + Alt + A    reformat code  
++--------------------------+--------------------------------------------+
+| Ctrl + Enter             | run selected lines                         |
++--------------------------+--------------------------------------------+
+| Ctrl + Alt + P           | re-run previous                            |
++--------------------------+--------------------------------------------+
+| Ctrl + Shift + C         | comment/uncomment lines                    |
++--------------------------+--------------------------------------------+
+| Ctrl + Alt + A           | reformat code                              |
++--------------------------+--------------------------------------------+
+| Ctrl + Shift + R         | insert section                             |
++--------------------------+--------------------------------------------+
+| Alt + -                  | assignment operator \<-                    |
++--------------------------+--------------------------------------------+
+| Ctrl + Shift + M         | pipe operator %\>%                         |
++--------------------------+--------------------------------------------+
+| Ctrl + left mouse button | View object at mouse point                 |
++--------------------------+--------------------------------------------+
+| Ctrl + Shift + F10       | Restart R session                          |
++--------------------------+--------------------------------------------+
+| Ctrl + Shift + P         | Command palette                            |
++--------------------------+--------------------------------------------+
 
-Alt + -   assignment operator <-
-Ctrl + Shift + M    pipe operator %>%
+*TODO* 
 
-*TODO*\  
-%<>% 
-
-*TODO*\
--   Write settings  
+- Write settings
