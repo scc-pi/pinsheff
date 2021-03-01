@@ -47,7 +47,7 @@ Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.mic
 GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository.
 
 *TODO*\
-- hopefully we'll have more to add on this if we get to collaborating on a repository
+- we'll have more to add on this if we collaborate on a repository
 
 ### Other features
 
@@ -63,6 +63,8 @@ There are also other GitHub features to explore.
 
 ## Git & RStudio
 
-*TODO*\
-- SSH\
-- [Happy Git with R](https://happygitwithr.com/)
+[Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) on the GitHub [Learning Lab](https://lab.github.com/) is a good place to get started and become familiar with some initial concepts and the GitHub website.  
+
+To use GitHub with RStudio there's a thorough step-by-step guide [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. My main recommendation is to setup the connection using [keys for SSH](https://happygitwithr.com/ssh-keys.html). This connection method by-passes the issues I had with the Council's proxy server and using the HTTPS connection method. I've also had no issues since working from home and connecting via the Tunnel.
+
+I frequently return to Jenny Bryan's book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I've mainly stuck with [Chapter 15 New project, GitHub first](Chapter 15 New project, GitHub first).
