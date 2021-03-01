@@ -11,6 +11,8 @@ r
 why-script
 style-guide
 rstudio-security-data-protection
+workspace
+passwords
 getting-started
 rstudio-tips
 rmd

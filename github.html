@@ -148,7 +148,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R &amp; RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#why-script"><i class="fa fa-check"></i><b>3.1</b> Why script?</a></li>
 <li class="chapter" data-level="3.2" data-path="r.html"><a href="r.html#style-guide"><i class="fa fa-check"></i><b>3.2</b> Style guide</a></li>
-<li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#rstudio-security-data-protection"><i class="fa fa-check"></i><b>3.3</b> RStudio security &amp; data protection</a></li>
+<li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#rstudio-security-data-protection"><i class="fa fa-check"></i><b>3.3</b> RStudio security &amp; data protection</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="r.html"><a href="r.html#workspace"><i class="fa fa-check"></i><b>3.3.1</b> Workspace</a></li>
+<li class="chapter" data-level="3.3.2" data-path="r.html"><a href="r.html#passwords"><i class="fa fa-check"></i><b>3.3.2</b> Passwords</a></li>
+</ul></li>
 <li class="chapter" data-level="3.4" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>3.4</b> Getting started</a></li>
 <li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio tips</a></li>
 </ul></li>
@@ -289,14 +292,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Our <a href="https://github.com/scc-pi">scc-pi</a> GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.</p>
 <div id="security-data-protection" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Security &amp; data protection</h3>
-<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.</p>
+<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository. See the section on (RStudio security &amp; data protection)[#workspace] for further considerations.</p>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
 </div>
 <div id="forking-and-pull-requests" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Forking and pull requests</h3>
 <p>GitHub <a href="https://guides.github.com/activities/forking/">forking</a> and pull requests are common workflows when collaborating on a repository.</p>
 <p><em>TODO</em><br />
-- hopefully we’ll have more to add on this if we get to collaborating on a repository</p>
+- we’ll have more to add on this if we collaborate on a repository</p>
 </div>
 <div id="other-features" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Other features</h3>
@@ -309,9 +312,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="git-rstudio" class="section level2">
 <h2><span class="header-section-number">2.4</span> Git &amp; RStudio</h2>
-<p><em>TODO</em><br />
-- SSH<br />
-- <a href="https://happygitwithr.com/">Happy Git with R</a></p>
+<p><a href="https://lab.github.com/githubtraining/introduction-to-github">Introduction to GitHub</a> on the GitHub <a href="https://lab.github.com/">Learning Lab</a> is a good place to get started and become familiar with some initial concepts and the GitHub website.</p>
+<p>To use GitHub with RStudio there’s a thorough step-by-step guide <a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan. My main recommendation is to setup the connection using <a href="https://happygitwithr.com/ssh-keys.html">keys for SSH</a>. This connection method by-passes the issues I had with the Council’s proxy server and using the HTTPS connection method. I’ve also had no issues since working from home and connecting via the Tunnel.</p>
+<p>I frequently return to Jenny Bryan’s book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I’ve mainly stuck with <a href="Chapter%2015%20New%20project,%20GitHub%20first">Chapter 15 New project, GitHub first</a>.</p>
 
 </div>
 </div>
