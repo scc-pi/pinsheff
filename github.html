@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -140,7 +140,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>2.2</b> GIT</a></li>
 <li class="chapter" data-level="2.3" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>2.3</b> GitHub</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="github.html"><a href="github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; data protection</a></li>
-<li class="chapter" data-level="2.3.2" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>2.3.2</b> Other features</a></li>
+<li class="chapter" data-level="2.3.2" data-path="github.html"><a href="github.html#forking-and-pull-requests"><i class="fa fa-check"></i><b>2.3.2</b> Forking and pull requests</a></li>
+<li class="chapter" data-level="2.3.3" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>2.3.3</b> Other features</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="github.html"><a href="github.html#git-rstudio"><i class="fa fa-check"></i><b>2.4</b> Git &amp; RStudio</a></li>
 </ul></li>
@@ -291,11 +292,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.</p>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
 </div>
+<div id="forking-and-pull-requests" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Forking and pull requests</h3>
+<p><em>TODO</em></p>
+</div>
 <div id="other-features" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Other features</h3>
+<h3><span class="header-section-number">2.3.3</span> Other features</h3>
 <p>GitHub now allows private repositories on <a href="https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts">free organisation accounts</a>, but not all GitHub features are available.</p>
-<p><em>TODO</em><br />
-- issues, projects, actions, pages,</p>
+<p>The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub <a href="https://guides.github.com/features/issues/">issue</a>. You can link a commit to an issue by including the issue number prefixed by # in the commit message.</p>
+<p>I’ve used a GitHub <a href="https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards">project</a> to organise the our private <a href="https://github.com/scc-pi/C19Surveillance">C19Surveillance</a> repository as a kanban board. However, a project is not restricted to issues or a single repository.</p>
+<p>GitHub <a href="https://pages.github.com/">pages</a> and <a href="https://github.com/features/actions">actions</a> have been used to <a href="<a href="rmd.html#publishing">4.4.1</a>">publish these notes</a>.</p>
+<p>There are also other GitHub features to explore.</p>
 </div>
 </div>
 <div id="git-rstudio" class="section level2">
