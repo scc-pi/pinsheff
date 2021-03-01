@@ -3,7 +3,7 @@ github
 why-version-control
 git
 github-1
-security-data-protection
+github-security-data-protection
 forking-and-pull-requests
 other-features
 git-rstudio
@@ -15,6 +15,10 @@ workspace
 passwords
 getting-started
 rstudio-tips
+code-display
+document-outline-and-headings
+pipe-addin
+shortcuts
 rmd
 r-markdown-vs-markdown
 child-markdown-iteration

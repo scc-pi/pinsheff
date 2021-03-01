@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="github.html"><a href="github.html#why-version-control"><i class="fa fa-check"></i><b>2.1</b> Why version control?</a></li>
 <li class="chapter" data-level="2.2" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>2.2</b> GIT</a></li>
 <li class="chapter" data-level="2.3" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>2.3</b> GitHub</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="github.html"><a href="github.html#security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Security &amp; data protection</a></li>
+<li class="chapter" data-level="2.3.1" data-path="github.html"><a href="github.html#github-security-data-protection"><i class="fa fa-check"></i><b>2.3.1</b> Github security &amp; data protection</a></li>
 <li class="chapter" data-level="2.3.2" data-path="github.html"><a href="github.html#forking-and-pull-requests"><i class="fa fa-check"></i><b>2.3.2</b> Forking and pull requests</a></li>
 <li class="chapter" data-level="2.3.3" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>2.3.3</b> Other features</a></li>
 </ul></li>
@@ -153,7 +153,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.2" data-path="r.html"><a href="r.html#passwords"><i class="fa fa-check"></i><b>3.3.2</b> Passwords</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>3.4</b> Getting started</a></li>
-<li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio tips</a></li>
+<li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio tips</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="r.html"><a href="r.html#code-display"><i class="fa fa-check"></i><b>3.5.1</b> Code display</a></li>
+<li class="chapter" data-level="3.5.2" data-path="r.html"><a href="r.html#document-outline-and-headings"><i class="fa fa-check"></i><b>3.5.2</b> Document outline and headings</a></li>
+<li class="chapter" data-level="3.5.3" data-path="r.html"><a href="r.html#pipe-addin"><i class="fa fa-check"></i><b>3.5.3</b> Pipe addin</a></li>
+<li class="chapter" data-level="3.5.4" data-path="r.html"><a href="r.html#shortcuts"><i class="fa fa-check"></i><b>3.5.4</b> Shortcuts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
 <li class="chapter" data-level="4.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>4.1</b> R Markdown vs Markdown</a></li>
@@ -254,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="passwords" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Passwords</h3>
-<p>It’s poor practice to include login details in code. I tend to use <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if I’m sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
+<p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if I’m sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r.html#cb3-1"></a><span class="cf">if</span>(<span class="kw">is.null</span>(<span class="dt">portal_pwd =</span> <span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>))){</span>
 <span id="cb3-2"><a href="r.html#cb3-2"></a>  portal_pwd =<span class="st"> </span>rstudioapi<span class="op">::</span><span class="kw">askForPassword</span>(<span class="st">&quot;Portal password&quot;</span>)</span>
 <span id="cb3-3"><a href="r.html#cb3-3"></a>}</span></code></pre></div>
@@ -267,14 +272,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="rstudio-tips" class="section level2">
 <h2><span class="header-section-number">3.5</span> RStudio tips</h2>
+<div id="code-display" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Code display</h3>
+<p><em>TODO</em> 
+- Rainbow braces<br />
+- code line 80</p>
+</div>
+<div id="document-outline-and-headings" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Document outline and headings</h3>
+</div>
+<div id="pipe-addin" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Pipe addin</h3>
+</div>
+<div id="shortcuts" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> Shortcuts</h3>
+<p>Ctrl + Enter run selected lines
+Ctrl + Alt + P re-run previous</p>
+<p>Ctrl + Alt + A reformat code</p>
+<p>Alt + - assignment operator &lt;-
+Ctrl + Shift + M pipe operator %&gt;%</p>
 <p><em>TODO</em><br />
 - Write settings</p>
-<ul>
-<li><p>Pipe addin</p></li>
-<li><p>Document outline and headings</p></li>
-<li><p>Shortcuts</p></li>
-</ul>
 
+</div>
 </div>
 </div>
             </section>
