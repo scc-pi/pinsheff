@@ -44,7 +44,10 @@ Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.mic
 
 ### Forking and pull requests  
 
+GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository. 
+
 _TODO_  
+ - hopefully we'll have more to add on this if we get to collaborating on a repository  
 
 ### Other features  
 
@@ -54,7 +57,7 @@ The evolution of a repository is captured by commits i.e. the changes to files i
 
 I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise the our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.  
 
-GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes](\@ref(publishing)).
+GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes]\@ref(publishing).
 
 There are also other GitHub features to explore.
 
