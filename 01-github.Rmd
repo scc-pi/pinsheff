@@ -20,7 +20,7 @@ shef_lsoa_codes() %>%
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
 
-## Why version control?  
+## Why version control?
 
 When scripting I take a backup of a file, so if the changes I make break what I've previously done, I can revert to the previous version. If I'm collating contributions to a document from different people I might use their initials to indicate who's made contributions in what version e.g. "BI_Principles-GR.docx" and "BI_Principles-NM.docx". These are both examples of manual version control.
 
@@ -28,41 +28,41 @@ When we talk about version control and scripting we typically mean a version con
 
 ## GIT
 
-Git is an open-source distributed version control system for tracking changes in source code during software development.  
+Git is an open-source distributed version control system for tracking changes in source code during software development.
 
 ## GitHub
 
 GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
 
-Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.  
+Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.
 
-### Security & data protection  
+### Security & data protection
 
-Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we've not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.  
+Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we've not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository.
 
 Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
 
-### Forking and pull requests  
+### Forking and pull requests
 
-GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository. 
+GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository.
 
-_TODO_  
- - hopefully we'll have more to add on this if we get to collaborating on a repository  
+*TODO*\
+- hopefully we'll have more to add on this if we get to collaborating on a repository
 
-### Other features  
+### Other features
 
 GitHub now allows private repositories on [free organisation accounts](https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts), but not all GitHub features are available.
 
-The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub [issue](https://guides.github.com/features/issues/). You can link a commit to an issue by including the issue number prefixed by # in the commit message.  
+The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub [issue](https://guides.github.com/features/issues/). You can link a commit to an issue by including the issue number prefixed by \# in the commit message.
 
-I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise the our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.  
+I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise the our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.
 
-GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes]\@ref(publishing).
+GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes](#publishing).
 
 There are also other GitHub features to explore.
 
-## Git & RStudio  
+## Git & RStudio
 
-_TODO_  
- - SSH  
- - [Happy Git with R](https://happygitwithr.com/)
+*TODO*\
+- SSH\
+- [Happy Git with R](https://happygitwithr.com/)
