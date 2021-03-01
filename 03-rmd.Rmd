@@ -42,7 +42,7 @@ with:
   email: ${{ secrets.EMAIL }}
 ```
 
-2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy).
+2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy#news).
 
 ## Further resources
 
