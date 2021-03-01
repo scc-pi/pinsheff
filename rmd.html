@@ -156,7 +156,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>3.5</b> RStudio tips</a><ul>
 <li class="chapter" data-level="3.5.1" data-path="r.html"><a href="r.html#code-display"><i class="fa fa-check"></i><b>3.5.1</b> Code display</a></li>
 <li class="chapter" data-level="3.5.2" data-path="r.html"><a href="r.html#document-outline-and-headings"><i class="fa fa-check"></i><b>3.5.2</b> Document outline and headings</a></li>
-<li class="chapter" data-level="3.5.3" data-path="r.html"><a href="r.html#pipe-addin"><i class="fa fa-check"></i><b>3.5.3</b> Pipe addin</a></li>
+<li class="chapter" data-level="3.5.3" data-path="r.html"><a href="r.html#viewpipesteps-addin"><i class="fa fa-check"></i><b>3.5.3</b> ViewPipeSteps addin</a></li>
 <li class="chapter" data-level="3.5.4" data-path="r.html"><a href="r.html#shortcuts"><i class="fa fa-check"></i><b>3.5.4</b> Shortcuts</a></li>
 </ul></li>
 </ul></li>
@@ -262,11 +262,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
 <p>1. Under …</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="rmd.html#cb5-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
 <p>… I added …</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="rmd.html#cb5-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
-<span id="cb5-2"><a href="rmd.html#cb5-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
-<span id="cb5-3"><a href="rmd.html#cb5-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="rmd.html#cb6-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
+<span id="cb6-2"><a href="rmd.html#cb6-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
+<span id="cb6-3"><a href="rmd.html#cb6-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
 <p>2. I used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as per a recent change to <a href="https://github.com/Cecilapp/GitHub-Pages-deploy#news">GitHub-Pages-deploy</a>.</p>
 </div>
 </div>
@@ -285,8 +285,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.6.2</span> Chunk named setup</h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rmd.html#cb7-1"></a><span class="co"># Packages</span></span>
-<span id="cb7-2"><a href="rmd.html#cb7-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rmd.html#cb8-1"></a><span class="co"># Packages</span></span>
+<span id="cb8-2"><a href="rmd.html#cb8-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <pre><code>```</code></pre>
 
 </div>
