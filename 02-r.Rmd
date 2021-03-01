@@ -14,7 +14,7 @@ Something I need to pay more attention to is following the [tidyverse style guid
 
 Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
 
-## RStudio security & data protection 
+## RStudio security & data protection {#pid}
 
 ### Workspace {#workspace}
 
@@ -50,10 +50,11 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 ### Document outline and headings
 
-
+*TODO*\  
 
 ### Pipe addin
 
+*TODO*\  
 
 ### Shortcuts
 
@@ -65,6 +66,8 @@ Ctrl + Alt + A    reformat code
 Alt + -   assignment operator <-
 Ctrl + Shift + M    pipe operator %>%
 
+*TODO*\  
+%<>% 
 
 *TODO*\
 -   Write settings  
