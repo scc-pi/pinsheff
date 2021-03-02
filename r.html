@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -259,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="passwords" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Passwords</h3>
-<p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if I’m sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
+<p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r.html#cb3-1"></a>portal_pwd &lt;-<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span>
 <span id="cb3-2"><a href="r.html#cb3-2"></a><span class="cf">if</span>(<span class="kw">length</span>(portal_pwd) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
 <span id="cb3-3"><a href="r.html#cb3-3"></a>  portal_pwd &lt;-<span class="st"> </span>rstudioapi<span class="op">::</span><span class="kw">askForPassword</span>(<span class="st">&quot;Portal password&quot;</span>)</span>
@@ -275,9 +275,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.5</span> RStudio tips</h2>
 <div id="code-display" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Code display</h3>
-<p>A few non-default Global Options, under Code and Display, make it a little easier for me to read and write code:</p>
+<p>A few non-default Global Options, under Code and Display, make it a little easier to read and write code:</p>
 <ul>
-<li><p>Show margin (80)</p></li>
+<li><p>Show margin (aim to limit line of code 80 characters)</p></li>
 <li><p>Highlight R function calls</p></li>
 <li><p>Rainbow parentheses (since RStudio v1.4)</p></li>
 </ul>
@@ -285,19 +285,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="document-outline-and-headings" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Document outline and headings</h3>
-<p>Code sections and subsections are useful, especially when combined with the document outline pane:<img src="images/doc-outline.png" /></p>
+<p>Code sections and subsections are useful:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="r.html#cb4-1"></a><span class="co"># Prefix a section with a hash tag and suffix with 4 or more dashes ----</span></span>
+<span id="cb4-2"><a href="r.html#cb4-2"></a><span class="co">## Subsections have additional hash tags ----</span></span></code></pre></div>
+<p>The sections can be collapsed and are also listed in the , especially when combined with the document outline pane:</p>
+<p><img src="images/doc-outline.png" /></p>
 </div>
 <div id="viewpipesteps-addin" class="section level3">
 <h3><span class="header-section-number">3.5.3</span> ViewPipeSteps addin</h3>
-<p>The pipe <code>%&gt;%</code> is useful for reading and writing code, but can make debugging tricky. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="r.html#cb4-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;daranzolin/ViewPipeSteps&quot;</span>)</span>
-<span id="cb4-2"><a href="r.html#cb4-2"></a><span class="kw">library</span>(ViewPipeSteps)</span></code></pre></div>
+<p>The pipe <code>%&gt;%</code> is useful for reading and writing code, but can make debugging cumbersome. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r.html#cb5-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;daranzolin/ViewPipeSteps&quot;</span>)</span>
+<span id="cb5-2"><a href="r.html#cb5-2"></a><span class="kw">library</span>(ViewPipeSteps)</span></code></pre></div>
 <p>To use:</p>
 <p><img src="images/view-pipe-steps.png" /></p>
 </div>
 <div id="shortcuts" class="section level3">
 <h3><span class="header-section-number">3.5.4</span> Shortcuts</h3>
-<p>RStudio has lots of shortcuts and since v1.4 you can also assign your own shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are shortcuts I’ve found most useful:</p>
+<p>RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I’ve found most useful:</p>
 <table>
 <colgroup>
 <col width="37%" />
@@ -334,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>Ctrl + left mouse button</td>
-<td>View object at mouse point</td>
+<td>View the object clicked</td>
 </tr>
 <tr class="odd">
 <td>Ctrl + Shift + F10</td>
