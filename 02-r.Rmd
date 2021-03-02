@@ -24,7 +24,7 @@ Hadley's recommendation also reduces the chances of inadvertently sharing PID in
 
 ### Passwords
 
-It's poor practice to include login details in code. I use the `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if I'm sharing the script I anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
+It's poor practice to include login details in code. I use the `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if you're sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
 
 ```{r credentials, eval=FALSE}
 portal_pwd <- Sys.getenv("portal_pwd")
@@ -43,9 +43,9 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 ### Code display
 
-A few non-default Global Options, under Code and Display, make it a little easier for me to read and write code:
+A few non-default Global Options, under Code and Display, make it a little easier to read and write code:
 
--   Show margin (80)
+-   Show margin (aim to limit line of code 80 characters)
 
 -   Highlight R function calls
 
@@ -55,11 +55,20 @@ A few non-default Global Options, under Code and Display, make it a little easie
 
 ### Document outline and headings
 
-Code sections and subsections are useful, especially when combined with the document outline pane:![](images/doc-outline.png)
+Code sections and subsections are useful:
+
+```{r, eval=FALSE}
+# Prefix a section with a hash tag and suffix with 4 or more dashes ----
+## Subsections have additional hash tags ----
+```
+
+The sections can be collapsed and are also listed in the , especially when combined with the document outline pane:
+
+![](images/doc-outline.png)
 
 ### ViewPipeSteps addin
 
-The pipe `%>%` is useful for reading and writing code, but can make debugging tricky. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
+The pipe `%>%` is useful for reading and writing code, but can make debugging cumbersome. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
 
 ```{r, eval=FALSE}
 devtools::install_github("daranzolin/ViewPipeSteps")
@@ -72,7 +81,7 @@ To use:
 
 ### Shortcuts
 
-RStudio has lots of shortcuts and since v1.4 you can also assign your own shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are shortcuts I've found most useful:
+RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I've found most useful:
 
 +--------------------------+--------------------------------------------+
 | Ctrl + Enter             | run selected lines                         |
@@ -89,7 +98,7 @@ RStudio has lots of shortcuts and since v1.4 you can also assign your own shortc
 +--------------------------+--------------------------------------------+
 | Ctrl + Shift + M         | pipe operator %\>%                         |
 +--------------------------+--------------------------------------------+
-| Ctrl + left mouse button | View object at mouse point                 |
+| Ctrl + left mouse button | View the object clicked                    |
 +--------------------------+--------------------------------------------+
 | Ctrl + Shift + F10       | Restart R session                          |
 +--------------------------+--------------------------------------------+
@@ -98,4 +107,4 @@ RStudio has lots of shortcuts and since v1.4 you can also assign your own shortc
 
 *TODO* 
 
-- Write settings
+-   Write settings

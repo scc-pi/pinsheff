@@ -55,7 +55,7 @@ GitHub now allows private repositories on [free organisation accounts](https://d
 
 The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub  [issue](https://guides.github.com/features/issues/). You can link a commit to an issue by including the issue number prefixed by \# in the commit message.
 
-I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise the our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.
+I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.
 
 GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes](#publishing).
 
