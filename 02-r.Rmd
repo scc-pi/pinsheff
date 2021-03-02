@@ -83,27 +83,18 @@ To use:
 
 RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I've found most useful:
 
-+--------------------------+--------------------------------------------+
-| Ctrl + Enter             | run selected lines                         |
-+--------------------------+--------------------------------------------+
-| Ctrl + Alt + P           | re-run previous                            |
-+--------------------------+--------------------------------------------+
-| Ctrl + Shift + C         | comment/uncomment lines                    |
-+--------------------------+--------------------------------------------+
-| Ctrl + Alt + A           | reformat code                              |
-+--------------------------+--------------------------------------------+
-| Ctrl + Shift + R         | insert section                             |
-+--------------------------+--------------------------------------------+
-| Alt + -                  | assignment operator \<-                    |
-+--------------------------+--------------------------------------------+
-| Ctrl + Shift + M         | pipe operator %\>%                         |
-+--------------------------+--------------------------------------------+
-| Ctrl + left mouse button | View the object clicked                    |
-+--------------------------+--------------------------------------------+
-| Ctrl + Shift + F10       | Restart R session                          |
-+--------------------------+--------------------------------------------+
-| Ctrl + Shift + P         | Command palette                            |
-+--------------------------+--------------------------------------------+
+|                          |                         |
+|--------------------------|-------------------------|
+| Ctrl + Enter             | run selected lines      |
+| Ctrl + Alt + P           | re-run previous         |
+| Ctrl + Shift + C         | comment/uncomment lines |
+| Ctrl + Alt + A           | reformat code           |
+| Ctrl + Shift + R         | insert section          |
+| Alt + -                  | assignment operator \<- |
+| Ctrl + Shift + M         | pipe operator %\>%      |
+| Ctrl + left mouse button | View the object clicked |
+| Ctrl + Shift + F10       | Restart R session       |
+| Ctrl + Shift + P         | Command palette         |
 
 *TODO* 
 

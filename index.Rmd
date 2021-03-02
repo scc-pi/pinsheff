@@ -12,7 +12,7 @@ github-repo: scc-pi/notes
 description: "Some notes, examples, lessons learnt and links to further resources."
 ---
 
-# Welcome
+# Welcome {.unnumbered}
 
 This is a place for ad-hoc notes, mainly to do with scripting and mainly R scripts. It's somewhere to store lessons learnt and examples. A resource to remind yourself if you return to something after a while away from it, or to smooth your path a little if it's something new.
 
