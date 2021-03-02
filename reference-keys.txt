@@ -1,4 +1,3 @@
-welcome
 github
 why-version-control
 git
