@@ -62,7 +62,7 @@ Code sections and subsections are useful:
 ## Subsections have additional hash tags ----
 ```
 
-The sections can be collapsed and are also listed in the , especially when combined with the document outline pane:
+The sections can be collapsed and are also listed in the document outline pane:
 
 ![](images/doc-outline.png)
 
