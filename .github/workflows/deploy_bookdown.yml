@@ -13,10 +13,6 @@ jobs:
       - uses: actions/checkout@v1
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      - name: Install devtools
-        run: Rscript -e 'install.packages("devtools")'
-      - name: Install bs4
-        run: Rscript -e 'devtools::install_github("rstudio/bookdown@bs4-book-encoding", force = TRUE)'
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse"))'
       - name: Install api
