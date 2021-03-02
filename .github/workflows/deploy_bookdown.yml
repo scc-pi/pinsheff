@@ -3,8 +3,6 @@ on:
      branches:
        - master
 
-devtools::install_github('rstudio/bookdown@bs4-book-encoding', force = TRUE)  
-
 name: renderbook
 
 jobs:
