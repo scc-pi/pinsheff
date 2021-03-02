@@ -14,6 +14,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install bs4
+        run: Rscript -e 'install.packages("devtools")'
         run: Rscript -e 'devtools::install_github("rstudio/bookdown@bs4-book-encoding", force = TRUE)'
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse"))'
