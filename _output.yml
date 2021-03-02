@@ -1,9 +1,14 @@
+bookdown::bs4_book:
+  theme:
+    primary: "#637238"
+
 bookdown::gitbook:
   css: style.css
   config:
     toc:
       before: |
         <li><a href="./">Notes</a></li>
+        
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
