@@ -8,16 +8,62 @@ Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is
 
 ## Simple Features
 
-_TODO_
+*TODO*
 
-## Coordinates & projections  
+## Coordinates & projections
 
-_TODO_
+The minimum you need to know is that any spatial data you use is likely to be based on one of two coordinate systems:
+
+1.  WSG84 with an ESPG of 4326.
+2.  OSGB1936 (British National Grid) with an ESPG of 27700
+
+WSG84 has become something of a default for web maps. Postcodes.io uses WSG84, but the Council's Portal and the ONS Open Geography Portal use OSGB1936 (*TODO*: *need to double check this!!)*.
+
+*TODO*: *EPSG:3857 (Pseudo-Mercator)??*
+
+```{r}
+# Create a data frame with some example records 
+df <- tibble::tribble(
+  ~name,                   ~postcode, ~longitude, ~latitude,
+  "SCC, Town Hall",        "S1 2HH",	-1.470006,  53.38038,
+  "Blades, Bramall Lane",  "S2 4SU",  -1.470512, 	53.36986,
+  "Owls, Hillsborough",    "S6 1SW",	-1.500859,	53.41084
+)
+
+# Create simple features
+sf_shef <- sf::st_as_sf(df, 
+                        coords = c("longitude", "latitude"), #from postcodes.io
+                        crs = 4326) #WSG84
+
+# Plot
+mapview::mapview(sf_shef, layer.name = "Sheffield")
+
+```
+
+### Geographic & projected coordinate systems
+
+A reference ellipsoid as an approximation of the surface of the earth and provides a shape on which a coordinate system can be placed.
+
+**Geographic coordinate systems** use the ellipsoid to define specific locations on the surface to create a grid. When we use longitude and latitude we are using geographic coordinates. Datums are geographic coordinate systems based on a specific ellipsoid (so a more specific geographic coordinate system), with an origin at a specific location, and the ellipsoid at a specific orientation. These are also called "spatial reference systems" or "coordinate reference systems".
+
+**Projected coordinate systems** are like geographic coordinate systems. A projected coordinate system is also a grid used as a reference for locations on the planet, but it's a translation of the three-dimensional grid onto a two-dimensional plane such as a paper map or screen.
+
+> A GCS defines ***where*** the data is located on the earth's surface. A PCS tells the data ***how*** to draw on a flat surface such as a screen.
+
+Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
 
 ## ArcGIS
 
-_TODO_
+*TODO*
 
 ## Rasters
 
-_TODO_
+*TODO*
+
+## Further resources
+
+[Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
+
+[EPSG 4326 vs EPSG 3857 (projections, datums, coordinate systems, and more!](https://lyzidiamond.com/posts/4326-vs-3857) Lyzi Diamond (26 May 2017)
+
+[mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette

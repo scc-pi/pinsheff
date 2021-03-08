@@ -14,11 +14,11 @@ Below is an example of using our `add_pcd_vars()` function that builds on the [P
 
 ```{r add-pcd-vars, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
-df <- tribble(
-  ~name,           ~postcode,
-  "Bob Johnson",   "S1 2HH",
-  "Chris Wilder",  "S2 4SU",
-  "Neil Thompson", "S6 1SW"
+df <- tibble::tribble(
+  ~name,                   ~postcode,
+  "SCC, Town Hall",        "S1 2HH",
+  "Blades, Bramall Lane",  "S2 4SU",
+  "Owls, Hillsborough",    "S6 1SW"
 )
 
 # Load the function we need
@@ -48,7 +48,7 @@ Sometimes, the postcode in a dataset is not included as a separate column, but i
 
 ```{r, extract-pcd, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
-df <- tribble(
+df <- tibble::tribble(
   ~name,           ~address,
   "Bob Johnson",   "Pinstone St, Sheffield City Centre, Sheffield S1 2HH",
   "Chris Wilder",  "Bramall Ln, Highfield, Sheffield S2 4SU",
@@ -56,7 +56,8 @@ df <- tribble(
 )
 
 # Extract the postcode from the address into a separate column
-mutate(df, postcode = word(address, -2, -1, sep = "[:space:]"))  %>%
+dplyr::mutate(df, 
+              postcode = stringr::word(address, -2, -1, sep = "[:space:]")) %>%
   knitr::kable()
 ```
 ### PAS Postcode Lookup  

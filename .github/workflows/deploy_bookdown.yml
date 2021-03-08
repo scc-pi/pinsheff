@@ -18,7 +18,7 @@ jobs:
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
       - name: Install spatial
-        run: Rscript -e 'install.packages(c("sf","PostcodesioR"))'
+        run: Rscript -e 'install.packages(c("sf","PostcodesioR", "mapview"))'
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown","knitr"))'
       - name: Render Book
