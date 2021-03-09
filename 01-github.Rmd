@@ -9,8 +9,8 @@ These notes are public, but to contribute i.e. [edit them](https://github.com/sc
 You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
 
 ```{r message=FALSE, warning=FALSE}
-# Load functions for Sheffield areas from a public scc-pi repository 
-source("https://raw.githubusercontent.com/scc-pi/functions/main/ShefAreas.R")
+# Load functions from a public scc-pi repository 
+source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")
 
 # Call one of our Sheffield area functions that returns LSOA codes 
 shef_lsoa_codes() %>% 
