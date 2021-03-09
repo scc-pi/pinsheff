@@ -6,9 +6,9 @@ The term "feature" is useful to distinguish a record as "spatial". By "spatial" 
 
 Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield secondary school features might be MULTIPOINT so that the feature for King Edward VII school can have one point for the Lower School near Crosspool, and another point for the Upper School in Broomhill.
 
-## Simple Features
+## Simple features
 
-*TODO*
+Simple features is an open standard developed by the Open Geospatial Consortium. It is a hierarchical data model that represents a wide range of geometry types, all of which are supported by the [sf R package](https://r-spatial.github.io/sf/index.html). The sf package also plays nice with the tidyverse.
 
 ## Coordinates & projections
 
@@ -62,8 +62,10 @@ Coordinate systems, projected and geographic, are often identified by an [EPSG c
 
 ## Further resources
 
+[Geocomputation with R](https://geocompr.robinlovelace.net/), by Robin Lovelace
+
+[mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
+
 [Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
 
 [EPSG 4326 vs EPSG 3857 (projections, datums, coordinate systems, and more!](https://lyzidiamond.com/posts/4326-vs-3857) Lyzi Diamond (26 May 2017)
-
-[mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
