@@ -14,7 +14,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install tidyverse
-        run: Rscript -e 'install.packages(c("broom","tidyverse"))'
+        run: Rscript -e 'install.packages(c("broom","tidyverse","janitor"))'
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
       - name: Install spatial
