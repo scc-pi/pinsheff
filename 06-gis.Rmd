@@ -80,7 +80,7 @@ More specific to the UK, is spatial data from ONS and Ordnance Survey. There are
 
 ### ArcGIS
 
-The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just consume spatial data, but share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
+The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
 
 ### Power BI
 
@@ -88,15 +88,15 @@ The GIS capabilities of Power BI do not match Portal or AGOL, but if only a smal
 
 ## Desktop GIS
 
-For some specialised spatial analysis a desktop GIS is best, but as we move to sharing spatial information using web maps and dashboards, more than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.
+For some specialised spatial analysis a desktop GIS is best. However, as we move to sharing spatial information using web maps and dashboards, rather than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.
 
 ### ArcGIS Desktop
 
-For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
+For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses, it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
 
 ### ArcGIS Pro
 
-ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the thousands of nested menu driven options are located in a different places to ArcGIS Desktop!
+ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the thousands of nested menu driven options are located in different places to ArcGIS Desktop!
 
 The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
 
