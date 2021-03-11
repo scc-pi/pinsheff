@@ -1,25 +1,31 @@
 # Python {#python}
 
+Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
+
 ## Reticulate
 
-_TODO_
-
-[reticulate](https://rstudio.github.io/reticulate/) R package.
+The [reticulate](https://rstudio.github.io/reticulate/) R package allows R to integrate with python. RStudio v1.4 has embedded `reticulate` into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the Environment pane.
 
 ## ArcGIS
 
 The Council's ArcGIS software from ESRI has a much stronger integration with Python than R.
 
-ESRI's Python integration with ArcGIS is via two main packages. The `arcgis` package is what we're going to use here to work with the Council's web based GIS infrastructure. The `arcpy` package would be used to leverage the ArcGIS desktop functionality. The distinction between web and desktop for `arcgis` and `arcpy` packages respectively is an oversimplification, but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+ESRI's Python integration with ArcGIS is via two main packages:
 
-To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/) 
+1.  The `arcgis` package is used to work with the Council's web based GIS infrastructure i.e. Portal and AGOL.
 
-_TODO_
+2.  The `arcpy` package would be used to leverage the ArcGIS desktop functionality.
+
+The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is an oversimplification, but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+
+To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
+
+*TODO*
 
 ### ArcPy
 
-_TODO_
+*TODO*
 
 ### ArcGIS API
 
-_TODO_
+*TODO*

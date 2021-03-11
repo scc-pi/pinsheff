@@ -34,7 +34,7 @@ add_pcd_vars(df,
   knitr::kable() #display them in a nice table
 ```
 
-`admin_district` can be used to answer the questions: Is it the postcode invalid? Is the postcode in Sheffield?  You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.   
+`admin_district` can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield?  You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.   
 
 Needing the coordinates of the postcode centroid is also common, so the function also has a `.lat_long` argument that if `TRUE` returns both a latitude column and a longitude column. 
 
@@ -49,10 +49,10 @@ Sometimes, the postcode in a dataset is not included as a separate column, but i
 ```{r, extract-pcd, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
 df <- tibble::tribble(
-  ~name,           ~address,
-  "Bob Johnson",   "Pinstone St, Sheffield City Centre, Sheffield S1 2HH",
-  "Chris Wilder",  "Bramall Ln, Highfield, Sheffield S2 4SU",
-  "Neil Thompson", "76 Penistone Rd N, Sheffield S6 1SW"
+  ~name,     ~address,
+  "SCC",     "Pinstone St, Sheffield City Centre, Sheffield S1 2HH",
+  "Blades",  "Bramall Ln, Highfield, Sheffield S2 4SU",
+  "Owls",    "76 Penistone Rd N, Sheffield S6 1SW"
 )
 
 # Extract the postcode from the address into a separate column

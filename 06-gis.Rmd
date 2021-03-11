@@ -24,7 +24,7 @@ Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL
 
 ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
 
-More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under the [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
+More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
 
 ## Web maps and dashboards
 
@@ -52,7 +52,7 @@ The Council only has one or two ArcGIS Pro licences, compared to a few dozen Arc
 
 ### QGIS
 
-QGIS is an open source alternative to ArcGIS.
+QGIS is an open source alternative to ArcGIS Desktop and ArcGIS Pro.
 
 ## Scripted GIS 
 
