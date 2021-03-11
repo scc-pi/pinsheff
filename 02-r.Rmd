@@ -45,7 +45,7 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 A few non-default Global Options, under Code and Display, make it a little easier to read and write code:
 
--   Show margin (aim to limit line of code 80 characters)
+-   Show margin (aim to limit a line of code to 80 characters)
 
 -   Highlight R function calls
 
@@ -68,7 +68,7 @@ The sections can be collapsed and are also listed in the document outline pane:
 
 ### ViewPipeSteps addin
 
-The pipe `%>%` is useful for reading and writing code, but can make debugging cumbersome. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
+The [pipe](https://r4ds.had.co.nz/pipes.html) `%>%` is useful for reading and writing code, but can make debugging cumbersome. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
 
 ```{r, eval=FALSE}
 devtools::install_github("daranzolin/ViewPipeSteps")
@@ -96,6 +96,5 @@ RStudio has lots of shortcuts. What you find most useful is down to preference a
 | Ctrl + Shift + F10       | Restart R session       |
 | Ctrl + Shift + P         | Command palette         |
 
-*TODO* 
-
--   Write settings
+*TODO* \
+- *Write settings*

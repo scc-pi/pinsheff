@@ -52,7 +52,61 @@ A reference ellipsoid as an approximation of the surface of the earth and provid
 
 Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
 
-## ArcGIS
+## Council's spatial data
+
+The Council's spatial data is hosted by ESRI's ArcGIS web GIS tools.
+
+Portal (ArcGIS Enterprise) is Council-wide:
+
+> [sheffieldcitycouncil.cloud.esriuk.com/portal/home/](https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/)
+
+ArcGIS Online (AGOL) is the public facing equivalent of Portal:
+
+> [sheffieldcc.maps.arcgis.com](https://sheffieldcc.maps.arcgis.com/)
+
+Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council's open data site:
+
+> [data-sheffieldcc.opendata.arcgis.com/](https://data-sheffieldcc.opendata.arcgis.com/)
+
+*TODO - example*
+
+## Other spatial data
+
+ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
+
+More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under the [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
+
+## Web maps and dashboards
+
+### ArcGIS
+
+The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just consume spatial data, but share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
+
+### Power BI
+
+The GIS capabilities of Power BI do not match Portal or AGOL, but if only a small proportion of the analysis you are sharing is spatial then Power BI could be a good option. The ArcGIS Power BI integration tool is now available to us at no extra cost, but we are yet to test it (*TODO*).
+
+## Desktop GIS
+
+For some specialised spatial analysis a desktop GIS is best, but as we move to sharing spatial information using web maps and dashboards, more than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.
+
+### ArcGIS Desktop
+
+For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
+
+### ArcGIS Pro
+
+ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the thousands of nested menu driven options are located in a different places to ArcGIS Desktop!
+
+The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
+
+### QGIS
+
+QGIS is an open source alternative to ArcGIS.
+
+## Scripted GIS 
+
+### Leaflet
 
 *TODO*
 
@@ -67,5 +121,3 @@ Coordinate systems, projected and geographic, are often identified by an [EPSG c
 [mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
 
 [Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
-
-[EPSG 4326 vs EPSG 3857 (projections, datums, coordinate systems, and more!](https://lyzidiamond.com/posts/4326-vs-3857) Lyzi Diamond (26 May 2017)
