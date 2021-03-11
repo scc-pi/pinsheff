@@ -42,7 +42,17 @@ features
 simple-features
 coordinates-projections
 geographic-projected-coordinate-systems
+councils-spatial-data
+other-spatial-data
+web-maps-and-dashboards
 arcgis-1
+power-bi
+desktop-gis
+arcgis-desktop
+arcgis-pro
+qgis
+scripted-gis
+leaflet
 rasters
 further-resources-1
 geocoding
@@ -55,7 +65,7 @@ public-data
 office-of-national-statistics
 crm
 nomis
-open-geography-portal
+open-geography
 ordnance-survey
 os-data-hub
 databases
