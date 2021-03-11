@@ -38,10 +38,7 @@ arcgis
 arcpy
 arcgis-api
 gis
-features
-simple-features
-coordinates-projections
-geographic-projected-coordinate-systems
+spatial-data
 councils-spatial-data
 other-spatial-data
 web-maps-and-dashboards
@@ -52,6 +49,10 @@ arcgis-desktop
 arcgis-pro
 qgis
 scripted-gis
+features
+simple-features
+coordinates-projections
+geographic-projected-coordinate-systems
 leaflet
 rasters
 further-resources-1
