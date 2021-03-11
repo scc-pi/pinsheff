@@ -276,15 +276,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="python" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Python</h1>
+<p>Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind and is popular in academia and research.</p>
 <div id="reticulate" class="section level2">
 <h2><span class="header-section-number">5.1</span> Reticulate</h2>
-<p><em>TODO</em></p>
-<p><a href="https://rstudio.github.io/reticulate/">reticulate</a> R package.</p>
+<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with python. RStudio v1.4 has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the Environment pane.</p>
 </div>
 <div id="arcgis" class="section level2">
 <h2><span class="header-section-number">5.2</span> ArcGIS</h2>
 <p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R.</p>
-<p>ESRI’s Python integration with ArcGIS is via two main packages. The <code>arcgis</code> package is what we’re going to use here to work with the Council’s web based GIS infrastructure. The <code>arcpy</code> package would be used to leverage the ArcGIS desktop functionality. The distinction between web and desktop for <code>arcgis</code> and <code>arcpy</code> packages respectively is an oversimplification, but it serves a purpose. It’s worth noting that the integration between the two packages isn’t as seamless as you might expect.</p>
+<p>ESRI’s Python integration with ArcGIS is via two main packages:</p>
+<ol style="list-style-type: decimal">
+<li><p>The <code>arcgis</code> package is used to work with the Council’s web based GIS infrastructure i.e. Portal and AGOL.</p></li>
+<li><p>The <code>arcpy</code> package would be used to leverage the ArcGIS desktop functionality.</p></li>
+</ol>
+<p>The distinction between web and desktop, for <code>arcgis</code> and <code>arcpy</code> packages respectively, is an oversimplification, but it serves a purpose. It’s worth noting that the integration between the two packages isn’t as seamless as you might expect.</p>
 <p>To use the <code>arcpy</code> or <code>arcgis</code> packages we first need to specify the <a href="https://developers.arcgis.com/python/guide/install-and-set-up/">ArcGIS Python environment</a></p>
 <p><em>TODO</em></p>
 <div id="arcpy" class="section level3">

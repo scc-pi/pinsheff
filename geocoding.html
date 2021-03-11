@@ -342,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p><code>admin_district</code> can be used to answer the questions: Is it the postcode invalid? Is the postcode in Sheffield? You can anticipate values of <code>NA</code> and <code>Sheffield</code> respectively if the answers are yes. These are common questions so the function has an <code>.admin_district</code> argument.</p>
+<p><code>admin_district</code> can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield? You can anticipate values of <code>NA</code> and <code>Sheffield</code> respectively if the answers are yes. These are common questions so the function has an <code>.admin_district</code> argument.</p>
 <p>Needing the coordinates of the postcode centroid is also common, so the function also has a <code>.lat_long</code> argument that if <code>TRUE</code> returns both a latitude column and a longitude column.</p>
 <p><em>TODO: link to sf example &amp; area stats</em></p>
 <p>Other columns are added by including their name in a character vector passed with the <code>other_vars</code> function argument. For example, <code>other_vars=c("ccg_code","lsoa_code")</code>. The list of valid <code>other_vars</code> is defined at <a href="https://docs.ropensci.org/PostcodesioR/#examples">docs.ropensci.org/PostcodesioR/#examples</a>.</p>
@@ -350,10 +350,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="geocoding.html#cb13-1"></a><span class="co"># Create a data frame with some example records</span></span>
 <span id="cb13-2"><a href="geocoding.html#cb13-2"></a>df &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tribble</span>(</span>
-<span id="cb13-3"><a href="geocoding.html#cb13-3"></a>  <span class="op">~</span>name,           <span class="op">~</span>address,</span>
-<span id="cb13-4"><a href="geocoding.html#cb13-4"></a>  <span class="st">&quot;Bob Johnson&quot;</span>,   <span class="st">&quot;Pinstone St, Sheffield City Centre, Sheffield S1 2HH&quot;</span>,</span>
-<span id="cb13-5"><a href="geocoding.html#cb13-5"></a>  <span class="st">&quot;Chris Wilder&quot;</span>,  <span class="st">&quot;Bramall Ln, Highfield, Sheffield S2 4SU&quot;</span>,</span>
-<span id="cb13-6"><a href="geocoding.html#cb13-6"></a>  <span class="st">&quot;Neil Thompson&quot;</span>, <span class="st">&quot;76 Penistone Rd N, Sheffield S6 1SW&quot;</span></span>
+<span id="cb13-3"><a href="geocoding.html#cb13-3"></a>  <span class="op">~</span>name,     <span class="op">~</span>address,</span>
+<span id="cb13-4"><a href="geocoding.html#cb13-4"></a>  <span class="st">&quot;SCC&quot;</span>,     <span class="st">&quot;Pinstone St, Sheffield City Centre, Sheffield S1 2HH&quot;</span>,</span>
+<span id="cb13-5"><a href="geocoding.html#cb13-5"></a>  <span class="st">&quot;Blades&quot;</span>,  <span class="st">&quot;Bramall Ln, Highfield, Sheffield S2 4SU&quot;</span>,</span>
+<span id="cb13-6"><a href="geocoding.html#cb13-6"></a>  <span class="st">&quot;Owls&quot;</span>,    <span class="st">&quot;76 Penistone Rd N, Sheffield S6 1SW&quot;</span></span>
 <span id="cb13-7"><a href="geocoding.html#cb13-7"></a>)</span>
 <span id="cb13-8"><a href="geocoding.html#cb13-8"></a></span>
 <span id="cb13-9"><a href="geocoding.html#cb13-9"></a><span class="co"># Extract the postcode from the address into a separate column</span></span>
@@ -370,17 +370,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Bob Johnson</td>
+<td align="left">SCC</td>
 <td align="left">Pinstone St, Sheffield City Centre, Sheffield S1 2HH</td>
 <td align="left">S1 2HH</td>
 </tr>
 <tr class="even">
-<td align="left">Chris Wilder</td>
+<td align="left">Blades</td>
 <td align="left">Bramall Ln, Highfield, Sheffield S2 4SU</td>
 <td align="left">S2 4SU</td>
 </tr>
 <tr class="odd">
-<td align="left">Neil Thompson</td>
+<td align="left">Owls</td>
 <td align="left">76 Penistone Rd N, Sheffield S6 1SW</td>
 <td align="left">S6 1SW</td>
 </tr>
