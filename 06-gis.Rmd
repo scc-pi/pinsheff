@@ -1,16 +1,72 @@
 # GIS
 
-## Features
+## Spatial Data
+
+### Council's spatial data
+
+The Council's spatial data is hosted by ESRI's ArcGIS web GIS tools.
+
+Portal (ArcGIS Enterprise) is Council-wide:
+
+> [sheffieldcitycouncil.cloud.esriuk.com/portal/home/](https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/)
+
+ArcGIS Online (AGOL) is the public facing equivalent of Portal:
+
+> [sheffieldcc.maps.arcgis.com](https://sheffieldcc.maps.arcgis.com/)
+
+Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council's open data site:
+
+> [data-sheffieldcc.opendata.arcgis.com/](https://data-sheffieldcc.opendata.arcgis.com/)
+
+*TODO - example*
+
+### Other spatial data
+
+ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
+
+More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under the [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
+
+## Web maps and dashboards
+
+### ArcGIS
+
+The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
+
+### Power BI
+
+The GIS capabilities of Power BI do not match Portal or AGOL, but if only a small proportion of the analysis you are sharing is spatial then Power BI could be a good option. The ArcGIS Power BI integration tool is now available to us at no extra cost, but we are yet to test it (*TODO*).
+
+## Desktop GIS
+
+For some specialised spatial analysis a desktop GIS is best. However, as we move to sharing spatial information using web maps and dashboards, rather than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.
+
+### ArcGIS Desktop
+
+For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses, it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
+
+### ArcGIS Pro
+
+ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
+
+The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
+
+### QGIS
+
+QGIS is an open source alternative to ArcGIS.
+
+## Scripted GIS 
+
+### Features
 
 The term "feature" is useful to distinguish a record as "spatial". By "spatial" we mean it has a point, a line or a polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons at least three pairs.
 
 Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield secondary school features might be MULTIPOINT so that the feature for King Edward VII school can have one point for the Lower School near Crosspool, and another point for the Upper School in Broomhill.
 
-## Simple features
+### Simple features
 
 Simple features is an open standard developed by the Open Geospatial Consortium. It is a hierarchical data model that represents a wide range of geometry types, all of which are supported by the [sf R package](https://r-spatial.github.io/sf/index.html). The sf package also plays nice with the tidyverse.
 
-## Coordinates & projections
+### Coordinates & projections
 
 The minimum you need to know is that any spatial data you use is likely to be based on one of two coordinate systems:
 
@@ -40,7 +96,7 @@ mapview::mapview(sf_shef, layer.name = "Sheffield")
 
 ```
 
-### Geographic & projected coordinate systems
+#### Geographic & projected coordinate systems
 
 A reference ellipsoid as an approximation of the surface of the earth and provides a shape on which a coordinate system can be placed.
 
@@ -51,60 +107,6 @@ A reference ellipsoid as an approximation of the surface of the earth and provid
 > A GCS defines ***where*** the data is located on the earth's surface. A PCS tells the data ***how*** to draw on a flat surface such as a screen.
 
 Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
-
-## Council's spatial data
-
-The Council's spatial data is hosted by ESRI's ArcGIS web GIS tools.
-
-Portal (ArcGIS Enterprise) is Council-wide:
-
-> [sheffieldcitycouncil.cloud.esriuk.com/portal/home/](https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/)
-
-ArcGIS Online (AGOL) is the public facing equivalent of Portal:
-
-> [sheffieldcc.maps.arcgis.com](https://sheffieldcc.maps.arcgis.com/)
-
-Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council's open data site:
-
-> [data-sheffieldcc.opendata.arcgis.com/](https://data-sheffieldcc.opendata.arcgis.com/)
-
-*TODO - example*
-
-## Other spatial data
-
-ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
-
-More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under the [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
-
-## Web maps and dashboards
-
-### ArcGIS
-
-The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
-
-### Power BI
-
-The GIS capabilities of Power BI do not match Portal or AGOL, but if only a small proportion of the analysis you are sharing is spatial then Power BI could be a good option. The ArcGIS Power BI integration tool is now available to us at no extra cost, but we are yet to test it (*TODO*).
-
-## Desktop GIS
-
-For some specialised spatial analysis a desktop GIS is best. However, as we move to sharing spatial information using web maps and dashboards, rather than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.
-
-### ArcGIS Desktop
-
-For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses, it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
-
-### ArcGIS Pro
-
-ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the thousands of nested menu driven options are located in different places to ArcGIS Desktop!
-
-The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
-
-### QGIS
-
-QGIS is an open source alternative to ArcGIS.
-
-## Scripted GIS 
 
 ### Leaflet
 
