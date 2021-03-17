@@ -98,3 +98,7 @@ RStudio has lots of shortcuts. What you find most useful is down to preference a
 
 *TODO* \
 - *Write settings*
+
+## Further resources
+
+[5 tips for writing clean R code](https://www.r-bloggers.com/2021/03/5-tips-for-writing-clean-r-code-leave-your-code-reviewer-commentless/),by Marcin Dubel in R bloggers (15 March 2021)
