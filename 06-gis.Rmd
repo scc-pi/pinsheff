@@ -156,7 +156,9 @@ Then, using:
 
 we can get the Sheffield boundary as a simple feature:
 
-```{r}
+*TODO: install esri2sf via deploy_bookdown.yml*
+
+```{r eval=FALSE, include=FALSE}
 # Base URL for ONS Open Geography Portal
 ons_geog_base_url <- "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/"
 
