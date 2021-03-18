@@ -4,7 +4,7 @@ This chapter is mainly aimed at our data analysts with little or no experience o
 
 A word of warning though before you jump in, the guidance, examples and functions targeted at helping you use our spatial data is still very much work-in-progress (*TODO*).
 
-## Spatial Data
+## Spatial data
 
 ### Council's spatial data
 
@@ -114,7 +114,7 @@ A reference ellipsoid as an approximation of the surface of the earth and provid
 
 Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
 
-### ArcGIS
+### ArcGIS {#arcgis}
 
 Listed below are R and Python packages that allow us to leverage ArcGIS content. Generally speaking, they are in ascending order of both ease of use and scope of functionality.
 
@@ -134,7 +134,7 @@ Listed below are R and Python packages that allow us to leverage ArcGIS content.
 
 The `esri2sf` R package is the only one of the four packages listed above that isn't maintained by ESRI. It is the simplest to start using because it doesn't require an installation and license for ArcGIS Desktop or Pro. The flip side, is that it has the least amount of functionality and the code isn't as robust. The scope of the package is limited to reading simple features or data frames from AGOL & ArcGIS Enterprise (ours or other organisations).
 
-The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) is based on the same ArcGIS web tools as our Portal and AGOL. To get for example. the local authority boundary for Sheffield you first need to navigate to the [dataset](https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2020-uk-bgc?geometry=-45.896%2C51.101%2C41.028%2C59.782) on the website to get the GeoService API URL:
+The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) is based on the same ArcGIS web tools as our Portal and AGOL. To get, for example, the local authority boundary for Sheffield you first need to navigate to the [dataset](https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2020-uk-bgc?geometry=-45.896%2C51.101%2C41.028%2C59.782) on the website and get the GeoService API URL:
 
 ![](images/open-geog-api.png)
 
@@ -142,9 +142,9 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-> https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\*&where=1%3D1
+    > https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\*&where=1%3D1
 
-2.  some resources to understand how to query via the API
+2.  some resources to understand how to query via the API,
 
     > [ArcGIS REST API - Query (Feature Service/Layer)](https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm)
     >
@@ -152,7 +152,7 @@ Then, using:
     >
     > [HTML encoding](https://www.w3schools.com/tags/ref_urlencode.ASP) is used for building URL queries
 
-3.  and the `esri2sf` functions,
+3.  and `esri2sf`,
 
 we can get the Sheffield boundary as a simple feature:
 
@@ -176,11 +176,13 @@ shef_msoa <- esri2sf::esri2sf(url = stringr::str_c(ons_geog_base_url,
 mapview::mapview(shef_msoa, layer.name = "Sheffield")
 ```
 
-The example above reads open data. Most of the Council's spatial data on Portal and AGOL requires login credentials to to access. Nevertheless, Portal and AGOL login credentials are a smaller requirement than a ArcGIS Desktop or Pro installation and license.
+The example above reads open data. However, most of the Council's spatial data on Portal and AGOL requires login credentials to to access. Nevertheless, Portal and AGOL login credentials are a smaller requirement than a ArcGIS Desktop or Pro installation and license.
 
-*TODO - test and note access via token authentication*
+*TODO - test and note authentication with token*
 
-The current intention is to Where possible [scc-pi](https://github.com/scc-pi) functions have been written to use
+Our public [github.com/scc-pi/functions](https://github.com/scc-pi/functions) repository includes functions in `ShefAreas.R` that use `esri2sf`. The sub-headings immediately below outline how other ArcGIS packages are more powerful, but also more onerous in terms of licensing and setup. So where possible, the intention is to utilise `esri2sf` in preference to the other ArcGIS packages.
+
+Relying on `esri2sf` may require some contributions to the `esri2sf` repository. For example, a pull request to fix an assumption that at least 500 features can be served at a time when the ONS Open Geography Portal limit is 50 (hence our forked [github.com/scc-pi/esri2sf](https://github.com/scc-pi/esri2sf) repository). Contributing to `esri2sf` repository is preferable to accessing the Portal or AGOL API via Javascript, which is better suited to web developers than data analysts.
 
 Further information on the `esri2sf` package, how to install and use it, is available from [github.com/yonghah/esri2sf](https://github.com/yonghah/esri2sf).
 
@@ -188,7 +190,7 @@ Further information on the `esri2sf` package, how to install and use it, is avai
 
 The R-ArcGIS Bridge is the name for the `arcgisbinding` package.
 
-Wrap R tools for use in ArcGIS
+-   Wrap R tools for use in ArcGIS
 
 #### ArcGIS Python API
 

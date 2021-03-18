@@ -15,10 +15,10 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse","janitor"))'
+      - name: Install spatial
+        run: Rscript -e 'install.packages(c("rgdal","sf","PostcodesioR", "mapview"))'
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
-      - name: Install spatial
-        run: Rscript -e 'install.packages(c("sf","PostcodesioR", "mapview"))'
       - name: Install rstudio
         run: Rscript -e 'install.packages("rstudioapi")'
       - name: Install rmarkdown

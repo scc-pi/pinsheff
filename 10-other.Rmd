@@ -1,0 +1,36 @@
+# Other {#other}
+
+This is a dumping ground for matters I'm yet to look in to properly, never mind write notes about.
+
+## renv
+
+[Introduction to renv](https://rstudio.github.io/renv/articles/renv.html) vignette
+
+## Docker {#docker}
+
+> Using docker containers means you don't have to deal with "works on my machine" problems.
+
+*Currently, the set-up and reproducibility issues I've had with* `arcpy` *and Jupyter notebooks means I can't recommend others in the Council go down this path and therefore collaborate with these tools. Could Docker be a means to address these issues, or at the very least, allow officers to trial* `arcpy` *and Jupyter notebooks before investing in a complicated setup? For more typical R projects* `renv` *might be preferable.*
+
+[Docker for Data Science --- A Step by Step Guide](https://towardsdatascience.com/docker-for-data-science-a-step-by-step-guide-1e5f7f3baf8e), Dean Pleban (18 October 2020)
+
+[The Pros and Cons of Docker](https://blog.iron.io/docker-containers-the-pros-and-cons-of-docker/), Nick from Iron.io (28 August 2020)
+
+[Play with Docker](https://www.docker.com/play-with-docker)
+
+[rocker](https://github.com/rocker-org/rocker) R package
+
+## reprex R package
+[reprex.tidyverse.org](https://reprex.tidyverse.org/)
+
+## Writing R packages
+
+### roxygen2
+
+## plumber R package
+
+[rplumber.io](https://www.rplumber.io/)
+
+## Data Visualisation  
+
+[Data Visualization, A practical introduction](https://socviz.co/index.html) by Kieran Healy

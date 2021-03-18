@@ -22,7 +22,7 @@ Try raising an [issue](https://guides.github.com/features/issues/) if you spot a
 
 ## Why version control?
 
-When scripting I take a backup of a file, so if the changes I make break what I've previously done, I can revert to the previous version. If I'm collating contributions to a document from different people I might use their initials to indicate who's made contributions in what version e.g. "BI_Principles-GR.docx" and "BI_Principles-NM.docx". These are both examples of manual version control.
+When scripting you might make a backup copy of a file, so if your new changes break what was previously working you can revert to the backup copy. If you're collating contributions to a document from different people you might use their initials in the file names to indicate and keep track of who's made contributions in what version e.g. "BI_Principles-GR.docx" and "BI_Principles-NM.docx". These are both examples of manual version control.
 
 When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.
 
@@ -65,6 +65,6 @@ There are also other GitHub features to explore.
 
 [Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) on the GitHub [Learning Lab](https://lab.github.com/) is a good place to get started and become familiar with some initial concepts and the GitHub website.
 
-To use GitHub with RStudio there's a thorough step-by-step guide, [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. My main recommendation is to setup the connection using [keys for SSH](https://happygitwithr.com/ssh-keys.html). This connection method by-passes the issues I had with the Council's proxy server and using the HTTPS connection method. I've also had no issues since working from home and connecting via the Tunnel.
+To use GitHub with RStudio there's a thorough step-by-step guide, [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. My main recommendation is to setup the connection using [keys for SSH](https://happygitwithr.com/ssh-keys.html). This connection method by-passes the issues I've had with the Council's proxy server and using the HTTPS connection method. I've also had no issues since working from home and connecting via the Tunnel.
 
 I frequently return to Jenny Bryan's book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I've mainly stuck with [Chapter 15 New project, GitHub first](Chapter%2015%20New%20project,%20GitHub%20first).

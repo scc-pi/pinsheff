@@ -1,9 +1,13 @@
 # Python {#python}
 
+*TODO: Move chapter to after R?*
+
 Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
 
 ## Reticulate
 
-The [reticulate](https://rstudio.github.io/reticulate/) R package allows R to integrate with python. RStudio v1.4 has embedded `reticulate` into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the Environment pane.
+The [reticulate](https://rstudio.github.io/reticulate/) R package allows R to integrate with Python. RStudio v1.4 has embedded `reticulate` into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the Environment pane.
 
-## 
+## ArcGIS & API wrappers
+
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on [RStudio security & data protection](#arcgis) for further notes about this). A similar area you may find Python packages but no corresponding R package, is a wrapper for a REST API that makes it easier to obtain data (see the section on [wrappers](#wrappers) for further notes about this). In both cases, `reticulate` allows us to leverage Python packages from within R.
