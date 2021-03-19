@@ -158,7 +158,7 @@ we can get the Sheffield boundary as a simple feature:
 
 *TODO: install esri2sf via deploy_bookdown.yml*
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=TRUE}
 # Base URL for ONS Open Geography Portal
 ons_geog_base_url <- "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/"
 
@@ -198,7 +198,7 @@ For more information on using the `arcgisbinding` package see the vignette on [U
 
 To use the R-ArcGIS Bridge you need an installation and license for ArcGIS Desktop or Pro. After loading the `arcgisbinding` package you have to call `arc.check_product()` to define a desktop license:
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=TRUE}
 library(arcgisbinding)
 arc.check_product()
 ```
