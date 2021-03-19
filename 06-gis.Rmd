@@ -189,7 +189,7 @@ Further information on the `esri2sf` package, how to install and use it, is avai
 
 #### R-ArcGIS Bridge
 
-The R-ArcGIS Bridge is the name for the `arcgisbinding` R package. It's scope is restricted to:
+The R-ArcGIS Bridge is the name for the `arcgisbinding` R package. It's scope is limited to:
 
 -   Transferring data in both directions between ArcGIS and R
 
