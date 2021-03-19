@@ -18,7 +18,7 @@
 
 ## Bookdown
 
-These notes are written using the [bookdown](https://bookdown.org/) package , which was built on top of R Markdown and [knitr](https://yihui.org/knitr/).
+These notes are written using the [bookdown](https://bookdown.org/) package, which was built on top of R Markdown and [knitr](https://yihui.org/knitr/).
 
 Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 

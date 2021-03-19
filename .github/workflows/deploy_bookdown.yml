@@ -26,11 +26,11 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown","knitr"))'
       - name: Install bslib
-        run: remotes::install_github("rstudio/bslib")
+        run: Rscript -e 'remotes::install_github("rstudio/bslib")'
       - name: Install downlit
-        run: install.packages("downlit")
+        run: Rscript -e 'install.packages("downlit")'
       - name: Install bookdown
-        run: remotes::install_github("rstudio/bookdown")
+        run: Rscript -e 'remotes::install_github("rstudio/bookdown")'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/upload-artifact@v1
