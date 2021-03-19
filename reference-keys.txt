@@ -41,7 +41,7 @@ gis
 spatial-data
 councils-spatial-data
 other-spatial-data
-web-maps-and-dashboards
+web-maps-dashboards
 arcgis
 power-bi
 desktop-gis
@@ -53,6 +53,7 @@ features
 simple-features
 coordinates-projections
 geographic-projected-coordinate-systems
+arcgis-r-python-packages
 esri2sf
 r-arcgis-bridge
 arcgis-python-api
