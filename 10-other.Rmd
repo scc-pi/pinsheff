@@ -25,7 +25,12 @@ This is a dumping ground for matters I'm yet to look in to properly, never mind 
 
 ## Writing R packages
 
+[R Packages](https://r-pkgs.org/index.html) by Hadley Wickham & Jenny Bryan
+
 ### roxygen2
+
+[Introduction to roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) vignette  
+[10.3 Roxygen comments](https://r-pkgs.org/man.html#roxygen-comments)  
 
 ## plumber R package
 

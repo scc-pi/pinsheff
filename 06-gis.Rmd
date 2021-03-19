@@ -28,9 +28,9 @@ ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of cont
 
 More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
 
-## Web maps and dashboards
+## Web maps & dashboards
 
-### ArcGIS
+### ArcGIS {#arcgis}
 
 The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but to share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license for which there is separate guidance (*TODO - add cross ref.*).
 
@@ -48,7 +48,7 @@ For the last fifteen, twenty years, the Council's spatial analysis has largely b
 
 ### ArcGIS Pro
 
-ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
+ArcGIS Pro another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues, it is 64-bit and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
 
 The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
 
@@ -114,25 +114,20 @@ A reference ellipsoid as an approximation of the surface of the earth and provid
 
 Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
 
-### ArcGIS {#arcgis}
+### ArcGIS R & Python packages
 
-Listed below are R and Python packages that allow us to leverage ArcGIS content. Generally speaking, they are in ascending order of both ease of use and scope of functionality.
+Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in ascending order of both ease of use and scope of functionality.
 
-+---------------+----------+---------------------------------+-----------------------------------------------+
-| Package       | Language | ArcGIS Desktop Install Required | Scope                                         |
-+===============+==========+=================================+===============================================+
-| esri2sf       | R        | ✕                               | Read from AGOL & ArcGIS Enterprise            |
-+---------------+----------+---------------------------------+-----------------------------------------------+
-| arcgisbinding | R        | ✓                               | Read & write from AGOL & ArcGIS Enterprise    |
-+---------------+----------+---------------------------------+-----------------------------------------------+
-| arcgis        | Python   | ✓                               | Access AGOL & ArcGIS Enterprise functionality |
-+---------------+----------+---------------------------------+-----------------------------------------------+
-| arcpy         | Python   | ✓                               | Access ArcGIS Desktop or Pro functionality    |
-+---------------+----------+---------------------------------+-----------------------------------------------+
+| Package         | Language | ArcGIS Desktop Install Required | Scope                                         |
+|-----------------|----------|---------------------------------|-----------------------------------------------|
+| `esri2sf`       | R        | ✕                               | Read from AGOL & ArcGIS Enterprise            |
+| `arcgisbinding` | R        | ✓                               | Read & write from AGOL & ArcGIS Enterprise    |
+| `arcgis`        | Python   | ✓                               | Access AGOL & ArcGIS Enterprise functionality |
+| `arcpy`         | Python   | ✓                               | Access ArcGIS Desktop or Pro functionality    |
 
 #### esri2sf
 
-The `esri2sf` R package is the only one of the four packages listed above that isn't maintained by ESRI. It is the simplest to start using because it doesn't require an installation and license for ArcGIS Desktop or Pro. The flip side, is that it has the least amount of functionality and the code isn't as robust. The scope of the package is limited to reading simple features or data frames from AGOL & ArcGIS Enterprise (ours or other organisations).
+The `esri2sf` R package is the only one of the four packages listed above that is not maintained by ESRI. It is the simplest to start using because it doesn't require an installation and license for ArcGIS Desktop or Pro. The flip side, is that it has the least amount of functionality and the code isn't as robust. The scope of the package is limited to reading simple features or data frames from AGOL & ArcGIS Enterprise (ours or other organisation's).
 
 The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) is based on the same ArcGIS web tools as our Portal and AGOL. To get, for example, the local authority boundary for Sheffield you first need to navigate to the [dataset](https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2020-uk-bgc?geometry=-45.896%2C51.101%2C41.028%2C59.782) on the website and get the GeoService API URL:
 
@@ -142,9 +137,9 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\*&where=1%3D1
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\*&where=1%3D1){.uri}
 
-2.  some resources to understand how to query via the API,
+2.  some resources to understand how to query the API,
 
     > [ArcGIS REST API - Query (Feature Service/Layer)](https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm)
     >
@@ -182,35 +177,52 @@ The example above reads open data. However, most of the Council's spatial data o
 
 Our public [github.com/scc-pi/functions](https://github.com/scc-pi/functions) repository includes functions in `ShefAreas.R` that use `esri2sf`. The sub-headings immediately below outline how other ArcGIS packages are more powerful, but also more onerous in terms of licensing and setup. So where possible, the intention is to utilise `esri2sf` in preference to the other ArcGIS packages.
 
-Relying on `esri2sf` may require some contributions to the `esri2sf` repository. For example, a pull request to fix an assumption that at least 500 features can be served at a time when the ONS Open Geography Portal limit is 50 (hence our forked [github.com/scc-pi/esri2sf](https://github.com/scc-pi/esri2sf) repository). Contributing to `esri2sf` repository is preferable to accessing the Portal or AGOL API via Javascript, which is better suited to web developers than data analysts.
+Relying on `esri2sf` may require some contributions to the `esri2sf` repository. For example, a pull request to fix an assumption that at least 500 features can be served at a time, when the ONS Open Geography Portal limit is 50 (hence our forked [github.com/scc-pi/esri2sf](https://github.com/scc-pi/esri2sf) repository). Contributing to `esri2sf` repository is preferable to accessing the Portal or AGOL API via Javascript, which is better suited to web developers than data analysts.
 
 Further information on the `esri2sf` package, how to install and use it, is available from [github.com/yonghah/esri2sf](https://github.com/yonghah/esri2sf).
 
 #### R-ArcGIS Bridge
 
-The R-ArcGIS Bridge is the name for the `arcgisbinding` package.
+The R-ArcGIS Bridge is the name for the `arcgisbinding` R package. It's scope is restricted to:
 
--   Wrap R tools for use in ArcGIS
+-   Transferring data in both directions between ArcGIS and R
+
+-   Wrapping R tools for use in ArcGIS
+
+For more information on using the `arcgisbinding` package see the vignette on [Using the R-ArcGIS Bridge](https://r.esri.com/assets/arcgisbinding-vignette.html).
+
+To use the R-ArcGIS Bridge you need an installation and license for ArcGIS Desktop or Pro. After loading the `arcgisbinding` package you have to call `arc.check_product()` to define a desktop license:
+
+```{r eval=FALSE, include=FALSE}
+library(arcgisbinding)
+arc.check_product()
+```
+
+Using `arcgisbinding` with ArcGIS Desktop means that you need to use 32-bit R, because ArcGIS Desktop is 32-bit. An ArcGIS Desktop 64-bit Background Geoprocessing option is a red herring because it only allows using the bridge from ArcGIS, not from within R itself. ArcGIS Pro is 64-bit and allows you to use use 64-bit R with `arcgisbinding`.
+
+The [README.md in the r-bridge GitHub repository](https://github.com/R-ArcGIS/r-bridge/blob/master/README.md) is the best starting point for more detail on R-ArcGIS Bridge requirements and installation.
+
+*TODO: - open, select, read example (how do I render in GitHub Actions with arc.check_product()?)*
 
 #### ArcGIS Python API
 
-The Council's ArcGIS software from ESRI has a much stronger integration with Python than R.
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R. The `arcgis` package is used to work with ArcGIS Enterprise (Portal) and AGOL.
 
-ESRI's Python integration with ArcGIS is via two main packages:
-
-1.  The `arcgis` package is used to work with the Council's web based GIS infrastructure i.e. Portal and AGOL.
-
-2.  The `arcpy` package is used to leverage the ArcGIS Desktop or Pro functionality.
-
-The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is an oversimplification, but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+*- The name of the package and it's purpose - OneNote?*
 
 To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
 
-*TODO - ArcGIS Desktop*
-
 #### ArcPy
 
+The `arcpy` package is used to leverage the ArcGIS Desktop or Pro functionality. Like the `arcgis` package, to use the `arcpy` package we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/).
+
+The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is a bit of a simplification but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+
 *TODO*
+
+*- setup*
+
+*- cross ref Docker*
 
 ### Leaflet
 

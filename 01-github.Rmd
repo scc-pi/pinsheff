@@ -1,6 +1,6 @@
 # Version Control & GitHub {#github}
 
-You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're new to scripting and R, visualisations or using R Markdown are better starting points than version control.
+You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're new to scripting and R, then visualisations or using R Markdown are better starting points than version control.
 
 These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
 
@@ -67,4 +67,4 @@ There are also other GitHub features to explore.
 
 To use GitHub with RStudio there's a thorough step-by-step guide, [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. My main recommendation is to setup the connection using [keys for SSH](https://happygitwithr.com/ssh-keys.html). This connection method by-passes the issues I've had with the Council's proxy server and using the HTTPS connection method. I've also had no issues since working from home and connecting via the Tunnel.
 
-I frequently return to Jenny Bryan's book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I've mainly stuck with [Chapter 15 New project, GitHub first](Chapter%2015%20New%20project,%20GitHub%20first).
+I frequently return to Jenny Bryan's book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I've mainly stuck with [Chapter 15 New project, GitHub first](https://happygitwithr.com/new-github-first.html).
