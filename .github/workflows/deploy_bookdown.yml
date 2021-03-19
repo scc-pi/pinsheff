@@ -17,8 +17,6 @@ jobs:
         run: Rscript -e 'install.packages("sf", type="mac.binary")'
       - name: Install remotes
         run: Rscript -e 'install.packages("remotes")'
-      - name: Install esri2sf
-        run: Rscript -e 'remotes::install_github("yonghah/esri2sf")'
       - name: Install devtools
         run: Rscript -e 'install.packages("devtools")'
       - name: Install bs4
