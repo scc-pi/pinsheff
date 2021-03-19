@@ -10,6 +10,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: scc-pi/notes
 description: "Some notes, examples, lessons learnt and links to further resources."
+favicon: "images/favicon.ico"
 ---
 
 # Welcome {.unnumbered}
