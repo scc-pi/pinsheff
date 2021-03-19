@@ -25,9 +25,11 @@ jobs:
         run: Rscript -e 'install.packages("rstudioapi")'
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown","knitr"))'
-      - name: bs4_book
+      - name: Install bslib
         run: remotes::install_github("rstudio/bslib")
+      - name: Install downlit
         run: install.packages("downlit")
+      - name: Install bookdown
         run: remotes::install_github("rstudio/bookdown")
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
