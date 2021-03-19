@@ -1,6 +1,6 @@
 # GIS
 
-This chapter is aimed in particular at our data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is particularly true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with a particular opportunity for data analysts to make more use of spatial data without being a GIS specialist.
+This chapter is particularly aimed at our data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with an opportunity for data analysts to make more use of spatial data without being a GIS specialist.
 
 A word of warning before you jump in, the guidance, examples and functions targeted at helping you use our spatial data is still very much work-in-progress (*TODO*).
 
@@ -143,7 +143,7 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1){.uri}
 
 2.  some resources to understand how to query the API,
 
