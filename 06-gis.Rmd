@@ -46,11 +46,13 @@ For some specialised spatial analysis a desktop GIS is best. However, as we move
 
 For the last fifteen, twenty years, the Council's spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses, it's a sledge hammer to crack a nut. If you've not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.
 
+ESRI have stopped development of ArcGIS Desktop, though it won't be retired for some years yet. New functionality will only be added to ArcGIS Pro from now on.
+
 ### ArcGIS Pro
 
-ArcGIS Pro another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues, it is 64-bit and is more closely integrated with the ArcGIS web tools. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
+ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues, it is 64-bit and is more closely integrated with the ArcGIS Enterprise (Portal) and AGOL. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
 
-The Council only has one or two ArcGIS Pro licences, compared to a few dozen ArcGIS Desktop licenses.
+The Council has an ArcGIS Pro license for every purchased ArcGIS Desktop license.
 
 ### QGIS
 
@@ -66,15 +68,15 @@ Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is
 
 ### Simple features
 
-Simple features is an open standard developed by the Open Geospatial Consortium. It is a hierarchical data model that represents a wide range of geometry types, all of which are supported by the [sf R package](https://r-spatial.github.io/sf/index.html). The sf package also plays nice with the tidyverse.
+Simple features is an open standard developed by the Open Geospatial Consortium. It is a hierarchical data model that represents a wide range of geometry types, all of which are supported by the [sf R package](https://r-spatial.github.io/sf/index.html). The `sf` package also plays nice with the `tidyverse`.
 
 ```{r}
 # Create a data frame with some example records 
 df <- tibble::tribble(
-  ~name,                   ~postcode, ~longitude, ~latitude,
-  "SCC, Town Hall",        "S1 2HH",	-1.470006,  53.38038,
-  "Blades, Bramall Lane",  "S2 4SU",  -1.470512, 	53.36986,
-  "Owls, Hillsborough",    "S6 1SW",	-1.500859,	53.41084
+  ~name,    ~postcode, ~longitude,  ~latitude,
+  "SCC",    "S1 2HH",	 -1.470006,   53.38038,
+  "Blades", "S2 4SU",  -1.470512,   53.36986,
+  "Owls",   "S6 1SW",	 -1.500859,   53.41084
 )
 
 # Create simple features
@@ -84,7 +86,6 @@ sf_shef <- sf::st_as_sf(df,
 
 # Plot
 mapview::mapview(sf_shef, layer.name = "Sheffield institutions")
-
 ```
 
 ### Coordinates & projections
@@ -142,7 +143,7 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\*&where=1%3D1){.uri}
+    > https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1
 
 2.  some resources to understand how to query the API,
 
