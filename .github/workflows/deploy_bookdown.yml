@@ -17,10 +17,8 @@ jobs:
         run: Rscript -e 'install.packages("sf", type="mac.binary")'
       - name: Install remotes
         run: Rscript -e 'install.packages("remotes")'
-      - name: Install devtools
-        run: Rscript -e 'install.packages("devtools")'
-      - name: Install bs4
-        run: Rscript -e 'devtools::install_github("rstudio/bookdown@bs4-book-encoding", force = TRUE)'
+      - name: Install esri2sf
+        run: Rscript -e 'remotes::install_github("yonghah/esri2sf", force = TRUE)'
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse","janitor"))'
       - name: Install spatial
