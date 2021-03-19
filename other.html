@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 R &amp; RStudio | Notes</title>
+  <title>Chapter 10 Other | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 R &amp; RStudio | Notes" />
+  <meta property="og:title" content="Chapter 10 Other | Notes" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="scc-pi/notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 R &amp; RStudio | Notes" />
+  <meta name="twitter:title" content="Chapter 10 Other | Notes" />
   
   <meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="github.html"/>
-<link rel="next" href="rmd.html"/>
+<link rel="prev" href="databases.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -286,122 +286,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> R &amp; RStudio</h1>
-<div id="why-script" class="section level2">
-<h2><span class="header-section-number">2.1</span> Why script?</h2>
-<p>I initially started scripting in Python to automate some spatial analysis tasks, but soon realised that reproducibility was the main advantage. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.</p>
-<p>There’s an element of self-documentation with scripting, so it’s easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.</p>
-<p>Scripting is not always better than using GUI tools. There’s a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.</p>
+<div id="other" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Other</h1>
+<p>This is a dumping ground for matters I’m yet to look in to properly, never mind write notes about.</p>
+<div id="renv" class="section level2">
+<h2><span class="header-section-number">10.1</span> renv</h2>
+<p><a href="https://rstudio.github.io/renv/articles/renv.html">Introduction to renv</a> vignette</p>
 </div>
-<div id="style-guide" class="section level2">
-<h2><span class="header-section-number">2.2</span> Style guide</h2>
-<p>Something I need to pay more attention to is following the <a href="https://style.tidyverse.org/">tidyverse style guide</a>, which benefits from supporting tools and familiarity via tidyverse package documentation.</p>
-<p>Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.</p>
+<div id="docker" class="section level2">
+<h2><span class="header-section-number">10.2</span> Docker</h2>
+<blockquote>
+<p>Using docker containers means you don’t have to deal with “works on my machine” problems.</p>
+</blockquote>
+<p><em>Currently, the set-up and reproducibility issues I’ve had with</em> <code>arcpy</code> <em>and Jupyter notebooks means I can’t recommend others in the Council go down this path and therefore collaborate with these tools. Could Docker be a means to address these issues, or at the very least, allow officers to trial</em> <code>arcpy</code> <em>and Jupyter notebooks before investing in a complicated setup? For more typical R projects</em> <code>renv</code> <em>might be preferable.</em></p>
+<p><a href="https://towardsdatascience.com/docker-for-data-science-a-step-by-step-guide-1e5f7f3baf8e">Docker for Data Science — A Step by Step Guide</a>, Dean Pleban (18 October 2020)</p>
+<p><a href="https://blog.iron.io/docker-containers-the-pros-and-cons-of-docker/">The Pros and Cons of Docker</a>, Nick from Iron.io (28 August 2020)</p>
+<p><a href="https://www.docker.com/play-with-docker">Play with Docker</a></p>
+<p><a href="https://github.com/rocker-org/rocker">rocker</a> R package</p>
 </div>
-<div id="pid" class="section level2">
-<h2><span class="header-section-number">2.3</span> RStudio security &amp; data protection</h2>
-<div id="workspace" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Workspace</h3>
-<p>To encourage reproducible R scripts, Hadley Wickham recommends not preserving your workspace between sessions. This entails deselecting a couple of options to save and restore .Rdata (see <a href="https://r4ds.had.co.nz/workflow-projects.html#what-is-real">chapter 8 Workflow: projects</a> in Hadley’s R4DS book).</p>
-<p>Hadley’s recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, .Rdata should also be included in the <a href="https://git-scm.com/docs/gitignore">.gitignore</a> file and the repository set to private.</p>
+<div id="reprex-r-package" class="section level2">
+<h2><span class="header-section-number">10.3</span> reprex R package</h2>
+<p><a href="https://reprex.tidyverse.org/">reprex.tidyverse.org</a></p>
 </div>
-<div id="passwords" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Passwords</h3>
-<p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r.html#cb3-1"></a>portal_pwd &lt;-<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span>
-<span id="cb3-2"><a href="r.html#cb3-2"></a><span class="cf">if</span>(<span class="kw">length</span>(portal_pwd) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb3-3"><a href="r.html#cb3-3"></a>  portal_pwd &lt;-<span class="st"> </span>rstudioapi<span class="op">::</span><span class="kw">askForPassword</span>(<span class="st">&quot;Portal password&quot;</span>)</span>
-<span id="cb3-4"><a href="r.html#cb3-4"></a>}</span></code></pre></div>
-</div>
-</div>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">2.4</span> Getting started</h2>
-<p>I’m not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:</p>
-<p><a href="https://education.rstudio.com/learn/beginner/">RStudio Education - Beginners</a></p>
-</div>
-<div id="rstudio-tips" class="section level2">
-<h2><span class="header-section-number">2.5</span> RStudio tips</h2>
-<div id="code-display" class="section level3">
-<h3><span class="header-section-number">2.5.1</span> Code display</h3>
-<p>A few non-default Global Options, under Code and Display, make it a little easier to read and write code:</p>
-<ul>
-<li><p>Show margin (aim to limit a line of code to 80 characters)</p></li>
-<li><p>Highlight R function calls</p></li>
-<li><p>Rainbow parentheses (since RStudio v1.4)</p></li>
-</ul>
-<p><img src="images/code-display.png" /></p>
-</div>
-<div id="document-outline-and-headings" class="section level3">
-<h3><span class="header-section-number">2.5.2</span> Document outline and headings</h3>
-<p>Code sections and subsections are useful:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="r.html#cb4-1"></a><span class="co"># Prefix a section with a hash tag and suffix with 4 or more dashes ----</span></span>
-<span id="cb4-2"><a href="r.html#cb4-2"></a><span class="co">## Subsections have additional hash tags ----</span></span></code></pre></div>
-<p>The sections can be collapsed and are also listed in the document outline pane:</p>
-<p><img src="images/doc-outline.png" /></p>
-</div>
-<div id="viewpipesteps-addin" class="section level3">
-<h3><span class="header-section-number">2.5.3</span> ViewPipeSteps addin</h3>
-<p>The <a href="https://r4ds.had.co.nz/pipes.html">pipe</a> <code>%&gt;%</code> is useful for reading and writing code, but can make debugging cumbersome. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r.html#cb5-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;daranzolin/ViewPipeSteps&quot;</span>)</span>
-<span id="cb5-2"><a href="r.html#cb5-2"></a><span class="kw">library</span>(ViewPipeSteps)</span></code></pre></div>
-<p>To use:</p>
-<p><img src="images/view-pipe-steps.png" /></p>
-</div>
-<div id="shortcuts" class="section level3">
-<h3><span class="header-section-number">2.5.4</span> Shortcuts</h3>
-<p>RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I’ve found most useful:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>Ctrl + Enter</td>
-<td>run selected lines</td>
-</tr>
-<tr class="even">
-<td>Ctrl + Alt + P</td>
-<td>re-run previous</td>
-</tr>
-<tr class="odd">
-<td>Ctrl + Shift + C</td>
-<td>comment/uncomment lines</td>
-</tr>
-<tr class="even">
-<td>Ctrl + Alt + A</td>
-<td>reformat code</td>
-</tr>
-<tr class="odd">
-<td>Ctrl + Shift + R</td>
-<td>insert section</td>
-</tr>
-<tr class="even">
-<td>Alt + -</td>
-<td>assignment operator &lt;-</td>
-</tr>
-<tr class="odd">
-<td>Ctrl + Shift + M</td>
-<td>pipe operator %&gt;%</td>
-</tr>
-<tr class="even">
-<td>Ctrl + left mouse button</td>
-<td>View the object clicked</td>
-</tr>
-<tr class="odd">
-<td>Ctrl + Shift + F10</td>
-<td>Restart R session</td>
-</tr>
-<tr class="even">
-<td>Ctrl + Shift + P</td>
-<td>Command palette</td>
-</tr>
-</tbody>
-</table>
-<p><em>TODO</em> <br />
-- <em>Write settings</em></p>
+<div id="writing-r-packages" class="section level2">
+<h2><span class="header-section-number">10.4</span> Writing R packages</h2>
+<div id="roxygen2" class="section level3">
+<h3><span class="header-section-number">10.4.1</span> roxygen2</h3>
 </div>
 </div>
-<div id="further-resources" class="section level2">
-<h2><span class="header-section-number">2.6</span> Further resources</h2>
-<p><a href="https://www.r-bloggers.com/2021/03/5-tips-for-writing-clean-r-code-leave-your-code-reviewer-commentless/">5 tips for writing clean R code</a>,by Marcin Dubel in R bloggers (15 March 2021)</p>
+<div id="plumber-r-package" class="section level2">
+<h2><span class="header-section-number">10.5</span> plumber R package</h2>
+<p><a href="https://www.rplumber.io/">rplumber.io</a></p>
+</div>
+<div id="data-visualisation" class="section level2">
+<h2><span class="header-section-number">10.6</span> Data Visualisation</h2>
+<p><a href="https://socviz.co/index.html">Data Visualization, A practical introduction</a> by Kieran Healy</p>
 
 </div>
 </div>
@@ -410,8 +329,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rmd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
