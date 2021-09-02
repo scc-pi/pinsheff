@@ -11,7 +11,8 @@ bookdown::gitbook:
       position: fixed
     edit : null
     download: null
-    search: yes
+    search:
+      engine: fuse
     fontsettings:
       theme: white
       family: sans
