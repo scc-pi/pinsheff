@@ -26,6 +26,7 @@ notebooks
 bookdown
 themes
 publishing
+flexdashboard
 further-resources-1
 r-markdown-tips
 markdown-visual-editor
@@ -65,6 +66,7 @@ geocoding
 uprn
 postcodes
 pas-postcode-lookup
+postcode-boundaries
 split-postcodes
 addresses
 public-data
@@ -76,6 +78,7 @@ ministry-of-housing-communities-local-government
 ordnance-survey
 os-data-hub
 lginform
+lsoapop-r-package
 databases
 corporate-data-warehouse
 oscar

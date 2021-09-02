@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 R Markdown | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 R Markdown | Notes" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-07-12" />
+<meta name="date" content="2021-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="r.html"/>
 <link rel="next" href="api.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -188,10 +188,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="rmd.html"><a href="rmd.html#themes"><i class="fa fa-check"></i><b>3.4.1</b> Themes</a></li>
 <li class="chapter" data-level="3.4.2" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>3.4.2</b> Publishing</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="rmd.html"><a href="rmd.html#further-resources-1"><i class="fa fa-check"></i><b>3.5</b> Further resources</a></li>
-<li class="chapter" data-level="3.6" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>3.6</b> R Markdown tips</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="rmd.html"><a href="rmd.html#markdown-visual-editor"><i class="fa fa-check"></i><b>3.6.1</b> Markdown visual editor</a></li>
-<li class="chapter" data-level="3.6.2" data-path="rmd.html"><a href="rmd.html#chunk-named-setup"><i class="fa fa-check"></i><b>3.6.2</b> Chunk named setup</a></li>
+<li class="chapter" data-level="3.5" data-path="rmd.html"><a href="rmd.html#flexdashboard"><i class="fa fa-check"></i><b>3.5</b> Flexdashboard</a></li>
+<li class="chapter" data-level="3.6" data-path="rmd.html"><a href="rmd.html#further-resources-1"><i class="fa fa-check"></i><b>3.6</b> Further resources</a></li>
+<li class="chapter" data-level="3.7" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>3.7</b> R Markdown tips</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="rmd.html"><a href="rmd.html#markdown-visual-editor"><i class="fa fa-check"></i><b>3.7.1</b> Markdown visual editor</a></li>
+<li class="chapter" data-level="3.7.2" data-path="rmd.html"><a href="rmd.html#chunk-named-setup"><i class="fa fa-check"></i><b>3.7.2</b> Chunk named setup</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="api.html"><a href="api.html"><i class="fa fa-check"></i><b>4</b> APIs</a><ul>
@@ -231,7 +232,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="geocoding.html"><a href="geocoding.html#uprn"><i class="fa fa-check"></i><b>7.1</b> UPRN</a></li>
 <li class="chapter" data-level="7.2" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>7.2</b> Postcodes</a><ul>
 <li class="chapter" data-level="7.2.1" data-path="geocoding.html"><a href="geocoding.html#pas-postcode-lookup"><i class="fa fa-check"></i><b>7.2.1</b> PAS Postcode Lookup</a></li>
-<li class="chapter" data-level="7.2.2" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>7.2.2</b> Split postcodes</a></li>
+<li class="chapter" data-level="7.2.2" data-path="geocoding.html"><a href="geocoding.html#postcode-boundaries"><i class="fa fa-check"></i><b>7.2.2</b> Postcode Boundaries</a></li>
+<li class="chapter" data-level="7.2.3" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>7.2.3</b> Split postcodes</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="geocoding.html"><a href="geocoding.html#addresses"><i class="fa fa-check"></i><b>7.3</b> Addresses</a></li>
 </ul></li>
@@ -246,6 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.1" data-path="public-data.html"><a href="public-data.html#os-data-hub"><i class="fa fa-check"></i><b>8.3.1</b> OS Data Hub</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="public-data.html"><a href="public-data.html#lginform"><i class="fa fa-check"></i><b>8.4</b> LGInform?</a></li>
+<li class="chapter" data-level="8.5" data-path="public-data.html"><a href="public-data.html#lsoapop-r-package"><i class="fa fa-check"></i><b>8.5</b> LSOApop R package</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>9</b> Databases</a><ul>
 <li class="chapter" data-level="9.1" data-path="databases.html"><a href="databases.html#corporate-data-warehouse"><i class="fa fa-check"></i><b>9.1</b> Corporate data warehouse</a><ul>
@@ -303,14 +306,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="bookdown" class="section level2">
 <h2><span class="header-section-number">3.4</span> Bookdown</h2>
-<p>These notes are written using the <a href="https://bookdown.org/">bookdown</a> package, which was built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
+<p>These notes are written using the <a href="https://pkgs.rstudio.com/bookdown/">bookdown package</a>, which is built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="themes" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Themes</h3>
 <p><em>TODO</em></p>
 <p><a href="https://bookdown.org/yihui/bookdown/html.html#gitbook-style">GitBook style</a><br />
-<a href="https://snowdreams1006.github.io/gitbook-official/en/themes/">Theming</a>
-<a href="https://github.com/hadley/r4ds">R4DS source</a></p>
+<a href="https://snowdreams1006.github.io/gitbook-official/en/themes/">Theming</a> <a href="https://github.com/hadley/r4ds">R4DS source</a></p>
 </div>
 <div id="publishing" class="section level3">
 <h3><span class="header-section-number">3.4.2</span> Publishing</h3>
@@ -325,19 +327,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>2. I used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as per a recent change to <a href="https://github.com/Cecilapp/GitHub-Pages-deploy#news">GitHub-Pages-deploy</a>.</p>
 </div>
 </div>
+<div id="flexdashboard" class="section level2">
+<h2><span class="header-section-number">3.5</span> Flexdashboard</h2>
+<blockquote>
+<p>The goal of flexdashboard is to make it easy to create interactive dashboards for R, using R Markdown.</p>
+</blockquote>
+<p><a href="https://pkgs.rstudio.com/flexdashboard/">pkgs.rstudio.com/flexdashboard</a></p>
+<p>Flexdashboards don’t have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project, or, because the output is simply an HTML file, if you need to share the dashboard with one or two people outside the organisation. They’re also obviously a good option if you’ve done your data analysis and preparatory work in R.</p>
+<p><em>TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.</em></p>
+</div>
 <div id="further-resources-1" class="section level2">
-<h2><span class="header-section-number">3.5</span> Further resources</h2>
-<p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
+<h2><span class="header-section-number">3.6</span> Further resources</h2>
+<p><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
 </div>
 <div id="r-markdown-tips" class="section level2">
-<h2><span class="header-section-number">3.6</span> R Markdown tips</h2>
+<h2><span class="header-section-number">3.7</span> R Markdown tips</h2>
 <div id="markdown-visual-editor" class="section level3">
-<h3><span class="header-section-number">3.6.1</span> Markdown visual editor</h3>
+<h3><span class="header-section-number">3.7.1</span> Markdown visual editor</h3>
 <p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
 <p><img src="images/rmd-editor.png" title="RStudio markdown visual editor" /></p>
 </div>
 <div id="chunk-named-setup" class="section level3">
-<h3><span class="header-section-number">3.6.2</span> Chunk named setup</h3>
+<h3><span class="header-section-number">3.7.2</span> Chunk named setup</h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rmd.html#cb9-1"></a><span class="co"># Packages</span></span>
@@ -357,7 +368,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -384,6 +394,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
@@ -391,7 +405,6 @@ gitbook.start({
 "toolbar": {
 "position": "fixed"
 },
-"search": true,
 "info": true
 });
 });
