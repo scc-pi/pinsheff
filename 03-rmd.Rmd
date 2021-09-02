@@ -22,13 +22,12 @@ These notes are written using the [bookdown](https://bookdown.org/) package, whi
 
 Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 
-### Themes  
+### Themes
 
-_TODO_  
+*TODO*
 
-[GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style)  
-[Theming](https://snowdreams1006.github.io/gitbook-official/en/themes/)
-[R4DS source](https://github.com/hadley/r4ds)
+[GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style)\
+[Theming](https://snowdreams1006.github.io/gitbook-official/en/themes/) [R4DS source](https://github.com/hadley/r4ds)
 
 ### Publishing {#publishing}
 
@@ -52,13 +51,24 @@ with:
 
 2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy#news).
 
+## Flexdashboard
+
+> The goal of flexdashboard is to make it easy to create interactive dashboards for R, using R Markdown.
+
+[pkgs.rstudio.com/flexdashboard](https://pkgs.rstudio.com/flexdashboard/)
+
+Flexdashboards don't have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project, or, because the output is simply an HTML file, if you need to share the dashboard with one or two people outside the organisation. They're also obviously a good option if you've done your data analysis and preparatory work in R.
+
+*TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.*
+
 ## Further resources
 
-[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
+[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
 
 ## R Markdown tips
 
 ### Markdown visual editor
+
 The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:
 
 ![](images/rmd-editor.png "RStudio markdown visual editor")
@@ -90,5 +100,3 @@ knitr::knit_hooks$set(wrapper = function(before, options) {
 # Packages
 library(tidyverse)
 ```
-
-

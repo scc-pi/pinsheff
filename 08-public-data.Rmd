@@ -2,35 +2,39 @@
 
 ## Office of National Statistics
 
-_TODO_
+*TODO*
 
 ### CRM
 
-_TODO_
+*TODO*
 
 ### NOMIS
 
-_TODO_
+*TODO*
 
 ### Open Geography Portal {#open-geography}
 
-_TODO_
+*TODO*
 
 ## Ministry of Housing, Communities & Local Government
 
-Official statistics from MHCLG (Ministry of Housing, Communities & Local Government):  
+Official statistics from MHCLG (Ministry of Housing, Communities & Local Government):\
 [opendatacommunities.org](https://opendatacommunities.org/home)
 
-https://guides.opendatacommunities.org/article/19-apis-part-2-using-r-with-the-apis
+[guides.opendatacommunities.org/article/19-apis-part-2-using-r-with-the-apis](https://guides.opendatacommunities.org/article/19-apis-part-2-using-r-with-the-apis){.uri}
 
 ## Ordnance Survey
 
-_TODO_
+*TODO*
 
 ### OS Data Hub {#os-data-hub}
 
-_TODO_
+*TODO*
 
 ## LGInform?
 
+## LSOApop R package
 
+> The goal of LSOApop is to make population estimates for Lower layer Super Output Areas (LSOA) and their Indecies of Multiple Deprivation (IMD) easily available in R.
+
+[nhs-r-community.github.io/LSOApop](https://nhs-r-community.github.io/LSOApop/)

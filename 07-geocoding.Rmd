@@ -15,10 +15,10 @@ Below is an example of using our `add_pcd_vars()` function that builds on the [P
 ```{r add-pcd-vars, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
 df <- tibble::tribble(
-  ~name,                   ~postcode,
-  "SCC, Town Hall",        "S1 2HH",
-  "Blades, Bramall Lane",  "S2 4SU",
-  "Owls, Hillsborough",    "S6 1SW"
+  ~name,    ~postcode,
+  "SCC",    "S1 2HH",
+  "Blades", "S2 4SU",
+  "Owls",   "S6 1SW"
 )
 
 # Load the function we need
@@ -60,11 +60,17 @@ dplyr::mutate(df,
               postcode = stringr::word(address, -2, -1, sep = "[:space:]")) %>%
   knitr::kable()
 ```
+
 ### PAS Postcode Lookup  
 
 PAS, the Performance & Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the `add_pcd_vars()` function.  
 
 _TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?_    
+
+### Postcode Boundaries
+
+_TODO:_
+[OPEN DATA GB POSTCODE UNIT BOUNDARIES](https://longair.net/blog/2021/08/23/open-data-gb-postcode-unit-boundaries/)
 
 ### Split postcodes
 

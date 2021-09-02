@@ -42,6 +42,8 @@ Assuming that GitHub.com is hosted in the US, it will not meet our data protecti
 
 Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
 
+*TODO - use .gitignore*
+
 ### Forking and pull requests
 
 GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository.
