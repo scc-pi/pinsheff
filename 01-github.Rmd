@@ -42,14 +42,14 @@ Assuming that GitHub.com is hosted in the US, it will not meet our data protecti
 
 The [`.gitignore`](https://git-scm.com/docs/gitignore) file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they're original or transformed, in a `/data` sub-folder, makes it simple to exclude data from the repository by adding the following to the `.gitignore` file:
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=TRUE}
 # data directory
 /data/
 ```
 
-As an additional precaution, any projects related to such information should be held in a private repository and [`.Rdata`](https://bookdown.org/ndphillips/YaRrr/rdata-files.html) should also be included in the `.gitignore` file (see the section on [RStudio security & data protection](#pid)):
+As an additional precaution, any projects involving confidential information should be held in a private repository and [`.Rdata`](https://bookdown.org/ndphillips/YaRrr/rdata-files.html) should also be included in the `.gitignore` file (see the section on [RStudio security & data protection](#pid)):
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=TRUE}
 # Session Data files
 .RData
 ```

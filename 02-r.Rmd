@@ -20,7 +20,7 @@ Scripting to the same style guide makes collaboration easier. Which style guide 
 
 To encourage reproducible R scripts, Hadley Wickham recommends not preserving your workspace between sessions. This entails deselecting a couple of options to save and restore [.Rdata](https://bookdown.org/ndphillips/YaRrr/rdata-files.html) (see [chapter 8 Workflow: projects](https://r4ds.had.co.nz/workflow-projects.html#what-is-real) in Hadley's R4DS book).
 
-Hadley's recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, `.Rdata` should also be included in the [`.gitignore`](https://git-scm.com/docs/gitignore) file and the repository set to private (see the section on [GitHub security & data protection](##github-security)).
+Hadley's recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, `.Rdata` should also be included in the [`.gitignore`](https://git-scm.com/docs/gitignore) file and the repository set to private (see the section on [GitHub security & data protection](#github-security)).
 
 ### Passwords
 
