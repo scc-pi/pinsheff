@@ -299,25 +299,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.2</span> Postcodes</h2>
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
 <p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="geocoding.html#cb16-1"></a><span class="co"># Create a data frame with some example records</span></span>
-<span id="cb16-2"><a href="geocoding.html#cb16-2"></a>df &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tribble</span>(</span>
-<span id="cb16-3"><a href="geocoding.html#cb16-3"></a>  <span class="op">~</span>name,    <span class="op">~</span>postcode,</span>
-<span id="cb16-4"><a href="geocoding.html#cb16-4"></a>  <span class="st">&quot;SCC&quot;</span>,    <span class="st">&quot;S1 2HH&quot;</span>,</span>
-<span id="cb16-5"><a href="geocoding.html#cb16-5"></a>  <span class="st">&quot;Blades&quot;</span>, <span class="st">&quot;S2 4SU&quot;</span>,</span>
-<span id="cb16-6"><a href="geocoding.html#cb16-6"></a>  <span class="st">&quot;Owls&quot;</span>,   <span class="st">&quot;S6 1SW&quot;</span></span>
-<span id="cb16-7"><a href="geocoding.html#cb16-7"></a>)</span>
-<span id="cb16-8"><a href="geocoding.html#cb16-8"></a></span>
-<span id="cb16-9"><a href="geocoding.html#cb16-9"></a><span class="co"># Load the function we need</span></span>
-<span id="cb16-10"><a href="geocoding.html#cb16-10"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R&quot;</span>)</span>
-<span id="cb16-11"><a href="geocoding.html#cb16-11"></a></span>
-<span id="cb16-12"><a href="geocoding.html#cb16-12"></a><span class="co"># Add postcode related columns to our data frame</span></span>
-<span id="cb16-13"><a href="geocoding.html#cb16-13"></a><span class="kw">add_pcd_vars</span>(df,</span>
-<span id="cb16-14"><a href="geocoding.html#cb16-14"></a>             <span class="dt">pcd_name =</span> <span class="st">&quot;postcode&quot;</span>,</span>
-<span id="cb16-15"><a href="geocoding.html#cb16-15"></a>             <span class="dt">.admin_district =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb16-16"><a href="geocoding.html#cb16-16"></a>             <span class="dt">.lat_long =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb16-17"><a href="geocoding.html#cb16-17"></a>             <span class="dt">other_vars =</span> <span class="kw">c</span>(<span class="st">&quot;admin_ward&quot;</span>,</span>
-<span id="cb16-18"><a href="geocoding.html#cb16-18"></a>                            <span class="st">&quot;msoa_code&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb16-19"><a href="geocoding.html#cb16-19"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>() <span class="co">#display them in a nice table</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="geocoding.html#cb18-1"></a><span class="co"># Create a data frame with some example records</span></span>
+<span id="cb18-2"><a href="geocoding.html#cb18-2"></a>df &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tribble</span>(</span>
+<span id="cb18-3"><a href="geocoding.html#cb18-3"></a>  <span class="op">~</span>name,    <span class="op">~</span>postcode,</span>
+<span id="cb18-4"><a href="geocoding.html#cb18-4"></a>  <span class="st">&quot;SCC&quot;</span>,    <span class="st">&quot;S1 2HH&quot;</span>,</span>
+<span id="cb18-5"><a href="geocoding.html#cb18-5"></a>  <span class="st">&quot;Blades&quot;</span>, <span class="st">&quot;S2 4SU&quot;</span>,</span>
+<span id="cb18-6"><a href="geocoding.html#cb18-6"></a>  <span class="st">&quot;Owls&quot;</span>,   <span class="st">&quot;S6 1SW&quot;</span></span>
+<span id="cb18-7"><a href="geocoding.html#cb18-7"></a>)</span>
+<span id="cb18-8"><a href="geocoding.html#cb18-8"></a></span>
+<span id="cb18-9"><a href="geocoding.html#cb18-9"></a><span class="co"># Load the function we need</span></span>
+<span id="cb18-10"><a href="geocoding.html#cb18-10"></a><span class="kw">source</span>(<span class="st">&quot;https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R&quot;</span>)</span>
+<span id="cb18-11"><a href="geocoding.html#cb18-11"></a></span>
+<span id="cb18-12"><a href="geocoding.html#cb18-12"></a><span class="co"># Add postcode related columns to our data frame</span></span>
+<span id="cb18-13"><a href="geocoding.html#cb18-13"></a><span class="kw">add_pcd_vars</span>(df,</span>
+<span id="cb18-14"><a href="geocoding.html#cb18-14"></a>             <span class="dt">pcd_name =</span> <span class="st">&quot;postcode&quot;</span>,</span>
+<span id="cb18-15"><a href="geocoding.html#cb18-15"></a>             <span class="dt">.admin_district =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb18-16"><a href="geocoding.html#cb18-16"></a>             <span class="dt">.lat_long =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb18-17"><a href="geocoding.html#cb18-17"></a>             <span class="dt">other_vars =</span> <span class="kw">c</span>(<span class="st">&quot;admin_ward&quot;</span>,</span>
+<span id="cb18-18"><a href="geocoding.html#cb18-18"></a>                            <span class="st">&quot;msoa_code&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb18-19"><a href="geocoding.html#cb18-19"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>() <span class="co">#display them in a nice table</span></span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -362,18 +362,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Other columns are added by including their name in a character vector passed with the <code>other_vars</code> function argument. For example, <code>other_vars=c("ccg_code","lsoa_code")</code>. The list of valid <code>other_vars</code> is defined at <a href="https://docs.ropensci.org/PostcodesioR/#examples">docs.ropensci.org/PostcodesioR/#examples</a>.</p>
 <p>The <code>pcd_name</code> function argument is used to specify the name of the data frame’s postcode column when it isn’t <code>postcode</code>. For example, <code>pcd_name="pupil_pcode"</code>.</p>
 <p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="geocoding.html#cb17-1"></a><span class="co"># Create a data frame with some example records</span></span>
-<span id="cb17-2"><a href="geocoding.html#cb17-2"></a>df &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tribble</span>(</span>
-<span id="cb17-3"><a href="geocoding.html#cb17-3"></a>  <span class="op">~</span>name,     <span class="op">~</span>address,</span>
-<span id="cb17-4"><a href="geocoding.html#cb17-4"></a>  <span class="st">&quot;SCC&quot;</span>,     <span class="st">&quot;Pinstone St, Sheffield City Centre, Sheffield S1 2HH&quot;</span>,</span>
-<span id="cb17-5"><a href="geocoding.html#cb17-5"></a>  <span class="st">&quot;Blades&quot;</span>,  <span class="st">&quot;Bramall Ln, Highfield, Sheffield S2 4SU&quot;</span>,</span>
-<span id="cb17-6"><a href="geocoding.html#cb17-6"></a>  <span class="st">&quot;Owls&quot;</span>,    <span class="st">&quot;76 Penistone Rd N, Sheffield S6 1SW&quot;</span></span>
-<span id="cb17-7"><a href="geocoding.html#cb17-7"></a>)</span>
-<span id="cb17-8"><a href="geocoding.html#cb17-8"></a></span>
-<span id="cb17-9"><a href="geocoding.html#cb17-9"></a><span class="co"># Extract the postcode from the address into a separate column</span></span>
-<span id="cb17-10"><a href="geocoding.html#cb17-10"></a>dplyr<span class="op">::</span><span class="kw">mutate</span>(df, </span>
-<span id="cb17-11"><a href="geocoding.html#cb17-11"></a>              <span class="dt">postcode =</span> stringr<span class="op">::</span><span class="kw">word</span>(address, <span class="dv">-2</span>, <span class="dv">-1</span>, <span class="dt">sep =</span> <span class="st">&quot;[:space:]&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb17-12"><a href="geocoding.html#cb17-12"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="geocoding.html#cb19-1"></a><span class="co"># Create a data frame with some example records</span></span>
+<span id="cb19-2"><a href="geocoding.html#cb19-2"></a>df &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tribble</span>(</span>
+<span id="cb19-3"><a href="geocoding.html#cb19-3"></a>  <span class="op">~</span>name,     <span class="op">~</span>address,</span>
+<span id="cb19-4"><a href="geocoding.html#cb19-4"></a>  <span class="st">&quot;SCC&quot;</span>,     <span class="st">&quot;Pinstone St, Sheffield City Centre, Sheffield S1 2HH&quot;</span>,</span>
+<span id="cb19-5"><a href="geocoding.html#cb19-5"></a>  <span class="st">&quot;Blades&quot;</span>,  <span class="st">&quot;Bramall Ln, Highfield, Sheffield S2 4SU&quot;</span>,</span>
+<span id="cb19-6"><a href="geocoding.html#cb19-6"></a>  <span class="st">&quot;Owls&quot;</span>,    <span class="st">&quot;76 Penistone Rd N, Sheffield S6 1SW&quot;</span></span>
+<span id="cb19-7"><a href="geocoding.html#cb19-7"></a>)</span>
+<span id="cb19-8"><a href="geocoding.html#cb19-8"></a></span>
+<span id="cb19-9"><a href="geocoding.html#cb19-9"></a><span class="co"># Extract the postcode from the address into a separate column</span></span>
+<span id="cb19-10"><a href="geocoding.html#cb19-10"></a>dplyr<span class="op">::</span><span class="kw">mutate</span>(df, </span>
+<span id="cb19-11"><a href="geocoding.html#cb19-11"></a>              <span class="dt">postcode =</span> stringr<span class="op">::</span><span class="kw">word</span>(address, <span class="dv">-2</span>, <span class="dv">-1</span>, <span class="dt">sep =</span> <span class="st">&quot;[:space:]&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb19-12"><a href="geocoding.html#cb19-12"></a><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">

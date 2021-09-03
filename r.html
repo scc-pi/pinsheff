@@ -306,15 +306,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="workspace" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Workspace</h3>
 <p>To encourage reproducible R scripts, Hadley Wickham recommends not preserving your workspace between sessions. This entails deselecting a couple of options to save and restore <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html">.Rdata</a> (see <a href="https://r4ds.had.co.nz/workflow-projects.html#what-is-real">chapter 8 Workflow: projects</a> in Hadley’s R4DS book).</p>
-<p>Hadley’s recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, <code>.Rdata</code> should also be included in the <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file and the repository set to private (see the section on <a href="##github-security">GitHub security &amp; data protection</a>).</p>
+<p>Hadley’s recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, <code>.Rdata</code> should also be included in the <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file and the repository set to private (see the section on <a href="github.html#github-security">GitHub security &amp; data protection</a>).</p>
 </div>
 <div id="passwords" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Passwords</h3>
 <p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r.html#cb3-1"></a>portal_pwd &lt;-<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span>
-<span id="cb3-2"><a href="r.html#cb3-2"></a><span class="cf">if</span>(<span class="kw">length</span>(portal_pwd) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
-<span id="cb3-3"><a href="r.html#cb3-3"></a>  portal_pwd &lt;-<span class="st"> </span>rstudioapi<span class="op">::</span><span class="kw">askForPassword</span>(<span class="st">&quot;Portal password&quot;</span>)</span>
-<span id="cb3-4"><a href="r.html#cb3-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r.html#cb5-1"></a>portal_pwd &lt;-<span class="st"> </span><span class="kw">Sys.getenv</span>(<span class="st">&quot;portal_pwd&quot;</span>)</span>
+<span id="cb5-2"><a href="r.html#cb5-2"></a><span class="cf">if</span>(<span class="kw">length</span>(portal_pwd) <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</span>
+<span id="cb5-3"><a href="r.html#cb5-3"></a>  portal_pwd &lt;-<span class="st"> </span>rstudioapi<span class="op">::</span><span class="kw">askForPassword</span>(<span class="st">&quot;Portal password&quot;</span>)</span>
+<span id="cb5-4"><a href="r.html#cb5-4"></a>}</span></code></pre></div>
 </div>
 </div>
 <div id="getting-started" class="section level2">
@@ -337,16 +337,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="document-outline-and-headings" class="section level3">
 <h3><span class="header-section-number">2.5.2</span> Document outline and headings</h3>
 <p>Code sections and subsections are useful:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="r.html#cb4-1"></a><span class="co"># Prefix a section with a hash tag and suffix with 4 or more dashes ----</span></span>
-<span id="cb4-2"><a href="r.html#cb4-2"></a><span class="co">## Subsections have additional hash tags ----</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="r.html#cb6-1"></a><span class="co"># Prefix a section with a hash tag and suffix with 4 or more dashes ----</span></span>
+<span id="cb6-2"><a href="r.html#cb6-2"></a><span class="co">## Subsections have additional hash tags ----</span></span></code></pre></div>
 <p>The sections can be collapsed and are also listed in the document outline pane:</p>
 <p><img src="images/doc-outline.png" /></p>
 </div>
 <div id="viewpipesteps-addin" class="section level3">
 <h3><span class="header-section-number">2.5.3</span> ViewPipeSteps addin</h3>
 <p>The <a href="https://r4ds.had.co.nz/pipes.html">pipe</a> <code>%&gt;%</code> is useful for reading and writing code, but can make debugging cumbersome. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r.html#cb5-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;daranzolin/ViewPipeSteps&quot;</span>)</span>
-<span id="cb5-2"><a href="r.html#cb5-2"></a><span class="kw">library</span>(ViewPipeSteps)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r.html#cb7-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;daranzolin/ViewPipeSteps&quot;</span>)</span>
+<span id="cb7-2"><a href="r.html#cb7-2"></a><span class="kw">library</span>(ViewPipeSteps)</span></code></pre></div>
 <p>To use:</p>
 <p><img src="images/view-pipe-steps.png" /></p>
 </div>
