@@ -3,7 +3,7 @@ why-version-control
 git
 github-1
 github-security
-forking-and-pull-requests
+forking-pull-requests
 other-features
 git-rstudio
 r
@@ -15,7 +15,7 @@ passwords
 getting-started
 rstudio-tips
 code-display
-document-outline-and-headings
+document-outline-headings
 viewpipesteps-addin
 shortcuts
 further-resources
