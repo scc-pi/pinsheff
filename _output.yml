@@ -4,8 +4,7 @@ bookdown::bs4_book:
     branch: master
   theme:
     primary: "#0d6efd"
-    inline-figure:
-      border: 1px dashed "#e1e4e8"
+    inline-figure.border: 1px dashed "#e1e4e8"
 
 bookdown::gitbook:
   css: style.css
