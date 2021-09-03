@@ -2,7 +2,7 @@ github
 why-version-control
 git
 github-1
-github-security-data-protection
+github-security
 forking-and-pull-requests
 other-features
 git-rstudio

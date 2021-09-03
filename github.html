@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Version Control &amp; GitHub | Notes</title>
   <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Version Control &amp; GitHub | Notes" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Laurie Platt" />
 
 
-<meta name="date" content="2021-09-02" />
+<meta name="date" content="2021-09-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -158,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="github.html"><a href="github.html#why-version-control"><i class="fa fa-check"></i><b>1.1</b> Why version control?</a></li>
 <li class="chapter" data-level="1.2" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>1.2</b> GIT</a></li>
 <li class="chapter" data-level="1.3" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>1.3</b> GitHub</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="github.html"><a href="github.html#github-security-data-protection"><i class="fa fa-check"></i><b>1.3.1</b> Github security &amp; data protection</a></li>
+<li class="chapter" data-level="1.3.1" data-path="github.html"><a href="github.html#github-security"><i class="fa fa-check"></i><b>1.3.1</b> GitHub security &amp; data protection</a></li>
 <li class="chapter" data-level="1.3.2" data-path="github.html"><a href="github.html#forking-and-pull-requests"><i class="fa fa-check"></i><b>1.3.2</b> Forking and pull requests</a></li>
 <li class="chapter" data-level="1.3.3" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>1.3.3</b> Other features</a></li>
 </ul></li>
@@ -346,11 +346,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.3</span> GitHub</h2>
 <p>GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
 <p>Our <a href="https://github.com/scc-pi">scc-pi</a> GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.</p>
-<div id="github-security-data-protection" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Github security &amp; data protection</h3>
-<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no no. As an additional precaution, any projects related to such information should be held in a private repository. See the section on <a href="r.html#pid">RStudio security &amp; data protection</a> for further considerations.</p>
+<div id="github-security" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> GitHub security &amp; data protection</h3>
+<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
+<p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
+<p>As an additional precaution, any projects related to such information should be held in a private repository and <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html"><code>.Rdata</code></a> should also be included in the <code>.gitignore</code> file (see the section on <a href="r.html#pid">RStudio security &amp; data protection</a>):</p>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
-<p><em>TODO - use .gitignore</em></p>
 </div>
 <div id="forking-and-pull-requests" class="section level3">
 <h3><span class="header-section-number">1.3.2</span> Forking and pull requests</h3>
