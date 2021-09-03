@@ -53,7 +53,7 @@ A few non-default Global Options, under Code and Display, make it a little easie
 
 ![](images/code-display.png)
 
-### Document outline and headings
+### Document outline & headings
 
 Code sections and subsections are useful:
 

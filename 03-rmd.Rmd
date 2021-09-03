@@ -24,9 +24,9 @@ Each Rmd file contains one and only one chapter, and a chapter is defined by the
 
 ### Themes
 
-*TODO*
+The theme of these notes changed in September 2021 from a [GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) to a [Three-column Bootstrap style](https://bookdown.org/yihui/bookdown/html.html#bs4-book).
 
-[GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style)\
+*TODO*\
 [Theming](https://snowdreams1006.github.io/gitbook-official/en/themes/) [R4DS source](https://github.com/hadley/r4ds)
 
 ### Publishing {#publishing}

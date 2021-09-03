@@ -4,7 +4,9 @@ You don't have to be familiar with version control, Git and GitHub to make use o
 
 These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
 
-![](images/github-edit.png)
+```{r echo=FALSE}
+knitr::include_graphics("images/github-edit.png")
+```
 
 You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
 
@@ -56,7 +58,7 @@ As an additional precaution, any projects involving confidential information sho
 
 Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
 
-### Forking and pull requests
+### Forking & pull requests
 
 GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository.
 
