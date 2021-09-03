@@ -1,321 +1,110 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 R Markdown | Notes</title>
-  <meta name="description" content="Some notes, examples, lessons learnt and links to further resources." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 3 R Markdown | Notes" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="Some notes, examples, lessons learnt and links to further resources." />
-  <meta name="github-repo" content="scc-pi/notes" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 R Markdown | Notes" />
-  
-  <meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources." />
-  
-
-<meta name="author" content="Laurie Platt" />
-
-
-<meta name="date" content="2021-09-03" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="r.html"/>
-<link rel="next" href="api.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
-<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
-<link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet" />
-<script src="libs/HomeButton-0.0.1/home-button.js"></script>
-<script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
-<script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
-<link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet" />
-<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet" />
-
-
-<style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 3 R Markdown | Notes</title>
+<meta name="author" content="Laurie Platt">
+<meta name="description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 3 R Markdown | Notes">
+<meta property="og:type" content="book">
+<meta property="og:description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 3 R Markdown | Notes">
+<meta name="twitter:description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
+<link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Notes</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="1" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>1</b> Version Control &amp; GitHub</a><ul>
-<li class="chapter" data-level="1.1" data-path="github.html"><a href="github.html#why-version-control"><i class="fa fa-check"></i><b>1.1</b> Why version control?</a></li>
-<li class="chapter" data-level="1.2" data-path="github.html"><a href="github.html#git"><i class="fa fa-check"></i><b>1.2</b> GIT</a></li>
-<li class="chapter" data-level="1.3" data-path="github.html"><a href="github.html#github-1"><i class="fa fa-check"></i><b>1.3</b> GitHub</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="github.html"><a href="github.html#github-security"><i class="fa fa-check"></i><b>1.3.1</b> GitHub security &amp; data protection</a></li>
-<li class="chapter" data-level="1.3.2" data-path="github.html"><a href="github.html#forking-and-pull-requests"><i class="fa fa-check"></i><b>1.3.2</b> Forking and pull requests</a></li>
-<li class="chapter" data-level="1.3.3" data-path="github.html"><a href="github.html#other-features"><i class="fa fa-check"></i><b>1.3.3</b> Other features</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="github.html"><a href="github.html#git-rstudio"><i class="fa fa-check"></i><b>1.4</b> Git &amp; RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>2</b> R &amp; RStudio</a><ul>
-<li class="chapter" data-level="2.1" data-path="r.html"><a href="r.html#why-script"><i class="fa fa-check"></i><b>2.1</b> Why script?</a></li>
-<li class="chapter" data-level="2.2" data-path="r.html"><a href="r.html#style-guide"><i class="fa fa-check"></i><b>2.2</b> Style guide</a></li>
-<li class="chapter" data-level="2.3" data-path="r.html"><a href="r.html#pid"><i class="fa fa-check"></i><b>2.3</b> RStudio security &amp; data protection</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="r.html"><a href="r.html#workspace"><i class="fa fa-check"></i><b>2.3.1</b> Workspace</a></li>
-<li class="chapter" data-level="2.3.2" data-path="r.html"><a href="r.html#passwords"><i class="fa fa-check"></i><b>2.3.2</b> Passwords</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="r.html"><a href="r.html#getting-started"><i class="fa fa-check"></i><b>2.4</b> Getting started</a></li>
-<li class="chapter" data-level="2.5" data-path="r.html"><a href="r.html#rstudio-tips"><i class="fa fa-check"></i><b>2.5</b> RStudio tips</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="r.html"><a href="r.html#code-display"><i class="fa fa-check"></i><b>2.5.1</b> Code display</a></li>
-<li class="chapter" data-level="2.5.2" data-path="r.html"><a href="r.html#document-outline-and-headings"><i class="fa fa-check"></i><b>2.5.2</b> Document outline and headings</a></li>
-<li class="chapter" data-level="2.5.3" data-path="r.html"><a href="r.html#viewpipesteps-addin"><i class="fa fa-check"></i><b>2.5.3</b> ViewPipeSteps addin</a></li>
-<li class="chapter" data-level="2.5.4" data-path="r.html"><a href="r.html#shortcuts"><i class="fa fa-check"></i><b>2.5.4</b> Shortcuts</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="r.html"><a href="r.html#further-resources"><i class="fa fa-check"></i><b>2.6</b> Further resources</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="rmd.html"><a href="rmd.html"><i class="fa fa-check"></i><b>3</b> R Markdown</a><ul>
-<li class="chapter" data-level="3.1" data-path="rmd.html"><a href="rmd.html#r-markdown-vs-markdown"><i class="fa fa-check"></i><b>3.1</b> R Markdown vs Markdown</a></li>
-<li class="chapter" data-level="3.2" data-path="rmd.html"><a href="rmd.html#child-markdown-iteration"><i class="fa fa-check"></i><b>3.2</b> Child markdown iteration</a></li>
-<li class="chapter" data-level="3.3" data-path="rmd.html"><a href="rmd.html#notebooks"><i class="fa fa-check"></i><b>3.3</b> Notebooks</a></li>
-<li class="chapter" data-level="3.4" data-path="rmd.html"><a href="rmd.html#bookdown"><i class="fa fa-check"></i><b>3.4</b> Bookdown</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="rmd.html"><a href="rmd.html#themes"><i class="fa fa-check"></i><b>3.4.1</b> Themes</a></li>
-<li class="chapter" data-level="3.4.2" data-path="rmd.html"><a href="rmd.html#publishing"><i class="fa fa-check"></i><b>3.4.2</b> Publishing</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="rmd.html"><a href="rmd.html#flexdashboard"><i class="fa fa-check"></i><b>3.5</b> Flexdashboard</a></li>
-<li class="chapter" data-level="3.6" data-path="rmd.html"><a href="rmd.html#further-resources-1"><i class="fa fa-check"></i><b>3.6</b> Further resources</a></li>
-<li class="chapter" data-level="3.7" data-path="rmd.html"><a href="rmd.html#r-markdown-tips"><i class="fa fa-check"></i><b>3.7</b> R Markdown tips</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="rmd.html"><a href="rmd.html#markdown-visual-editor"><i class="fa fa-check"></i><b>3.7.1</b> Markdown visual editor</a></li>
-<li class="chapter" data-level="3.7.2" data-path="rmd.html"><a href="rmd.html#chunk-named-setup"><i class="fa fa-check"></i><b>3.7.2</b> Chunk named setup</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="api.html"><a href="api.html"><i class="fa fa-check"></i><b>4</b> APIs</a><ul>
-<li class="chapter" data-level="4.1" data-path="api.html"><a href="api.html#rest-apis"><i class="fa fa-check"></i><b>4.1</b> REST APIs</a></li>
-<li class="chapter" data-level="4.2" data-path="api.html"><a href="api.html#wrappers"><i class="fa fa-check"></i><b>4.2</b> Wrappers</a></li>
-<li class="chapter" data-level="4.3" data-path="api.html"><a href="api.html#rectangling"><i class="fa fa-check"></i><b>4.3</b> Rectangling</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>5</b> Python</a><ul>
-<li class="chapter" data-level="5.1" data-path="python.html"><a href="python.html#reticulate"><i class="fa fa-check"></i><b>5.1</b> Reticulate</a></li>
-<li class="chapter" data-level="5.2" data-path="python.html"><a href="python.html#arcgis-api-wrappers"><i class="fa fa-check"></i><b>5.2</b> ArcGIS &amp; API wrappers</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="gis.html"><a href="gis.html"><i class="fa fa-check"></i><b>6</b> GIS</a><ul>
-<li class="chapter" data-level="6.1" data-path="gis.html"><a href="gis.html#spatial-data"><i class="fa fa-check"></i><b>6.1</b> Spatial data</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="gis.html"><a href="gis.html#councils-spatial-data"><i class="fa fa-check"></i><b>6.1.1</b> Council’s spatial data</a></li>
-<li class="chapter" data-level="6.1.2" data-path="gis.html"><a href="gis.html#other-spatial-data"><i class="fa fa-check"></i><b>6.1.2</b> Other spatial data</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="gis.html"><a href="gis.html#web-maps-dashboards"><i class="fa fa-check"></i><b>6.2</b> Web maps &amp; dashboards</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="gis.html"><a href="gis.html#arcgis"><i class="fa fa-check"></i><b>6.2.1</b> ArcGIS</a></li>
-<li class="chapter" data-level="6.2.2" data-path="gis.html"><a href="gis.html#power-bi"><i class="fa fa-check"></i><b>6.2.2</b> Power BI</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="gis.html"><a href="gis.html#desktop-gis"><i class="fa fa-check"></i><b>6.3</b> Desktop GIS</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="gis.html"><a href="gis.html#arcgis-desktop"><i class="fa fa-check"></i><b>6.3.1</b> ArcGIS Desktop</a></li>
-<li class="chapter" data-level="6.3.2" data-path="gis.html"><a href="gis.html#arcgis-pro"><i class="fa fa-check"></i><b>6.3.2</b> ArcGIS Pro</a></li>
-<li class="chapter" data-level="6.3.3" data-path="gis.html"><a href="gis.html#qgis"><i class="fa fa-check"></i><b>6.3.3</b> QGIS</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="gis.html"><a href="gis.html#scripted-gis"><i class="fa fa-check"></i><b>6.4</b> Scripted GIS</a><ul>
-<li class="chapter" data-level="6.4.1" data-path="gis.html"><a href="gis.html#features"><i class="fa fa-check"></i><b>6.4.1</b> Features</a></li>
-<li class="chapter" data-level="6.4.2" data-path="gis.html"><a href="gis.html#simple-features"><i class="fa fa-check"></i><b>6.4.2</b> Simple features</a></li>
-<li class="chapter" data-level="6.4.3" data-path="gis.html"><a href="gis.html#coordinates-projections"><i class="fa fa-check"></i><b>6.4.3</b> Coordinates &amp; projections</a></li>
-<li class="chapter" data-level="6.4.4" data-path="gis.html"><a href="gis.html#arcgis-r-python-packages"><i class="fa fa-check"></i><b>6.4.4</b> ArcGIS R &amp; Python packages</a></li>
-<li class="chapter" data-level="6.4.5" data-path="gis.html"><a href="gis.html#leaflet"><i class="fa fa-check"></i><b>6.4.5</b> Leaflet</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="gis.html"><a href="gis.html#rasters"><i class="fa fa-check"></i><b>6.5</b> Rasters</a></li>
-<li class="chapter" data-level="6.6" data-path="gis.html"><a href="gis.html#further-resources-2"><i class="fa fa-check"></i><b>6.6</b> Further resources</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>7</b> Postcodes &amp; Addresses</a><ul>
-<li class="chapter" data-level="7.1" data-path="geocoding.html"><a href="geocoding.html#uprn"><i class="fa fa-check"></i><b>7.1</b> UPRN</a></li>
-<li class="chapter" data-level="7.2" data-path="geocoding.html"><a href="geocoding.html#postcodes"><i class="fa fa-check"></i><b>7.2</b> Postcodes</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="geocoding.html"><a href="geocoding.html#pas-postcode-lookup"><i class="fa fa-check"></i><b>7.2.1</b> PAS Postcode Lookup</a></li>
-<li class="chapter" data-level="7.2.2" data-path="geocoding.html"><a href="geocoding.html#postcode-boundaries"><i class="fa fa-check"></i><b>7.2.2</b> Postcode Boundaries</a></li>
-<li class="chapter" data-level="7.2.3" data-path="geocoding.html"><a href="geocoding.html#split-postcodes"><i class="fa fa-check"></i><b>7.2.3</b> Split postcodes</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="geocoding.html"><a href="geocoding.html#addresses"><i class="fa fa-check"></i><b>7.3</b> Addresses</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="public-data.html"><a href="public-data.html"><i class="fa fa-check"></i><b>8</b> Public Data Sources</a><ul>
-<li class="chapter" data-level="8.1" data-path="public-data.html"><a href="public-data.html#office-of-national-statistics"><i class="fa fa-check"></i><b>8.1</b> Office of National Statistics</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="public-data.html"><a href="public-data.html#crm"><i class="fa fa-check"></i><b>8.1.1</b> CRM</a></li>
-<li class="chapter" data-level="8.1.2" data-path="public-data.html"><a href="public-data.html#nomis"><i class="fa fa-check"></i><b>8.1.2</b> NOMIS</a></li>
-<li class="chapter" data-level="8.1.3" data-path="public-data.html"><a href="public-data.html#open-geography"><i class="fa fa-check"></i><b>8.1.3</b> Open Geography Portal</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="public-data.html"><a href="public-data.html#ministry-of-housing-communities-local-government"><i class="fa fa-check"></i><b>8.2</b> Ministry of Housing, Communities &amp; Local Government</a></li>
-<li class="chapter" data-level="8.3" data-path="public-data.html"><a href="public-data.html#ordnance-survey"><i class="fa fa-check"></i><b>8.3</b> Ordnance Survey</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="public-data.html"><a href="public-data.html#os-data-hub"><i class="fa fa-check"></i><b>8.3.1</b> OS Data Hub</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="public-data.html"><a href="public-data.html#lginform"><i class="fa fa-check"></i><b>8.4</b> LGInform?</a></li>
-<li class="chapter" data-level="8.5" data-path="public-data.html"><a href="public-data.html#lsoapop-r-package"><i class="fa fa-check"></i><b>8.5</b> LSOApop R package</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>9</b> Databases</a><ul>
-<li class="chapter" data-level="9.1" data-path="databases.html"><a href="databases.html#corporate-data-warehouse"><i class="fa fa-check"></i><b>9.1</b> Corporate data warehouse</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="databases.html"><a href="databases.html#oscar"><i class="fa fa-check"></i><b>9.1.1</b> OSCAR</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="databases.html"><a href="databases.html#corporate-spatial-database"><i class="fa fa-check"></i><b>9.2</b> Corporate spatial database</a></li>
-<li class="chapter" data-level="9.3" data-path="databases.html"><a href="databases.html#sqlite"><i class="fa fa-check"></i><b>9.3</b> SQLite</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="databases.html"><a href="databases.html#spatialite"><i class="fa fa-check"></i><b>9.3.1</b> SpatiaLite</a></li>
-</ul></li>
-<li class="chapter" data-level="9.4" data-path="databases.html"><a href="databases.html#further-resources-3"><i class="fa fa-check"></i><b>9.4</b> Further resources</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="other.html"><a href="other.html"><i class="fa fa-check"></i><b>10</b> Other</a><ul>
-<li class="chapter" data-level="10.1" data-path="other.html"><a href="other.html#renv"><i class="fa fa-check"></i><b>10.1</b> renv</a></li>
-<li class="chapter" data-level="10.2" data-path="other.html"><a href="other.html#docker"><i class="fa fa-check"></i><b>10.2</b> Docker</a></li>
-<li class="chapter" data-level="10.3" data-path="other.html"><a href="other.html#reprex-r-package"><i class="fa fa-check"></i><b>10.3</b> reprex R package</a></li>
-<li class="chapter" data-level="10.4" data-path="other.html"><a href="other.html#writing-r-packages"><i class="fa fa-check"></i><b>10.4</b> Writing R packages</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="other.html"><a href="other.html#roxygen2"><i class="fa fa-check"></i><b>10.4.1</b> roxygen2</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="other.html"><a href="other.html#plumber-r-package"><i class="fa fa-check"></i><b>10.5</b> plumber R package</a></li>
-<li class="chapter" data-level="10.6" data-path="other.html"><a href="other.html#data-visualisation"><i class="fa fa-check"></i><b>10.6</b> Data Visualisation</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Notes</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="github.html"><span class="header-section-number">1</span> Version Control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
+<li><a class="active" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">4</span> APIs</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">5</span> Python</a></li>
+<li><a class="" href="gis.html"><span class="header-section-number">6</span> GIS</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">7</span> Postcodes &amp; Addresses</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">8</span> Public Data Sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">9</span> Databases</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">10</span> Other</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="rmd" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> R Markdown</h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmd" class="section level1">
+<h1>
+<span class="header-section-number">3</span> R Markdown<a class="anchor" aria-label="anchor" href="#rmd"><i class="fas fa-link"></i></a>
+</h1>
 <div id="r-markdown-vs-markdown" class="section level2">
-<h2><span class="header-section-number">3.1</span> R Markdown vs Markdown</h2>
+<h2>
+<span class="header-section-number">3.1</span> R Markdown vs Markdown<a class="anchor" aria-label="anchor" href="#r-markdown-vs-markdown"><i class="fas fa-link"></i></a>
+</h2>
 <p><em>TODO</em></p>
 </div>
 <div id="child-markdown-iteration" class="section level2">
-<h2><span class="header-section-number">3.2</span> Child markdown iteration</h2>
+<h2>
+<span class="header-section-number">3.2</span> Child markdown iteration<a class="anchor" aria-label="anchor" href="#child-markdown-iteration"><i class="fas fa-link"></i></a>
+</h2>
 <p><em>TODO</em></p>
 <p>- example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser base dashboards such as those provided via Power BI or Shiny</p>
 </div>
 <div id="notebooks" class="section level2">
-<h2><span class="header-section-number">3.3</span> Notebooks</h2>
+<h2>
+<span class="header-section-number">3.3</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
+</h2>
 <p><em>TODO</em></p>
 <p>- technical vs data exploration - don’t add to github</p>
 </div>
 <div id="bookdown" class="section level2">
-<h2><span class="header-section-number">3.4</span> Bookdown</h2>
+<h2>
+<span class="header-section-number">3.4</span> Bookdown<a class="anchor" aria-label="anchor" href="#bookdown"><i class="fas fa-link"></i></a>
+</h2>
 <p>These notes are written using the <a href="https://pkgs.rstudio.com/bookdown/">bookdown package</a>, which is built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="themes" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> Themes</h3>
+<h3>
+<span class="header-section-number">3.4.1</span> Themes<a class="anchor" aria-label="anchor" href="#themes"><i class="fas fa-link"></i></a>
+</h3>
 <p><em>TODO</em></p>
-<p><a href="https://bookdown.org/yihui/bookdown/html.html#gitbook-style">GitBook style</a><br />
-<a href="https://snowdreams1006.github.io/gitbook-official/en/themes/">Theming</a> <a href="https://github.com/hadley/r4ds">R4DS source</a></p>
+<p><a href="https://bookdown.org/yihui/bookdown/html.html#gitbook-style">GitBook style</a><br><a href="https://snowdreams1006.github.io/gitbook-official/en/themes/">Theming</a> <a href="https://github.com/hadley/r4ds">R4DS source</a></p>
 </div>
 <div id="publishing" class="section level3">
-<h3><span class="header-section-number">3.4.2</span> Publishing</h3>
+<h3>
+<span class="header-section-number">3.4.2</span> Publishing<a class="anchor" aria-label="anchor" href="#publishing"><i class="fas fa-link"></i></a>
+</h3>
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
 <p>1. Under …</p>
@@ -328,7 +117,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="flexdashboard" class="section level2">
-<h2><span class="header-section-number">3.5</span> Flexdashboard</h2>
+<h2>
+<span class="header-section-number">3.5</span> Flexdashboard<a class="anchor" aria-label="anchor" href="#flexdashboard"><i class="fas fa-link"></i></a>
+</h2>
 <blockquote>
 <p>The goal of flexdashboard is to make it easy to create interactive dashboards for R, using R Markdown.</p>
 </blockquote>
@@ -337,79 +128,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.</em></p>
 </div>
 <div id="further-resources-1" class="section level2">
-<h2><span class="header-section-number">3.6</span> Further resources</h2>
+<h2>
+<span class="header-section-number">3.6</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
+</h2>
 <p><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
 </div>
 <div id="r-markdown-tips" class="section level2">
-<h2><span class="header-section-number">3.7</span> R Markdown tips</h2>
+<h2>
+<span class="header-section-number">3.7</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
+</h2>
 <div id="markdown-visual-editor" class="section level3">
-<h3><span class="header-section-number">3.7.1</span> Markdown visual editor</h3>
+<h3>
+<span class="header-section-number">3.7.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
+</h3>
 <p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
-<p><img src="images/rmd-editor.png" title="RStudio markdown visual editor" /></p>
+<div class="inline-figure"><img src="images/rmd-editor.png" title="RStudio markdown visual editor"></div>
 </div>
 <div id="chunk-named-setup" class="section level3">
-<h3><span class="header-section-number">3.7.2</span> Chunk named setup</h3>
+<h3>
+<span class="header-section-number">3.7.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
+</h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rmd.html#cb11-1"></a><span class="co"># Packages</span></span>
-<span id="cb11-2"><a href="rmd.html#cb11-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Packages</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></code></pre></div>
 <pre><code>```</code></pre>
 
 </div>
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></div>
+<div class="next"><a href="api.html"><span class="header-section-number">4</span> APIs</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rmd"><span class="header-section-number">3</span> R Markdown</a></li>
+<li><a class="nav-link" href="#r-markdown-vs-markdown"><span class="header-section-number">3.1</span> R Markdown vs Markdown</a></li>
+<li><a class="nav-link" href="#child-markdown-iteration"><span class="header-section-number">3.2</span> Child markdown iteration</a></li>
+<li><a class="nav-link" href="#notebooks"><span class="header-section-number">3.3</span> Notebooks</a></li>
+<li>
+<a class="nav-link" href="#bookdown"><span class="header-section-number">3.4</span> Bookdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#themes"><span class="header-section-number">3.4.1</span> Themes</a></li>
+<li><a class="nav-link" href="#publishing"><span class="header-section-number">3.4.2</span> Publishing</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.5</span> Flexdashboard</a></li>
+<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">3.6</span> Further resources</a></li>
+<li>
+<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.7</span> R Markdown tips</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.7.1</span> Markdown visual editor</a></li>
+<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.7.2</span> Chunk named setup</a></li>
+</ul>
+</li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="api.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-09-03.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-},
-"info": true
-});
-});
-</script>
 
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
 </body>
-
 </html>
