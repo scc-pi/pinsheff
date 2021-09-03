@@ -117,7 +117,7 @@ Coordinate systems, projected and geographic, are often identified by an [EPSG c
 
 ### ArcGIS R & Python packages
 
-Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in ascending order of both ease of use and scope of functionality.
+Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in descending order of ease of use, and he scope of functionality is in ascending order.
 
 +-----------------+----------+---------------------------------+-----------------------------------------------+
 | Package         | Language | ArcGIS Desktop Install Required | Scope                                         |
