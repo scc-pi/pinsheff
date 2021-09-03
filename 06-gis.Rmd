@@ -137,7 +137,9 @@ The `esri2sf` R package is the only one of the four packages listed above that i
 
 The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) is based on the same ArcGIS web tools as our Portal and AGOL. To get, for example, the local authority boundary for Sheffield you first need to navigate to the [dataset](https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2020-uk-bgc?geometry=-45.896%2C51.101%2C41.028%2C59.782) on the website and get the GeoService API URL:
 
-![](images/open-geog-api.png)
+```{r echo=FALSE}
+knitr::include_graphics("images/open-geog-api.png")
+```
 
 Then, using:
 

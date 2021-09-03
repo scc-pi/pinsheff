@@ -71,7 +71,9 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:
 
-![](images/rmd-editor.png "RStudio markdown visual editor")
+```{r echo=FALSE}
+knitr::include_graphics("images/rmd-editor.png")
+```
 
 ### Chunk named setup
 

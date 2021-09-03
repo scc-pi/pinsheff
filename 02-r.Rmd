@@ -51,7 +51,9 @@ A few non-default Global Options, under Code and Display, make it a little easie
 
 -   Rainbow parentheses (since RStudio v1.4)
 
-![](images/code-display.png)
+```{r echo=FALSE}
+knitr::include_graphics("images/code-display.png")
+```
 
 ### Document outline & headings
 
@@ -64,7 +66,9 @@ Code sections and subsections are useful:
 
 The sections can be collapsed and are also listed in the document outline pane:
 
-![](images/doc-outline.png)
+```{r echo=FALSE}
+knitr::include_graphics("images/doc-outline.png")
+```
 
 ### ViewPipeSteps addin
 
@@ -77,7 +81,9 @@ library(ViewPipeSteps)
 
 To use:
 
-![](images/view-pipe-steps.png)
+```{r echo=FALSE}
+knitr::include_graphics("images/view-pipe-steps.png")
+```
 
 ### Shortcuts
 
