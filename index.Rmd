@@ -3,7 +3,7 @@ title: "Notes"
 author: "Laurie Platt"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: bookdown::bs4_book
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
