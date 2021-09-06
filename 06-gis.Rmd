@@ -115,7 +115,7 @@ A reference ellipsoid as an approximation of the surface of the earth and provid
 
 Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
 
-### ArcGIS R & Python packages
+### ArcGIS R & Python packages {#arcgisr}
 
 Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in descending order of ease of use, and he scope of functionality is in ascending order.
 
@@ -145,7 +145,7 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\*&where=1%3D1){.uri}
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\*&where=1%3D1){.uri}
 
 2.  some resources to understand how to query the API,
 
