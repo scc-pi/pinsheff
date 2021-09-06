@@ -54,7 +54,7 @@ features
 simple-features
 coordinates-projections
 geographic-projected-coordinate-systems
-arcgis-r-python-packages
+arcgisr
 esri2sf
 r-arcgis-bridge
 arcgis-python-api
