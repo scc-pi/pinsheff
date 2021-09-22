@@ -21,9 +21,9 @@ download.file(url = str_c(filepath, filename),
               mode = "wb")
 
 # Read the data, then select the rows and columns we need
-df <- read_excel(path = str_c("data/", filename), sheet = 5, skip = 4) %>% 
-  select(c(1:5)) %>% 
-  filter(`LA name (2021 boundaries)` == "Sheffield") %>% 
+df <- readxl::read_excel(path = str_c("data/", filename), sheet = 5, skip = 4) %>% 
+  dplyr::select(c(1:5)) %>% 
+  dplyr::filter(`LA name (2021 boundaries)` == "Sheffield") %>% 
   knitr::kable() #display in a nice table
 ```
 
