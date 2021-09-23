@@ -2,31 +2,11 @@
 
 ## Office of National Statistics
 
-For this example we're going to get the population for each Ward in Sheffield. First we need to find the dataset on the ONS website:
+For this example we're going to get the population for each Ward in Sheffield. First we need to [find the dataset on the ONS website](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland). From which we copy the link to the Excel file and use it in the script below:
 
-<https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland>
-
-From which we copy the link to the Excel file and use it in the script below:
-
-```{r ons-ward-pop}
-# The xlsx link minus the file name
-filepath <- "https://www.ons.gov.uk/file?uri=%2fpeoplepopulationandcommunity%2fpopulationandmigration%2fpopulationestimates%2fdatasets%2fwardlevelmidyearpopulationestimatesexperimental%2fmid2020sape23dt8a/"
-
-# The xlsx file name
-filename <- "sape23dt8amid2020ward2020on2021lasyoaestimatesunformattedcorrection.xlsx"
-
-# Download the file into the "data" sub-folder in our working directory
-download.file(url = str_c(filepath, filename), 
-              dest = str_c("data/", filename),
-              mode = "wb")
-
-# Read the data, then select the rows and columns we need
-df <- readxl::read_excel(path = str_c("data/", filename), sheet = 5, skip = 4) %>% 
-  dplyr::select(c(1:5)) %>% 
-  dplyr::filter(`LA name (2021 boundaries)` == "Sheffield") %>% 
-  knitr::kable() #display in a nice table
+```{=html}
+<script src="https://gist.github.com/laurie-platt/0ac7f1197f51181c4f1e6f2baa4f2ca9.js"></script>
 ```
-
 The [monstR](https://github.com/HFAnalyticsLab/monstR) and [onsr](https://kvasilopoulos.github.io/onsr/) packages provide access to the ONS beta API. However, the API currently has quite a limited number of datasets, and in particular it lacks access to the data for smaller geographies that we're typically interested in e.g. wards and LSOAs.
 
 ### CRM
