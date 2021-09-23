@@ -57,7 +57,7 @@ Coordinate systems, projected and geographic, are often identified by an [EPSG c
 
 ## ArcGIS R & Python packages {#arcgisr}
 
-Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in descending order of ease of use, and he scope of functionality is in ascending order.
+Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in descending order of ease of use, and the scope of functionality is in ascending order.
 
 +-----------------+----------+---------------------------------+-----------------------------------------------+
 | Package         | Language | ArcGIS Desktop Install Required | Scope                                         |
@@ -101,7 +101,7 @@ we can get the Sheffield boundary as a simple feature:
 
 *TODO: install esri2sf via deploy_bookdown.yml*
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=TRUE, include=TRUE}
 # Base URL for ONS Open Geography Portal
 ons_geog_base_url <- "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/"
 
