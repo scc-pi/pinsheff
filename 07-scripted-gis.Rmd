@@ -150,7 +150,7 @@ Using `arcgisbinding` with ArcGIS Desktop means that you need to use 32-bit R, b
 
 The [README.md in the r-bridge GitHub repository](https://github.com/R-ArcGIS/r-bridge/blob/master/README.md) is the best starting point for more detail on R-ArcGIS Bridge requirements and installation.
 
-The following is an example of how to use spatial data from the Council's AGOL and Portal via the  R-ArcGIS Bridge:
+The R-ArcGIS Bridge cannot write spatial data directly to the Council's Portal and AGOL. It can write to a local geodatabase, which can then be published to Portal or AGOL via ArcGIS Pro. The R-ArcGIS Bridge can read spatial data directly from the Council's Portal and AGOL:
 <script src="https://gist.github.com/laurie-platt/30c253e3b5ddf37ea13446d027ae7d41.js"></script>
 
 The `arc.check_product()` to define a desktop license means that the results of the example above can't be rendered via GitHub Actions in these notes. However, the same example has been knitted locally and included in some [notes on isochrones](https://scc-pi.github.io/isochrones/isochrones.html#Secondary_schools).
@@ -174,6 +174,10 @@ The distinction between web and desktop, for `arcgis` and `arcpy` packages respe
 *- setup*
 
 *- cross ref Docker*
+
+## ArcGIS Notebooks
+
+*TODO*
 
 ## Leaflet
 
