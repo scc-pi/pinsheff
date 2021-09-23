@@ -21,10 +21,6 @@ jobs:
         run: Rscript -e 'install.packages("readxl")'
       - name: Install spatial
         run: Rscript -e 'install.packages(c("PostcodesioR", "mapview"))'
-      - name: Install remotes
-        run: Rscript -e 'install.packages("remotes")'
-      - name: Install esri2sf
-        run: Rscript -e 'remotes::install_github("yonghah/esri2sf")'
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
       - name: Install rstudio
