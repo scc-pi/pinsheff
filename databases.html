@@ -52,7 +52,7 @@
 <li><a class="" href="api.html"><span class="header-section-number">4</span> APIs</a></li>
 <li><a class="" href="python.html"><span class="header-section-number">5</span> Python</a></li>
 <li><a class="" href="gis.html"><span class="header-section-number">6</span> GIS</a></li>
-<li><a class="" href="scripted-gis-1.html"><span class="header-section-number">7</span> Scripted GIS</a></li>
+<li><a class="" href="scripted-gis.html"><span class="header-section-number">7</span> Scripted GIS</a></li>
 <li><a class="" href="geocoding.html"><span class="header-section-number">8</span> Postcodes &amp; Addresses</a></li>
 <li><a class="" href="public-data.html"><span class="header-section-number">9</span> Public Data Sources</a></li>
 <li><a class="active" href="databases.html"><span class="header-section-number">10</span> Databases</a></li>
@@ -92,7 +92,7 @@
 </h2>
 <p>Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.</p>
 <p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular, date types are handled differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Convert dates we've read from a SQLite database</span>
 <span class="fu">mutate</span><span class="op">(</span>date <span class="op">=</span> <span class="fu">JD</span><span class="op">(</span><span class="va">date</span>, inverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
        week_end <span class="op">=</span> <span class="fu">JD</span><span class="op">(</span><span class="va">week_end</span>, inverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
