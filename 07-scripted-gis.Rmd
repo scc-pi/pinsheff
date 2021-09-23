@@ -1,0 +1,194 @@
+# Scripted GIS
+
+## Features
+
+The term "feature" is useful to distinguish a record as "spatial". By "spatial" we mean it has a point, a line or a polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons at least three pairs.
+
+Something to keep an eye out for is MULTIPOINT, multi-part polygons etc. This is a single record, a single feature, but it has more than one point, line or polygon. For example, Sheffield secondary school features might be MULTIPOINT so that the feature for King Edward VII school can have one point for the Lower School near Crosspool, and another point for the Upper School in Broomhill.
+
+### Simple features
+
+Simple features is an open standard developed by the Open Geospatial Consortium. It is a hierarchical data model that represents a wide range of geometry types, all of which are supported by the [sf R package](https://r-spatial.github.io/sf/index.html). The `sf` package also plays nice with the `tidyverse`.
+
+```{r}
+# Create a data frame with some example records 
+df <- tibble::tribble(
+  ~name,    ~postcode, ~longitude,  ~latitude,
+  "SCC",    "S1 2HH",	 -1.470006,   53.38038,
+  "Blades", "S2 4SU",  -1.470512,   53.36986,
+  "Owls",   "S6 1SW",	 -1.500859,   53.41084
+)
+
+# Create simple features
+sf_shef <- sf::st_as_sf(df, 
+                        coords = c("longitude", "latitude"), #from postcodes.io
+                        crs = 4326) #WSG84
+
+# Plot
+mapview::mapview(sf_shef, layer.name = "Sheffield institutions")
+```
+
+## Coordinates & projections
+
+The minimum you need to know is that any spatial data you use is likely to involve one or more of three coordinate systems:
+
+1.  WSG84 with an ESPG of 4326
+2.  Web Mercator with an EPSG of 3857
+3.  OSGB1936 (British National Grid) with an ESPG of 27700
+
+Most web maps are based on features stored as WSG84 and displayed (projected) as Web Mercator. Postcodes.io uses WSG84, but the Council's Portal and the ONS Open Geography Portal use OSGB1936 (BNG) (*TODO*: *need to double check this!!)*.
+
+```{r}
+# Check the coordinate system of simple features
+sf::st_crs(sf_shef)
+```
+
+### Geographic & projected coordinate systems
+
+A reference ellipsoid as an approximation of the surface of the earth and provides a shape on which a coordinate system can be placed.
+
+**Geographic coordinate systems** use the ellipsoid to define specific locations on the surface to create a grid. Datums are geographic coordinate systems based on a specific ellipsoid (so a more specific geographic coordinate system), with an origin at a specific location, and the ellipsoid at a specific orientation. These are also called "spatial reference systems" or "coordinate reference systems".
+
+**Projected coordinate systems** are like geographic coordinate systems. A projected coordinate system is also a grid used as a reference for locations on the planet, but it's a translation of the three-dimensional grid onto a two-dimensional plane such as a paper map or screen.
+
+> A GCS defines ***where*** the data is located on the earth's surface. A PCS tells the data ***how*** to draw on a flat surface such as a screen.
+
+Coordinate systems, projected and geographic, are often identified by an [EPSG code](https://epsg.org/home.html).
+
+## ArcGIS R & Python packages {#arcgisr}
+
+Listed below are R and Python packages that allow us to leverage ArcGIS functionality. Generally speaking, they are in descending order of ease of use, and he scope of functionality is in ascending order.
+
++-----------------+----------+---------------------------------+-----------------------------------------------+
+| Package         | Language | ArcGIS Desktop Install Required | Scope                                         |
++=================+==========+=================================+===============================================+
+| `esri2sf`       | R        | ✕                               | Read from AGOL & ArcGIS Enterprise            |
++-----------------+----------+---------------------------------+-----------------------------------------------+
+| `arcgisbinding` | R        | ✓                               | Read & write from AGOL & ArcGIS Enterprise    |
++-----------------+----------+---------------------------------+-----------------------------------------------+
+| `arcgis`        | Python   | ✓                               | Access AGOL & ArcGIS Enterprise functionality |
++-----------------+----------+---------------------------------+-----------------------------------------------+
+| `arcpy`         | Python   | ✓                               | Access ArcGIS Desktop or Pro functionality    |
++-----------------+----------+---------------------------------+-----------------------------------------------+
+
+### esri2sf
+
+The `esri2sf` R package is the only one of the four packages listed above that is not maintained by ESRI. It is the simplest to start using because it doesn't require an installation and license for ArcGIS Desktop or Pro. The flip side, is that it has the least amount of functionality and the code isn't as robust. The scope of the package is limited to reading simple features or data frames from AGOL & ArcGIS Enterprise (ours or other organisation's).
+
+The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) is based on the same ArcGIS web tools as our Portal and AGOL. To get, for example, the local authority boundary for Sheffield you first need to navigate to the [dataset](https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2020-uk-bgc?geometry=-45.896%2C51.101%2C41.028%2C59.782) on the website and get the GeoService API URL:
+
+```{r echo=FALSE}
+knitr::include_graphics("images/open-geog-api.png")
+```
+
+Then, using:
+
+1.  the copied GeoService URL,
+
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\*&where=1%3D1){.uri}
+
+2.  some resources to understand how to query the API,
+
+    > [ArcGIS REST API - Query (Feature Service/Layer)](https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm)
+    >
+    > [SQL 92](https://ronsavage.github.io/SQL/sql-92.bnf.html) is used by ESRI based APIs
+    >
+    > [HTML encoding](https://www.w3schools.com/tags/ref_urlencode.ASP) is used for building URL queries
+
+3.  and `esri2sf`,
+
+we can get the Sheffield boundary as a simple feature:
+
+*TODO: install esri2sf via deploy_bookdown.yml*
+
+```{r eval=FALSE, include=TRUE}
+# Base URL for ONS Open Geography Portal
+ons_geog_base_url <- "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/"
+
+# URL part for how detailed the local authority boundary should be
+generalised <- "Local_Authority_Districts_December_2020_UK_BGC"
+
+# Get Sheffield MSOA boundaries as simple features  
+shef_msoa <- esri2sf::esri2sf(url = stringr::str_c(ons_geog_base_url,
+                                                   generalised,
+                                                   "/FeatureServer/0"),
+                              where = "LAD20NM LIKE'Sheffield%'",
+                              geomType = "esriGeometryPolygon")
+
+# Plot
+mapview::mapview(shef_msoa, layer.name = "Sheffield")
+```
+
+The example above reads open data. However, most of the Council's spatial data on Portal and AGOL requires login credentials to to access. Nevertheless, Portal and AGOL login credentials are a smaller requirement than a ArcGIS Desktop or Pro installation and license.
+
+*TODO - test and note authentication with token*
+
+Our public [github.com/scc-pi/functions](https://github.com/scc-pi/functions) repository includes functions in `ShefAreas.R` that use `esri2sf`. The sub-headings immediately below outline how other ArcGIS packages are more powerful, but also more onerous in terms of licensing and setup. So where possible, the intention is to utilise `esri2sf` in preference to the other ArcGIS packages.
+
+Relying on `esri2sf` may require some contributions to the `esri2sf` repository. For example, a pull request to fix an assumption that at least 500 features can be served at a time, when the ONS Open Geography Portal limit is 50 (hence our forked [github.com/scc-pi/esri2sf](https://github.com/scc-pi/esri2sf) repository). Contributing to `esri2sf` repository is preferable to accessing the Portal or AGOL API via Javascript, which is better suited to web developers than data analysts.
+
+Further information on the `esri2sf` package, how to install and use it, is available from [github.com/yonghah/esri2sf](https://github.com/yonghah/esri2sf).
+
+### R-ArcGIS Bridge
+
+The R-ArcGIS Bridge is the name for the `arcgisbinding` R package. It's scope is limited to:
+
+-   Transferring data in both directions between ArcGIS and R
+
+-   Wrapping R tools for use in ArcGIS
+
+For more information on using the `arcgisbinding` package see the vignette on [Using the R-ArcGIS Bridge](https://r.esri.com/assets/arcgisbinding-vignette.html).
+
+To use the R-ArcGIS Bridge you need an installation and license for ArcGIS Desktop or Pro. After loading the `arcgisbinding` package you have to call `arc.check_product()` to define a desktop license:
+
+```{r eval=FALSE, include=TRUE}
+library(arcgisbinding)
+arc.check_product()
+```
+
+Using `arcgisbinding` with ArcGIS Desktop means that you need to use 32-bit R, because ArcGIS Desktop is 32-bit. An ArcGIS Desktop 64-bit Background Geoprocessing option is a red herring because it only allows using the bridge from ArcGIS, not from within R itself. ArcGIS Pro is 64-bit and allows you to use use 64-bit R with `arcgisbinding`.
+
+The [README.md in the r-bridge GitHub repository](https://github.com/R-ArcGIS/r-bridge/blob/master/README.md) is the best starting point for more detail on R-ArcGIS Bridge requirements and installation.
+
+The following is an example of how to use spatial data from the Council's AGOL and Portal via the  R-ArcGIS Bridge:
+<script src="https://gist.github.com/laurie-platt/30c253e3b5ddf37ea13446d027ae7d41.js"></script>
+
+The `arc.check_product()` to define a desktop license means that the results of the example above can't be rendered via GitHub Actions in these notes. However, the same example has been knitted locally and included in some [notes on isochrones](https://scc-pi.github.io/isochrones/isochrones.html#Secondary_schools).
+
+### ArcGIS Python API
+
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R. The `arcgis` package is used to work with ArcGIS Enterprise (Portal) and AGOL.
+
+*- The name of the package and it's purpose - OneNote?*
+
+To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
+
+### ArcPy
+
+The `arcpy` package is used to leverage the ArcGIS Desktop or Pro functionality. Like the `arcgis` package, to use the `arcpy` package we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/).
+
+The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is a bit of a simplification but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+
+*TODO*
+
+*- setup*
+
+*- cross ref Docker*
+
+## Leaflet
+
+*TODO*
+
+## Rasters
+
+*TODO*
+
+## Further resources
+
+[Geocomputation with R](https://geocompr.robinlovelace.net/), by Robin Lovelace
+
+[mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
+
+[Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
+
+[EPSG 4326 vs EPSG 3857](https://lyzidiamond.com/posts/4326-vs-3857#:~:text=EPSG%3A3857%20(Pseudo%2DMercator),-The%20projected%20Pseudo&text=This%20projection%20was%20first%20introduced,the%20coordinates%20onto%20a%20sphere.), Lyzi Diamond (26 May 2017)
