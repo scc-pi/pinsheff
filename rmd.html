@@ -128,26 +128,32 @@
 <p>Flexdashboards don’t have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project, or, because the output is simply an HTML file, if you need to share the dashboard with one or two people outside the organisation. They’re also obviously a good option if you’ve done your data analysis and preparatory work in R.</p>
 <p><em>TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.</em></p>
 </div>
+<div id="rolldown" class="section level2">
+<h2>
+<span class="header-section-number">3.6</span> Rolldown<a class="anchor" aria-label="anchor" href="#rolldown"><i class="fas fa-link"></i></a>
+</h2>
+<p>“<a href="https://github.com/yihui/rolldown/blob/master/README.md">Rolldown</a> is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling”. It’s similar to the ArcGIS StoryMaps that have proved popular and poeple might be familiar with.</p>
+</div>
 <div id="further-resources-1" class="section level2">
 <h2>
-<span class="header-section-number">3.6</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.7</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
 </div>
 <div id="r-markdown-tips" class="section level2">
 <h2>
-<span class="header-section-number">3.7</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
 </h2>
 <div id="markdown-visual-editor" class="section level3">
 <h3>
-<span class="header-section-number">3.7.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
 </h3>
 <p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
 <div class="inline-figure"><img src="images/rmd-editor.png" width="328"></div>
 </div>
 <div id="chunk-named-setup" class="section level3">
 <h3>
-<span class="header-section-number">3.7.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
 </h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
@@ -176,11 +182,12 @@
 </ul>
 </li>
 <li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.5</span> Flexdashboard</a></li>
-<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">3.6</span> Further resources</a></li>
+<li><a class="nav-link" href="#rolldown"><span class="header-section-number">3.6</span> Rolldown</a></li>
+<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">3.7</span> Further resources</a></li>
 <li>
-<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.7</span> R Markdown tips</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.7.1</span> Markdown visual editor</a></li>
-<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.7.2</span> Chunk named setup</a></li>
+<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.8</span> R Markdown tips</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.8.1</span> Markdown visual editor</a></li>
+<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.8.2</span> Chunk named setup</a></li>
 </ul>
 </li>
 </ul>
@@ -200,7 +207,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-09-23.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-09-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

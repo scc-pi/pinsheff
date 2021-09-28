@@ -27,6 +27,7 @@ bookdown
 themes
 publishing
 flexdashboard
+rolldown
 further-resources-1
 r-markdown-tips
 markdown-visual-editor
