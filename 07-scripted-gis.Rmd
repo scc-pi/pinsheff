@@ -36,7 +36,7 @@ The minimum you need to know is that any spatial data you use is likely to invol
 2.  Web Mercator with an EPSG of 3857
 3.  OSGB1936 (British National Grid) with an ESPG of 27700
 
-Most web maps are based on features stored as WSG84 and displayed (projected) as Web Mercator. Postcodes.io uses WSG84, but the Council's Portal and the ONS Open Geography Portal use OSGB1936 (BNG) (*TODO*: *need to double check this!!)*.
+Most web maps are based on features stored as WSG84 and displayed (projected) as Web Mercator. Postcodes.io uses WSG84, but the Council's Portal and AGOL, and the ONS Open Geography Portal use OSGB1936 (BNG).
 
 ```{r}
 # Check the coordinate system of simple features
@@ -117,7 +117,7 @@ shef_msoa <- esri2sf::esri2sf(url = stringr::str_c(ons_geog_base_url,
 mapview::mapview(shef_msoa, layer.name = "Sheffield")
 ```
 
-The example above reads open data. However, most of the Council's spatial data on Portal and AGOL requires login credentials to to access. Nevertheless, Portal and AGOL login credentials are a smaller requirement than a ArcGIS Desktop or Pro installation and license.
+The example above reads open data. However, most of the Council's spatial data on Portal and AGOL requires login credentials to access. Nevertheless, Portal and AGOL login credentials are a smaller requirement than a ArcGIS Desktop or Pro installation and license.
 
 *TODO - test and note authentication with token*
 
