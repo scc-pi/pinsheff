@@ -1,8 +1,8 @@
 # GIS with R
 
-As a rule of thumb, use GIS with R if you're familiar with R but not ArcGIS and Python, [and]{.ul} your project has just [some]{.ul} spatial content. If your project is predominantly spatial, you should consider upskilling to ArcGIS. The GIS capabilities of R packages are increasingly competent. However, you'll be swimming against the tide if you don't take advantage of the Council's investment in the ArcGIS platform, tools and skills.
+As a rule of thumb, use GIS with R if you're familiar with R but not ArcGIS and Python, **and** your project has just **some** spatial content. If your project is predominantly spatial, you should consider upskilling to ArcGIS. The GIS capabilities of R packages are increasingly competent. However, you'll be swimming against the tide if you don't take advantage of the Council's investment in the ArcGIS platform, tools and skills.
 
-This chapter focusses on how you can include spatial data in your R project from the Council's ArcGIS platform, or other public data sources.
+This chapter focusses on how you can include spatial data in your R project from public data sources and the Council's ArcGIS platform.
 
 ## Features
 
@@ -89,7 +89,7 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\*&where=1%3D1){.uri}
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=*&where=1%3D1){.uri}
 
 2.  some resources to understand how to query the API,
 

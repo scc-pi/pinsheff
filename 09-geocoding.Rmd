@@ -2,9 +2,9 @@
 
 A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents by Ward.
 
-## UPRN  
+## UPRN
 
-_TODO_
+*TODO*
 
 ## Postcodes
 
@@ -34,17 +34,17 @@ add_pcd_vars(df,
   knitr::kable() #display them in a nice table
 ```
 
-`admin_district` can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield?  You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.   
+`admin_district` can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield? You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.
 
-Needing the coordinates of the postcode centroid is also common, so the function also has a `.lat_long` argument that if `TRUE` returns both a latitude column and a longitude column. 
+Needing the coordinates of the postcode centroid is also common, so the function also has a `.lat_long` argument that if `TRUE` returns both a latitude column and a longitude column.
 
-_TODO: link to sf example & area stats_  
- 
-Other columns are added by including their name in a character vector passed with the `other_vars` function argument. For example, `other_vars=c("ccg_code","lsoa_code")`. The list of valid `other_vars` is defined at [docs.ropensci.org/PostcodesioR/#examples](https://docs.ropensci.org/PostcodesioR/#examples). 
+*TODO: link to sf example & area stats*
+
+Other columns are added by including their name in a character vector passed with the `other_vars` function argument. For example, `other_vars=c("ccg_code","lsoa_code")`. The list of valid `other_vars` is defined at [docs.ropensci.org/PostcodesioR/\#examples](https://docs.ropensci.org/PostcodesioR/#examples).
 
 The `pcd_name` function argument is used to specify the name of the data frame's postcode column when it isn't `postcode`. For example, `pcd_name="pupil_pcode"`.
 
-Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:  
+Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:
 
 ```{r, extract-pcd, message=FALSE, warning=FALSE}
 # Create a data frame with some example records
@@ -61,23 +61,27 @@ dplyr::mutate(df,
   knitr::kable()
 ```
 
-### PAS Postcode Lookup  
+### PAS Postcode Lookup
 
-PAS, the Performance & Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the `add_pcd_vars()` function.  
+PAS, the Performance & Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the `add_pcd_vars()` function.
 
-_TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?_    
+*TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?*
 
 ### Postcode Boundaries
 
-_TODO:_
-[OPEN DATA GB POSTCODE UNIT BOUNDARIES](https://longair.net/blog/2021/08/23/open-data-gb-postcode-unit-boundaries/)
+*TODO:* [OPEN DATA GB POSTCODE UNIT BOUNDARIES](https://longair.net/blog/2021/08/23/open-data-gb-postcode-unit-boundaries/)
 
 ### Split postcodes
 
-_TODO_
+*TODO*
 
 ## Addresses
 
-_TODO_  
-- Portal LLPG Cascade Locator  
-- OS Places ESRI integration  
+Anne Tetley has provided the following guidance (on Portal):
+
+-   [Geocoding Address Data in Portal](https://sheffieldcitycouncil.cloud.esriuk.com/portal/apps/storymaps/stories/65cd11fc65ef4c0cb89b761ebf367053)
+
+
+*TODO*\
+- Portal LLPG Cascade Locator\
+- OS Places ESRI integration
