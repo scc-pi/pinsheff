@@ -1,4 +1,4 @@
-# Scripted GIS
+# GIS with R
 
 ## Features
 
@@ -152,30 +152,6 @@ The R-ArcGIS Bridge cannot write spatial data directly to the Council's Portal a
 <script src="https://gist.github.com/laurie-platt/30c253e3b5ddf37ea13446d027ae7d41.js"></script>
 
 The `arc.check_product()` to define a desktop license means that the results of the example above can't be rendered via GitHub Actions in these notes. However, the same example has been knitted locally and included in some [notes on isochrones](https://scc-pi.github.io/isochrones/isochrones.html#Secondary_schools).
-
-### ArcGIS Python API
-
-The Council's ArcGIS software from ESRI has a much stronger integration with Python than R. The `arcgis` package is used to work with ArcGIS Enterprise (Portal) and AGOL.
-
-*- The name of the package and it's purpose - OneNote?*
-
-To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
-
-### ArcPy
-
-The `arcpy` package is used to leverage the ArcGIS Desktop or Pro functionality. Like the `arcgis` package, to use the `arcpy` package we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/).
-
-The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is a bit of a simplification but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
-
-*TODO*
-
-*- setup*
-
-*- cross ref Docker*
-
-## ArcGIS Notebooks
-
-*TODO*
 
 ## Leaflet
 

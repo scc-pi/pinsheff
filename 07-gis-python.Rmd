@@ -1,0 +1,47 @@
+# GIS with Python
+
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R, which is why this "GIS with Python" chapter precedes the "GIS with R" chapter.
+
+There are three main ways of leveraging GIS (in particular the Council's ArcGIS) via Python. In increasing order of difficulty in terms of initial setup:
+
+1.  ArcGIS Notebooks (see the [sub-heading immediately below](#argis-notebooks))
+
+2.  Non-ESRI IDE e.g. Jupyter Notebooks, VS Code or RStudio
+
+3.  R via the `reticulate` package
+
+ArcGIS Notebooks take care of most the Python environment and ESRI license settings. Taking your Python scripts outside of ArcGIS Notebooks, e.g. by using VS Code, means that you're taking more responsibility for the Python environment and ESRI license settings. Using Python in R via the `reticulate` package means that you have the added responsibility of the R environment.
+
+## ArcGIS Notebooks {#arcgis-notebooks}
+
+"ArcGIS Notebooks are built on top of [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/), an open-source web application that allows you to create and share documents that contain live Python code, visualizations, and narrative text."
+
+ArcGIS Notebooks can be created in ArcGIS Pro and AGOL. They are also now available in ArcGIS Enterprise but have yet to be setup in the Council's Portal.
+
+[Learn Python with ArcGIS Notebooks](https://learn.arcgis.com/en/paths/learn-python-with-arcgis-notebooks/)
+
+[Notebooks in ArcGIS Pro](https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/pro-notebooks.htm) documentation
+
+[ArcGIS API for Python Fundamentals](https://www.esri.com/training/catalog/5e14df4436e7e15d09b53cff/arcgis-api-for-python-fundamentals/) learning plan
+
+## ArcGIS Python API
+
+The `arcgis` package is used to work with ArcGIS Enterprise (Portal) and AGOL.
+
+*- The name of the package and it's purpose - OneNote?*
+
+To use the `arcpy` or `arcgis` packages we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/)
+
+## ArcPy
+
+The `arcpy` package is used to leverage the ArcGIS Desktop or Pro functionality. Like the `arcgis` package, to use the `arcpy` package we first need to specify the [ArcGIS Python environment](https://developers.arcgis.com/python/guide/install-and-set-up/).
+
+The distinction between web and desktop, for `arcgis` and `arcpy` packages respectively, is a bit of a simplification but it serves a purpose. It's worth noting that the integration between the two packages isn't as seamless as you might expect.
+
+*TODO*
+
+*- setup*
+
+*- cross ref Docker*
+
+## Non-ESRI GIS with Python

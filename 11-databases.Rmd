@@ -8,7 +8,8 @@ _TODO_
 
 ## Corporate spatial database
 
-_TODO_
+_TODO_  
+ - Postgres - extensions for geometry types e.g. line
 
 ## SQLite
 

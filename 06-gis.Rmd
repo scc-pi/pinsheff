@@ -61,3 +61,4 @@ QGIS is an open source alternative to ArcGIS Desktop and ArcGIS Pro.
 ## Further resources
 
 *TODO*
+ - cross-ref database chapter and spatial database content
