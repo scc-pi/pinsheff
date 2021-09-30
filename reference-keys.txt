@@ -28,10 +28,10 @@ themes
 publishing
 flexdashboard
 rolldown
-further-resources-1
 r-markdown-tips
 markdown-visual-editor
 chunk-named-setup
+further-resources-1
 api
 rest-apis
 wrappers
