@@ -36,7 +36,7 @@ More specific to the UK, is spatial data from ONS and Ordnance Survey. There are
 
 The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but to share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license.
 
-Anne Tetley has created the following guidance (on Portal) for creating content on Portal:
+Anne Tetley has created the following guidance (on Portal) on creating content in Portal or AGOL:
 
 -   [Creating a web map in Portal](https://sheffieldcitycouncil.cloud.esriuk.com/portal/apps/storymaps/stories/47a2818d4a0442e9ac62eaa98621e30d)
 

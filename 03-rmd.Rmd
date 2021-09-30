@@ -60,11 +60,9 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 ## Rolldown
 
-"[Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling". It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
+> [Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.
 
-## Further resources
-
-[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
+It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
 
 ## R Markdown tips
 
@@ -103,3 +101,7 @@ knitr::knit_hooks$set(wrapper = function(before, options) {
 # Packages
 library(tidyverse)
 ```
+
+## Further resources
+
+[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for bookdown.
