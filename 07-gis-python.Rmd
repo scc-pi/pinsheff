@@ -14,7 +14,7 @@ ArcGIS Notebooks take care of most the Python environment and ESRI license setti
 
 ## ArcGIS Notebooks {#arcgis-notebooks}
 
-"ArcGIS Notebooks are built on top of [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/), an open-source web application that allows you to create and share documents that contain live Python code, visualizations, and narrative text."
+> ArcGIS Notebooks are built on top of [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/), an open-source web application that allows you to create and share documents that contain live Python code, visualizations, and narrative text.
 
 ArcGIS Notebooks can be created in ArcGIS Pro and AGOL. They are also now available in ArcGIS Enterprise but have yet to be setup in the Council's Portal.
 

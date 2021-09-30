@@ -26,9 +26,6 @@ Each Rmd file contains one and only one chapter, and a chapter is defined by the
 
 The theme of these notes changed in September 2021 from a [GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style) to a [Three-column Bootstrap style](https://bookdown.org/yihui/bookdown/html.html#bs4-book).
 
-*TODO*\
-[Theming](https://snowdreams1006.github.io/gitbook-official/en/themes/) [R4DS source](https://github.com/hadley/r4ds)
-
 ### Publishing {#publishing}
 
 These notes are published on [GitHub Pages](https://pages.github.com/) with [GitHub Actions](https://github.com/features/actions). A GitHub Action has been configured to start when there's a push to the [master branch](https://github.com/scc-pi/notes). The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called `gh-pages`. Alternatives to using GitHub Actions include Travis and Jekyll.

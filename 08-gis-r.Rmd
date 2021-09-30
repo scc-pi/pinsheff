@@ -1,5 +1,9 @@
 # GIS with R
 
+As a rule of thumb, use GIS with R if you're familiar with R but not ArcGIS and Python, [and]{.ul} your project has just [some]{.ul} spatial content. If your project is predominantly spatial, you should consider upskilling to ArcGIS. The GIS capabilities of R packages are increasingly competent. However, you'll be swimming against the tide if you don't take advantage of the Council's investment in the ArcGIS platform, tools and skills.
+
+This chapter focusses on how you can include spatial data in your R project from the Council's ArcGIS platform, or other public data sources.
+
 ## Features
 
 The term "feature" is useful to distinguish a record as "spatial". By "spatial" we mean it has a point, a line or a polygon. A point is a pair of coordinates, a line a minimum of two pairs of coordinates and polygons at least three pairs.
@@ -85,7 +89,7 @@ Then, using:
 
 1.  the copied GeoService URL,
 
-    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\*&where=1%3D1){.uri}
+    > [https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\\\\\\\\\\\\\\\*&where=1%3D1](https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2020_UK_BGC/FeatureServer/0/query?outFields=\*&where=1%3D1){.uri}
 
 2.  some resources to understand how to query the API,
 
@@ -149,8 +153,10 @@ Using `arcgisbinding` with ArcGIS Desktop means that you need to use 32-bit R, b
 The [README.md in the r-bridge GitHub repository](https://github.com/R-ArcGIS/r-bridge/blob/master/README.md) is the best starting point for more detail on R-ArcGIS Bridge requirements and installation.
 
 The R-ArcGIS Bridge cannot write spatial data directly to the Council's Portal and AGOL. It can write to a local geodatabase, which can then be published to Portal or AGOL via ArcGIS Pro. The R-ArcGIS Bridge can read spatial data directly from the Council's Portal and AGOL:
-<script src="https://gist.github.com/laurie-platt/30c253e3b5ddf37ea13446d027ae7d41.js"></script>
 
+```{=html}
+<script src="https://gist.github.com/laurie-platt/30c253e3b5ddf37ea13446d027ae7d41.js"></script>
+```
 The `arc.check_product()` to define a desktop license means that the results of the example above can't be rendered via GitHub Actions in these notes. However, the same example has been knitted locally and included in some [notes on isochrones](https://scc-pi.github.io/isochrones/isochrones.html#Secondary_schools).
 
 ## Leaflet
