@@ -51,7 +51,12 @@ arcgis-desktop
 arcgis-pro
 qgis
 further-resources-2
-scripted-gis
+gis-with-python
+arcgis-notebooks
+arcgis-python-api
+arcpy
+non-esri-gis-with-python
+gis-with-r
 features
 simple-features
 coordinates-projections
@@ -59,9 +64,6 @@ geographic-projected-coordinate-systems
 arcgisr
 esri2sf
 r-arcgis-bridge
-arcgis-python-api
-arcpy
-arcgis-notebooks
 leaflet
 rasters
 further-resources-3
