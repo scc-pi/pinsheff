@@ -63,7 +63,7 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 ## Rolldown
 
-"[Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling". It's similar to the ArcGIS StoryMaps that have proved popular and poeple might be familiar with.
+"[Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling". It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
 
 ## Further resources
 

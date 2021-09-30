@@ -39,6 +39,8 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 [RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
 
+Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/index.html) is the main book people use when new to R. However, if you already have some coding experience [A Succinct Intro to R](http://r-guide.steveharoz.com/index.html) by Steve Haroz is useful.
+
 ## RStudio tips
 
 ### Code display
