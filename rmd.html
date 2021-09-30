@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 R Markdown | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<meta name="description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 3 R Markdown | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<meta property="og:description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 R Markdown | Notes">
-<meta name="twitter:description" content="3.1 R Markdown vs Markdown TODO  3.2 Child markdown iteration TODO - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by...">
+<meta name="twitter:description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -77,21 +77,26 @@
 <h2>
 <span class="header-section-number">3.1</span> R Markdown vs Markdown<a class="anchor" aria-label="anchor" href="#r-markdown-vs-markdown"><i class="fas fa-link"></i></a>
 </h2>
-<p><em>TODO</em></p>
+<p>Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be readable as-is, unlike text formatted with a markup language such as RTF or HTML. So it’s easy to read the raw markdown document as well as final rendered output.</p>
+<p>GitHub has it’s own flavour of markdown, most commonly used in the <code>README.md</code> file that serves to introduce each GitHub repository.</p>
+<p>R Markdown is another flavour of markdown. It combines in a reproducible manner: code, output, and commentary. R Markdown documents support different output formats, like PDFs, Word files, slideshows, and HTML. Hadley Wickham <a href="https://r4ds.had.co.nz/r-markdown.html#introduction-18">lists</a> the three main uses of R Markdown files as:</p>
+<ol style="list-style-type: decimal">
+<li><p>For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis.</p></li>
+<li><p>For collaborating with other data scientists (including future you!), who are interested in both your conclusions, and how you reached them (i.e. the code).</p></li>
+<li><p>As an environment in which to <em>do</em> data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.</p></li>
+</ol>
 </div>
 <div id="child-markdown-iteration" class="section level2">
 <h2>
 <span class="header-section-number">3.2</span> Child markdown iteration<a class="anchor" aria-label="anchor" href="#child-markdown-iteration"><i class="fas fa-link"></i></a>
 </h2>
-<p><em>TODO</em></p>
-<p>- example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser base dashboards such as those provided via Power BI or Shiny</p>
+<p><em>TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.</em></p>
 </div>
 <div id="notebooks" class="section level2">
 <h2>
 <span class="header-section-number">3.3</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
 </h2>
-<p><em>TODO</em></p>
-<p>- technical vs data exploration - don’t add to github</p>
+<p><em>TODO - technical vs data exploration - don’t add to github</em></p>
 </div>
 <div id="bookdown" class="section level2">
 <h2>
@@ -167,7 +172,8 @@
 <h2>
 <span class="header-section-number">3.8</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
 </h2>
-<p><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for bookdown.</p>
+<p><a href="https://r4ds.had.co.nz/r-markdown.html">Chapter 27 R Markdown</a>, R4DS by Hadley Wickham.</p>
+<p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for R Markdown.</p>
 
 </div>
 </div>
