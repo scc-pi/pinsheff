@@ -2,7 +2,7 @@
 
 ## R Markdown vs Markdown
 
-Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be readable as-is, unlike text formatted with a markup language such as RTF or HTML. So it's easy to read the raw markdown document as well as final rendered output.
+Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be readable as-is, unlike text formatted with a markup language such as RTF or HTML. A raw markdown document should be easy to read, as well as the final rendered output.
 
 GitHub has it's own flavour of markdown, most commonly used in the `README.md` file that serves to introduce each GitHub repository.
 
@@ -13,10 +13,6 @@ R Markdown is another flavour of markdown. It combines in a reproducible manner:
 2.  For collaborating with other data scientists (including future you!), who are interested in both your conclusions, and how you reached them (i.e. the code).
 
 3.  As an environment in which to *do* data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.
-
-## Child markdown iteration
-
-*TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.*
 
 ## Notebooks
 
@@ -52,7 +48,7 @@ with:
   email: ${{ secrets.EMAIL }}
 ```
 
-2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a recent change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy#news).
+2\. I used `GITHUB_TOKEN` rather than `GH_PAT`, as per a change to [GitHub-Pages-deploy](https://github.com/Cecilapp/GitHub-Pages-deploy#news).
 
 ## Flexdashboard
 
@@ -60,7 +56,7 @@ with:
 
 [pkgs.rstudio.com/flexdashboard](https://pkgs.rstudio.com/flexdashboard/)
 
-Flexdashboards don't have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project, or, because the output is simply an HTML file, if you need to share the dashboard with one or two people outside the organisation. They're also obviously a good option if you've done your data analysis and preparatory work in R.
+Flexdashboards don't have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project. The flexdashboard output is simply an HTML file, so it's useful if you need to share the dashboard with a few people outside the organisation. They're also obviously a good option if you've done your data analysis and preparatory work in R. The Council's imminent upgrade of SharePoint and to fuller MS Teams functionality, could be a really useful way to publish flexdashboards.
 
 *TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.*
 
@@ -69,6 +65,10 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 > [Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.
 
 It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
+
+## Child markdown iteration
+
+*TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.*
 
 ## R Markdown tips
 

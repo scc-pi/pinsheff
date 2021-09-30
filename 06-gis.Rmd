@@ -2,9 +2,9 @@
 
 # GIS
 
-This section is aimed at our data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with an opportunity for data analysts to make more use of spatial data without being a GIS specialist.
+This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with better opportunities for data analysts to make use of spatial data without being a GIS specialist.
 
-A word of warning before you jump in, the guidance, examples and functions targeted at helping you use our spatial data is still very much work-in-progress (*TODO*).
+A word of warning before you jump in, the guidance, examples and functions targeted at helping you use our spatial data are still very much work-in-progress (*TODO*).
 
 ## Spatial data
 
@@ -34,9 +34,9 @@ More specific to the UK, is spatial data from ONS and Ordnance Survey. There are
 
 ### ArcGIS {#arcgis}
 
-The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but to share it or share spatial analysis via a web map or dashboard, then the default is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license.
+The Council's Portal and AGOL are the default home for our spatial data. Similarly, if you're looking to not just extract spatial data, but to share it or share spatial analysis via a web map or dashboard, then the default tool is also the Council's Portal and AGOL. To share content on Portal or AGOL you need a Creator license.
 
-Anne Tetley has created the following guidance (on Portal) on creating content in Portal or AGOL:
+Anne Tetley has provided the following guidance (on Portal) about creating content in Portal and AGOL:
 
 -   [Creating a web map in Portal](https://sheffieldcitycouncil.cloud.esriuk.com/portal/apps/storymaps/stories/47a2818d4a0442e9ac62eaa98621e30d)
 
@@ -44,7 +44,7 @@ Anne Tetley has created the following guidance (on Portal) on creating content i
 
 ### Power BI
 
-The GIS capabilities of Power BI do not match Portal or AGOL, but if only a small proportion of the analysis you are sharing is spatial then Power BI could be a good option. The ArcGIS Power BI integration tool is now available to us. Anne Tetley has provided the following guidance (on Portal):
+The GIS capabilities of Power BI do not match Portal or AGOL. However, if only a small proportion of the analysis you are sharing is spatial, then Power BI could be a good option. The ArcGIS Power BI integration tool is available to us. Anne Tetley has provided the following guidance (on Portal):
 
 -   [ArcGIS for Power BI](https://sheffieldcitycouncil.cloud.esriuk.com/portal/apps/storymaps/stories/622f381b377c4607902064fd311a84f1)
 
@@ -60,7 +60,7 @@ ESRI have stopped development of ArcGIS Desktop, though it won't be retired for 
 
 ### ArcGIS Pro
 
-ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues, it is 64-bit and is more closely integrated with the ArcGIS Enterprise (Portal) and AGOL. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
+ArcGIS Pro is another desktop GIS application from ESRI. It isn't as old as ArcGIS Desktop, so has less legacy issues. ArcGIS Pro is 64-bit and is more closely integrated with the ArcGIS Enterprise (Portal) and AGOL. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!
 
 The Council has an ArcGIS Pro license for every purchased ArcGIS Desktop license.
 
