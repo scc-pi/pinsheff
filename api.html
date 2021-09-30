@@ -51,16 +51,15 @@
 <li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
 <li><a class="" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
 <li><a class="active" href="api.html"><span class="header-section-number">4</span> APIs</a></li>
-<li><a class="" href="python.html"><span class="header-section-number">5</span> Python</a></li>
 <li class="book-part">Spatial Data</li>
-<li><a class="" href="gis.html"><span class="header-section-number">6</span> GIS</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">7</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">8</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">9</span> Postcodes &amp; Addresses</a></li>
+<li><a class="" href="gis.html"><span class="header-section-number">5</span> GIS</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">6</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">7</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">8</span> Postcodes &amp; Addresses</a></li>
 <li class="book-part">Miscellaneous</li>
-<li><a class="" href="public-data.html"><span class="header-section-number">10</span> Public Data Sources</a></li>
-<li><a class="" href="databases.html"><span class="header-section-number">11</span> Databases</a></li>
-<li><a class="" href="other.html"><span class="header-section-number">12</span> Other</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">9</span> Public Data Sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">10</span> Databases</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">11</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -95,11 +94,29 @@
 <p><em>TODO</em><br>
 scc-pi functions with rectangling e.g. postcode and geocoding</p>
 
+<p>"# Python {#python}</p>
+<p>Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind and is popular in academia and research.</p>
+</div>
+<div id="reticulate" class="section level2">
+<h2>
+<span class="header-section-number">4.4</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio v1.4 has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
+</div>
+<div id="arcgis-api-wrappers" class="section level2">
+<h2>
+<span class="header-section-number">4.5</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on <a href="gis-with-r.html#arcgisr">ArcGIS R &amp; Python packages</a> for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API “wrappers” that make it easier to obtain data (see the section on <a href="api.html#wrappers">wrappers</a> for further notes about this). In both cases, <code>reticulate</code> allows us to leverage Python packages from within R.</p>
+
 </div>
 </div>
+
+
+
   <div class="chapter-nav">
 <div class="prev"><a href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></div>
-<div class="next"><a href="python.html"><span class="header-section-number">5</span> Python</a></div>
+<div class="next"><a href="gis.html"><span class="header-section-number">5</span> GIS</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -107,6 +124,8 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <li><a class="nav-link" href="#rest-apis"><span class="header-section-number">4.1</span> REST APIs</a></li>
 <li><a class="nav-link" href="#wrappers"><span class="header-section-number">4.2</span> Wrappers</a></li>
 <li><a class="nav-link" href="#rectangling"><span class="header-section-number">4.3</span> Rectangling</a></li>
+<li><a class="nav-link" href="#reticulate"><span class="header-section-number">4.4</span> Reticulate</a></li>
+<li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">4.5</span> ArcGIS &amp; API wrappers</a></li>
 </ul>
 
       <div class="book-extra">

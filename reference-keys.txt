@@ -21,13 +21,13 @@ shortcuts
 further-resources
 rmd
 r-markdown-vs-markdown
-child-markdown-iteration
 notebooks
 bookdown
 themes
 publishing
 flexdashboard
 rolldown
+child-markdown-iteration
 r-markdown-tips
 markdown-visual-editor
 chunk-named-setup
@@ -36,7 +36,6 @@ api
 rest-apis
 wrappers
 rectangling
-python
 reticulate
 arcgis-api-wrappers
 gis
