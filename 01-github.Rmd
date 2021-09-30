@@ -64,8 +64,7 @@ Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.mic
 
 GitHub [forking](https://guides.github.com/activities/forking/) and pull requests are common workflows when collaborating on a repository.
 
-*TODO*\
-*- we'll have more to add on this if we collaborate on a repository*
+*TODO - we'll have more to add on this once we've collaborated on a repository*
 
 ### Other features
 
