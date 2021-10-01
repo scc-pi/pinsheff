@@ -29,7 +29,8 @@ themes
 publishing
 flexdashboard
 rolldown
-child-markdown-iteration
+child-markdown
+iteration
 r-markdown-tips
 markdown-visual-editor
 chunk-named-setup
