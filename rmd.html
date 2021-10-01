@@ -46,20 +46,27 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
-<li class="book-part">Foundations</li>
-<li><a class="" href="github.html"><span class="header-section-number">1</span> Version Control &amp; GitHub</a></li>
+<li class="book-part">Scripting tools</li>
+<li><a class="" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
 <li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
 <li><a class="active" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">4</span> APIs</a></li>
-<li class="book-part">Spatial Data</li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">5</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">6</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">7</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">8</span> Postcodes &amp; Addresses</a></li>
-<li class="book-part">Miscellaneous</li>
-<li><a class="" href="public-data.html"><span class="header-section-number">9</span> Public Data Sources</a></li>
-<li><a class="" href="databases.html"><span class="header-section-number">10</span> Databases</a></li>
-<li><a class="" href="other.html"><span class="header-section-number">11</span> Other</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li class="book-part">Accessing data</li>
+<li><a class="" href="databases.html"><span class="header-section-number">5</span> Council databases</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">8</span> Public data sources</a></li>
+<li class="book-part">Spatial data</li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li class="book-part">ETL</li>
+<li class="book-part">Statistical modelling</li>
+<li class="book-part">Visualisation</li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -90,7 +97,7 @@
 <h2>
 <span class="header-section-number">3.2</span> <strong>R Markdown security &amp; data protection</strong><a class="anchor" aria-label="anchor" href="#r-markdown-security-data-protection"><i class="fas fa-link"></i></a>
 </h2>
-<p>A limit of R Markdown, or rather our current unapproved use of GitHub, is that a repo for a project with PID or other confidential data must exclude the rendered output of the R Markdown file. The <code>.Rmd</code> file is fine to be included in the GitHub repo, but the rendered output e.g. <code>.pdf</code> or <code>.html</code>, which includes the output of code and probably some of your confidential data, needs to be excluded from the GitHub repo, even if your repo is private. I’m not clear yet what the implications of this are for collaborating with R Markdown e.g. with an R Notebook, but I’d be interested to hear. The limitation does make sharing the R Markdown rendered output cumbersome, especially this side of the Council’s <em>always on VPN</em>, SharePoint upgrade and pending a fuller roll-out of MS Teams functionality. Ultimately though, if GitHub proves useful, we need to make the case for a paid, fuller functioned and more secure Council instance. See the section on <a href="github.html#github-security">GitHub security &amp; data protection</a> for more detail about this and in particular how to use <code>.gitignore</code> to exclude the rendered R Markdown output from your GitHub repo.</p>
+<p>A limit of R Markdown, or rather our current unapproved use of GitHub, is that a repo for a project with PID or other confidential data must exclude the rendered output of the R Markdown file. The <code>.Rmd</code> file is fine to be included in the GitHub repo, but the rendered output e.g. <code>.pdf</code> or <code>.html</code>, which includes the output of code and probably some of your confidential data, needs to be excluded from the GitHub repo, even if your repo is private. I’m not clear yet what the implications of this are for collaborating with R Markdown e.g. with an R Notebook, but I’d be interested to hear. The limitation does make sharing the R Markdown rendered output cumbersome, especially this side of the Council’s <em>always on VPN</em>, SharePoint upgrade and pending a fuller roll-out of MS Teams functionality. Ultimately though, if GitHub proves useful, we need to make the case for a paid, fuller functioned and more secure Council instance. See the section on <a href="github.html#github-security">GitHub security &amp; data protection</a> for more detail about this, and in particular how to use <code>.gitignore</code> to exclude the rendered R Markdown output from your GitHub repo.</p>
 </div>
 <div id="r-notebooks" class="section level2">
 <h2>
@@ -185,7 +192,7 @@
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></div>
-<div class="next"><a href="api.html"><span class="header-section-number">4</span> APIs</a></div>
+<div class="next"><a href="python.html"><span class="header-section-number">4</span> Python</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
