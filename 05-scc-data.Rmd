@@ -1,0 +1,17 @@
+# (PART) Accessing data {.unnumbered}
+
+# Council data {#databases}
+
+## OSCAR
+
+_TODO_
+
+## Corporate spatial database
+
+_TODO_  
+ - Postgres - extensions for geometry types e.g. line
+
+
+## Further resources  
+
+-   [Databases using R](https://db.rstudio.com/getting-started/connect-to-database/) from RStudio  
