@@ -152,20 +152,22 @@
 </blockquote>
 <p>It’s similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.</p>
 </div>
-<div id="child-markdown" class="section level2">
+<div id="child-r-markdown" class="section level2">
 <h2>
-<span class="header-section-number">3.7</span> Child markdown<a class="anchor" aria-label="anchor" href="#child-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.7</span> Child R Markdown<a class="anchor" aria-label="anchor" href="#child-r-markdown"><i class="fas fa-link"></i></a>
 </h2>
-<p>There are a couple of use cases for child R Markdown documents:</p>
+<p>Here are a couple of use cases for child R Markdown documents:</p>
 <ol style="list-style-type: decimal">
 <li><p>Your content is so large that breaking it down into smaller parts makes it more manageable.</p></li>
 <li><p>You want to include the same child R Markdown document in more than one parent document. For example the <a href="https://github.com/scc-pi/libraries">libraries repo</a> uses a child R Markdown document in a <a href="https://github.com/scc-pi/libraries/blob/main/ClusterExample.Rmd">standalone example</a> and in a much <a href="https://github.com/scc-pi/libraries/blob/main/LibrariesScheduling-BI-Report-14May2021.Rmd">larger project documentation document</a>.</p></li>
 </ol>
-<script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script><div id="iteration" class="section level3">
+<script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script><p>Note that a child R Markdown has no YAML header, it just inherits its parents YAML header.</p>
+<div id="iteration" class="section level3">
 <h3>
 <span class="header-section-number">3.7.1</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration"><i class="fas fa-link"></i></a>
 </h3>
-<p><em>TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.</em></p>
+<p>A third and more complicated use case for child markdown, is to use a parameter to iterate through a child R Markdown document. You still have a single <code>parent.Rmd</code> and a single <code>child.Rmd</code> file. However, in the single knitted output file, you have <code>n</code> iterations of the child document content depending on the number of values in the parameter. There’s a proof-of-concept <a href="https://github.com/scc-pi/C19Surveillance/tree/master/r-markdown/UosExample">example</a> in the C19Surveillance repo. Three different residential types are passed as a parameter to the child R Markdown document, which renders a map and a summary table for each residential type in the knitted output:</p>
+<script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script><p>This iteration technique isn’t prominent because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny. However, the Council hasn’t fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports.</p>
 </div>
 </div>
 <div id="r-markdown-tips" class="section level2">
@@ -215,7 +217,7 @@
 <li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.5</span> Flexdashboard</a></li>
 <li><a class="nav-link" href="#rolldown"><span class="header-section-number">3.6</span> Rolldown</a></li>
 <li>
-<a class="nav-link" href="#child-markdown"><span class="header-section-number">3.7</span> Child markdown</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#iteration"><span class="header-section-number">3.7.1</span> Iteration</a></li></ul>
+<a class="nav-link" href="#child-r-markdown"><span class="header-section-number">3.7</span> Child R Markdown</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#iteration"><span class="header-section-number">3.7.1</span> Iteration</a></li></ul>
 </li>
 <li>
 <a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.8</span> R Markdown tips</a><ul class="nav navbar-nav">
