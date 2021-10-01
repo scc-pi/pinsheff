@@ -1,4 +1,4 @@
-"# Python {#python}
+# Python {#python}
 
 Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
 

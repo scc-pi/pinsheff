@@ -1,6 +1,4 @@
-# (PART) Miscellaneous {.unnumbered}
-
-# Public Data Sources {#public-data}
+# Public data sources {#public-data}
 
 ## Office of National Statistics
 
@@ -9,7 +7,7 @@ For this example we're going to get the population for each Ward in Sheffield. F
 ```{=html}
 <script src="https://gist.github.com/laurie-platt/0ac7f1197f51181c4f1e6f2baa4f2ca9.js"></script>
 ```
-The [monstR](https://github.com/HFAnalyticsLab/monstR) and [onsr](https://kvasilopoulos.github.io/onsr/) R packages provide access to the ONS beta API. However, the API currently has quite a limited number of datasets, and in particular it lacks access to the data for smaller geographies that we're typically interested in e.g. wards and LSOAs.
+The [monstR](https://github.com/HFAnalyticsLab/monstR) and [onsr](https://kvasilopoulos.github.io/onsr/) R packages provide access to the ONS beta API. However, the API currently has a limited number of datasets, and in particular it lacks access to the data for smaller geographies that we're typically interested in e.g. wards and LSOAs.
 
 ### CRM
 

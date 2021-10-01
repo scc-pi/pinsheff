@@ -1,4 +1,4 @@
-# Postcodes & Addresses {#geocoding}
+# Postcodes & addresses {#geocoding}
 
 A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents by Ward.
 
@@ -61,13 +61,13 @@ dplyr::mutate(df,
   knitr::kable()
 ```
 
-### PAS Postcode Lookup
+### PAS postcode lookup
 
 PAS, the Performance & Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the `add_pcd_vars()` function.
 
 *TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?*
 
-### Postcode Boundaries
+### Postcode boundaries
 
 *TODO:* [OPEN DATA GB POSTCODE UNIT BOUNDARIES](https://longair.net/blog/2021/08/23/open-data-gb-postcode-unit-boundaries/)
 

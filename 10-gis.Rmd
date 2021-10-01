@@ -1,5 +1,3 @@
-# (PART) Spatial Data {.unnumbered}
-
 # GIS with web & desktop tools
 
 This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with better opportunities for data analysts to make use of spatial data without being a GIS specialist.

@@ -1,6 +1,6 @@
-# (PART) Foundations {.unnumbered}
+# (PART) Scripting tools {.unnumbered}
 
-# Version Control & GitHub {#github}
+# Version control & GitHub {#github}
 
 You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're new to scripting and R, then visualisations or using R Markdown are better starting points than version control.
 

@@ -1,3 +1,8 @@
+# (PART) ETL {.unnumbered}
+# (PART) Statistical modelling {.unnumbered}
+# (PART) Visualisation {.unnumbered}
+# (PART) Appendix {.unnumbered}
+
 # Other {#other}
 
 This is a dumping ground for matters I'm yet to look in to properly, never mind write notes about.
