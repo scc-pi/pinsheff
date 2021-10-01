@@ -72,7 +72,18 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
 
-## Child markdown iteration
+## Child markdown
+
+There are a couple of use cases for child R Markdown documents:
+
+1.  Your content is so large that breaking it down into smaller parts makes it more manageable.
+
+2.  You want to include the same child R Markdown document in more than one parent document. For example the [libraries repo](https://github.com/scc-pi/libraries) uses a child R Markdown document in a [standalone example](https://github.com/scc-pi/libraries/blob/main/ClusterExample.Rmd) and in a much [larger project documentation document](https://github.com/scc-pi/libraries/blob/main/LibrariesScheduling-BI-Report-14May2021.Rmd).
+
+```{=html}
+<script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script>
+```
+### Iteration
 
 *TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.*
 
@@ -93,7 +104,6 @@ Naming a code block `setup` means that after you restart RStudio and execute any
 ```{=html}
 <script src="https://gist.github.com/laurie-platt/c8a1e49cabb5f9fa0104ca6daef5dff2.js"></script>
 ```
-
 ## Further resources
 
 [Chapter 27 R Markdown](https://r4ds.had.co.nz/r-markdown.html), R4DS by Hadley Wickham.
