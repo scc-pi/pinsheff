@@ -40,7 +40,7 @@ wrappers
 rectangling
 reticulate
 arcgis-api-wrappers
-gis
+gis-with-web-desktop-tools
 spatial-data
 councils-spatial-data
 other-spatial-data
