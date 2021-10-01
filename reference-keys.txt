@@ -40,14 +40,12 @@ arcgis-api-wrappers
 databases
 oscar
 corporate-spatial-database
-sqlite
-spatialite
 further-resources-3
 warehouse
 corporate-data-warehouse
 postgres
-sqlite-1
-spatialite-1
+sqlite
+spatialite
 api
 rest-apis
 wrappers
