@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Databases, warehouses &amp; lakes | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 SQLite Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases,...">
+<meta name="description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 Postgres TODO - cross-ref to corporate spatial database  6.3 SQLite Access to an SQLite database is controlled by permissions...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Databases, warehouses &amp; lakes | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 SQLite Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases,...">
+<meta property="og:description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 Postgres TODO - cross-ref to corporate spatial database  6.3 SQLite Access to an SQLite database is controlled by permissions...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Databases, warehouses &amp; lakes | Notes">
-<meta name="twitter:description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 SQLite Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases,...">
+<meta name="twitter:description" content="TODO - definitions, open to debate  6.1 Corporate data warehouse   6.2 Postgres TODO - cross-ref to corporate spatial database  6.3 SQLite Access to an SQLite database is controlled by permissions...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -55,7 +55,7 @@
 <li><a class="" href="databases.html"><span class="header-section-number">5</span> Council databases</a></li>
 <li><a class="active" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
 <li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> Public data sources</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
 <li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
 <li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
@@ -85,9 +85,15 @@
 <span class="header-section-number">6.1</span> Corporate data warehouse<a class="anchor" aria-label="anchor" href="#corporate-data-warehouse"><i class="fas fa-link"></i></a>
 </h2>
 </div>
+<div id="postgres" class="section level2">
+<h2>
+<span class="header-section-number">6.2</span> Postgres<a class="anchor" aria-label="anchor" href="#postgres"><i class="fas fa-link"></i></a>
+</h2>
+<p><em>TODO - cross-ref to corporate spatial database</em></p>
+</div>
 <div id="sqlite-1" class="section level2">
 <h2>
-<span class="header-section-number">6.2</span> SQLite<a class="anchor" aria-label="anchor" href="#sqlite-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> SQLite<a class="anchor" aria-label="anchor" href="#sqlite-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Access to an SQLite database is controlled by permissions on the folder where it is stored. Unlike other databases, you do not create users who are authenticated by the database, and you do not grant privileges on specific datasets to other users.</p>
 <p>SQLite is also different from other databases in that fields are not assigned specific data types and data type definitions are not strictly enforced. Instead, SQLite uses storage classes in which values of different data types can be stored. In particular, date types are handled differently. ArcGIS handles SQLite dates without needing any special attention, but reading dates from SQLite in to R or Power BI needs attention. For example, by using the <code>JD()</code> function from the insol package:</p>
@@ -97,7 +103,7 @@
        week_end <span class="op">=</span> <span class="fu">JD</span><span class="op">(</span><span class="va">week_end</span>, inverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div id="spatialite-1" class="section level3">
 <h3>
-<span class="header-section-number">6.2.1</span> SpatiaLite<a class="anchor" aria-label="anchor" href="#spatialite-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.1</span> SpatiaLite<a class="anchor" aria-label="anchor" href="#spatialite-1"><i class="fas fa-link"></i></a>
 </h3>
 <p><a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a> extends SQLite to support spatial data. The <a href="https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html">RSQLite</a> package includes the driver for SpatiaLite.</p>
 <p>Robin Lovelace has a <a href="https://geocompr.robinlovelace.net/read-write.html">chapter on spatial databases</a> in his book Geocomputation with R.</p>
@@ -114,8 +120,9 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#warehouse"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
 <li><a class="nav-link" href="#corporate-data-warehouse"><span class="header-section-number">6.1</span> Corporate data warehouse</a></li>
+<li><a class="nav-link" href="#postgres"><span class="header-section-number">6.2</span> Postgres</a></li>
 <li>
-<a class="nav-link" href="#sqlite-1"><span class="header-section-number">6.2</span> SQLite</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#spatialite-1"><span class="header-section-number">6.2.1</span> SpatiaLite</a></li></ul>
+<a class="nav-link" href="#sqlite-1"><span class="header-section-number">6.3</span> SQLite</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#spatialite-1"><span class="header-section-number">6.3.1</span> SpatiaLite</a></li></ul>
 </li>
 </ul>
 

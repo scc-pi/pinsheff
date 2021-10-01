@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 9 Spatial data sources | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta name="description" content="9.1 Council’s spatial data The Council’s spatial data is hosted by ESRI’s ArcGIS web GIS tools. Portal (ArcGIS Enterprise) is Council-wide: sheffieldcitycouncil.cloud.esriuk.com/portal/home ArcGIS...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 9 Spatial data sources | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta property="og:description" content="9.1 Council’s spatial data The Council’s spatial data is hosted by ESRI’s ArcGIS web GIS tools. Portal (ArcGIS Enterprise) is Council-wide: sheffieldcitycouncil.cloud.esriuk.com/portal/home ArcGIS...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 9 Spatial data sources | Notes">
-<meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta name="twitter:description" content="9.1 Council’s spatial data The Council’s spatial data is hosted by ESRI’s ArcGIS web GIS tools. Portal (ArcGIS Enterprise) is Council-wide: sheffieldcitycouncil.cloud.esriuk.com/portal/home ArcGIS...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -55,7 +55,7 @@
 <li><a class="" href="databases.html"><span class="header-section-number">5</span> Council databases</a></li>
 <li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
 <li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> Public data sources</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
 <li><a class="active" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
 <li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
@@ -79,14 +79,89 @@
 <h1>
 <span class="header-section-number">9</span> Spatial data sources<a class="anchor" aria-label="anchor" href="#spatial-data-sources"><i class="fas fa-link"></i></a>
 </h1>
+<div id="councils-spatial-data" class="section level2">
+<h2>
+<span class="header-section-number">9.1</span> Council’s spatial data<a class="anchor" aria-label="anchor" href="#councils-spatial-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Council’s spatial data is hosted by ESRI’s ArcGIS web GIS tools.</p>
+<p>Portal (ArcGIS Enterprise) is Council-wide:</p>
+<blockquote>
+<p><a href="https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/">sheffieldcitycouncil.cloud.esriuk.com/portal/home</a></p>
+</blockquote>
+<p>ArcGIS Online (AGOL) is the public facing equivalent of Portal:</p>
+<blockquote>
+<p><a href="https://sheffieldcc.maps.arcgis.com/">sheffieldcc.maps.arcgis.com</a></p>
+</blockquote>
+<p>Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council’s open data site:</p>
+<blockquote>
+<p><a href="https://data-sheffieldcc.opendata.arcgis.com/">data-sheffieldcc.opendata.arcgis.com</a></p>
+</blockquote>
+</div>
+<div id="external-spatial-data" class="section level2">
+<h2>
+<span class="header-section-number">9.2</span> External spatial data<a class="anchor" aria-label="anchor" href="#external-spatial-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>Data that’s publically available or available via a license to the Council.</p>
+<div id="open-geography" class="section level3">
+<h3>
+<span class="header-section-number">9.2.1</span> Open Geography Portal<a class="anchor" aria-label="anchor" href="#open-geography"><i class="fas fa-link"></i></a>
+</h3>
+<p>More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on <a href="public-data.html#public-data">Public Data Sources</a> under <a href="spatial-data-sources.html#open-geography">Open Geography Portal</a> and <a href="spatial-data-sources.html#os-data-hub">OS Data Hub</a>.</p>
+</div>
+<div id="ordnance-survey" class="section level3">
+<h3>
+<span class="header-section-number">9.2.2</span> Ordnance Survey<a class="anchor" aria-label="anchor" href="#ordnance-survey"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>TODO</em></p>
+<div id="os-data-hub" class="section level4">
+<h4>
+<span class="header-section-number">9.2.2.1</span> OS Data Hub<a class="anchor" aria-label="anchor" href="#os-data-hub"><i class="fas fa-link"></i></a>
+</h4>
+<p><em>TODO</em></p>
+</div>
+</div>
+<div id="lginform" class="section level3">
+<h3>
+<span class="header-section-number">9.2.3</span> LGInform?<a class="anchor" aria-label="anchor" href="#lginform"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="lsoapop-r-package" class="section level3">
+<h3>
+<span class="header-section-number">9.2.4</span> LSOApop R package<a class="anchor" aria-label="anchor" href="#lsoapop-r-package"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>The goal of LSOApop is to make population estimates for Lower layer Super Output Areas (LSOA) and their Indecies of Multiple Deprivation (IMD) easily available in R.</p>
+</blockquote>
+<p><a href="https://nhs-r-community.github.io/LSOApop/">nhs-r-community.github.io/LSOApop</a></p>
+<p><em>TODO</em></p>
+</div>
+<div id="living-atlas" class="section level3">
+<h3>
+<span class="header-section-number">9.2.5</span> Living Atlas<a class="anchor" aria-label="anchor" href="#living-atlas"><i class="fas fa-link"></i></a>
+</h3>
+<p>ESRI’s <a href="https://livingatlas.arcgis.com/en/home/">Living Atlas</a> has a lot of content, but I’ve yet to properly explore or use it (<em>TODO</em>).</p>
 
 </div>
+</div>
+</div>
   <div class="chapter-nav">
-<div class="prev"><a href="public-data.html"><span class="header-section-number">8</span> Public data sources</a></div>
+<div class="prev"><a href="public-data.html"><span class="header-section-number">8</span> External data sources</a></div>
 <div class="next"><a href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#spatial-data-sources"><span class="header-section-number">9</span> Spatial data sources</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#spatial-data-sources"><span class="header-section-number">9</span> Spatial data sources</a></li>
+<li><a class="nav-link" href="#councils-spatial-data"><span class="header-section-number">9.1</span> Council’s spatial data</a></li>
+<li>
+<a class="nav-link" href="#external-spatial-data"><span class="header-section-number">9.2</span> External spatial data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#open-geography"><span class="header-section-number">9.2.1</span> Open Geography Portal</a></li>
+<li><a class="nav-link" href="#ordnance-survey"><span class="header-section-number">9.2.2</span> Ordnance Survey</a></li>
+<li><a class="nav-link" href="#lginform"><span class="header-section-number">9.2.3</span> LGInform?</a></li>
+<li><a class="nav-link" href="#lsoapop-r-package"><span class="header-section-number">9.2.4</span> LSOApop R package</a></li>
+<li><a class="nav-link" href="#living-atlas"><span class="header-section-number">9.2.5</span> Living Atlas</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
