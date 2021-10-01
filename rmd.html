@@ -84,28 +84,35 @@
 <li><p>For collaborating with other data scientists (including future you!), who are interested in both your conclusions, and how you reached them (i.e. the code).</p></li>
 <li><p>As an environment in which to <em>do</em> data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.</p></li>
 </ol>
+<p>My experience of R Markdown is very positive. It’s really helpful for keeping all my work in a single place, rather than wondering whether notes are in script comments, OneNote or a Word document. Similarly the output is embedded rather than relying on well organised data output folder structures. Finally, the linear nature of a document also provides some structure. Combining R Markdown with GitHub provides version control (an audit trail or log of how the work has evolved), plus GitHub Issues and Actions can add to the project management wrapper around the work.</p>
 </div>
-<div id="notebooks" class="section level2">
+<div id="r-markdown-security-data-protection" class="section level2">
 <h2>
-<span class="header-section-number">3.2</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> <strong>R Markdown security &amp; data protection</strong><a class="anchor" aria-label="anchor" href="#r-markdown-security-data-protection"><i class="fas fa-link"></i></a>
+</h2>
+<p>A limit of R Markdown, or rather our current unapproved use of GitHub, is that a repo for a project with PID or other confidential data must exclude the rendered output of the R Markdown file. The <code>.Rmd</code> file is fine to be included in the GitHub repo, but the rendered output e.g. <code>.pdf</code> or <code>.html</code>, which includes the output of code and probably some of your confidential data, needs to be excluded from the GitHub repo. I’m not clear yet what the implications of this are for collaborating with R Markdown e.g. with an R Notebook, but I’d be interested to hear. The limitation does make sharing the R Markdown rendered output cumbersome, especially this side of the Council’s <em>always on VPN</em>, SharePoint upgrade and pending a fuller roll-out of MS Teams functionality. Ultimately though, if GitHub proves useful, we need to make the case for a paid, fuller functioned and more secure Council instance. See the section on <a href="github.html#github-security">GitHub security &amp; data protection</a> for more detail about this and in particular how to use <code>.gitignore</code> to exclude the rendered R Markdown output from your GitHub repo.</p>
+</div>
+<div id="r-notebooks" class="section level2">
+<h2>
+<span class="header-section-number">3.3</span> R Notebooks<a class="anchor" aria-label="anchor" href="#r-notebooks"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO - technical vs data exploration - don’t add to github</em></p>
 </div>
 <div id="bookdown" class="section level2">
 <h2>
-<span class="header-section-number">3.3</span> Bookdown<a class="anchor" aria-label="anchor" href="#bookdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.4</span> Bookdown<a class="anchor" aria-label="anchor" href="#bookdown"><i class="fas fa-link"></i></a>
 </h2>
 <p>These notes are written using the <a href="https://pkgs.rstudio.com/bookdown/">bookdown package</a>, which is built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="themes" class="section level3">
 <h3>
-<span class="header-section-number">3.3.1</span> Themes<a class="anchor" aria-label="anchor" href="#themes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.4.1</span> Themes<a class="anchor" aria-label="anchor" href="#themes"><i class="fas fa-link"></i></a>
 </h3>
 <p>The theme of these notes changed in September 2021 from a <a href="https://bookdown.org/yihui/bookdown/html.html#gitbook-style">GitBook style</a> to a <a href="https://bookdown.org/yihui/bookdown/html.html#bs4-book">Three-column Bootstrap style</a>.</p>
 </div>
 <div id="publishing" class="section level3">
 <h3>
-<span class="header-section-number">3.3.2</span> Publishing<a class="anchor" aria-label="anchor" href="#publishing"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.4.2</span> Publishing<a class="anchor" aria-label="anchor" href="#publishing"><i class="fas fa-link"></i></a>
 </h3>
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
@@ -120,7 +127,7 @@
 </div>
 <div id="flexdashboard" class="section level2">
 <h2>
-<span class="header-section-number">3.4</span> Flexdashboard<a class="anchor" aria-label="anchor" href="#flexdashboard"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5</span> Flexdashboard<a class="anchor" aria-label="anchor" href="#flexdashboard"><i class="fas fa-link"></i></a>
 </h2>
 <blockquote>
 <p>The goal of flexdashboard is to make it easy to create interactive dashboards for R, using R Markdown.</p>
@@ -131,7 +138,7 @@
 </div>
 <div id="rolldown" class="section level2">
 <h2>
-<span class="header-section-number">3.5</span> Rolldown<a class="anchor" aria-label="anchor" href="#rolldown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.6</span> Rolldown<a class="anchor" aria-label="anchor" href="#rolldown"><i class="fas fa-link"></i></a>
 </h2>
 <blockquote>
 <p><a href="https://github.com/yihui/rolldown/blob/master/README.md">Rolldown</a> is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.</p>
@@ -140,24 +147,24 @@
 </div>
 <div id="child-markdown-iteration" class="section level2">
 <h2>
-<span class="header-section-number">3.6</span> Child markdown iteration<a class="anchor" aria-label="anchor" href="#child-markdown-iteration"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.7</span> Child markdown iteration<a class="anchor" aria-label="anchor" href="#child-markdown-iteration"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.</em></p>
 </div>
 <div id="r-markdown-tips" class="section level2">
 <h2>
-<span class="header-section-number">3.7</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
 </h2>
 <div id="markdown-visual-editor" class="section level3">
 <h3>
-<span class="header-section-number">3.7.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
 </h3>
 <p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
 <div class="inline-figure"><img src="images/rmd-editor.png" width="328"></div>
 </div>
 <div id="chunk-named-setup" class="section level3">
 <h3>
-<span class="header-section-number">3.7.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.8.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
 </h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <pre><code>```{r, setup, message = FALSE, warning = FALSE}</code></pre>
@@ -167,9 +174,9 @@
 <pre><code>```</code></pre>
 </div>
 </div>
-<div id="further-resources-1" class="section level2">
+<div id="further-resources-2" class="section level2">
 <h2>
-<span class="header-section-number">3.8</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.9</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-2"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://r4ds.had.co.nz/r-markdown.html">Chapter 27 R Markdown</a>, R4DS by Hadley Wickham.</p>
 <p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for R Markdown.</p>
@@ -184,23 +191,24 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#rmd"><span class="header-section-number">3</span> R Markdown</a></li>
 <li><a class="nav-link" href="#r-markdown-vs-markdown"><span class="header-section-number">3.1</span> R Markdown vs Markdown</a></li>
-<li><a class="nav-link" href="#notebooks"><span class="header-section-number">3.2</span> Notebooks</a></li>
+<li><a class="nav-link" href="#r-markdown-security-data-protection"><span class="header-section-number">3.2</span> R Markdown security &amp; data protection</a></li>
+<li><a class="nav-link" href="#r-notebooks"><span class="header-section-number">3.3</span> R Notebooks</a></li>
 <li>
-<a class="nav-link" href="#bookdown"><span class="header-section-number">3.3</span> Bookdown</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#themes"><span class="header-section-number">3.3.1</span> Themes</a></li>
-<li><a class="nav-link" href="#publishing"><span class="header-section-number">3.3.2</span> Publishing</a></li>
+<a class="nav-link" href="#bookdown"><span class="header-section-number">3.4</span> Bookdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#themes"><span class="header-section-number">3.4.1</span> Themes</a></li>
+<li><a class="nav-link" href="#publishing"><span class="header-section-number">3.4.2</span> Publishing</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.4</span> Flexdashboard</a></li>
-<li><a class="nav-link" href="#rolldown"><span class="header-section-number">3.5</span> Rolldown</a></li>
-<li><a class="nav-link" href="#child-markdown-iteration"><span class="header-section-number">3.6</span> Child markdown iteration</a></li>
+<li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.5</span> Flexdashboard</a></li>
+<li><a class="nav-link" href="#rolldown"><span class="header-section-number">3.6</span> Rolldown</a></li>
+<li><a class="nav-link" href="#child-markdown-iteration"><span class="header-section-number">3.7</span> Child markdown iteration</a></li>
 <li>
-<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.7</span> R Markdown tips</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.7.1</span> Markdown visual editor</a></li>
-<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.7.2</span> Chunk named setup</a></li>
+<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.8</span> R Markdown tips</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.8.1</span> Markdown visual editor</a></li>
+<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.8.2</span> Chunk named setup</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">3.8</span> Further resources</a></li>
+<li><a class="nav-link" href="#further-resources-2"><span class="header-section-number">3.9</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">

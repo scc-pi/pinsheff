@@ -6,6 +6,7 @@ github-security
 forking-pull-requests
 other-features
 git-rstudio
+further-resources
 r
 why-script
 style-guide
@@ -18,10 +19,11 @@ code-display
 document-outline-headings
 viewpipesteps-addin
 shortcuts
-further-resources
+further-resources-1
 rmd
 r-markdown-vs-markdown
-notebooks
+r-markdown-security-data-protection
+r-notebooks
 bookdown
 themes
 publishing
@@ -31,7 +33,7 @@ child-markdown-iteration
 r-markdown-tips
 markdown-visual-editor
 chunk-named-setup
-further-resources-1
+further-resources-2
 api
 rest-apis
 wrappers
@@ -49,7 +51,7 @@ desktop-gis
 arcgis-desktop
 arcgis-pro
 qgis
-further-resources-2
+further-resources-3
 gis-with-python
 arcgis-notebooks
 arcgis-python-api
@@ -65,7 +67,7 @@ esri2sf
 r-arcgis-bridge
 leaflet
 rasters
-further-resources-3
+further-resources-4
 geocoding
 uprn
 postcodes
@@ -89,7 +91,7 @@ oscar
 corporate-spatial-database
 sqlite
 spatialite
-further-resources-4
+further-resources-5
 other
 renv
 docker
