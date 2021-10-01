@@ -72,9 +72,9 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 It's similar to the ArcGIS StoryMaps that have proved popular and people might be familiar with.
 
-## Child markdown
+## Child R Markdown
 
-There are a couple of use cases for child R Markdown documents:
+Here are a couple of use cases for child R Markdown documents:
 
 1.  Your content is so large that breaking it down into smaller parts makes it more manageable.
 
@@ -83,9 +83,17 @@ There are a couple of use cases for child R Markdown documents:
 ```{=html}
 <script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script>
 ```
+Note that a child R Markdown has no YAML header, it just inherits its parents YAML header.
+
 ### Iteration
 
-*TODO - GIST - example based on C19 UoS example - not a prominent technique because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny.*
+A third and more complicated use case for child markdown, is to use a parameter to iterate through a child R Markdown document. You still have a single `parent.Rmd` and a single `child.Rmd` file. However, in the single knitted output file, you have `n` iterations of the child document content depending on the number of values in the parameter. There's a proof-of-concept [example](https://github.com/scc-pi/C19Surveillance/tree/master/r-markdown/UosExample) in the C19Surveillance repo. Three different residential types are passed as a parameter to the child R Markdown document, which renders a map and a summary table for each residential type in the knitted output:
+
+```{=html}
+<script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script>
+```
+
+This iteration technique isn't prominent because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny. However, the Council hasn't fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports. 
 
 ## R Markdown tips
 
