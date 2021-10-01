@@ -2,30 +2,6 @@
 
 This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council's new web based GIS tools will open up GIS to a wider user base, with better opportunities for data analysts to make use of spatial data without being a GIS specialist.
 
-## Spatial data
-
-### Council's spatial data
-
-The Council's spatial data is hosted by ESRI's ArcGIS web GIS tools.
-
-Portal (ArcGIS Enterprise) is Council-wide:
-
-> [sheffieldcitycouncil.cloud.esriuk.com/portal/home](https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/)
-
-ArcGIS Online (AGOL) is the public facing equivalent of Portal:
-
-> [sheffieldcc.maps.arcgis.com](https://sheffieldcc.maps.arcgis.com/)
-
-Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council's open data site:
-
-> [data-sheffieldcc.opendata.arcgis.com](https://data-sheffieldcc.opendata.arcgis.com/)
-
-### Other spatial data
-
-ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
-
-More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
-
 ## Web maps & dashboards
 
 ### ArcGIS {#arcgis}

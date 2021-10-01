@@ -2,3 +2,48 @@
 
 # Spatial data sources
 
+## Council's spatial data
+
+The Council's spatial data is hosted by ESRI's ArcGIS web GIS tools.
+
+Portal (ArcGIS Enterprise) is Council-wide:
+
+> [sheffieldcitycouncil.cloud.esriuk.com/portal/home](https://sheffieldcitycouncil.cloud.esriuk.com/portal/home/)
+
+ArcGIS Online (AGOL) is the public facing equivalent of Portal:
+
+> [sheffieldcc.maps.arcgis.com](https://sheffieldcc.maps.arcgis.com/)
+
+Unlike R, ArcGIS is not open source and incurs a financial cost. Portal and AGOL require login credentials for both licensing and data protection purposes. The exception, is some public data on AGOL, for example the Council's open data site:
+
+> [data-sheffieldcc.opendata.arcgis.com](https://data-sheffieldcc.opendata.arcgis.com/)
+
+## External spatial data
+
+Data that's publically available or available via a license to the Council.
+
+### Open Geography Portal {#open-geography}
+
+More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
+
+### Ordnance Survey
+
+*TODO*
+
+#### OS Data Hub {#os-data-hub}
+
+*TODO*
+
+### LGInform?
+
+### LSOApop R package
+
+> The goal of LSOApop is to make population estimates for Lower layer Super Output Areas (LSOA) and their Indecies of Multiple Deprivation (IMD) easily available in R.
+
+[nhs-r-community.github.io/LSOApop](https://nhs-r-community.github.io/LSOApop/)
+
+*TODO*
+
+### Living Atlas
+
+ESRI's [Living Atlas](https://livingatlas.arcgis.com/en/home/) has a lot of content, but I've yet to properly explore or use it (*TODO*).
