@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
@@ -161,13 +161,13 @@
 <li><p>Your content is so large that breaking it down into smaller parts makes it more manageable.</p></li>
 <li><p>You want to include the same child R Markdown document in more than one parent document. For example the <a href="https://github.com/scc-pi/libraries">libraries repo</a> uses a child R Markdown document in a <a href="https://github.com/scc-pi/libraries/blob/main/ClusterExample.Rmd">standalone example</a> and in a much <a href="https://github.com/scc-pi/libraries/blob/main/LibrariesScheduling-BI-Report-14May2021.Rmd">larger project documentation document</a>.</p></li>
 </ol>
-<script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script><p>Note that a child R Markdown has no YAML header, it just inherits its parents YAML header.</p>
+<script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script><p>Note that a child R Markdown has no YAML header, it just inherits its parent’s YAML header.</p>
 <div id="iteration" class="section level3">
 <h3>
 <span class="header-section-number">3.7.1</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration"><i class="fas fa-link"></i></a>
 </h3>
-<p>A third and more complicated use case for child markdown, is to use a parameter to iterate through a child R Markdown document. You still have a single <code>parent.Rmd</code> and a single <code>child.Rmd</code> file. However, in the single knitted output file, you have <code>n</code> iterations of the child document content depending on the number of values in the parameter. There’s a proof-of-concept <a href="https://github.com/scc-pi/C19Surveillance/tree/master/r-markdown/UosExample">example</a> in the C19Surveillance repo. Three different residential types are passed as a parameter to the child R Markdown document, which renders a map and a summary table for each residential type in the knitted output:</p>
-<script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script><p>This iteration technique isn’t prominent because the demand for such reports has largely been superseded by browser based dashboards such as those provided via Power BI or Shiny. However, the Council hasn’t fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports.</p>
+<p>A third and more complicated use case for child R Markdown, is to use a parameter to iterate through a child R Markdown document. You still have a single <code>parent.Rmd</code> and a single <code>child.Rmd</code> file. However, in the single knitted output file, you have <code>n</code> iterations of the child document content depending on the number of values in the parameter. There’s a proof-of-concept <a href="https://github.com/scc-pi/C19Surveillance/tree/master/r-markdown/UosExample">example</a> in the C19Surveillance repo. Three different residential types are passed as a parameter to the child R Markdown document, which renders a map and a summary table for each residential type in the knitted output:</p>
+<script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script><p>This iteration technique isn’t prominent because the demand for such reports outside the Council has largely been superseded by browser based dashboards, such as those provided via Power BI or Shiny. However, the Council hasn’t fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports.</p>
 </div>
 </div>
 <div id="r-markdown-tips" class="section level2">
@@ -243,7 +243,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-01.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -13,7 +13,7 @@ style-guide
 pid
 workspace
 passwords
-getting-started
+getting-started-with-r
 rstudio-tips
 code-display
 document-outline-headings
