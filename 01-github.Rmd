@@ -2,7 +2,7 @@
 
 # Version control & GitHub {#github}
 
-You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're new to scripting and R, then visualisations or using R Markdown are better starting points than version control.
+You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're [new to scripting and R](#getting-started-with-r), then visualisations or using R Markdown are better starting points than version control.
 
 These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
 
