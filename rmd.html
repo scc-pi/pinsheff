@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 3 R Markdown | Notes</title>
+<title>Chapter 5 R Markdown | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
+<meta name="description" content="5.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 3 R Markdown | Notes">
+<meta property="og:title" content="Chapter 5 R Markdown | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
+<meta property="og:description" content="5.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 3 R Markdown | Notes">
-<meta name="twitter:description" content="3.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
+<meta name="twitter:title" content="Chapter 5 R Markdown | Notes">
+<meta name="twitter:description" content="5.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -46,27 +46,30 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Power BI</li>
+<li><a class="" href="power-bi-fundamentals.html"><span class="header-section-number">1</span> Power BI fundamentals</a></li>
+<li><a class="" href="dax.html"><span class="header-section-number">2</span> DAX</a></li>
 <li class="book-part">Scripting tools</li>
-<li><a class="" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
-<li><a class="active" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li><a class="" href="github.html"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
+<li><a class="active" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">9</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">10</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">11</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">15</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">16</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -77,11 +80,11 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmd" class="section level1">
 <h1>
-<span class="header-section-number">3</span> R Markdown<a class="anchor" aria-label="anchor" href="#rmd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5</span> R Markdown<a class="anchor" aria-label="anchor" href="#rmd"><i class="fas fa-link"></i></a>
 </h1>
 <div id="r-markdown-vs-markdown" class="section level2">
 <h2>
-<span class="header-section-number">3.1</span> R Markdown vs Markdown<a class="anchor" aria-label="anchor" href="#r-markdown-vs-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> R Markdown vs Markdown<a class="anchor" aria-label="anchor" href="#r-markdown-vs-markdown"><i class="fas fa-link"></i></a>
 </h2>
 <p>Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be readable as-is, unlike text formatted with a markup language such as RTF or HTML. A raw markdown document should be easy to read, as well as the final rendered output.</p>
 <p>GitHub has it’s own flavour of markdown, most commonly used in the <code>README.md</code> file that serves to introduce each GitHub repository.</p>
@@ -95,31 +98,31 @@
 </div>
 <div id="r-markdown-security-data-protection" class="section level2">
 <h2>
-<span class="header-section-number">3.2</span> <strong>R Markdown security &amp; data protection</strong><a class="anchor" aria-label="anchor" href="#r-markdown-security-data-protection"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> <strong>R Markdown security &amp; data protection</strong><a class="anchor" aria-label="anchor" href="#r-markdown-security-data-protection"><i class="fas fa-link"></i></a>
 </h2>
 <p>A limit of R Markdown, or rather our current unapproved use of GitHub, is that a repo for a project with PID or other confidential data must exclude the rendered output of the R Markdown file. The <code>.Rmd</code> file is fine to be included in the GitHub repo, but the rendered output e.g. <code>.pdf</code> or <code>.html</code>, which includes the output of code and probably some of your confidential data, needs to be excluded from the GitHub repo, even if your repo is private. I’m not clear yet what the implications of this are for collaborating with R Markdown e.g. with an R Notebook, but I’d be interested to hear. The limitation does make sharing the R Markdown rendered output cumbersome, especially this side of the Council’s <em>always on VPN</em>, SharePoint upgrade and pending a fuller roll-out of MS Teams functionality. Ultimately though, if GitHub proves useful, we need to make the case for a paid, fuller functioned and more secure Council instance. See the section on <a href="github.html#github-security">GitHub security &amp; data protection</a> for more detail about this, and in particular how to use <code>.gitignore</code> to exclude the rendered R Markdown output from your GitHub repo.</p>
 </div>
 <div id="r-notebooks" class="section level2">
 <h2>
-<span class="header-section-number">3.3</span> R Notebooks<a class="anchor" aria-label="anchor" href="#r-notebooks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> R Notebooks<a class="anchor" aria-label="anchor" href="#r-notebooks"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO - technical vs data exploration - don’t add to github</em></p>
 </div>
 <div id="bookdown" class="section level2">
 <h2>
-<span class="header-section-number">3.4</span> Bookdown<a class="anchor" aria-label="anchor" href="#bookdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4</span> Bookdown<a class="anchor" aria-label="anchor" href="#bookdown"><i class="fas fa-link"></i></a>
 </h2>
 <p>These notes are written using the <a href="https://pkgs.rstudio.com/bookdown/">bookdown package</a>, which is built on top of R Markdown and <a href="https://yihui.org/knitr/">knitr</a>.</p>
 <p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <div id="themes" class="section level3">
 <h3>
-<span class="header-section-number">3.4.1</span> Themes<a class="anchor" aria-label="anchor" href="#themes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4.1</span> Themes<a class="anchor" aria-label="anchor" href="#themes"><i class="fas fa-link"></i></a>
 </h3>
 <p>The theme of these notes changed in September 2021 from a <a href="https://bookdown.org/yihui/bookdown/html.html#gitbook-style">GitBook style</a> to a <a href="https://bookdown.org/yihui/bookdown/html.html#bs4-book">Three-column Bootstrap style</a>.</p>
 </div>
 <div id="publishing" class="section level3">
 <h3>
-<span class="header-section-number">3.4.2</span> Publishing<a class="anchor" aria-label="anchor" href="#publishing"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4.2</span> Publishing<a class="anchor" aria-label="anchor" href="#publishing"><i class="fas fa-link"></i></a>
 </h3>
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
@@ -134,7 +137,7 @@
 </div>
 <div id="flexdashboard" class="section level2">
 <h2>
-<span class="header-section-number">3.5</span> Flexdashboard<a class="anchor" aria-label="anchor" href="#flexdashboard"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5</span> Flexdashboard<a class="anchor" aria-label="anchor" href="#flexdashboard"><i class="fas fa-link"></i></a>
 </h2>
 <blockquote>
 <p>The goal of flexdashboard is to make it easy to create interactive dashboards for R, using R Markdown.</p>
@@ -145,7 +148,7 @@
 </div>
 <div id="rolldown" class="section level2">
 <h2>
-<span class="header-section-number">3.6</span> Rolldown<a class="anchor" aria-label="anchor" href="#rolldown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.6</span> Rolldown<a class="anchor" aria-label="anchor" href="#rolldown"><i class="fas fa-link"></i></a>
 </h2>
 <blockquote>
 <p><a href="https://github.com/yihui/rolldown/blob/master/README.md">Rolldown</a> is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.</p>
@@ -154,7 +157,7 @@
 </div>
 <div id="child-r-markdown" class="section level2">
 <h2>
-<span class="header-section-number">3.7</span> Child R Markdown<a class="anchor" aria-label="anchor" href="#child-r-markdown"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.7</span> Child R Markdown<a class="anchor" aria-label="anchor" href="#child-r-markdown"><i class="fas fa-link"></i></a>
 </h2>
 <p>Here are a couple of use cases for child R Markdown documents:</p>
 <ol style="list-style-type: decimal">
@@ -164,7 +167,7 @@
 <script src="https://gist.github.com/laurie-platt/d4323e68c28ee6bf1e6880153416b5d1.js"></script><p>Note that a child R Markdown has no YAML header, it just inherits its parent’s YAML header.</p>
 <div id="iteration" class="section level3">
 <h3>
-<span class="header-section-number">3.7.1</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.7.1</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration"><i class="fas fa-link"></i></a>
 </h3>
 <p>A third and more complicated use case for child R Markdown, is to use a parameter to iterate through a child R Markdown document. You still have a single <code>parent.Rmd</code> and a single <code>child.Rmd</code> file. However, in the single knitted output file, you have <code>n</code> iterations of the child document content depending on the number of values in the parameter. There’s a proof-of-concept <a href="https://github.com/scc-pi/C19Surveillance/tree/master/r-markdown/UosExample">example</a> in the C19Surveillance repo. Three different residential types are passed as a parameter to the child R Markdown document, which renders a map and a summary table for each residential type in the knitted output:</p>
 <script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script><p>This iteration technique isn’t prominent because the demand for such reports outside the Council has largely been superseded by browser based dashboards, such as those provided via Power BI or Shiny. However, the Council hasn’t fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports.</p>
@@ -172,26 +175,26 @@
 </div>
 <div id="r-markdown-tips" class="section level2">
 <h2>
-<span class="header-section-number">3.8</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.8</span> R Markdown tips<a class="anchor" aria-label="anchor" href="#r-markdown-tips"><i class="fas fa-link"></i></a>
 </h2>
 <div id="markdown-visual-editor" class="section level3">
 <h3>
-<span class="header-section-number">3.8.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.8.1</span> Markdown visual editor<a class="anchor" aria-label="anchor" href="#markdown-visual-editor"><i class="fas fa-link"></i></a>
 </h3>
 <p>The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:</p>
 <div class="inline-figure"><img src="images/rmd-editor.png" width="328"></div>
 </div>
 <div id="chunk-named-setup" class="section level3">
 <h3>
-<span class="header-section-number">3.8.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.8.2</span> Chunk named setup<a class="anchor" aria-label="anchor" href="#chunk-named-setup"><i class="fas fa-link"></i></a>
 </h3>
 <p>Naming a code block <code>setup</code> means that after you restart RStudio and execute any code in the middle of your markdown document, the <code>setup</code> block will run first. For example, to make sure your libraries are loaded first:</p>
 <script src="https://gist.github.com/laurie-platt/c8a1e49cabb5f9fa0104ca6daef5dff2.js"></script>
 </div>
 </div>
-<div id="further-resources-2" class="section level2">
+<div id="further-resources-4" class="section level2">
 <h2>
-<span class="header-section-number">3.9</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.9</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-4"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://r4ds.had.co.nz/r-markdown.html">Chapter 27 R Markdown</a>, R4DS by Hadley Wickham.</p>
 <p><a href="https://bookdown.org/yihui/bookdown/">Authoring Books and Technical Documents with R Markdown</a> by Yihui Xie is the definitive resource for R Markdown.</p>
@@ -199,39 +202,39 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></div>
-<div class="next"><a href="python.html"><span class="header-section-number">4</span> Python</a></div>
+<div class="prev"><a href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></div>
+<div class="next"><a href="python.html"><span class="header-section-number">6</span> Python</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#rmd"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="nav-link" href="#r-markdown-vs-markdown"><span class="header-section-number">3.1</span> R Markdown vs Markdown</a></li>
-<li><a class="nav-link" href="#r-markdown-security-data-protection"><span class="header-section-number">3.2</span> R Markdown security &amp; data protection</a></li>
-<li><a class="nav-link" href="#r-notebooks"><span class="header-section-number">3.3</span> R Notebooks</a></li>
+<li><a class="nav-link" href="#rmd"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="nav-link" href="#r-markdown-vs-markdown"><span class="header-section-number">5.1</span> R Markdown vs Markdown</a></li>
+<li><a class="nav-link" href="#r-markdown-security-data-protection"><span class="header-section-number">5.2</span> R Markdown security &amp; data protection</a></li>
+<li><a class="nav-link" href="#r-notebooks"><span class="header-section-number">5.3</span> R Notebooks</a></li>
 <li>
-<a class="nav-link" href="#bookdown"><span class="header-section-number">3.4</span> Bookdown</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#themes"><span class="header-section-number">3.4.1</span> Themes</a></li>
-<li><a class="nav-link" href="#publishing"><span class="header-section-number">3.4.2</span> Publishing</a></li>
+<a class="nav-link" href="#bookdown"><span class="header-section-number">5.4</span> Bookdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#themes"><span class="header-section-number">5.4.1</span> Themes</a></li>
+<li><a class="nav-link" href="#publishing"><span class="header-section-number">5.4.2</span> Publishing</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">3.5</span> Flexdashboard</a></li>
-<li><a class="nav-link" href="#rolldown"><span class="header-section-number">3.6</span> Rolldown</a></li>
+<li><a class="nav-link" href="#flexdashboard"><span class="header-section-number">5.5</span> Flexdashboard</a></li>
+<li><a class="nav-link" href="#rolldown"><span class="header-section-number">5.6</span> Rolldown</a></li>
 <li>
-<a class="nav-link" href="#child-r-markdown"><span class="header-section-number">3.7</span> Child R Markdown</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#iteration"><span class="header-section-number">3.7.1</span> Iteration</a></li></ul>
+<a class="nav-link" href="#child-r-markdown"><span class="header-section-number">5.7</span> Child R Markdown</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#iteration"><span class="header-section-number">5.7.1</span> Iteration</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">3.8</span> R Markdown tips</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">3.8.1</span> Markdown visual editor</a></li>
-<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">3.8.2</span> Chunk named setup</a></li>
+<a class="nav-link" href="#r-markdown-tips"><span class="header-section-number">5.8</span> R Markdown tips</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#markdown-visual-editor"><span class="header-section-number">5.8.1</span> Markdown visual editor</a></li>
+<li><a class="nav-link" href="#chunk-named-setup"><span class="header-section-number">5.8.2</span> Chunk named setup</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#further-resources-2"><span class="header-section-number">3.9</span> Further resources</a></li>
+<li><a class="nav-link" href="#further-resources-4"><span class="header-section-number">5.9</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/03-rmd.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/03-rmd.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/05-rmd.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/05-rmd.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -243,7 +246,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

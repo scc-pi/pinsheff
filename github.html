@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 1 Version control &amp; GitHub | Notes</title>
+<title>Chapter 3 Version control &amp; GitHub | Notes</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 1 Version control &amp; GitHub | Notes">
+<meta property="og:title" content="Chapter 3 Version control &amp; GitHub | Notes">
 <meta property="og:type" content="book">
 <meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 1 Version control &amp; GitHub | Notes">
+<meta name="twitter:title" content="Chapter 3 Version control &amp; GitHub | Notes">
 <meta name="twitter:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -46,27 +46,30 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Power BI</li>
+<li><a class="" href="power-bi-fundamentals.html"><span class="header-section-number">1</span> Power BI fundamentals</a></li>
+<li><a class="" href="dax.html"><span class="header-section-number">2</span> DAX</a></li>
 <li class="book-part">Scripting tools</li>
-<li><a class="active" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
-<li><a class="" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li><a class="active" href="github.html"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
+<li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">9</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">10</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">11</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">15</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">16</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -77,7 +80,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="github" class="section level1">
 <h1>
-<span class="header-section-number">1</span> Version control &amp; GitHub<a class="anchor" aria-label="anchor" href="#github"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3</span> Version control &amp; GitHub<a class="anchor" aria-label="anchor" href="#github"><i class="fas fa-link"></i></a>
 </h1>
 <p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. If you’re <a href="r.html#getting-started-with-r">new to scripting and R</a>, then visualisations or using R Markdown are better starting points than version control.</p>
 <p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.</p>
@@ -123,26 +126,26 @@
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="why-version-control" class="section level2">
 <h2>
-<span class="header-section-number">1.1</span> Why version control?<a class="anchor" aria-label="anchor" href="#why-version-control"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.1</span> Why version control?<a class="anchor" aria-label="anchor" href="#why-version-control"><i class="fas fa-link"></i></a>
 </h2>
 <p>When scripting you might make a backup copy of a file, so if your new changes break what was previously working you can revert to the backup copy. If you’re collating contributions to a document from different people you might use their initials in the file names to indicate and keep track of who’s made contributions in what version e.g. “BI_Principles-GR.docx” and “BI_Principles-NM.docx”. These are both examples of manual version control.</p>
 <p>When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.</p>
 </div>
 <div id="git" class="section level2">
 <h2>
-<span class="header-section-number">1.2</span> GIT<a class="anchor" aria-label="anchor" href="#git"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> GIT<a class="anchor" aria-label="anchor" href="#git"><i class="fas fa-link"></i></a>
 </h2>
 <p>Git is an open-source distributed version control system for tracking changes in source code during software development.</p>
 </div>
 <div id="github-1" class="section level2">
 <h2>
-<span class="header-section-number">1.3</span> GitHub<a class="anchor" aria-label="anchor" href="#github-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3</span> GitHub<a class="anchor" aria-label="anchor" href="#github-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
 <p>Our <a href="https://github.com/scc-pi">scc-pi</a> GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.</p>
 <div id="github-security" class="section level3">
 <h3>
-<span class="header-section-number">1.3.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
 </h3>
 <p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
@@ -156,14 +159,14 @@
 </div>
 <div id="forking-pull-requests" class="section level3">
 <h3>
-<span class="header-section-number">1.3.2</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3.2</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub <a href="https://guides.github.com/activities/forking/">forking</a> and pull requests are common workflows when collaborating on a repository.</p>
 <p><em>TODO - we’ll have more to add on this once we’ve collaborated on a repository</em></p>
 </div>
 <div id="other-features" class="section level3">
 <h3>
-<span class="header-section-number">1.3.3</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3.3</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub now allows private repositories on <a href="https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts">free organisation accounts</a>, but not all GitHub features are available.</p>
 <p>The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub <a href="https://guides.github.com/features/issues/">issue</a>. You can link a commit to an issue by including the issue number prefixed by <code>#</code> in the commit message.</p>
@@ -174,44 +177,44 @@
 </div>
 <div id="git-rstudio" class="section level2">
 <h2>
-<span class="header-section-number">1.4</span> Git &amp; RStudio<a class="anchor" aria-label="anchor" href="#git-rstudio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.4</span> Git &amp; RStudio<a class="anchor" aria-label="anchor" href="#git-rstudio"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://lab.github.com/githubtraining/introduction-to-github">Introduction to GitHub</a> on the GitHub <a href="https://lab.github.com/">Learning Lab</a> is a good place to get started and become familiar with some initial concepts and the GitHub website.</p>
 <p>To use GitHub with RStudio there’s a thorough step-by-step guide, <a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan. My main recommendation is to setup the connection using <a href="https://happygitwithr.com/ssh-keys.html">keys for SSH</a>. This connection method by-passes the issues I’ve had with the Council’s proxy server and using the HTTPS connection method. I’ve also had no issues since working from home and connecting via the Tunnel. Infact, since August 2021 <a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">GitHub token authentication is required</a> (e.g. SSH) and some on the steps in the Jenny Bryan’s book (e.g. chapters 9 and 10 on connecting and HTTPS) are out of date. As of October 2021 this is the case, but if <a href="https://github.com/jennybc/happy-git-with-r/issues/181">issue #181</a> gets closed in the <a href="https://github.com/jennybc/happy-git-with-r">Happy Git with R GitHub repo</a>, then it’s been fixed. Until then the recommendation is to skip chapters 9 and 10 and focus on 11 and 15 (SSH and New project, GitHub first).</p>
 <p>I frequently return to Jenny Bryan’s book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I’ve mainly stuck with <a href="https://happygitwithr.com/new-github-first.html">Chapter 15 New project, GitHub first</a>.</p>
 </div>
-<div id="further-resources" class="section level2">
+<div id="further-resources-2" class="section level2">
 <h2>
-<span class="header-section-number">1.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-2"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&amp;mode=desktop">Version Control with Git and SVN</a>, RStudio Support</p>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html">Welcome</a></div>
-<div class="next"><a href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></div>
+<div class="prev"><a href="dax.html"><span class="header-section-number">2</span> DAX</a></div>
+<div class="next"><a href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#github"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="nav-link" href="#why-version-control"><span class="header-section-number">1.1</span> Why version control?</a></li>
-<li><a class="nav-link" href="#git"><span class="header-section-number">1.2</span> GIT</a></li>
+<li><a class="nav-link" href="#github"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="nav-link" href="#why-version-control"><span class="header-section-number">3.1</span> Why version control?</a></li>
+<li><a class="nav-link" href="#git"><span class="header-section-number">3.2</span> GIT</a></li>
 <li>
-<a class="nav-link" href="#github-1"><span class="header-section-number">1.3</span> GitHub</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#github-security"><span class="header-section-number">1.3.1</span> GitHub security &amp; data protection</a></li>
-<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">1.3.2</span> Forking &amp; pull requests</a></li>
-<li><a class="nav-link" href="#other-features"><span class="header-section-number">1.3.3</span> Other features</a></li>
+<a class="nav-link" href="#github-1"><span class="header-section-number">3.3</span> GitHub</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#github-security"><span class="header-section-number">3.3.1</span> GitHub security &amp; data protection</a></li>
+<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">3.3.2</span> Forking &amp; pull requests</a></li>
+<li><a class="nav-link" href="#other-features"><span class="header-section-number">3.3.3</span> Other features</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#git-rstudio"><span class="header-section-number">1.4</span> Git &amp; RStudio</a></li>
-<li><a class="nav-link" href="#further-resources"><span class="header-section-number">1.5</span> Further resources</a></li>
+<li><a class="nav-link" href="#git-rstudio"><span class="header-section-number">3.4</span> Git &amp; RStudio</a></li>
+<li><a class="nav-link" href="#further-resources-2"><span class="header-section-number">3.5</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/01-github.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/01-github.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/03-github.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/03-github.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -223,7 +226,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

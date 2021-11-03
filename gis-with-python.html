@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 11 GIS with Python | Notes</title>
+<title>Chapter 13 GIS with Python | Notes</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R, which is why this “GIS with Python” chapter precedes the “GIS with R” chapter. There are three main ways...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 11 GIS with Python | Notes">
+<meta property="og:title" content="Chapter 13 GIS with Python | Notes">
 <meta property="og:type" content="book">
 <meta property="og:description" content="The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R, which is why this “GIS with Python” chapter precedes the “GIS with R” chapter. There are three main ways...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 11 GIS with Python | Notes">
+<meta name="twitter:title" content="Chapter 13 GIS with Python | Notes">
 <meta name="twitter:description" content="The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R, which is why this “GIS with Python” chapter precedes the “GIS with R” chapter. There are three main ways...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -46,27 +46,30 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Power BI</li>
+<li><a class="" href="power-bi-fundamentals.html"><span class="header-section-number">1</span> Power BI fundamentals</a></li>
+<li><a class="" href="dax.html"><span class="header-section-number">2</span> DAX</a></li>
 <li class="book-part">Scripting tools</li>
-<li><a class="" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
-<li><a class="" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li><a class="" href="github.html"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
+<li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">9</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">10</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="active" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">11</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="active" href="gis-with-python.html"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">15</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">16</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -77,7 +80,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="gis-with-python" class="section level1">
 <h1>
-<span class="header-section-number">11</span> GIS with Python<a class="anchor" aria-label="anchor" href="#gis-with-python"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13</span> GIS with Python<a class="anchor" aria-label="anchor" href="#gis-with-python"><i class="fas fa-link"></i></a>
 </h1>
 <p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R, which is why this “GIS with Python” chapter precedes the “GIS with R” chapter.</p>
 <p>There are three main ways of leveraging GIS (in particular the Council’s ArcGIS) via Python. In increasing order of difficulty in terms of initial setup:</p>
@@ -89,7 +92,7 @@
 <p>ArcGIS Notebooks take care of most the Python environment and ESRI license settings. Taking your Python scripts outside of ArcGIS Notebooks, e.g. by using VS Code, means that you’re taking more responsibility for the Python environment and ESRI license settings. Using Python in R via the <code>reticulate</code> package means that you have the added responsibility of the R environment.</p>
 <div id="arcgis-notebooks" class="section level2">
 <h2>
-<span class="header-section-number">11.1</span> ArcGIS Notebooks<a class="anchor" aria-label="anchor" href="#arcgis-notebooks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.1</span> ArcGIS Notebooks<a class="anchor" aria-label="anchor" href="#arcgis-notebooks"><i class="fas fa-link"></i></a>
 </h2>
 <blockquote>
 <p>ArcGIS Notebooks are built on top of <a href="https://jupyter.readthedocs.io/en/latest/">Jupyter Notebook</a>, an open-source web application that allows you to create and share documents that contain live Python code, visualizations, and narrative text.</p>
@@ -101,7 +104,7 @@
 </div>
 <div id="arcgis-python-api" class="section level2">
 <h2>
-<span class="header-section-number">11.2</span> ArcGIS Python API<a class="anchor" aria-label="anchor" href="#arcgis-python-api"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2</span> ArcGIS Python API<a class="anchor" aria-label="anchor" href="#arcgis-python-api"><i class="fas fa-link"></i></a>
 </h2>
 <p>The <code>arcgis</code> package is used to work with ArcGIS Enterprise (Portal) and AGOL.</p>
 <p><em>- The name of the package and it’s purpose - OneNote?</em></p>
@@ -109,7 +112,7 @@
 </div>
 <div id="arcpy" class="section level2">
 <h2>
-<span class="header-section-number">11.3</span> ArcPy<a class="anchor" aria-label="anchor" href="#arcpy"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.3</span> ArcPy<a class="anchor" aria-label="anchor" href="#arcpy"><i class="fas fa-link"></i></a>
 </h2>
 <p>The <code>arcpy</code> package is used to leverage the ArcGIS Desktop or Pro functionality. Like the <code>arcgis</code> package, to use the <code>arcpy</code> package we first need to specify the <a href="https://developers.arcgis.com/python/guide/install-and-set-up/">ArcGIS Python environment</a>.</p>
 <p>The distinction between web and desktop, for <code>arcgis</code> and <code>arcpy</code> packages respectively, is a bit of a simplification but it serves a purpose. It’s worth noting that the integration between the two packages isn’t as seamless as you might expect.</p>
@@ -119,28 +122,28 @@
 </div>
 <div id="non-esri-gis-with-python" class="section level2">
 <h2>
-<span class="header-section-number">11.4</span> Non-ESRI GIS with Python<a class="anchor" aria-label="anchor" href="#non-esri-gis-with-python"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.4</span> Non-ESRI GIS with Python<a class="anchor" aria-label="anchor" href="#non-esri-gis-with-python"><i class="fas fa-link"></i></a>
 </h2>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></div>
-<div class="next"><a href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></div>
+<div class="prev"><a href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></div>
+<div class="next"><a href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#gis-with-python"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="nav-link" href="#arcgis-notebooks"><span class="header-section-number">11.1</span> ArcGIS Notebooks</a></li>
-<li><a class="nav-link" href="#arcgis-python-api"><span class="header-section-number">11.2</span> ArcGIS Python API</a></li>
-<li><a class="nav-link" href="#arcpy"><span class="header-section-number">11.3</span> ArcPy</a></li>
-<li><a class="nav-link" href="#non-esri-gis-with-python"><span class="header-section-number">11.4</span> Non-ESRI GIS with Python</a></li>
+<li><a class="nav-link" href="#gis-with-python"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="nav-link" href="#arcgis-notebooks"><span class="header-section-number">13.1</span> ArcGIS Notebooks</a></li>
+<li><a class="nav-link" href="#arcgis-python-api"><span class="header-section-number">13.2</span> ArcGIS Python API</a></li>
+<li><a class="nav-link" href="#arcpy"><span class="header-section-number">13.3</span> ArcPy</a></li>
+<li><a class="nav-link" href="#non-esri-gis-with-python"><span class="header-section-number">13.4</span> Non-ESRI GIS with Python</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/11-gis-python.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/11-gis-python.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/13-gis-python.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/13-gis-python.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -152,7 +155,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

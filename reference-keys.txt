@@ -1,3 +1,7 @@
+power-bi-fundamentals
+further-resources
+dax
+further-resources-1
 github
 why-version-control
 git
@@ -6,7 +10,7 @@ github-security
 forking-pull-requests
 other-features
 git-rstudio
-further-resources
+further-resources-2
 r
 why-script
 style-guide
@@ -19,7 +23,7 @@ code-display
 document-outline-headings
 viewpipesteps-addin
 shortcuts
-further-resources-1
+further-resources-3
 rmd
 r-markdown-vs-markdown
 r-markdown-security-data-protection
@@ -34,14 +38,14 @@ iteration
 r-markdown-tips
 markdown-visual-editor
 chunk-named-setup
-further-resources-2
+further-resources-4
 python
 reticulate
 arcgis-api-wrappers
 databases
 oscar
 corporate-spatial-database
-further-resources-3
+further-resources-5
 warehouse
 corporate-data-warehouse
 postgres
@@ -73,7 +77,7 @@ desktop-gis
 arcgis-desktop
 arcgis-pro
 qgis
-further-resources-4
+further-resources-6
 gis-with-python
 arcgis-notebooks
 arcgis-python-api
@@ -89,7 +93,7 @@ esri2sf
 r-arcgis-bridge
 leaflet
 rasters
-further-resources-5
+further-resources-7
 geocoding
 uprn
 postcodes

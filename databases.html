@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 5 Council data | Notes</title>
+<title>Chapter 7 Council data | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="5.1 OSCAR TODO  5.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  5.3 Further resources  Databases using R from RStudio">
+<meta name="description" content="7.1 OSCAR TODO  7.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  7.3 Further resources  Databases using R from RStudio">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 5 Council data | Notes">
+<meta property="og:title" content="Chapter 7 Council data | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="5.1 OSCAR TODO  5.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  5.3 Further resources  Databases using R from RStudio">
+<meta property="og:description" content="7.1 OSCAR TODO  7.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  7.3 Further resources  Databases using R from RStudio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 5 Council data | Notes">
-<meta name="twitter:description" content="5.1 OSCAR TODO  5.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  5.3 Further resources  Databases using R from RStudio">
+<meta name="twitter:title" content="Chapter 7 Council data | Notes">
+<meta name="twitter:description" content="7.1 OSCAR TODO  7.2 Corporate spatial database TODO - Postgres - extensions for geometry types e.g. line  7.3 Further resources  Databases using R from RStudio">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -46,27 +46,30 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Power BI</li>
+<li><a class="" href="power-bi-fundamentals.html"><span class="header-section-number">1</span> Power BI fundamentals</a></li>
+<li><a class="" href="dax.html"><span class="header-section-number">2</span> DAX</a></li>
 <li class="book-part">Scripting tools</li>
-<li><a class="" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
-<li><a class="" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li><a class="" href="github.html"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
+<li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="active" href="databases.html"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
+<li><a class="active" href="databases.html"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">9</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">10</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">11</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">15</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">16</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -77,24 +80,24 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="databases" class="section level1">
 <h1>
-<span class="header-section-number">5</span> Council data<a class="anchor" aria-label="anchor" href="#databases"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7</span> Council data<a class="anchor" aria-label="anchor" href="#databases"><i class="fas fa-link"></i></a>
 </h1>
 <div id="oscar" class="section level2">
 <h2>
-<span class="header-section-number">5.1</span> OSCAR<a class="anchor" aria-label="anchor" href="#oscar"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.1</span> OSCAR<a class="anchor" aria-label="anchor" href="#oscar"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO</em></p>
 </div>
 <div id="corporate-spatial-database" class="section level2">
 <h2>
-<span class="header-section-number">5.2</span> Corporate spatial database<a class="anchor" aria-label="anchor" href="#corporate-spatial-database"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2</span> Corporate spatial database<a class="anchor" aria-label="anchor" href="#corporate-spatial-database"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO</em><br>
 - Postgres - extensions for geometry types e.g. line</p>
 </div>
-<div id="further-resources-3" class="section level2">
+<div id="further-resources-5" class="section level2">
 <h2>
-<span class="header-section-number">5.3</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -103,21 +106,21 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="python.html"><span class="header-section-number">4</span> Python</a></div>
-<div class="next"><a href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></div>
+<div class="prev"><a href="python.html"><span class="header-section-number">6</span> Python</a></div>
+<div class="next"><a href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#databases"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="nav-link" href="#oscar"><span class="header-section-number">5.1</span> OSCAR</a></li>
-<li><a class="nav-link" href="#corporate-spatial-database"><span class="header-section-number">5.2</span> Corporate spatial database</a></li>
-<li><a class="nav-link" href="#further-resources-3"><span class="header-section-number">5.3</span> Further resources</a></li>
+<li><a class="nav-link" href="#databases"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="nav-link" href="#oscar"><span class="header-section-number">7.1</span> OSCAR</a></li>
+<li><a class="nav-link" href="#corporate-spatial-database"><span class="header-section-number">7.2</span> Corporate spatial database</a></li>
+<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">7.3</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/05-scc-data.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/05-scc-data.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/07-scc-data.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/07-scc-data.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -129,7 +132,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

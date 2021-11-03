@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Python | Notes</title>
+<title>Chapter 6 Python | Notes</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Python | Notes">
+<meta property="og:title" content="Chapter 6 Python | Notes">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Python | Notes">
+<meta name="twitter:title" content="Chapter 6 Python | Notes">
 <meta name="twitter:description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -46,27 +46,30 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Power BI</li>
+<li><a class="" href="power-bi-fundamentals.html"><span class="header-section-number">1</span> Power BI fundamentals</a></li>
+<li><a class="" href="dax.html"><span class="header-section-number">2</span> DAX</a></li>
 <li class="book-part">Scripting tools</li>
-<li><a class="" href="github.html"><span class="header-section-number">1</span> Version control &amp; GitHub</a></li>
-<li><a class="" href="r.html"><span class="header-section-number">2</span> R &amp; RStudio</a></li>
-<li><a class="" href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></li>
-<li><a class="active" href="python.html"><span class="header-section-number">4</span> Python</a></li>
+<li><a class="" href="github.html"><span class="header-section-number">3</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
+<li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
+<li><a class="active" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">5</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">6</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">7</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">8</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">7</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">8</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">9</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">10</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">9</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">10</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">11</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">12</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">13</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">11</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">12</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">13</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">14</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">15</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">14</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">16</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -77,18 +80,18 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="python" class="section level1">
 <h1>
-<span class="header-section-number">4</span> Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6</span> Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
 </h1>
 <p>Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind and is popular in academia and research.</p>
 <div id="reticulate" class="section level2">
 <h2>
-<span class="header-section-number">4.1</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
 </h2>
 <p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio v1.4 has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
 </div>
 <div id="arcgis-api-wrappers" class="section level2">
 <h2>
-<span class="header-section-number">4.2</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on <a href="gis-with-r.html#arcgisr">ArcGIS R &amp; Python packages</a> for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API “wrappers” that make it easier to obtain data (see the section on <a href="api.html#wrappers">wrappers</a> for further notes about this). In both cases, <code>reticulate</code> allows us to leverage Python packages from within R.</p>
 
@@ -98,20 +101,20 @@
 
 
   <div class="chapter-nav">
-<div class="prev"><a href="rmd.html"><span class="header-section-number">3</span> R Markdown</a></div>
-<div class="next"><a href="databases.html"><span class="header-section-number">5</span> Council data</a></div>
+<div class="prev"><a href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></div>
+<div class="next"><a href="databases.html"><span class="header-section-number">7</span> Council data</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#python"><span class="header-section-number">4</span> Python</a></li>
-<li><a class="nav-link" href="#reticulate"><span class="header-section-number">4.1</span> Reticulate</a></li>
-<li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">4.2</span> ArcGIS &amp; API wrappers</a></li>
+<li><a class="nav-link" href="#python"><span class="header-section-number">6</span> Python</a></li>
+<li><a class="nav-link" href="#reticulate"><span class="header-section-number">6.1</span> Reticulate</a></li>
+<li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/04-python.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/04-python.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/06-python.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/06-python.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -123,7 +126,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-10-07.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
