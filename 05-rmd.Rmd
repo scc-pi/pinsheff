@@ -66,6 +66,8 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 *TODO: Test whether a fexdashboard can be hosted via our Power BI Report Server in an IFrame.*
 
+[scc-pi.github.io/asc-localities-insight](https://scc-pi.github.io/asc-localities-insight) is an example of flexdashboard. The `.html` file hosted on GitHub has also been added in the "Adult Health and Social Care Programme" MS Team as a [website tab](http://davidgiard.com/2019/01/27/AddingAWebsiteTabToAMicrosoftTeamsChannel.aspx).  
+
 ## Rolldown
 
 > [Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.
@@ -93,7 +95,7 @@ A third and more complicated use case for child R Markdown, is to use a paramete
 <script src="https://gist.github.com/laurie-platt/79a5e9cd3b08820b781e38cc0996fec2.js"></script>
 ```
 
-This iteration technique isn't prominent because the demand for such reports outside the Council has largely been superseded by browser based dashboards, such as those provided via Power BI or Shiny. However, the Council hasn't fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports. 
+This iteration technique isn't prominent because the demand for such reports outside the Council has largely been superseded by browser based dashboards, such as those provided via Power BI or Shiny. However, the Council hasn't fully transitioned from static reports (e.g. pdf files) to browser based dashboards. Until it has, there may still be an expectation, a demand, for such iterative reports. Plus, the [flexdashboard example](https://scc-pi.github.io/asc-localities-insight) noted above uses child R markdown and iteration, thanks to code largely derived from a [blog by SOMTOM](https://somtom.github.io/post/using-dynamically-rendered-r-markdown-childs-for-reports/) (January 2019).
 
 ## R Markdown tips
 
