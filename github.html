@@ -147,7 +147,7 @@
 <h3>
 <span class="header-section-number">3.3.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
 </h3>
-<p>Assuming that GitHub.com is hosted in the US, it will not meet our data protection obligations. Either way, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
+<p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Plus, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="github.html#cb3-1"></a><span class="co"># data directory</span></span>
 <span id="cb3-2"><a href="github.html#cb3-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
@@ -156,17 +156,25 @@
 <code class="sourceCode R"><span class="co"># Session Data files</span>
 <span class="va">.RData</span></code></pre></div>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
+<p>BitBucket currently looks like a more likely solution than GitHub.</p>
+</div>
+<div id="bitbucket" class="section level3">
+<h3>
+<span class="header-section-number">3.3.2</span> BitBucket<a class="anchor" aria-label="anchor" href="#bitbucket"><i class="fas fa-link"></i></a>
+</h3>
+<p>BitBucket is Council approved and used by Digital Services, the only team in the Council that uses version control for code. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories (our main use case), whereas GitHub is more popular with open source projects. Fundamentally, the two have very similar functionality. One difference is the narrower scope of BitBucket, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.</p>
+<p>If the current BI Team GitHub trial comes to the conclusion that version control is something we need, we need to have a conversation with Information Governance and TDA about BitBucket. We also need to keep in touch with Digital Services who may switch to an alternative version control provider in July 2022. I need to verify my expectation that using BitBucket with RStudio is the same experience as using GitHub.</p>
 </div>
 <div id="forking-pull-requests" class="section level3">
 <h3>
-<span class="header-section-number">3.3.2</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3.3</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub <a href="https://guides.github.com/activities/forking/">forking</a> and pull requests are common workflows when collaborating on a repository.</p>
 <p><em>TODO - we’ll have more to add on this once we’ve collaborated on a repository</em></p>
 </div>
 <div id="other-features" class="section level3">
 <h3>
-<span class="header-section-number">3.3.3</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3.4</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub now allows private repositories on <a href="https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts">free organisation accounts</a>, but not all GitHub features are available.</p>
 <p>The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub <a href="https://guides.github.com/features/issues/">issue</a>. You can link a commit to an issue by including the issue number prefixed by <code>#</code> in the commit message.</p>
@@ -203,8 +211,9 @@
 <li>
 <a class="nav-link" href="#github-1"><span class="header-section-number">3.3</span> GitHub</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#github-security"><span class="header-section-number">3.3.1</span> GitHub security &amp; data protection</a></li>
-<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">3.3.2</span> Forking &amp; pull requests</a></li>
-<li><a class="nav-link" href="#other-features"><span class="header-section-number">3.3.3</span> Other features</a></li>
+<li><a class="nav-link" href="#bitbucket"><span class="header-section-number">3.3.2</span> BitBucket</a></li>
+<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">3.3.3</span> Forking &amp; pull requests</a></li>
+<li><a class="nav-link" href="#other-features"><span class="header-section-number">3.3.4</span> Other features</a></li>
 </ul>
 </li>
 <li><a class="nav-link" href="#git-rstudio"><span class="header-section-number">3.4</span> Git &amp; RStudio</a></li>

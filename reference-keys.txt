@@ -7,6 +7,7 @@ why-version-control
 git
 github-1
 github-security
+bitbucket
 forking-pull-requests
 other-features
 git-rstudio
