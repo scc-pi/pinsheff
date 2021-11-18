@@ -14,7 +14,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install sf
-        run: Rscript -e 'install.packages("sf", type="mac.binary")'
+        run: Rscript -e 'install.packages("sf")'
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse","janitor"))'
       - name: Install readxl
