@@ -116,6 +116,8 @@ Naming a code block `setup` means that after you restart RStudio and execute any
 ```
 ## Further resources
 
+[R Markdown from RStudio](https://rmarkdown.rstudio.com/lesson-1.html)  
+
 [Chapter 27 R Markdown](https://r4ds.had.co.nz/r-markdown.html), R4DS by Hadley Wickham.
 
 [Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) by Yihui Xie is the definitive resource for R Markdown.
