@@ -14,13 +14,15 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install sf
-        run: Rscript -e 'install.packages("sf")'
+        run: Rscript -e 'install.packages("sf", type="mac.binary")'
+      - name: Install terra
+        run: Rscript -e 'install.packages("terra", type="mac.binary")'
       - name: Install tidyverse
         run: Rscript -e 'install.packages(c("broom","tidyverse","janitor"))'
       - name: Install readxl
         run: Rscript -e 'install.packages("readxl")'
       - name: Install spatial
-        run: Rscript -e 'install.packages(c("PostcodesioR", "mapview", "terra"))'
+        run: Rscript -e 'install.packages(c("PostcodesioR", "mapview"))'
       - name: Install api
         run: Rscript -e 'install.packages(c("httr","jsonlite"))'
       - name: Install rstudio
