@@ -11,6 +11,7 @@ libs/
 .Rhistory
 .RData
 .Ruserdata
+*.Rproj
 # bookdown log file
 *.log
 # cumulative bookdown markdown file left & useful for debugging if build fails 

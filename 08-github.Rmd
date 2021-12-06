@@ -1,4 +1,4 @@
-# (PART) Scripting tools {.unnumbered}
+# (PART) Scripting {.unnumbered}
 
 # Version control & GitHub {#github}
 
