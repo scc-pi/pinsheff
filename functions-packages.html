@@ -89,17 +89,17 @@
 <span class="header-section-number">7.1</span> Functions<a class="anchor" aria-label="anchor" href="#functions"><i class="fas fa-link"></i></a>
 </h2>
 <p>If you find yourself copying and pasting the same code several times, that’s a good indication that you should probably consider creating a function to do the copied code. Writing functions is an initial investment of time and effort, that pays off down the line, by making it easier to read and maintain scripts.</p>
-<p>The place to start getting a better understanding of the purpose of functions and how to write them, is the relevant chapter in <a href="https://r4ds.had.co.nz/functions.html#functions">Hadley’s R for Data Science</a>.</p>
+<p>The place to start understanding the purpose of functions and how to write them, is the relevant chapter in <a href="https://r4ds.had.co.nz/functions.html#functions">Hadley’s R for Data Science</a>.</p>
 <div id="lazy-tidy-evaluation" class="section level3">
 <h3>
 <span class="header-section-number">7.1.1</span> Lazy &amp; tidy evaluation<a class="anchor" aria-label="anchor" href="#lazy-tidy-evaluation"><i class="fas fa-link"></i></a>
 </h3>
-<p>A couple of concepts to be aware of when writing R functions are:</p>
+<p>There are a couple of concepts to be aware of when writing R functions:</p>
 <ol style="list-style-type: decimal">
 <li><p>Lazy evaluation</p></li>
 <li><p>Tidy evaluation</p></li>
 </ol>
-<p>Tidy evaluation in particular I’m not yet comfortable enough with yet to try and explain. I’m getting better at using it, but I’ve not fully understood it yet. <a href="https://adv-r.hadley.nz/">Hadley’s Advanced R</a> book is where you should look for a explanation:</p>
+<p>Tidy evaluation in particular, I’m not comfortable enough with yet to try and explain. I’m getting better at using it, but I’ve not fully understood it yet. <a href="https://adv-r.hadley.nz/">Hadley’s Advanced R</a> book is where you should look for an explanation:</p>
 <ul>
 <li><p><a href="https://adv-r.hadley.nz/functions.html">Chapter 6 Functions</a> (for lazy evaluation)</p></li>
 <li><p><a href="https://adv-r.hadley.nz/metaprogramming.html">Metaprogramming section</a> or the <a href="https://dplyr.tidyverse.org/articles/programming.html">Programming with dplyr</a> vignette (for tidy evaluation)</p></li>
@@ -109,7 +109,7 @@
 <h3>
 <span class="header-section-number">7.1.2</span> Sourcing files<a class="anchor" aria-label="anchor" href="#sourcing-files"><i class="fas fa-link"></i></a>
 </h3>
-<p>When you need access to functions across different scripts in your project, you can put your functions in a separate R script and include them in a script using the <code>source</code> function. The <code>source</code> function can be used with a relative (i.e. to your working directory) or absolute path. It can also be used with a URL, for example to a (Raw) file on GitHub.</p>
+<p>When you need access to functions across different scripts in your project, you can put your functions in a separate R script and include them in a script using the <code>source</code> function. The <code>source</code> function can be used with a relative path (i.e. to your working directory) or an absolute path. It can also be used with a URL, for example to a (Raw) file on GitHub.</p>
 </div>
 </div>
 <div id="packages" class="section level2">
@@ -139,7 +139,7 @@
 <span class="header-section-number">7.2.2</span> Installing packages<a class="anchor" aria-label="anchor" href="#installing-packages"><i class="fas fa-link"></i></a>
 </h3>
 <p>Packages are typically installed in to your library (a designated folder on a local drive) using the <code>install.packages</code> function. Packages are loaded into an R session from your library using the <code>library function</code>.</p>
-<p><code>install.packages</code> is usually used to install packages hosted on <a href="https://cran.r-project.org/">CRAN</a>. Hosting a package on CRAN involves a verification process, quality check, reviews etc. I’ve not done that for the <code>popsheff</code> and <code>boundsheff</code> packages, so they have to ben installed a different way, either using:</p>
+<p><code>install.packages</code> is usually used to install packages hosted on <a href="https://cran.r-project.org/">CRAN</a>. Hosting a package on CRAN involves a verification process, quality check, reviews etc. I’ve not done that for the <code>popsheff</code> and <code>boundsheff</code> packages, so they have to be installed a different way, either using:</p>
 <ol style="list-style-type: decimal">
 <li><p>RStudio and the <em>Tools &gt; Install packages…</em> menu item to load the Windows binary (zip) file from <code>S:/BI Team/ShareToAll/RPackages</code> if you work for Sheffield City Council.</p></li>
 <li><p>GitHub via the devtools R package and it’s <code>install_github</code> function.</p></li>
