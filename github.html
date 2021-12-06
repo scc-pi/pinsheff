@@ -55,7 +55,6 @@
 <li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
 <li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="" href="functions-packages.html"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
-<li class="book-part">Scripting</li>
 <li><a class="active" href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
 <li class="book-part">Accessing data</li>
 <li><a class="" href="databases.html"><span class="header-section-number">9</span> Council data</a></li>
@@ -89,7 +88,7 @@
 <p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.</p>
 <div class="inline-figure"><img src="images/github-edit.png" width="484"></div>
 <p>You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Load functions from a public scc-pi repository </span>
 <span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R"</span><span class="op">)</span>
 
@@ -152,10 +151,10 @@
 </h3>
 <p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Plus, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="github.html#cb8-1"></a><span class="co"># data directory</span></span>
-<span id="cb8-2"><a href="github.html#cb8-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="github.html#cb9-1"></a><span class="co"># data directory</span></span>
+<span id="cb9-2"><a href="github.html#cb9-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
 <p>As an additional precaution, any projects involving confidential information should be held in a private repository and <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html"><code>.Rdata</code></a> should also be included in the <code>.gitignore</code> file (see the section on <a href="r.html#pid">RStudio security &amp; data protection</a>):</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Session Data files</span>
 <span class="va">.RData</span></code></pre></div>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment. However, BitBucket currently looks like a more likely solution than GitHub.</p>

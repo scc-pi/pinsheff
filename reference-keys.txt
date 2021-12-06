@@ -34,6 +34,12 @@ python
 reticulate
 arcgis-api-wrappers
 functions-packages
+functions
+lazy-tidy-evaluation
+sourcing-files
+packages
+writing-r-packages
+installing-packages
 github
 why-version-control
 git
@@ -107,7 +113,7 @@ other
 renv
 docker
 reprex-r-package
-writing-r-packages
+writing-r-packages-1
 roxygen2
 plumber-r-package
 data-visualisation

@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 7 Functions &amp; packages | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta name="description" content="7.1 Functions If you find yourself copying and pasting the same code several times, that’s a good indication that you should probably consider creating a function to do the copied code. Writing...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 7 Functions &amp; packages | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta property="og:description" content="7.1 Functions If you find yourself copying and pasting the same code several times, that’s a good indication that you should probably consider creating a function to do the copied code. Writing...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 7 Functions &amp; packages | Notes">
-<meta name="twitter:description" content="Some notes, examples, lessons learnt and links to further resources.">
+<meta name="twitter:description" content="7.1 Functions If you find yourself copying and pasting the same code several times, that’s a good indication that you should probably consider creating a function to do the copied code. Writing...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -55,7 +55,6 @@
 <li><a class="" href="rmd.html"><span class="header-section-number">5</span> R Markdown</a></li>
 <li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="active" href="functions-packages.html"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
-<li class="book-part">Scripting</li>
 <li><a class="" href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
 <li class="book-part">Accessing data</li>
 <li><a class="" href="databases.html"><span class="header-section-number">9</span> Council data</a></li>
@@ -85,17 +84,93 @@
 <h1>
 <span class="header-section-number">7</span> Functions &amp; packages<a class="anchor" aria-label="anchor" href="#functions-packages"><i class="fas fa-link"></i></a>
 </h1>
+<div id="functions" class="section level2">
+<h2>
+<span class="header-section-number">7.1</span> Functions<a class="anchor" aria-label="anchor" href="#functions"><i class="fas fa-link"></i></a>
+</h2>
+<p>If you find yourself copying and pasting the same code several times, that’s a good indication that you should probably consider creating a function to do the copied code. Writing functions is an initial investment of time and effort, that pays off down the line, by making it easier to read and maintain scripts.</p>
+<p>The place to start getting a better understanding of the purpose of functions and how to write them, is the relevant chapter in <a href="https://r4ds.had.co.nz/functions.html#functions">Hadley’s R for Data Science</a>.</p>
+<div id="lazy-tidy-evaluation" class="section level3">
+<h3>
+<span class="header-section-number">7.1.1</span> Lazy &amp; tidy evaluation<a class="anchor" aria-label="anchor" href="#lazy-tidy-evaluation"><i class="fas fa-link"></i></a>
+</h3>
+<p>A couple of concepts to be aware of when writing R functions are:</p>
+<ol style="list-style-type: decimal">
+<li><p>Lazy evaluation</p></li>
+<li><p>Tidy evaluation</p></li>
+</ol>
+<p>Tidy evaluation in particular I’m not yet comfortable enough with yet to try and explain. I’m getting better at using it, but I’ve not fully understood it yet. <a href="https://adv-r.hadley.nz/">Hadley’s Advanced R</a> book is where you should look for a explanation:</p>
+<ul>
+<li><p><a href="https://adv-r.hadley.nz/functions.html">Chapter 6 Functions</a> (for lazy evaluation)</p></li>
+<li><p><a href="https://adv-r.hadley.nz/metaprogramming.html">Metaprogramming section</a> or the <a href="https://dplyr.tidyverse.org/articles/programming.html">Programming with dplyr</a> vignette (for tidy evaluation)</p></li>
+</ul>
+</div>
+<div id="sourcing-files" class="section level3">
+<h3>
+<span class="header-section-number">7.1.2</span> Sourcing files<a class="anchor" aria-label="anchor" href="#sourcing-files"><i class="fas fa-link"></i></a>
+</h3>
+<p>When you need access to functions across different scripts in your project, you can put your functions in a separate R script and include them in a script using the <code>source</code> function. The <code>source</code> function can be used with a relative (i.e. to your working directory) or absolute path. It can also be used with a URL, for example to a (Raw) file on GitHub.</p>
+</div>
+</div>
+<div id="packages" class="section level2">
+<h2>
+<span class="header-section-number">7.2</span> Packages<a class="anchor" aria-label="anchor" href="#packages"><i class="fas fa-link"></i></a>
+</h2>
+<div id="writing-r-packages" class="section level3">
+<h3>
+<span class="header-section-number">7.2.1</span> Writing R packages<a class="anchor" aria-label="anchor" href="#writing-r-packages"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you find that your functions are useful across different projects then you could include them in an R package. Writing R packages isn’t conceptually difficult, it’s more a case of becoming familiar with the R package conventions and documenting your code more than you usually do.</p>
+<p>I’ve written a couple of small R packages called <a href="https://github.com/scc-pi/popsheff">popsheff</a> and <a href="https://github.com/scc-pi/boundsheff">boundsheff</a>. Instead of functions, these contain population and boundary data for Sheffield. The resources I relied on to create these include:</p>
+<ul>
+<li><p><a href="https://support.rstudio.com/hc/en-us/articles/200486488?version=2021.09.1%2B372&amp;mode=desktop">Developing Packages with the RStudio IDE</a></p></li>
+<li><p>Hadley’s <a href="https://github.com/scc-pi/boundsheff">R Packages</a> book</p></li>
+<li><p><a href="https://mvuorre.github.io/exampleRPackage/index.html">exampleRPackage</a></p></li>
+<li><p>The Hadley R package <a href="https://github.com/hadley/babynames">babynames</a></p></li>
+</ul>
+<p>Resources I intend to use include:</p>
+<ul>
+<li><p><a href="http://mangothecat.github.io/goodpractice/">goodpractice</a> R package</p></li>
+<li><p><a href="https://pkgdown.r-lib.org/">Pkgdown</a></p></li>
+</ul>
+</div>
+<div id="installing-packages" class="section level3">
+<h3>
+<span class="header-section-number">7.2.2</span> Installing packages<a class="anchor" aria-label="anchor" href="#installing-packages"><i class="fas fa-link"></i></a>
+</h3>
+<p>Packages are typically installed in to your library (a designated folder on a local drive) using the <code>install.packages</code> function. Packages are loaded into an R session from your library using the <code>library function</code>.</p>
+<p><code>install.packages</code> is usually used to install packages hosted on <a href="https://cran.r-project.org/">CRAN</a>. Hosting a package on CRAN involves a verification process, quality check, reviews etc. I’ve not done that for the <code>popsheff</code> and <code>boundsheff</code> packages, so they have to ben installed a different way, either using:</p>
+<ol style="list-style-type: decimal">
+<li><p>RStudio and the <em>Tools &gt; Install packages…</em> menu item to load the Windows binary (zip) file from <code>S:/BI Team/ShareToAll/RPackages</code> if you work for Sheffield City Council.</p></li>
+<li><p>GitHub via the devtools R package and it’s <code>install_github</code> function.</p></li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"scc-pi/popsheff"</span><span class="op">)</span></code></pre></div>
 
 </div>
-
-
-
+</div>
+</div>
   <div class="chapter-nav">
 <div class="prev"><a href="python.html"><span class="header-section-number">6</span> Python</a></div>
 <div class="next"><a href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#functions-packages"><span class="header-section-number">7</span> Functions &amp; packages</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#functions-packages"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
+<li>
+<a class="nav-link" href="#functions"><span class="header-section-number">7.1</span> Functions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lazy-tidy-evaluation"><span class="header-section-number">7.1.1</span> Lazy &amp; tidy evaluation</a></li>
+<li><a class="nav-link" href="#sourcing-files"><span class="header-section-number">7.1.2</span> Sourcing files</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#packages"><span class="header-section-number">7.2</span> Packages</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#writing-r-packages"><span class="header-section-number">7.2.1</span> Writing R packages</a></li>
+<li><a class="nav-link" href="#installing-packages"><span class="header-section-number">7.2.2</span> Installing packages</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
