@@ -1,2 +1,64 @@
 # Functions & packages
 
+## Functions  
+
+If you find yourself copying and pasting the same code several times, that's a good indication that you should probably consider creating a function to do the copied code. Writing functions is an initial investment of time and effort, that pays off down the line, by making it easier to read and maintain scripts.    
+
+The place to start getting a better understanding of the purpose of functions and how to write them, is the relevant chapter in [Hadley's R for Data Science](https://r4ds.had.co.nz/functions.html#functions). 
+
+### Lazy & tidy evaluation  
+
+A couple of concepts to be aware of when writing R functions are:  
+
+1. Lazy evaluation  
+
+1. Tidy evaluation  
+
+Tidy evaluation in particular I'm not yet comfortable enough with yet to try and explain. I'm getting better at using it, but I've not fully understood it yet. [Hadley's Advanced R](https://adv-r.hadley.nz/) book is where you should look for a explanation:   
+
+* [Chapter 6 Functions](https://adv-r.hadley.nz/functions.html) (for lazy evaluation)  
+
+* [Metaprogramming section](https://adv-r.hadley.nz/metaprogramming.html) or the [Programming with dplyr](https://dplyr.tidyverse.org/articles/programming.html) vignette (for tidy evaluation)
+
+### Sourcing files  
+
+When you need access to functions across different scripts in your project, you can put your functions in a separate R script and include them in a script using the `source` function. The `source` function can be used with a relative (i.e. to your working directory) or absolute path. It can also be used with a URL, for example to a (Raw) file on GitHub.
+
+## Packages  
+
+### Writing R packages
+
+If you find that your functions are useful across different projects then you could include them in an R package. Writing R packages isn't conceptually difficult, it's more a case of becoming familiar with the R package conventions and documenting your code more than you usually do.
+
+I've written a couple of small R packages called [popsheff](https://github.com/scc-pi/popsheff) and [boundsheff](https://github.com/scc-pi/boundsheff). Instead of functions, these contain population and boundary data for Sheffield. The resources I relied on to create these include:  
+
+* [Developing Packages with the RStudio IDE](https://support.rstudio.com/hc/en-us/articles/200486488?version=2021.09.1%2B372&mode=desktop)   
+
+* Hadley's [R Packages](https://github.com/scc-pi/boundsheff) book 
+
+* [exampleRPackage](https://mvuorre.github.io/exampleRPackage/index.html)  
+
+* The Hadley R package [babynames](https://github.com/hadley/babynames)
+
+Resources I intend to use include:  
+
+* [goodpractice](http://mangothecat.github.io/goodpractice/) R package  
+
+* [Pkgdown](https://pkgdown.r-lib.org/)
+
+### Installing packages  
+
+Packages are typically installed in to your library (a designated folder on a local drive) using the `install.packages` function. Packages are loaded into an R session from your library using the `library function`.
+
+`install.packages` is usually used to install packages hosted on  [CRAN](https://cran.r-project.org/). Hosting a package on CRAN involves a verification process, quality check, reviews etc. I've not done that for the `popsheff` and `boundsheff` packages, so they have to ben installed a different way, either using:  
+
+1. RStudio and the *Tools > Install packages...* menu item to load the Windows binary (zip) file from `S:/BI Team/ShareToAll/RPackages` if you work for Sheffield City Council.  
+
+2. GitHub via the devtools R package and it's `install_github` function.  
+
+```{r eval=FALSE}
+#install.packages("devtools")
+devtools::install_github("scc-pi/popsheff")
+```
+
+
