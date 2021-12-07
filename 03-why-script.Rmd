@@ -6,7 +6,7 @@
 
 Scripts are a series of typed commands in a file. When you "run" a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a given task. 
 
-The terms "scripting", "coding" and "programming" are often used synonymously. However, coding and programming are synonymous and are umbrella terms. Whereas scripting is just a part of these umbrella terms. Compared with coding and programming, scripting generally covers less complex tasks, with an easier to understand language, and with fewer commands.
+The terms "scripting", "coding" and "programming" are often used synonymously. More accurately though, coding and programming are umbrella terms that scripting is just a part of. Compared with coding and programming, scripting generally covers less complex tasks, with an easier to understand language, and with fewer commands.
 
 ## Scripting for data analysis 
 
@@ -44,7 +44,13 @@ RStudio makes the (slightly biased?) case for scripting in an hour long webinar 
 
 ### R & Python  
 
+Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
+
+*open source*  
+
 #### Notebooks  
+
+*Jupyter & R Markdown notebooks*
 
 ### SQL
 flavours
@@ -60,6 +66,8 @@ Arcade
 Stata, SPSS?
 
 ## Who writes scripts?  
+
+This isn't an exhaustive list of who in the Council writes scripts. Rather, it is a few examples that illustrate why different people use scripts.  
 
 ### Laurie Platt, BI Team   
 
