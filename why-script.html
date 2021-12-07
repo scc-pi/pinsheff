@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 Why script? | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="I initially started scripting in Python to automate some spatial analysis tasks, but found reproducibility the main advantage. Iterating, improving a process incrementally and at the end verifying...">
+<meta name="description" content="3.1 What is scripting? Scripts are a series of typed commands in a file. When you “run” a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Why script? | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="I initially started scripting in Python to automate some spatial analysis tasks, but found reproducibility the main advantage. Iterating, improving a process incrementally and at the end verifying...">
+<meta property="og:description" content="3.1 What is scripting? Scripts are a series of typed commands in a file. When you “run” a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 Why script? | Notes">
-<meta name="twitter:description" content="I initially started scripting in Python to automate some spatial analysis tasks, but found reproducibility the main advantage. Iterating, improving a process incrementally and at the end verifying...">
+<meta name="twitter:description" content="3.1 What is scripting? Scripts are a series of typed commands in a file. When you “run” a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -84,17 +84,137 @@
 <h1>
 <span class="header-section-number">3</span> Why script?<a class="anchor" aria-label="anchor" href="#why-script"><i class="fas fa-link"></i></a>
 </h1>
-<p>I initially started scripting in Python to automate some spatial analysis tasks, but found reproducibility the main advantage. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.</p>
+<div id="what-is-scripting" class="section level2">
+<h2>
+<span class="header-section-number">3.1</span> What is scripting?<a class="anchor" aria-label="anchor" href="#what-is-scripting"><i class="fas fa-link"></i></a>
+</h2>
+<p>Scripts are a series of typed commands in a file. When you “run” a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a given task.</p>
+<p>The terms “scripting”, “coding” and “programming” are often used synonymously. However, coding and programming are synonymous and are umbrella terms. Whereas scripting is just a part of these umbrella terms. Compared with coding and programming, scripting generally covers less complex tasks, with an easier to understand language, and with fewer commands.</p>
+</div>
+<div id="scripting-for-data-analysis" class="section level2">
+<h2>
+<span class="header-section-number">3.2</span> Scripting for data analysis<a class="anchor" aria-label="anchor" href="#scripting-for-data-analysis"><i class="fas fa-link"></i></a>
+</h2>
+<p>Scripts can be used to accomplish a variety of tasks. For example, BCIS in Sheffield City Council use scripts to update and maintain laptops and servers.</p>
+<p>For the purposes of these notes, we are limiting the scope of scripting to mean scripting for data analysis. So, scripting to accomplish data analysis tasks, including data:</p>
+<ul>
+<li><p>extraction</p></li>
+<li><p>transformation</p></li>
+<li><p>loading</p></li>
+<li><p>exploration</p></li>
+<li><p>analysis</p></li>
+<li><p>modelling</p></li>
+<li><p>visualisation</p></li>
+<li><p>narration</p></li>
+</ul>
+<p>Scripting for data capture, data entry, is outside the scope of these notes.</p>
+</div>
+<div id="scripting-pros-cons" class="section level2">
+<h2>
+<span class="header-section-number">3.3</span> Scripting pros &amp; cons?<a class="anchor" aria-label="anchor" href="#scripting-pros-cons"><i class="fas fa-link"></i></a>
+</h2>
 <p>There’s an element of self-documentation with scripting, so it’s easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.</p>
-<p>Scripting is not always better than using GUI tools. There’s a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.</p>
+<p>Scripting is not always better than using GUI tools. There’s a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools that the Council has licenses for (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.</p>
+<p>RStudio makes the (slightly biased?) case for scripting in an hour long webinar on <a href="https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/">Why Your Enterprise Needs Code-First Data Science</a></p>
+</div>
+<div id="scripting-languages" class="section level2">
+<h2>
+<span class="header-section-number">3.4</span> Scripting languages<a class="anchor" aria-label="anchor" href="#scripting-languages"><i class="fas fa-link"></i></a>
+</h2>
+<div id="r-python" class="section level3">
+<h3>
+<span class="header-section-number">3.4.1</span> R &amp; Python<a class="anchor" aria-label="anchor" href="#r-python"><i class="fas fa-link"></i></a>
+</h3>
+<div id="notebooks" class="section level4">
+<h4>
+<span class="header-section-number">3.4.1.1</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
+</h4>
+</div>
+</div>
+<div id="sql" class="section level3">
+<h3>
+<span class="header-section-number">3.4.2</span> SQL<a class="anchor" aria-label="anchor" href="#sql"><i class="fas fa-link"></i></a>
+</h3>
+<p>flavours
+procedural</p>
+</div>
+<div id="others" class="section level3">
+<h3>
+<span class="header-section-number">3.4.3</span> Others<a class="anchor" aria-label="anchor" href="#others"><i class="fas fa-link"></i></a>
+</h3>
+<p>VBA
+DAX
+Typescript
+Javascript
+Arcade
+Stata, SPSS?</p>
+</div>
+</div>
+<div id="who-writes-scripts" class="section level2">
+<h2>
+<span class="header-section-number">3.5</span> Who writes scripts?<a class="anchor" aria-label="anchor" href="#who-writes-scripts"><i class="fas fa-link"></i></a>
+</h2>
+<div id="laurie-platt-bi-team" class="section level3">
+<h3>
+<span class="header-section-number">3.5.1</span> Laurie Platt, BI Team<a class="anchor" aria-label="anchor" href="#laurie-platt-bi-team"><i class="fas fa-link"></i></a>
+</h3>
+<p>Laurie used to develop software before working as a Town Planner. His experience with coding rather than Excel meant scripting was a more obvious tool for him. Laurie initially started scripting whilst a Planner, using Python to <strong>automate</strong> some spatial analysis tasks. However, he found <strong>reproducibility</strong> to be the main advantage of scripting. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.</p>
+</div>
+<div id="dan-taylor-bi-team" class="section level3">
+<h3>
+<span class="header-section-number">3.5.2</span> Dan Taylor, BI Team<a class="anchor" aria-label="anchor" href="#dan-taylor-bi-team"><i class="fas fa-link"></i></a>
+</h3>
+<p>Excel, R, Python</p>
+<p>version control</p>
+</div>
+<div id="giles-robinson-bi-team" class="section level3">
+<h3>
+<span class="header-section-number">3.5.3</span> Giles Robinson, BI Team<a class="anchor" aria-label="anchor" href="#giles-robinson-bi-team"><i class="fas fa-link"></i></a>
+</h3>
+<p>SQL, DAX, R</p>
+<p>collaboration</p>
+</div>
+<div id="ben-arnold-performance-team" class="section level3">
+<h3>
+<span class="header-section-number">3.5.4</span> Ben Arnold, Performance Team<a class="anchor" aria-label="anchor" href="#ben-arnold-performance-team"><i class="fas fa-link"></i></a>
+</h3>
+<p>VBA, DAX</p>
+</div>
+<div id="martin-fox-capital-delivery-service" class="section level3">
+<h3>
+<span class="header-section-number">3.5.5</span> Martin Fox, Capital Delivery Service<a class="anchor" aria-label="anchor" href="#martin-fox-capital-delivery-service"><i class="fas fa-link"></i></a>
+</h3>
 
+</div>
+</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="dax.html"><span class="header-section-number">2</span> DAX</a></div>
 <div class="next"><a href="r.html"><span class="header-section-number">4</span> R &amp; RStudio</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#why-script"><span class="header-section-number">3</span> Why script?</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#why-script"><span class="header-section-number">3</span> Why script?</a></li>
+<li><a class="nav-link" href="#what-is-scripting"><span class="header-section-number">3.1</span> What is scripting?</a></li>
+<li><a class="nav-link" href="#scripting-for-data-analysis"><span class="header-section-number">3.2</span> Scripting for data analysis</a></li>
+<li><a class="nav-link" href="#scripting-pros-cons"><span class="header-section-number">3.3</span> Scripting pros &amp; cons?</a></li>
+<li>
+<a class="nav-link" href="#scripting-languages"><span class="header-section-number">3.4</span> Scripting languages</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#r-python"><span class="header-section-number">3.4.1</span> R &amp; Python</a></li>
+<li><a class="nav-link" href="#sql"><span class="header-section-number">3.4.2</span> SQL</a></li>
+<li><a class="nav-link" href="#others"><span class="header-section-number">3.4.3</span> Others</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#who-writes-scripts"><span class="header-section-number">3.5</span> Who writes scripts?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#laurie-platt-bi-team"><span class="header-section-number">3.5.1</span> Laurie Platt, BI Team</a></li>
+<li><a class="nav-link" href="#dan-taylor-bi-team"><span class="header-section-number">3.5.2</span> Dan Taylor, BI Team</a></li>
+<li><a class="nav-link" href="#giles-robinson-bi-team"><span class="header-section-number">3.5.3</span> Giles Robinson, BI Team</a></li>
+<li><a class="nav-link" href="#ben-arnold-performance-team"><span class="header-section-number">3.5.4</span> Ben Arnold, Performance Team</a></li>
+<li><a class="nav-link" href="#martin-fox-capital-delivery-service"><span class="header-section-number">3.5.5</span> Martin Fox, Capital Delivery Service</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -111,7 +231,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-12-06.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-12-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
