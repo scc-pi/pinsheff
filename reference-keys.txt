@@ -47,6 +47,7 @@ further-resources-3
 python
 reticulate
 arcgis-api-wrappers
+spyder-ide
 functions-packages
 r-functions
 lazy-tidy-evaluation

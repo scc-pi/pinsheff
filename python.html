@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Python | Notes</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
+<meta name="description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Python | Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
+<meta property="og:description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Python | Notes">
-<meta name="twitter:description" content="Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind...">
+<meta name="twitter:description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -84,18 +84,24 @@
 <h1>
 <span class="header-section-number">6</span> Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
 </h1>
-<p>Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind and is popular in academia and research.</p>
 <div id="reticulate" class="section level2">
 <h2>
 <span class="header-section-number">6.1</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
 </h2>
-<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio v1.4 has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
+<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
 </div>
 <div id="arcgis-api-wrappers" class="section level2">
 <h2>
 <span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on <a href="gis-with-r.html#arcgisr">ArcGIS R &amp; Python packages</a> for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API “wrappers” that make it easier to obtain data (see the section on <a href="api.html#wrappers">wrappers</a> for further notes about this). In both cases, <code>reticulate</code> allows us to leverage Python packages from within R.</p>
+</div>
+<div id="spyder-ide" class="section level2">
+<h2>
+<span class="header-section-number">6.3</span> Spyder IDE<a class="anchor" aria-label="anchor" href="#spyder-ide"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are feature rich IDEs for working with Python such as PyCharm, RStudio and VS Code. At the other end of the feature scale is the default Python editor IDLE that is installed with every version of Python.</p>
+<p>Spyder is not as feature rich as many IDEs, but probably has more than enough to satisy your initial needs without being too complicated. Spyder installs as a Python package. This makes it a good option for working with ArcGIS via Python and the simplest solution for handling the ArcGIS licensing requirements and related Python package management. Installing Spyder requires cloning the default Python environment for ArcGIS Pro and adding Spyder using conda. Other IDEs can have issues handling virtual environments.</p>
 
 </div>
 </div>
@@ -108,6 +114,7 @@
 <li><a class="nav-link" href="#python"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="nav-link" href="#reticulate"><span class="header-section-number">6.1</span> Reticulate</a></li>
 <li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers</a></li>
+<li><a class="nav-link" href="#spyder-ide"><span class="header-section-number">6.3</span> Spyder IDE</a></li>
 </ul>
 
       <div class="book-extra">
