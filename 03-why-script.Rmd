@@ -1,9 +1,85 @@
 # (PART) Scripting {.unnumbered}
 
-# Why script? 
+# Why script?
 
-I initially started scripting in Python to automate some spatial analysis tasks, but found reproducibility the main advantage. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.
+## What is scripting? 
+
+Scripts are a series of typed commands in a file. When you "run" a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a given task. 
+
+The terms "scripting", "coding" and "programming" are often used synonymously. However, coding and programming are synonymous and are umbrella terms. Whereas scripting is just a part of these umbrella terms. Compared with coding and programming, scripting generally covers less complex tasks, with an easier to understand language, and with fewer commands.
+
+## Scripting for data analysis 
+
+Scripts can be used to accomplish a variety of tasks. For example, BCIS in Sheffield City Council use scripts to update and maintain laptops and servers.  
+
+For the purposes of these notes, we are limiting the scope of scripting to mean scripting for data analysis. So, scripting to accomplish data analysis tasks, including data:  
+
+* extraction  
+
+* transformation  
+
+* loading  
+
+* exploration  
+
+* analysis  
+
+* modelling 
+
+* visualisation  
+
+* narration  
+
+Scripting for data capture, data entry, is outside the scope of these notes.
+
+## Scripting pros & cons? 
 
 There's an element of self-documentation with scripting, so it's easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.
 
-Scripting is not always better than using GUI tools. There's a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.
+Scripting is not always better than using GUI tools. There's a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools that the Council has licenses for (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.
+
+RStudio makes the (slightly biased?) case for scripting in an hour long webinar on [Why Your Enterprise Needs Code-First Data Science](https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/)
+
+## Scripting languages  
+
+### R & Python  
+
+#### Notebooks  
+
+### SQL
+flavours
+procedural
+
+### Others 
+
+VBA
+DAX
+Typescript
+Javascript
+Arcade
+Stata, SPSS?
+
+## Who writes scripts?  
+
+### Laurie Platt, BI Team   
+
+Laurie used to develop software before working as a Town Planner. His experience with coding rather than Excel meant scripting was a more obvious tool for him. Laurie initially started scripting whilst a Planner, using Python to **automate** some spatial analysis tasks. However, he found **reproducibility** to be the main advantage of scripting. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.
+
+### Dan Taylor, BI Team  
+
+Excel, R, Python      
+
+version control  
+
+### Giles Robinson, BI Team  
+
+SQL, DAX, R  
+
+collaboration  
+
+### Ben Arnold, Performance Team  
+
+VBA, DAX  
+
+### Martin Fox, Capital Delivery Service  
+
