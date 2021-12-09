@@ -44,21 +44,26 @@ RStudio makes the (slightly biased?) case for scripting in an hour long webinar 
 
 ### R & Python  
 
-Python and R are both popular data analysis scripting languages. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
-
-*open source*  
+Python and R are open-source scripting languages popular with data analysts. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
 
 #### Notebooks  
 
 *Jupyter & R Markdown notebooks*
 
 ### SQL
-flavours
-procedural
+
+SQL (Structured Query Language) is designed for storing, manipulating and retrieving data in a database. SQL commands are simpler and their range narrower than R and Python commands. For example, time series or spatial analysis isn't within scope of SQL. Also, whilst much of our data is still held in databases, data is now commonly from CSV files and other formats. 
+
+SQL is run on the database server, which even with today's powerful personal computers, can have time saving benefits. The type of database can mean the SQL extensions have different syntax, but the core elements such as `SELECT` and `JOIN` are generic.     
+
+Often it's not a case of choosing to use SQL or say R, but using both. SQL to initially extract data from a corporate database. Then R to combine with data from other sources, e.g. ONS, and then analyse and visualise it. 
+### VBA
+
+VBA (Visual Basic for Applications) is Microsoft's scripting language for, and built into, its Office programmes like Word and PowerPoint. However, for data analysis purposes, it is how it extends and automates Excel that is of interest.     
 
 ### Others 
 
-VBA
+
 DAX
 Typescript
 Javascript
@@ -69,25 +74,13 @@ Stata, SPSS?
 
 This isn't an exhaustive list of who in the Council writes scripts. Rather, it is a few examples that illustrate why different people use scripts.  
 
-### Laurie Platt, BI Team   
+**Laurie Platt** (BI Team) used to develop software before working as a Town Planner. His experience with coding rather than Excel meant scripting was a more obvious tool for him. Laurie initially started scripting whilst a Planner, using Python to **automate** some spatial analysis tasks. However, he found **reproducibility** to be the main advantage of scripting. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.
 
-Laurie used to develop software before working as a Town Planner. His experience with coding rather than Excel meant scripting was a more obvious tool for him. Laurie initially started scripting whilst a Planner, using Python to **automate** some spatial analysis tasks. However, he found **reproducibility** to be the main advantage of scripting. Iterating, improving a process incrementally and at the end verifying the results by re-running the script.
+**Dan Taylor** (BI Team) - *Excel, R, Python, version control*
 
-### Dan Taylor, BI Team  
+**Giles Robinson** (BI Team) - *SQL, DAX, R, collaboration*  
 
-Excel, R, Python      
+**Ben Arnold** (Performance Team) - *VBA, DAX*  
 
-version control  
-
-### Giles Robinson, BI Team  
-
-SQL, DAX, R  
-
-collaboration  
-
-### Ben Arnold, Performance Team  
-
-VBA, DAX  
-
-### Martin Fox, Capital Delivery Service  
+**Martin Fox** (Capital Delivery Service) - *Javascript* 
 
