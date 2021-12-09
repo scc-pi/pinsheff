@@ -12,11 +12,6 @@ notebooks
 sql
 others
 who-writes-scripts
-laurie-platt-bi-team
-dan-taylor-bi-team
-giles-robinson-bi-team
-ben-arnold-performance-team
-martin-fox-capital-delivery-service
 r
 style-guide
 pid
