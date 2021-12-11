@@ -10,8 +10,7 @@ scripting-languages
 r-python
 notebooks
 sql
-others
-who-writes-scripts
+vba
 r
 style-guide
 pid
