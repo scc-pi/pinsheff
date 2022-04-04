@@ -57,7 +57,7 @@ df <- tibble::tribble(
 
 # Extract the postcode from the address into a separate column
 dplyr::mutate(df, 
-              postcode = stringr::word(address, -2, -1, sep = "[:space:]")) %>%
+              postcode = stringr::word(address, -2, -1, sep = "[:space:]")) |>
   knitr::kable()
 ```
 
