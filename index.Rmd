@@ -10,7 +10,8 @@ biblio-style: apalike
 link-citations: yes
 github-repo: scc-pi/notes
 description: "Some notes, examples, lessons learnt and links to further resources."
-favicon: "fas fa-air-freshener"
+favicon: fa-question
+
 ---
 
 # About {.unnumbered}
