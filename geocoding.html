@@ -7,7 +7,7 @@
 <title>Chapter 17 Postcodes &amp; addresses | Notes</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 17 Postcodes &amp; addresses | Notes">
 <meta property="og:type" content="book">
 <meta property="og:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
@@ -20,10 +20,14 @@
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
 <script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
 <link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -97,7 +101,7 @@
 </h2>
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
 <p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">name</span>,    <span class="op">~</span><span class="va">postcode</span>,
@@ -106,60 +110,24 @@
   <span class="st">"Owls"</span>,   <span class="st">"S6 1SW"</span>
 <span class="op">)</span>
 
-<span class="co"># Load the function we need</span>
-<span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R"</span><span class="op">)</span>
-
-<span class="co"># Add postcode related columns to our data frame</span>
-<span class="fu">add_pcd_vars</span><span class="op">(</span><span class="va">df</span>,
-             pcd_name <span class="op">=</span> <span class="st">"postcode"</span>,
-             .admin_district <span class="op">=</span> <span class="cn">FALSE</span>,
-             .lat_long <span class="op">=</span> <span class="cn">TRUE</span>,
-             other_vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"admin_ward"</span>,
-                            <span class="st">"msoa_code"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#display them in a nice table</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">name</th>
-<th align="left">postcode</th>
-<th align="right">longitude</th>
-<th align="right">latitude</th>
-<th align="left">admin_ward</th>
-<th align="left">msoa_code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">SCC</td>
-<td align="left">S1 2HH</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Blades</td>
-<td align="left">S2 4SU</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">Owls</td>
-<td align="left">S6 1SW</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-</tbody>
-</table></div>
+<span class="co"># # Load the function we need</span>
+<span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")</span>
+<span class="co"># </span>
+<span class="co"># # Add postcode related columns to our data frame</span>
+<span class="co"># add_pcd_vars(df,</span>
+<span class="co">#              pcd_name = "postcode",</span>
+<span class="co">#              .admin_district = FALSE,</span>
+<span class="co">#              .lat_long = TRUE,</span>
+<span class="co">#              other_vars = c("admin_ward",</span>
+<span class="co">#                             "msoa_code")) %&gt;%</span>
+<span class="co">#   knitr::kable() #display them in a nice table</span></code></pre></div>
 <p><code>admin_district</code> can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield? You can anticipate values of <code>NA</code> and <code>Sheffield</code> respectively if the answers are yes. These are common questions so the function has an <code>.admin_district</code> argument.</p>
 <p>Needing the coordinates of the postcode centroid is also common, so the function also has a <code>.lat_long</code> argument that if <code>TRUE</code> returns both a latitude column and a longitude column.</p>
 <p><em>TODO: link to sf example &amp; area stats</em></p>
 <p>Other columns are added by including their name in a character vector passed with the <code>other_vars</code> function argument. For example, <code>other_vars=c("ccg_code","lsoa_code")</code>. The list of valid <code>other_vars</code> is defined at <a href="https://docs.ropensci.org/PostcodesioR/#examples">docs.ropensci.org/PostcodesioR/#examples</a>.</p>
 <p>The <code>pcd_name</code> function argument is used to specify the name of the data frame’s postcode column when it isn’t <code>postcode</code>. For example, <code>pcd_name="pupil_pcode"</code>.</p>
 <p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">name</span>,     <span class="op">~</span><span class="va">address</span>,
@@ -170,7 +138,7 @@
 
 <span class="co"># Extract the postcode from the address into a separate column</span>
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">df</span>, 
-              postcode <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/word.html">word</a></span><span class="op">(</span><span class="va">address</span>, <span class="op">-</span><span class="fl">2</span>, <span class="op">-</span><span class="fl">1</span>, sep <span class="op">=</span> <span class="st">"[:space:]"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+              postcode <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/word.html">word</a></span><span class="op">(</span><span class="va">address</span>, <span class="op">-</span><span class="fl">2</span>, <span class="op">-</span><span class="fl">1</span>, sep <span class="op">=</span> <span class="st">"[:space:]"</span><span class="op">)</span><span class="op">)</span> |&gt;
   <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -275,7 +243,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-12-11.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2022-04-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -7,7 +7,7 @@
 <title>Chapter 8 Version control &amp; GitHub | Notes</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Version control &amp; GitHub | Notes">
 <meta property="og:type" content="book">
 <meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
@@ -20,10 +20,14 @@
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
 <script src="libs/HomeButton-0.0.1/home-button.js"></script><script src="libs/HomeButton-0.0.1/easy-button-src.min.js"></script><script src="libs/clipboard-0.0.1/setClipboardText.js"></script><link href="libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
 <link href="libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -89,42 +93,13 @@
 <div class="inline-figure"><img src="images/github-edit.png" width="484"></div>
 <p>You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Load functions from a public scc-pi repository </span>
-<span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R"</span><span class="op">)</span>
-
-<span class="co"># Call one of our Sheffield area functions that returns LSOA codes </span>
-<span class="fu">shef_lsoa_codes</span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co">#only display the first 5 records</span>
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#display them in a nice table </span></code></pre></div>
-<pre><code>## [1] "Table"</code></pre>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">LSOA11CD</th>
-<th align="left">LSOA11NM</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">E01008124</td>
-<td align="left">Sheffield 012F</td>
-</tr>
-<tr class="even">
-<td align="left">E01008125</td>
-<td align="left">Sheffield 009G</td>
-</tr>
-<tr class="odd">
-<td align="left">E01007917</td>
-<td align="left">Sheffield 071B</td>
-</tr>
-<tr class="even">
-<td align="left">E01033273</td>
-<td align="left">Sheffield 042F</td>
-</tr>
-<tr class="odd">
-<td align="left">E01007967</td>
-<td align="left">Sheffield 045B</td>
-</tr>
-</tbody>
-</table></div>
+<code class="sourceCode R"><span class="co"># # Load functions from a public scc-pi repository </span>
+<span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")</span>
+<span class="co"># </span>
+<span class="co"># # Call one of our Sheffield area functions that returns LSOA codes </span>
+<span class="co"># shef_lsoa_codes() %&gt;% </span>
+<span class="co">#   head(5) %&gt;% #only display the first 5 records</span>
+<span class="co">#   knitr::kable() #display them in a nice table </span></code></pre></div>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="why-version-control" class="section level2">
 <h2>
@@ -151,10 +126,10 @@
 </h3>
 <p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Plus, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="github.html#cb9-1"></a><span class="co"># data directory</span></span>
-<span id="cb9-2"><a href="github.html#cb9-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="github.html#cb8-1"></a><span class="co"># data directory</span></span>
+<span id="cb8-2"><a href="github.html#cb8-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
 <p>As an additional precaution, any projects involving confidential information should be held in a private repository and <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html"><code>.Rdata</code></a> should also be included in the <code>.gitignore</code> file (see the section on <a href="r.html#pid">RStudio security &amp; data protection</a>):</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Session Data files</span>
 <span class="va">.RData</span></code></pre></div>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment. However, BitBucket currently looks like a more likely solution than GitHub.</p>
@@ -239,7 +214,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2021-12-11.</p>
+    <p>"<strong>Notes</strong>" was written by Laurie Platt. It was last built on 2022-04-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
