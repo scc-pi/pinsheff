@@ -21,17 +21,17 @@ df <- tibble::tribble(
   "Owls",   "S6 1SW"
 )
 
-# Load the function we need
-source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")
-
-# Add postcode related columns to our data frame
-add_pcd_vars(df,
-             pcd_name = "postcode",
-             .admin_district = FALSE,
-             .lat_long = TRUE,
-             other_vars = c("admin_ward",
-                            "msoa_code")) %>%
-  knitr::kable() #display them in a nice table
+# # Load the function we need
+# source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")
+# 
+# # Add postcode related columns to our data frame
+# add_pcd_vars(df,
+#              pcd_name = "postcode",
+#              .admin_district = FALSE,
+#              .lat_long = TRUE,
+#              other_vars = c("admin_ward",
+#                             "msoa_code")) %>%
+#   knitr::kable() #display them in a nice table
 ```
 
 `admin_district` can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield? You can anticipate values of `NA` and `Sheffield` respectively if the answers are yes. These are common questions so the function has an `.admin_district` argument.

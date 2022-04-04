@@ -122,8 +122,6 @@ The example above reads open data. However, most of the Council's spatial data o
 
 Our public [github.com/scc-pi/functions](https://github.com/scc-pi/functions) repository includes functions in `ShefAreas.R` that use `esri2sf`. The sub-headings immediately below outline how other ArcGIS packages are more powerful, but also more onerous in terms of licensing and setup. So where possible, the intention is to utilise `esri2sf` in preference to the other ArcGIS packages.
 
-Relying on `esri2sf` may require some contributions to the `esri2sf` repository. For example, a pull request to fix an assumption that at least 500 features can be served at a time, when the ONS Open Geography Portal limit is 50 (hence our forked [github.com/scc-pi/esri2sf](https://github.com/scc-pi/esri2sf) repository). Contributing to `esri2sf` repository is preferable to accessing the Portal or AGOL API via Javascript, which is better suited to web developers than data analysts.
-
 Further information on the `esri2sf` package, how to install and use it, is available from [github.com/yonghah/esri2sf](https://github.com/yonghah/esri2sf).
 
 ### R-ArcGIS Bridge
