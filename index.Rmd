@@ -10,7 +10,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: scc-pi/notes
 description: "Some notes, examples, lessons learnt and links to further resources."
-favicon: "favicon.ico"
+favicon: fa-magnifying-glass-chart
 ---
 
 # About {.unnumbered}
