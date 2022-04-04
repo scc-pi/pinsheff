@@ -2,7 +2,7 @@
 
 # Why script?  
 
-The Sheffield City Council has made some fantastic progress in recent years with data analysis tools, such as the new GIS infrastructure and Power BI. These are powerful and intuitive, great for both full time data analysts and those for whom data analysis is only part of their responsibilities. Scripting is another tool that is becoming increasingly available to us now with the Council’s rapidly evolving IT improvements. 
+Sheffield City Council has made some fantastic progress in recent years with data analysis tools, such as the new GIS infrastructure and Power BI. These are powerful and intuitive, great for both full time data analysts and those for whom data analysis is only part of their responsibilities. Scripting is another tool that is becoming increasingly available to us now with the Council’s rapidly evolving IT improvements. 
 
 ## What is scripting? 
 
