@@ -1,3 +1,3 @@
 Ad-hoc notes, mainly to do with scripting and mainly R scripts. It's somewhere to share lessons learnt, examples and links to further resources.
 
-The notes are published to [scc-pi.github.io/notes/](https://scc-pi.github.io/notes/) using the [bookdown](https://bookdown.org/) package via a [GitHub Action](https://github.com/features/actions) that is triggered on a push to the `master` branch, and uses the `gh-pages` branch and [GitHub Pages](https://pages.github.com/).
+The notes are published to [scc-pi.github.io/pinsheff/](https://scc-pi.github.io/pinsheff/) using the [bookdown](https://bookdown.org/) package via a [GitHub Action](https://github.com/features/actions) that is triggered on a push to the `master` branch, and uses the `gh-pages` branch and [GitHub Pages](https://pages.github.com/).
