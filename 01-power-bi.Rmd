@@ -2,7 +2,7 @@
 
 # Power BI fundamentals
 
-Power BI is a tool for combining, analysing, and visualising data, and sharing the results. It's a Microsoft product, orginally an Excel add-in, that fits well with the Council's move to Micorsoft Azure based services. It's also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option), so is now the main corporate tool for data analysis. Or more accurately, it's the main alternative to Excel.
+Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It's a Microsoft product (originally an Excel add-in) that fits well with the Council's move to Microsoft Azure services. It's also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option), so it is now the main corporate tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. Similar to ArcGIS being the main corporate tool for spatial analysis.
 
 Power BI can be thought of as comprising three main pieces of software:
 
@@ -12,7 +12,7 @@ Power BI can be thought of as comprising three main pieces of software:
 
 **Power BI Service** has more functionality than the Report Server. The Council's Corporate Performance reporting is via Power BI Service, but it doesn't include PID.
 
-The **Power BI Report Server** (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). You need to use the user ID, which you can find in the *Alias* field in the *Global Address List* in Outlook.
+The **Power BI Report Server** (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). Permissions are added via user ID e.g. LP41455. You can find user IDs in the *Alias* field in the *Global Address List* in Outlook.
 
 To upload reports to the Report Server, for version compatibility reasons, you need to use the the May 2021 version of **Power BI Desktop**, which is in the Council's Software Centre. If you have a different version, remove it and install the Software Centre version.
 
@@ -22,6 +22,8 @@ Paul Haine also coordinates the SCC **Power BI User Group**.
 
 ## Further resources
 
-DIAD ...
+The good way to quicky get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online workshop, indirectly provided by Microsoft.
+
+online course ...
 
 For managers ...

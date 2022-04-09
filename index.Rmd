@@ -8,10 +8,8 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: scc-pi/notes
+github-repo: scc-pi/pinsheff
 description: "Some notes, examples, lessons learnt and links to further resources."
-favicon: fa-question
-
 ---
 
 # About {.unnumbered}
