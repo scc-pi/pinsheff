@@ -7,12 +7,12 @@ Power BI is ...
 Power BI can be thought of as comprising three main pieces of software:
 
 1.  Power BI Desktop - local install, for designing reports (dashboards).
-2.  Power BI Report Server - browser based internal report sharing..
+2.  Power BI Report Server - browser based internal report sharing.
 3.  Power BI Service - browser based non-confidential report sharing.
 
 Power BI Service has more functionality than the Report Server. The Council's Corporate Performance reporting is via Power BI Service, but it doesn't include PID.
 
-The Power BI Report Server ([<https://sccvmazpbi01.sheffield.gov.uk/reports>](https://sccvmazpbi01.sheffield.gov.uk/reports)) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report but will need to share a link to the report unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded
+The Power BI Report Server (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). You need to use the user ID, which you can find in the *Alias* field in the *Global Address List* in Outlook.
 
 To upload reports to the Report Server, for version compatibility reasons, you need to use the the May 2021 version of Power BI Desktop, which is in the Council's Software Centre. If you have a different version, remove it and install the Software Centre version.
 
