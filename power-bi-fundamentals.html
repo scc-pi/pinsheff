@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 1 Power BI fundamentals | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="Power BI is a tool for combining, analysing, and visualising data, and sharing the results. It’s a Microsoft product, orginally an Excel add-in, that fits well with the Council’s move to Micorsoft...">
+<meta name="description" content="Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It’s a Microsoft product (originally an Excel add-in) that fits well with the Council’s move to...">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 1 Power BI fundamentals | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Power BI is a tool for combining, analysing, and visualising data, and sharing the results. It’s a Microsoft product, orginally an Excel add-in, that fits well with the Council’s move to Micorsoft...">
+<meta property="og:description" content="Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It’s a Microsoft product (originally an Excel add-in) that fits well with the Council’s move to...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 1 Power BI fundamentals | pinsheff">
-<meta name="twitter:description" content="Power BI is a tool for combining, analysing, and visualising data, and sharing the results. It’s a Microsoft product, orginally an Excel add-in, that fits well with the Council’s move to Micorsoft...">
+<meta name="twitter:description" content="Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It’s a Microsoft product (originally an Excel add-in) that fits well with the Council’s move to...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -88,7 +88,7 @@
 <h1>
 <span class="header-section-number">1</span> Power BI fundamentals<a class="anchor" aria-label="anchor" href="#power-bi-fundamentals"><i class="fas fa-link"></i></a>
 </h1>
-<p>Power BI is a tool for combining, analysing, and visualising data, and sharing the results. It’s a Microsoft product, orginally an Excel add-in, that fits well with the Council’s move to Micorsoft Azure based services. It’s also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option), so is now the main corporate tool for data analysis. Or more accurately, it’s the main alternative to Excel.</p>
+<p>Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It’s a Microsoft product (originally an Excel add-in) that fits well with the Council’s move to Microsoft Azure services. It’s also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option), so it is now the main corporate tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. Similar to ArcGIS being the main corporate tool for spatial analysis.</p>
 <p>Power BI can be thought of as comprising three main pieces of software:</p>
 <ol style="list-style-type: decimal">
 <li>Power BI Desktop - local install, for designing reports (dashboards).</li>
@@ -96,7 +96,7 @@
 <li>Power BI Service - browser based non-confidential report sharing.</li>
 </ol>
 <p><strong>Power BI Service</strong> has more functionality than the Report Server. The Council’s Corporate Performance reporting is via Power BI Service, but it doesn’t include PID.</p>
-<p>The <strong>Power BI Report Server</strong> (<a href="https://sccvmazpbi01.sheffield.gov.uk/reports" class="uri">https://sccvmazpbi01.sheffield.gov.uk/reports</a>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give <em>browser</em> access to the folder and the report so they can open it. Click the … at the side of the folder name and select <em>manage</em> and then <em>security</em> (this is the same once you have reports uploaded). You need to use the user ID, which you can find in the <em>Alias</em> field in the <em>Global Address List</em> in Outlook.</p>
+<p>The <strong>Power BI Report Server</strong> (<a href="https://sccvmazpbi01.sheffield.gov.uk/reports" class="uri">https://sccvmazpbi01.sheffield.gov.uk/reports</a>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give <em>browser</em> access to the folder and the report so they can open it. Click the … at the side of the folder name and select <em>manage</em> and then <em>security</em> (this is the same once you have reports uploaded). Permissions are added via user ID e.g. LP41455. You can find user IDs in the <em>Alias</em> field in the <em>Global Address List</em> in Outlook.</p>
 <p>To upload reports to the Report Server, for version compatibility reasons, you need to use the the May 2021 version of <strong>Power BI Desktop</strong>, which is in the Council’s Software Centre. If you have a different version, remove it and install the Software Centre version.</p>
 <p>If you want to enable auto-refresh then you need to create the report using a URL not a drive mapping, Paul Haine can advise on this.</p>
 <p>Paul Haine also coordinates the SCC <strong>Power BI User Group</strong>.</p>
@@ -104,7 +104,8 @@
 <h2>
 <span class="header-section-number">1.1</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources"><i class="fas fa-link"></i></a>
 </h2>
-<p>DIAD …</p>
+<p>The good way to quicky get familiar with Power BI is the free <a href="https://powerbi.microsoft.com/en-us/diad/">Power BI Dashboard in a Day</a> online workshop, indirectly provided by Microsoft.</p>
+<p>online course …</p>
 <p>For managers …</p>
 
 </div>
