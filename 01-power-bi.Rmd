@@ -2,7 +2,9 @@
 
 # Power BI fundamentals
 
-Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It's a Microsoft product (originally an Excel add-in) that fits well with the Council's move to Microsoft Azure services. It's also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option), so it is now the main corporate tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. Similar to ArcGIS being the main corporate tool for spatial analysis.
+Power BI is a tool for combining, analysing, and visualising data, and then sharing the results. It's a Microsoft product (originally an Excel add-in) that fits well with the Council's move to Microsoft Azure services. It's also reasonably priced compared to alternative tools such as Tableau (arguably a higher quality option).
+
+Power BI is now the main Council tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. It's similar to ArcGIS being the main Council tool for spatial analysis.
 
 Power BI can be thought of as comprising three main pieces of software:
 
