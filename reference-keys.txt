@@ -1,5 +1,13 @@
 power-bi-fundamentals
+what-is-power-bi
+service
+report-server
+desktop
+roles
+user-group
 further-resources
+business-users
+designers
 dax
 row-context
 further-resources-1
