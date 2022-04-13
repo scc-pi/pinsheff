@@ -16,7 +16,7 @@ Power BI can be thought of as comprising three main pieces of software:
 
 The **Power BI Report Server** (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it. You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). Permissions are added via user ID e.g. LP41455. You can find user IDs in the *Alias* field in the *Global Address List* in Outlook.
 
-To upload reports to the Report Server, for version compatibility reasons, you need to use the the May 2021 version of **Power BI Desktop**, which is in the Council's Software Centre. If you have a different version, remove it and install the Software Centre version.
+To upload reports to the Report Server, for version compatibility reasons, you need to use the the May 2021 version of **Power BI Desktop**, which is available from the Council's Software Centre on your laptop. If you have a different version, remove it and install the Software Centre version.
 
 If you want to enable auto-refresh then you need to create the report using a URL not a drive mapping, Paul Haine can advise on this.
 
@@ -24,7 +24,7 @@ Paul Haine also coordinates the SCC **Power BI User Group**.
 
 ## Further resources
 
-The good way to quicky get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online workshop, indirectly provided by Microsoft.
+The good way to quickly get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online workshop, indirectly provided by Microsoft.
 
 online course ...
 

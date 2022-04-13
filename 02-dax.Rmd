@@ -1,8 +1,13 @@
-# DAX 
+# DAX
 
-DAX is ...
+> Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel.  
 
+[DAX overview](https://docs.microsoft.com/en-us/dax/dax-overview)(MS Docs)  
+
+## Row context  
+
+DAX is not vectorised like R, nor does it have the concept of a "current row" that you might be familiar with from using VBA or a cursor in procedural or transact SQL. The article [Row context in DAX](https://www.sqlbi.com/articles/row-context-in-dax/) by Marco Russo & Alberto Ferrari (28/03/22) explains this well.
 
 ## Further resources
 
-
+...
