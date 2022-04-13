@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 2 DAX | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="DAX is …  2.1 Further resources">
+<meta name="description" content="Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX overview(MS Docs)  2.1 Row context DAX is not vectorised like R,...">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 2 DAX | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="DAX is …  2.1 Further resources">
+<meta property="og:description" content="Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX overview(MS Docs)  2.1 Row context DAX is not vectorised like R,...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 2 DAX | pinsheff">
-<meta name="twitter:description" content="DAX is …  2.1 Further resources">
+<meta name="twitter:description" content="Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX overview(MS Docs)  2.1 Row context DAX is not vectorised like R,...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -88,11 +88,21 @@
 <h1>
 <span class="header-section-number">2</span> DAX<a class="anchor" aria-label="anchor" href="#dax"><i class="fas fa-link"></i></a>
 </h1>
-<p>DAX is …</p>
+<blockquote>
+<p>Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel.</p>
+</blockquote>
+<p><a href="https://docs.microsoft.com/en-us/dax/dax-overview">DAX overview</a>(MS Docs)</p>
+<div id="row-context" class="section level2">
+<h2>
+<span class="header-section-number">2.1</span> Row context<a class="anchor" aria-label="anchor" href="#row-context"><i class="fas fa-link"></i></a>
+</h2>
+<p>DAX is not vectorised like R, nor does it have the concept of a “current row” that you might be familiar with from using VBA or a cursor in procedural or transact SQL. The article <a href="https://www.sqlbi.com/articles/row-context-in-dax/">Row context in DAX</a> by Marco Russo &amp; Alberto Ferrari (28/03/22) explains this well.</p>
+</div>
 <div id="further-resources-1" class="section level2">
 <h2>
-<span class="header-section-number">2.1</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.2</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-1"><i class="fas fa-link"></i></a>
 </h2>
+<p>…</p>
 
 </div>
 </div>
@@ -106,7 +116,8 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#dax"><span class="header-section-number">2</span> DAX</a></li>
-<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">2.1</span> Further resources</a></li>
+<li><a class="nav-link" href="#row-context"><span class="header-section-number">2.1</span> Row context</a></li>
+<li><a class="nav-link" href="#further-resources-1"><span class="header-section-number">2.2</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
@@ -124,7 +135,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-09.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-13.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

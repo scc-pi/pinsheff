@@ -1,6 +1,7 @@
 power-bi-fundamentals
 further-resources
 dax
+row-context
 further-resources-1
 why-script
 what-is-scripting
