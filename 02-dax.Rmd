@@ -2,7 +2,7 @@
 
 > Data Analysis Expressions (DAX) is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel.  
 
-[DAX overview](https://docs.microsoft.com/en-us/dax/dax-overview)(MS Docs)  
+[DAX overview](https://docs.microsoft.com/en-us/dax/dax-overview) (MS Docs)  
 
 ## Row context  
 
