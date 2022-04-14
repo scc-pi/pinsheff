@@ -101,39 +101,48 @@
 <span class="header-section-number">3.2</span> Scripting for data analysis<a class="anchor" aria-label="anchor" href="#scripting-for-data-analysis"><i class="fas fa-link"></i></a>
 </h2>
 <p>Scripts can be used to accomplish a variety of tasks. For example, BCIS in Sheffield City Council use scripts to update and maintain laptops and servers.</p>
-<p>For the purposes of these notes, we are limiting the scope of scripting to mean scripting for data analysis. So, scripting to accomplish data analysis tasks, including data: extraction, transformation, loading, exploration, analysis, modelling, visualisation, and narration.</p>
+<p>For the purposes of these notes, the scope of scripting is limited to scripting for data analysis. So, scripting to accomplish data analysis tasks, including data: extraction, transformation, loading, exploration, analysis, modelling, visualisation, and narration.</p>
 <p>Scripting for data capture, data entry, is outside the scope of these notes.</p>
 </div>
 <div id="scripting-pros-cons" class="section level2">
 <h2>
 <span class="header-section-number">3.3</span> Scripting pros &amp; cons?<a class="anchor" aria-label="anchor" href="#scripting-pros-cons"><i class="fas fa-link"></i></a>
 </h2>
-<p>There’s an element of self-documentation with scripting, so it’s easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.</p>
+<p>There’s an element of self-documentation with scripting, so it’s easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also generally easier with scripting than GUI tools.</p>
 <p>Scripting is not always better than using GUI tools. There’s a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools that the Council has licenses for (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.</p>
-<p>RStudio makes the (slightly biased?) case for scripting in an hour long webinar on <a href="https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/">Why Your Enterprise Needs Code-First Data Science</a></p>
+<p>RStudio makes the (slightly biased?) case for scripting in an hour long webinar on <a href="https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/">Why Your Enterprise Needs Code-First Data Science</a>.</p>
+<p>Probably the single main advantage of scripting, is what was touched upon at the start of this sub-heading i.e. reproducibility.</p>
+</div>
+<div id="reproducibility" class="section level2">
+<h2>
+<span class="header-section-number">3.4</span> Reproducibility<a class="anchor" aria-label="anchor" href="#reproducibility"><i class="fas fa-link"></i></a>
+</h2>
+<p>A good explanation of the value of reproducibility is included in <a href="https://www.gov.uk/guidance/pathways-reproducible-analytical-pipelines">RAP (Reproducible Analytical Pipelines)</a>, one of the Government’s <a href="https://www.gov.uk/guidance/analytical-learning-pathways">Analytical Learning Pathways</a>.</p>
+<p>At the heart of RAP is QA (Quality Assurance) and reducing manual steps in an analytical process. Such “automation” of a process is commonly motivated by time savings. However, with RAP the motivation is because documenting manual steps is difficult and manual steps are more prone to error. The <a href="https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646">Reinhart-Rogoff error</a> is a good example.</p>
+<p>The Analytical Learning Pathways are available on the ONS <a href="https://learninghub.ons.gov.uk/">Learning Hub</a>. Some Local Government employees are eligible for a Learning Hub account. They “request that only those Analysis Function colleagues who have a specific training need apply for an account”. So, probably only if your job is data analysis, or at least the majority of it is. Contact <a href="mailto:GSS.Capability@statistics.gov.uk" class="email">GSS.Capability@statistics.gov.uk</a> to request log in details. They’ll email back a sign-up form that requests line manager details and prior line manager approval to request sign-up. Visit <a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gov.uk%2Fguidance%2Fgovernment-analysis-function-af-learning-curriculum&amp;data=04%7C01%7CLaurie.Platt%40sheffield.gov.uk%7C143bbbfe1523467d4ef308da1c528ae0%7Ca1ba59b9720448d8a3607770245ad4a9%7C0%7C0%7C637853438242759147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=5B1vqtSVKGwELZ7qWz%2B85Jld9d9n6%2Bxn4zrhRsG2HVM%3D&amp;reserved=0" title="https://eur03.safelinks.protection.outlook.com/?url=https%3a%2f%2fwww.gov.uk%2fguidance%2fgovernment-analysis-function-af-learning-curriculum&amp;data=04%7c01%7cmargarita.tsakiridou%40ons.gov.uk%7c94ed0260f90345809eb808d94b839809%7c078807bfce824688bce00d81168"><span class="ul">AF Government Learning Curriculum</span></a> and the <a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgss.civilservice.gov.uk%2Ftraining-courses%2F&amp;data=04%7C01%7CLaurie.Platt%40sheffield.gov.uk%7C143bbbfe1523467d4ef308da1c528ae0%7Ca1ba59b9720448d8a3607770245ad4a9%7C0%7C0%7C637853438242759147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=WByNJVKoO856Ds0fObR530Ks5w2pcY2o7Zk5hEIFXCw%3D&amp;reserved=0" title="https://eur03.safelinks.protection.outlook.com/?url=https%3a%2f%2fgss.civilservice.gov.uk%2ftraining-courses%2f&amp;data=04%7c01%7cmargarita.tsakiridou%40ons.gov.uk%7c94ed0260f90345809eb808d94b839809%7c078807bfce824688bce00d811684dc46%7c0%7c0%7c63762385098768"><span class="ul">GSS Website</span></a> for information about the courses available.</p>
 </div>
 <div id="scripting-languages" class="section level2">
 <h2>
-<span class="header-section-number">3.4</span> Scripting languages<a class="anchor" aria-label="anchor" href="#scripting-languages"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5</span> Scripting languages<a class="anchor" aria-label="anchor" href="#scripting-languages"><i class="fas fa-link"></i></a>
 </h2>
 <p>Python and R are two of the most popular scripting languages for data analysis. These are capable of covering the whole data analysis life-cycle of data extraction, transformation, analysis, and visualisation.</p>
 <p>Some scripting languages are geared more to just one or two aspects of the data analysis life-cycle. SQL is for working with databases, whilst JavaScript is primarily for making web pages more interactive and adds value to data visualisation.</p>
 <p>Other scripting languages extend the functionality of our point-and-click data analysis tools. VBA and DAX extend the functionality of Excel and Power BI respectively. Arcade is used in tandem with ArcGIS, and Mata is used with Stata.</p>
 <div id="r-python" class="section level3">
 <h3>
-<span class="header-section-number">3.4.1</span> R &amp; Python<a class="anchor" aria-label="anchor" href="#r-python"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5.1</span> R &amp; Python<a class="anchor" aria-label="anchor" href="#r-python"><i class="fas fa-link"></i></a>
 </h3>
 <p>Python and R are open-source scripting languages popular with data analysts. Python is a general-purpose language with an easy-to-understand syntax. R’s functionality was developed with statisticians in mind and is popular in academia and research.</p>
 <div id="notebooks" class="section level4">
 <h4>
-<span class="header-section-number">3.4.1.1</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5.1.1</span> Notebooks<a class="anchor" aria-label="anchor" href="#notebooks"><i class="fas fa-link"></i></a>
 </h4>
 <p><em>Jupyter &amp; R Markdown notebooks</em></p>
 </div>
 </div>
 <div id="sql" class="section level3">
 <h3>
-<span class="header-section-number">3.4.2</span> SQL<a class="anchor" aria-label="anchor" href="#sql"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5.2</span> SQL<a class="anchor" aria-label="anchor" href="#sql"><i class="fas fa-link"></i></a>
 </h3>
 <p>SQL (Structured Query Language) is designed for storing, manipulating and retrieving data in a database. SQL commands are simpler and their range narrower than R and Python commands. For example, time series or spatial analysis isn’t within scope of SQL. Also, whilst much of our data is still held in databases, data is now commonly from CSV files and other formats.</p>
 <p>SQL is run on the database server, which even with today’s powerful laptops, can have time saving benefits. The type of database can mean the SQL extensions have different syntax, but the core elements such as <code>SELECT</code> and <code>JOIN</code> are generic.</p>
@@ -141,7 +150,7 @@
 </div>
 <div id="vba" class="section level3">
 <h3>
-<span class="header-section-number">3.4.3</span> VBA<a class="anchor" aria-label="anchor" href="#vba"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.5.3</span> VBA<a class="anchor" aria-label="anchor" href="#vba"><i class="fas fa-link"></i></a>
 </h3>
 <p>VBA (Visual Basic for Applications) is Microsoft’s scripting language for, and built into, its Office programmes like Word and PowerPoint. However, for data analysis purposes, it is how it extends and automates Excel that is of interest.</p>
 
@@ -158,11 +167,12 @@
 <li><a class="nav-link" href="#what-is-scripting"><span class="header-section-number">3.1</span> What is scripting?</a></li>
 <li><a class="nav-link" href="#scripting-for-data-analysis"><span class="header-section-number">3.2</span> Scripting for data analysis</a></li>
 <li><a class="nav-link" href="#scripting-pros-cons"><span class="header-section-number">3.3</span> Scripting pros &amp; cons?</a></li>
+<li><a class="nav-link" href="#reproducibility"><span class="header-section-number">3.4</span> Reproducibility</a></li>
 <li>
-<a class="nav-link" href="#scripting-languages"><span class="header-section-number">3.4</span> Scripting languages</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#r-python"><span class="header-section-number">3.4.1</span> R &amp; Python</a></li>
-<li><a class="nav-link" href="#sql"><span class="header-section-number">3.4.2</span> SQL</a></li>
-<li><a class="nav-link" href="#vba"><span class="header-section-number">3.4.3</span> VBA</a></li>
+<a class="nav-link" href="#scripting-languages"><span class="header-section-number">3.5</span> Scripting languages</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#r-python"><span class="header-section-number">3.5.1</span> R &amp; Python</a></li>
+<li><a class="nav-link" href="#sql"><span class="header-section-number">3.5.2</span> SQL</a></li>
+<li><a class="nav-link" href="#vba"><span class="header-section-number">3.5.3</span> VBA</a></li>
 </ul>
 </li>
 </ul>

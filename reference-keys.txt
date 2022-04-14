@@ -14,6 +14,7 @@ why-script
 what-is-scripting
 scripting-for-data-analysis
 scripting-pros-cons
+reproducibility
 scripting-languages
 r-python
 notebooks
