@@ -2,7 +2,7 @@
 
 # Power BI fundamentals
 
-This Power BI section is likely to be superseded fairly soon by an MS Teams site being setup by Jess Kavanagh. The Teams site will help collate and disseminate the learning that has been shared by Giles Robinson, Sam Jenner, and others over the last year or so via the SCC **Power BI user group** that is coordinated by Paul Haine.
+This Power BI section is likely to be superseded fairly soon by an MS Teams site being setup by Jess Kavanagh. The Teams site will help collate and disseminate the learning that has been shared by Giles Robinson, Sam Jenner, and others via the SCC **Power BI user group** coordinated by Paul Haine.
 
 ## What is Power BI?
 

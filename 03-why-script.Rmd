@@ -1,55 +1,65 @@
 # (PART) Scripting {.unnumbered}
 
-# Why script?  
+# Why script?
 
-Sheffield City Council has made some fantastic progress in recent years with data analysis tools, such as the new GIS infrastructure and Power BI. These are powerful and intuitive, great for both full time data analysts and those for whom data analysis is only part of their responsibilities. Scripting is another tool that is becoming increasingly available to us now with the Council’s rapidly evolving IT improvements. 
+Sheffield City Council has made some fantastic progress in recent years with data analysis tools, such as the new GIS infrastructure and Power BI. These are powerful and intuitive, great for both full time data analysts and those for whom data analysis is only part of their responsibilities. Scripting is another tool that is becoming increasingly available to us now with the Council's rapidly evolving IT improvements.
 
-## What is scripting? 
+## What is scripting?
 
-Scripts are a series of typed commands in a file. When you "run" a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a given task. 
+Scripts are a series of typed commands in a file. When you "run" a script, you are asking a programme to interpret and fulfil the commands in the script to accomplish a given task.
 
 The terms "scripting", "coding" and "programming" are often used synonymously. More accurately though, coding and programming are umbrella terms that scripting is just a part of. Compared with coding and programming, scripting generally covers less complex tasks, with an easier to understand language, and with fewer commands.
 
-## Scripting for data analysis 
+## Scripting for data analysis
 
-Scripts can be used to accomplish a variety of tasks. For example, BCIS in Sheffield City Council use scripts to update and maintain laptops and servers.  
+Scripts can be used to accomplish a variety of tasks. For example, BCIS in Sheffield City Council use scripts to update and maintain laptops and servers.
 
-For the purposes of these notes, we are limiting the scope of scripting to mean scripting for data analysis. So, scripting to accomplish data analysis tasks, including data: extraction, transformation, loading, exploration, analysis, modelling, visualisation, and narration.
+For the purposes of these notes, the scope of scripting is limited to scripting for data analysis. So, scripting to accomplish data analysis tasks, including data: extraction, transformation, loading, exploration, analysis, modelling, visualisation, and narration.
 
 Scripting for data capture, data entry, is outside the scope of these notes.
 
-## Scripting pros & cons? 
+## Scripting pros & cons?
 
-There's an element of self-documentation with scripting, so it's easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also easier with scripting than GUI tools.
+There's an element of self-documentation with scripting, so it's easier to return to a scripted task after a bit of time away from it, or pick up a scripted task from a colleague. However, in-line comments and adherence to a style guide make a big difference to just how easy it is. Version control and collaboration are also generally easier with scripting than GUI tools.
 
 Scripting is not always better than using GUI tools. There's a good reason that more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools that the Council has licenses for (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.
 
-RStudio makes the (slightly biased?) case for scripting in an hour long webinar on [Why Your Enterprise Needs Code-First Data Science](https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/)
+RStudio makes the (slightly biased?) case for scripting in an hour long webinar on [Why Your Enterprise Needs Code-First Data Science](https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/).
 
-## Scripting languages  
+Probably the single main advantage of scripting, is what was touched upon at the start of this sub-heading i.e. reproducibility.
 
-Python and R are two of the most popular scripting languages for data analysis. These are capable of covering the whole data analysis life-cycle of data extraction, transformation, analysis, and visualisation.  
+## Reproducibility
 
-Some scripting languages are geared more to just one or two aspects of the data analysis life-cycle. SQL is for working with databases, whilst JavaScript is primarily for making web pages more interactive and adds value to data visualisation.   
+A good explanation of the value of reproducibility is included in [RAP (Reproducible Analytical Pipelines)](https://www.gov.uk/guidance/pathways-reproducible-analytical-pipelines), one of the Government's [Analytical Learning Pathways](https://www.gov.uk/guidance/analytical-learning-pathways).
 
-Other scripting languages extend the functionality of our point-and-click data analysis tools. VBA and DAX extend the functionality of Excel and Power BI respectively. Arcade is used in tandem with ArcGIS, and Mata is used with Stata. 
+At the heart of RAP is QA (Quality Assurance) and reducing manual steps in an analytical process. Such "automation" of a process is commonly motivated by time savings. However, with RAP the motivation is because documenting manual steps is difficult and manual steps are more prone to error. The [Reinhart-Rogoff error](https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646) is a good example.
 
-### R & Python  
+The Analytical Learning Pathways are available on the ONS [Learning Hub](https://learninghub.ons.gov.uk/). Some Local Government employees are eligible for a Learning Hub account. They "request that only those Analysis Function colleagues who have a specific training need apply for an account". So, probably only if your job is data analysis, or at least the majority of it is. Contact [GSS.Capability\@statistics.gov.uk](mailto:GSS.Capability@statistics.gov.uk){.email} to request log in details. They'll email back a sign-up form that requests line manager details and prior line manager approval to request sign-up. Visit [[AF Government Learning Curriculum]{.ul}](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gov.uk%2Fguidance%2Fgovernment-analysis-function-af-learning-curriculum&data=04%7C01%7CLaurie.Platt%40sheffield.gov.uk%7C143bbbfe1523467d4ef308da1c528ae0%7Ca1ba59b9720448d8a3607770245ad4a9%7C0%7C0%7C637853438242759147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=5B1vqtSVKGwELZ7qWz%2B85Jld9d9n6%2Bxn4zrhRsG2HVM%3D&reserved=0 "https://eur03.safelinks.protection.outlook.com/?url=https%3a%2f%2fwww.gov.uk%2fguidance%2fgovernment-analysis-function-af-learning-curriculum&data=04%7c01%7cmargarita.tsakiridou%40ons.gov.uk%7c94ed0260f90345809eb808d94b839809%7c078807bfce824688bce00d81168") and the [[GSS Website]{.ul}](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgss.civilservice.gov.uk%2Ftraining-courses%2F&data=04%7C01%7CLaurie.Platt%40sheffield.gov.uk%7C143bbbfe1523467d4ef308da1c528ae0%7Ca1ba59b9720448d8a3607770245ad4a9%7C0%7C0%7C637853438242759147%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=WByNJVKoO856Ds0fObR530Ks5w2pcY2o7Zk5hEIFXCw%3D&reserved=0 "https://eur03.safelinks.protection.outlook.com/?url=https%3a%2f%2fgss.civilservice.gov.uk%2ftraining-courses%2f&data=04%7c01%7cmargarita.tsakiridou%40ons.gov.uk%7c94ed0260f90345809eb808d94b839809%7c078807bfce824688bce00d811684dc46%7c0%7c0%7c63762385098768") for information about the courses available.
+
+## Scripting languages
+
+Python and R are two of the most popular scripting languages for data analysis. These are capable of covering the whole data analysis life-cycle of data extraction, transformation, analysis, and visualisation.
+
+Some scripting languages are geared more to just one or two aspects of the data analysis life-cycle. SQL is for working with databases, whilst JavaScript is primarily for making web pages more interactive and adds value to data visualisation.
+
+Other scripting languages extend the functionality of our point-and-click data analysis tools. VBA and DAX extend the functionality of Excel and Power BI respectively. Arcade is used in tandem with ArcGIS, and Mata is used with Stata.
+
+### R & Python
 
 Python and R are open-source scripting languages popular with data analysts. Python is a general-purpose language with an easy-to-understand syntax. R's functionality was developed with statisticians in mind and is popular in academia and research.
 
-#### Notebooks  
+#### Notebooks
 
 *Jupyter & R Markdown notebooks*
 
 ### SQL
 
-SQL (Structured Query Language) is designed for storing, manipulating and retrieving data in a database. SQL commands are simpler and their range narrower than R and Python commands. For example, time series or spatial analysis isn't within scope of SQL. Also, whilst much of our data is still held in databases, data is now commonly from CSV files and other formats. 
+SQL (Structured Query Language) is designed for storing, manipulating and retrieving data in a database. SQL commands are simpler and their range narrower than R and Python commands. For example, time series or spatial analysis isn't within scope of SQL. Also, whilst much of our data is still held in databases, data is now commonly from CSV files and other formats.
 
-SQL is run on the database server, which even with today's powerful laptops, can have time saving benefits. The type of database can mean the SQL extensions have different syntax, but the core elements such as `SELECT` and `JOIN` are generic.  
+SQL is run on the database server, which even with today's powerful laptops, can have time saving benefits. The type of database can mean the SQL extensions have different syntax, but the core elements such as `SELECT` and `JOIN` are generic.
 
-Often it's not a case of choosing to use SQL or say R, but using both. SQL to initially extract data from a corporate database. Then R to combine with data from other sources, e.g. ONS, and then analyse and visualise it. 
+Often it's not a case of choosing to use SQL or say R, but using both. SQL to initially extract data from a corporate database. Then R to combine with data from other sources, e.g. ONS, and then analyse and visualise it.
 
 ### VBA
 
-VBA (Visual Basic for Applications) is Microsoft's scripting language for, and built into, its Office programmes like Word and PowerPoint. However, for data analysis purposes, it is how it extends and automates Excel that is of interest.     
+VBA (Visual Basic for Applications) is Microsoft's scripting language for, and built into, its Office programmes like Word and PowerPoint. However, for data analysis purposes, it is how it extends and automates Excel that is of interest.
