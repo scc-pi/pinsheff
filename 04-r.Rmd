@@ -1,10 +1,28 @@
 # R & RStudio {#r}
 
-## Style guide
+R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop.
 
-Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from supporting tools and familiarity via tidyverse package documentation.
+You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is very good because of its extensibility, and initially it is not as easy to navigate and configure.
 
-Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
+One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. RStudio plays a key role in the R community.
+
+## Installation
+
+There's some guidance on [Installing R and RStudio](https://rstudio-education.github.io/hopr/starting.html) in the appendix of the [Hands on Programming with R](https://rstudio-education.github.io/hopr/index.html) by Garrett Grolemund.
+
+For Council laptops, you want the 64-bit Windows versions of R and RStudio. It the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council's Software Centre, available from your laptop, but it's currently several versions old. R isn't currently available from the Software Centre.
+
+Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can't, then you need to make a request via the IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
+
+RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`. Without this, you'll not be able to use R packages other than those provided with the base R installation. You may also need to add a `R_LIBS_USER` *User Environment Variable* and set it to the R library folder e.g.   `C:\Program Files\R\R-4.1.2\library`.
+
+## Getting started with R
+
+I'm not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:
+
+[RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
+
+Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/index.html) is the main book people use when new to R. However, if you already have some coding experience [A Succinct Intro to R](http://r-guide.steveharoz.com/index.html) by Steve Haroz is useful.
 
 ## RStudio security & data protection {#pid}
 
@@ -25,13 +43,11 @@ if(length(portal_pwd) == 0){
 }
 ```
 
-## Getting started with R
+## Style guide
 
-I'm not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:
+Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from supporting tools and familiarity via tidyverse package documentation.
 
-[RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
-
-Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/index.html) is the main book people use when new to R. However, if you already have some coding experience [A Succinct Intro to R](http://r-guide.steveharoz.com/index.html) by Steve Haroz is useful.
+Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
 
 ## RStudio tips
 
@@ -91,7 +107,7 @@ RStudio has lots of shortcuts. What you find most useful is down to preference a
 | Ctrl + Alt + A           | reformat code           |
 | Ctrl + Shift + R         | insert section          |
 | Alt + -                  | assignment operator \<- |
-| Ctrl + Shift + M         | pipe operator %\>%      |
+| Ctrl + Shift + M         | pipe operator %>%       |
 | Ctrl + left mouse button | View the object clicked |
 | Ctrl + Shift + F10       | Restart R session       |
 | Ctrl + Shift + P         | Command palette         |
