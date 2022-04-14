@@ -1,10 +1,10 @@
-# R Markdown {#rmd}
+# Markdown {#rmd}
 
 ## R Markdown vs Markdown
 
 Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be readable as-is, unlike text formatted with a markup language such as RTF or HTML. A raw markdown document should be easy to read, as well as the final rendered output.
 
-GitHub has it's own flavour of markdown, most commonly used in the `README.md` file that serves to introduce each GitHub repository.
+GitHub has its own flavour of markdown, most commonly used in the `README.md` file that serves to introduce each GitHub repository.
 
 R Markdown is another flavour of markdown. It combines in a reproducible manner: code, output, and commentary. R Markdown documents support different output formats, like PDFs, Word files, slideshows, and HTML. Hadley Wickham [lists](https://r4ds.had.co.nz/r-markdown.html#introduction-18) the three main uses of R Markdown files as:
 
@@ -14,7 +14,7 @@ R Markdown is another flavour of markdown. It combines in a reproducible manner:
 
 3.  As an environment in which to *do* data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.
 
-My experience of R Markdown is very positive. It's really helpful for keeping all my work in a single place, rather than wondering whether notes are in script comments, OneNote or a Word document. Similarly the output is embedded rather than relying on well organised data output folder structures. Finally, the linear nature of a document also provides some structure. Combining R Markdown with GitHub provides version control (an audit trail or log of how the work has evolved), plus GitHub Issues and Actions can add to the project management wrapper around the work.
+R Markdown can be really helpful for keeping data analysis work in a single place, rather than wondering whether notes are in script comments, OneNote or a Word document. Similarly the output is embedded rather than relying on well organised data output folder structures. Finally, the linear nature of a document also provides some structure. Combining R Markdown with GitHub provides version control (an audit trail or log of how the work has evolved), plus GitHub Issues and Actions can add to the project management wrapper around the work.
 
 ## R Markdown security & data protection
 
@@ -24,11 +24,23 @@ A limit of R Markdown, or rather our current unapproved use of GitHub, is that a
 
 *TODO - technical vs data exploration - don't add to github*
 
+## Quarto  
+
+[Quarto](https://quarto.org/) is the medium term replacement for R Markdown that also covers Python and Julia. So if you’re thinking of starting to use R Markdown, probably worth putting your efforts in to Quarto instead.
+
+It's possible to install Quarto without admin rights.  
+
+RStudio includes integration with Quarto, in release v2022.02 onwards.
+
+Tools to make it simple to convert R Markdown to Quarto are expected to be available from summer 2022.
+
 ## Bookdown
 
 These notes are written using the [bookdown package](https://pkgs.rstudio.com/bookdown/), which is built on top of R Markdown and [knitr](https://yihui.org/knitr/).
 
 Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To understand more about bookdown evolution and Quarto book, visit this [RStudio Community post](https://community.rstudio.com/t/bookdown-evolution-in-response-to-quarto/133163). 
 
 ### Themes
 
@@ -68,6 +80,42 @@ Flexdashboards don't have the same functionality of Power BI, nor do they allow 
 
 [scc-pi.github.io/asc-localities-insight](https://scc-pi.github.io/asc-localities-insight) is an example of flexdashboard. The `.html` file hosted on GitHub has also been added in the "Adult Health and Social Care Programme" MS Team as a [website tab](http://davidgiard.com/2019/01/27/AddingAWebsiteTabToAMicrosoftTeamsChannel.aspx).  
 
+## R Markdown websites  
+
+The starting point for understanding how to build a static website with R Markdown is this RStudio webpage:  
+
+[rmarkdown.rstudio.com/lesson-13.html](https://rmarkdown.rstudio.com/lesson-13.html)
+
+This in turn, points to more detail in The Definitive Guide for R Markdown:  
+
+[bookdown.org/yihui/rmarkdown/rmarkdown-site.html](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)
+
+### Build
+
+Have the local copy of the project close to root e.g. *C:/Repo/asc-sna-site*. There were problems building the site with long path names and/or from OneDrive.  
+
+Copy the latest R Markdown files, plus their supporting files and directories, into the local project folder. 
+
+Use the build pane in the RStudio project.
+
+When adding or removing pages you need to do a full build. This ensures that the header and menu options are consistent across all pages. If you're amending a page you only need to knit that one R Markdown file.  
+
+Adding or removing pages needs to be reflected under *navbar* in *_site.yml*.
+
+All R Markdown files in the project folder are knitted during a build unless they are prefixed with an underscore.
+
+### Deploy
+
+The build creates a *_site* folder in the project directory that can be copied whole to a static web server, or failing that a file server. Note that MS Teams and SharePoint aren't intended to serve static websites of this type. 
+
+We're not allowed a static web server, so *_site* is currently copied to:  *S:/BI Team/<project name>*  
+
+As we're using a file server rather than a web server, to view the home page for the site we have to specify the *index.html* in the path that we copy into our browser: *S:/BI Team/<project name>/_site/index.html*  
+
+BI Team members have *full control* permissions for *S:/BI Team* and can add *read* permissions for other Council officers so they can access the site (the files in *S:/BI Team/<project name>*).
+
+After content in the folder is updated, *read* permission has to be re-applied. This doesn't involve re-adding all the names of individual officers, but ensuring *read* is checked and then hitting apply.  
+
 ## Rolldown
 
 > [Rolldown](https://github.com/yihui/rolldown/blob/master/README.md) is an R Markdown extension that builds scroll-driven HTML documents for storytelling, a.k.a scrollytelling.
@@ -101,7 +149,7 @@ This iteration technique isn't prominent because the demand for such reports out
 
 ### Markdown visual editor
 
-The RStudio v1.4 release includes a visual editor for markdown, which makes it more like using MS Word:
+The RStudio includes a visual editor for markdown, which makes it more like using MS Word:
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/rmd-editor.png")
