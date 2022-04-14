@@ -10,11 +10,11 @@ One of the stand-out aspects of R is its user community, who are amazingly helpf
 
 There's some guidance on [Installing R and RStudio](https://rstudio-education.github.io/hopr/starting.html) in the appendix of the [Hands on Programming with R](https://rstudio-education.github.io/hopr/index.html) by Garrett Grolemund.
 
-For Council laptops, you want the 64-bit Windows versions of R and RStudio. It the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council's Software Centre, available from your laptop, but it's currently several versions old. R isn't currently available from the Software Centre.
+For Council laptops, you want the 64-bit Windows versions of R and RStudio. It's the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council's Software Centre, available from your laptop, but it's currently several versions old. R isn't currently available from the Software Centre.
 
 Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can't, then you need to make a request via the IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
 
-RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`. Without this, you'll not be able to use R packages other than those provided with the base R installation. You may also need to add a `R_LIBS_USER` *User Environment Variable* and set it to the R library folder e.g.   `C:\Program Files\R\R-4.1.2\library`.
+RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`. Without this, you'll not be able to use R packages other than those provided with the base R installation. You may also need to add a `R_LIBS_USER` *User Environment Variable* and set it to the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`.
 
 ## Getting started with R
 
@@ -23,6 +23,19 @@ I'm not going to provide advice on getting started, other than signposting to th
 [RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
 
 Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/index.html) is the main book people use when new to R. However, if you already have some coding experience [A Succinct Intro to R](http://r-guide.steveharoz.com/index.html) by Steve Haroz is useful.
+
+A re-styled and searchable version of the R documentation is provided by RStudio and is easier to use than the original format: [rstudio.github.io/r-manuals](https://rstudio.github.io/r-manuals/).
+
+## Library
+
+Other languages, such as Python, use the terms *package* and *library* interchangeably. R is more specific. You extend the base R installation of packages to be more useful, by installing other *packages* into your *library*.
+
+The *library* is just a local folder on your laptop, usually a sub-folder of your R installation e.g. `C:\Program Files\R\R-4.1.2\library`.
+
+`install.packages("dplyr")` [installs]{.ul} new packages into your *library*. You only need to do this once per package version and laptop (or version of R).
+
+`library(dplyr)` [loads]{.ul} the previously installed, non base R package from the *library* into your current R session. You need to do this in every R session you're using the non base R package, usually at the top of your script. Alternatively, you can avoid loading the entire package and make use of the :: notation e.g.\
+`droids <- dplyr::filter(dplyr::starwars, species == "Droid")`. You might do this when writing your own packages or when you want to be explicit in any examples.
 
 ## RStudio security & data protection {#pid}
 
@@ -45,9 +58,9 @@ if(length(portal_pwd) == 0){
 
 ## Style guide
 
-Something I need to pay more attention to is following the [tidyverse style guide](https://style.tidyverse.org/), which benefits from supporting tools and familiarity via tidyverse package documentation.
-
 Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.
+
+The current recommendation (which is open to discussion) is to follow the [tidyverse style guide](https://style.tidyverse.org/), which benefits from familiarity via tidyverse package documentation, and supporting tools such as the [styler](https://styler.r-lib.org/) RStudio add-in.
 
 ## RStudio tips
 
@@ -82,7 +95,7 @@ knitr::include_graphics("images/doc-outline.png")
 
 ### ViewPipeSteps addin
 
-The [pipe](https://r4ds.had.co.nz/pipes.html) `%>%` is useful for reading and writing code, but can make debugging cumbersome. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
+The [pipe](https://r4ds.had.co.nz/pipes.html) `%>%` from the `magrittr` package is useful for reading and writing code, but can make debugging cumbersome. The `ViewPipeSteps` addin lets you view the output of your pipe chain after each step. To install:
 
 ```{r, eval=FALSE}
 devtools::install_github("daranzolin/ViewPipeSteps")
@@ -95,9 +108,15 @@ To use:
 knitr::include_graphics("images/view-pipe-steps.png")
 ```
 
-### Shortcuts
+### Base pipe
 
-RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I've found most useful:
+The `magrittr` pipe has proved so popular that base R now includes its own pipe: `|>`.
+
+There's a setting in *RStudio* \> *Tools* \> *Global Options ...* \> *Code* \> *Editing* to "Use native pipe operator", which includes inserting `|>` instead of `%>%` when you use the keyboard shortcut *Ctrl* + *Shift* + *M*.
+
+### Keyboard shortcuts
+
+RStudio has lots of keyboard shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I've found most useful:
 
 |                          |                         |
 |--------------------------|-------------------------|
