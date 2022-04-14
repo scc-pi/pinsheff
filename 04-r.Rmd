@@ -12,7 +12,7 @@ There's some guidance on [Installing R and RStudio](https://rstudio-education.gi
 
 For Council laptops, you want the 64-bit Windows versions of R and RStudio. It's the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council's Software Centre, available from your laptop, but it's currently several versions old. R isn't currently available from the Software Centre.
 
-Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can't, then you need to make a request via the IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
+Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can't, then you need to make a request via the SCC IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
 
 RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`. Without this, you'll not be able to use R packages other than those provided with the base R installation. You may also need to add a `R_LIBS_USER` *User Environment Variable* and set it to the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`.
 
@@ -24,7 +24,7 @@ I'm not going to provide advice on getting started, other than signposting to th
 
 Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/index.html) is the main book people use when new to R. However, if you already have some coding experience [A Succinct Intro to R](http://r-guide.steveharoz.com/index.html) by Steve Haroz is useful.
 
-A re-styled and searchable version of the R documentation is provided by RStudio and is easier to use than the original format: [rstudio.github.io/r-manuals](https://rstudio.github.io/r-manuals/).
+A re-styled and searchable version of the R documentation that is easier to use than the original format is provided by RStudio: [rstudio.github.io/r-manuals](https://rstudio.github.io/r-manuals/).
 
 ## Library
 
@@ -32,10 +32,11 @@ Other languages, such as Python, use the terms *package* and *library* interchan
 
 The *library* is just a local folder on your laptop, usually a sub-folder of your R installation e.g. `C:\Program Files\R\R-4.1.2\library`.
 
-`install.packages("dplyr")` [installs]{.ul} new packages into your *library*. You only need to do this once per package version and laptop (or version of R).
+`install.packages("dplyr")` **installs** new packages into your *library*. You only need to do this once per package version and laptop (or version of R).
 
-`library(dplyr)` [loads]{.ul} the previously installed, non base R package from the *library* into your current R session. You need to do this in every R session you're using the non base R package, usually at the top of your script. Alternatively, you can avoid loading the entire package and make use of the :: notation e.g.\
-`droids <- dplyr::filter(dplyr::starwars, species == "Droid")`. You might do this when writing your own packages or when you want to be explicit in any examples.
+`library(dplyr)` **loads** the previously installed, non base R package, **from** the *library* into your current R session. You need to do this in every R session you're using the non base R package, usually at the top of your script. Alternatively, you can avoid loading the entire package and make use of the `::` notation, for example:\
+`droids <- dplyr::filter(dplyr::starwars, species == "Droid")`\
+You might do this when writing your own packages or when you want to be explicit in any examples.
 
 ## RStudio security & data protection {#pid}
 
@@ -47,7 +48,7 @@ Hadley's recommendation also reduces the chances of inadvertently sharing PID in
 
 ### Passwords
 
-It's poor practice to include login details in code. I use the `.Renviron` file option for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if you're sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
+It's poor practice to include login details in code. One option is using the `.Renviron` file for [securing credentials](https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables). However, if you're sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
 
 ```{r credentials, eval=FALSE}
 portal_pwd <- Sys.getenv("portal_pwd")
