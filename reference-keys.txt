@@ -4,10 +4,9 @@ service
 report-server
 desktop
 roles
-user-group
 further-resources
-business-users
-designers
+for-business-users
+for-designers
 dax
 row-context
 further-resources-1
