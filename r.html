@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 4 R &amp; RStudio | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="4.1 Style guide Something I need to pay more attention to is following the tidyverse style guide, which benefits from supporting tools and familiarity via tidyverse package documentation....">
+<meta name="description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
 <meta property="og:title" content="Chapter 4 R &amp; RStudio | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="4.1 Style guide Something I need to pay more attention to is following the tidyverse style guide, which benefits from supporting tools and familiarity via tidyverse package documentation....">
+<meta property="og:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4 R &amp; RStudio | pinsheff">
-<meta name="twitter:description" content="4.1 Style guide Something I need to pay more attention to is following the tidyverse style guide, which benefits from supporting tools and familiarity via tidyverse package documentation....">
+<meta name="twitter:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -88,27 +88,40 @@
 <h1>
 <span class="header-section-number">4</span> R &amp; RStudio<a class="anchor" aria-label="anchor" href="#r"><i class="fas fa-link"></i></a>
 </h1>
-<div id="style-guide" class="section level2">
+<p>R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop.</p>
+<p>You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is very good because of its extensibility, and initially it is not as easy to navigate and configure.</p>
+<p>One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. RStudio plays a key role in the R community.</p>
+<div id="installation" class="section level2">
 <h2>
-<span class="header-section-number">4.1</span> Style guide<a class="anchor" aria-label="anchor" href="#style-guide"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1</span> Installation<a class="anchor" aria-label="anchor" href="#installation"><i class="fas fa-link"></i></a>
 </h2>
-<p>Something I need to pay more attention to is following the <a href="https://style.tidyverse.org/">tidyverse style guide</a>, which benefits from supporting tools and familiarity via tidyverse package documentation.</p>
-<p>Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.</p>
+<p>There’s some guidance on <a href="https://rstudio-education.github.io/hopr/starting.html">Installing R and RStudio</a> in the appendix of the <a href="https://rstudio-education.github.io/hopr/index.html">Hands on Programming with R</a> by Garrett Grolemund.</p>
+<p>For Council laptops, you want the 64-bit Windows versions of R and RStudio. It the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council’s Software Centre, available from your laptop, but it’s currently several versions old. R isn’t currently available from the Software Centre.</p>
+<p>Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can’t, then you need to make a request via the IT Service Desk. The form to complete is under “Request Something”and is titled “Peripheral &amp; Software Requests”. To complete the form you’ll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.</p>
+<p>RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. <code>C:\Program Files\R\R-4.1.2\library</code>. Without this, you’ll not be able to use R packages other than those provided with the base R installation. You may also need to add a <code>R_LIBS_USER</code> <em>User Environment Variable</em> and set it to the R library folder e.g.   <code>C:\Program Files\R\R-4.1.2\library</code>.</p>
+</div>
+<div id="getting-started-with-r" class="section level2">
+<h2>
+<span class="header-section-number">4.2</span> Getting started with R<a class="anchor" aria-label="anchor" href="#getting-started-with-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>I’m not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:</p>
+<p><a href="https://education.rstudio.com/learn/beginner/">RStudio Education - Beginners</a></p>
+<p>Hadley Wickham’s <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> is the main book people use when new to R. However, if you already have some coding experience <a href="http://r-guide.steveharoz.com/index.html">A Succinct Intro to R</a> by Steve Haroz is useful.</p>
 </div>
 <div id="pid" class="section level2">
 <h2>
-<span class="header-section-number">4.2</span> RStudio security &amp; data protection<a class="anchor" aria-label="anchor" href="#pid"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> RStudio security &amp; data protection<a class="anchor" aria-label="anchor" href="#pid"><i class="fas fa-link"></i></a>
 </h2>
 <div id="workspace" class="section level3">
 <h3>
-<span class="header-section-number">4.2.1</span> Workspace<a class="anchor" aria-label="anchor" href="#workspace"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> Workspace<a class="anchor" aria-label="anchor" href="#workspace"><i class="fas fa-link"></i></a>
 </h3>
 <p>To encourage reproducible R scripts, Hadley Wickham recommends not preserving your workspace between sessions. This entails deselecting a couple of options to save and restore <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html">.Rdata</a> (see <a href="https://r4ds.had.co.nz/workflow-projects.html#what-is-real">chapter 8 Workflow: projects</a> in Hadley’s R4DS book).</p>
 <p>Hadley’s recommendation also reduces the chances of inadvertently sharing PID in a GitHub repository. However, <code>.Rdata</code> should also be included in the <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file and the repository set to private (see the section on <a href="github.html#github-security">GitHub security &amp; data protection</a>).</p>
 </div>
 <div id="passwords" class="section level3">
 <h3>
-<span class="header-section-number">4.2.2</span> Passwords<a class="anchor" aria-label="anchor" href="#passwords"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.2</span> Passwords<a class="anchor" aria-label="anchor" href="#passwords"><i class="fas fa-link"></i></a>
 </h3>
 <p>It’s poor practice to include login details in code. I use the <code>.Renviron</code> file option for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -118,21 +131,20 @@
 <span class="op">}</span></code></pre></div>
 </div>
 </div>
-<div id="getting-started-with-r" class="section level2">
+<div id="style-guide" class="section level2">
 <h2>
-<span class="header-section-number">4.3</span> Getting started with R<a class="anchor" aria-label="anchor" href="#getting-started-with-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4</span> Style guide<a class="anchor" aria-label="anchor" href="#style-guide"><i class="fas fa-link"></i></a>
 </h2>
-<p>I’m not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:</p>
-<p><a href="https://education.rstudio.com/learn/beginner/">RStudio Education - Beginners</a></p>
-<p>Hadley Wickham’s <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> is the main book people use when new to R. However, if you already have some coding experience <a href="http://r-guide.steveharoz.com/index.html">A Succinct Intro to R</a> by Steve Haroz is useful.</p>
+<p>Something I need to pay more attention to is following the <a href="https://style.tidyverse.org/">tidyverse style guide</a>, which benefits from supporting tools and familiarity via tidyverse package documentation.</p>
+<p>Scripting to the same style guide makes collaboration easier. Which style guide is less important than collaborators scripting to the same style guide.</p>
 </div>
 <div id="rstudio-tips" class="section level2">
 <h2>
-<span class="header-section-number">4.4</span> RStudio tips<a class="anchor" aria-label="anchor" href="#rstudio-tips"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5</span> RStudio tips<a class="anchor" aria-label="anchor" href="#rstudio-tips"><i class="fas fa-link"></i></a>
 </h2>
 <div id="code-display" class="section level3">
 <h3>
-<span class="header-section-number">4.4.1</span> Code display<a class="anchor" aria-label="anchor" href="#code-display"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5.1</span> Code display<a class="anchor" aria-label="anchor" href="#code-display"><i class="fas fa-link"></i></a>
 </h3>
 <p>A few non-default Global Options, under Code and Display, make it a little easier to read and write code:</p>
 <ul>
@@ -144,7 +156,7 @@
 </div>
 <div id="document-outline-headings" class="section level3">
 <h3>
-<span class="header-section-number">4.4.2</span> Document outline &amp; headings<a class="anchor" aria-label="anchor" href="#document-outline-headings"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5.2</span> Document outline &amp; headings<a class="anchor" aria-label="anchor" href="#document-outline-headings"><i class="fas fa-link"></i></a>
 </h3>
 <p>Code sections and subsections are useful:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -155,7 +167,7 @@
 </div>
 <div id="viewpipesteps-addin" class="section level3">
 <h3>
-<span class="header-section-number">4.4.3</span> ViewPipeSteps addin<a class="anchor" aria-label="anchor" href="#viewpipesteps-addin"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5.3</span> ViewPipeSteps addin<a class="anchor" aria-label="anchor" href="#viewpipesteps-addin"><i class="fas fa-link"></i></a>
 </h3>
 <p>The <a href="https://r4ds.had.co.nz/pipes.html">pipe</a> <code>%&gt;%</code> is useful for reading and writing code, but can make debugging cumbersome. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -166,7 +178,7 @@
 </div>
 <div id="shortcuts" class="section level3">
 <h3>
-<span class="header-section-number">4.4.4</span> Shortcuts<a class="anchor" aria-label="anchor" href="#shortcuts"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.5.4</span> Shortcuts<a class="anchor" aria-label="anchor" href="#shortcuts"><i class="fas fa-link"></i></a>
 </h3>
 <p>RStudio has lots of shortcuts. What you find most useful is down to preference and the areas of the IDE you use most often. These are the shortcuts I’ve found most useful:</p>
 <div class="inline-table"><table class="table table-sm"><tbody>
@@ -215,7 +227,7 @@
 </div>
 <div id="further-resources-2" class="section level2">
 <h2>
-<span class="header-section-number">4.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.6</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-2"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://www.r-bloggers.com/2021/03/5-tips-for-writing-clean-r-code-leave-your-code-reviewer-commentless/">5 tips for writing clean R code</a>, by Marcin Dubel in R bloggers (15 March 2021)</p>
 
@@ -228,23 +240,24 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#r"><span class="header-section-number">4</span> R &amp; RStudio</a></li>
-<li><a class="nav-link" href="#style-guide"><span class="header-section-number">4.1</span> Style guide</a></li>
+<li><a class="nav-link" href="#installation"><span class="header-section-number">4.1</span> Installation</a></li>
+<li><a class="nav-link" href="#getting-started-with-r"><span class="header-section-number">4.2</span> Getting started with R</a></li>
 <li>
-<a class="nav-link" href="#pid"><span class="header-section-number">4.2</span> RStudio security &amp; data protection</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#workspace"><span class="header-section-number">4.2.1</span> Workspace</a></li>
-<li><a class="nav-link" href="#passwords"><span class="header-section-number">4.2.2</span> Passwords</a></li>
+<a class="nav-link" href="#pid"><span class="header-section-number">4.3</span> RStudio security &amp; data protection</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#workspace"><span class="header-section-number">4.3.1</span> Workspace</a></li>
+<li><a class="nav-link" href="#passwords"><span class="header-section-number">4.3.2</span> Passwords</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#getting-started-with-r"><span class="header-section-number">4.3</span> Getting started with R</a></li>
+<li><a class="nav-link" href="#style-guide"><span class="header-section-number">4.4</span> Style guide</a></li>
 <li>
-<a class="nav-link" href="#rstudio-tips"><span class="header-section-number">4.4</span> RStudio tips</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#code-display"><span class="header-section-number">4.4.1</span> Code display</a></li>
-<li><a class="nav-link" href="#document-outline-headings"><span class="header-section-number">4.4.2</span> Document outline &amp; headings</a></li>
-<li><a class="nav-link" href="#viewpipesteps-addin"><span class="header-section-number">4.4.3</span> ViewPipeSteps addin</a></li>
-<li><a class="nav-link" href="#shortcuts"><span class="header-section-number">4.4.4</span> Shortcuts</a></li>
+<a class="nav-link" href="#rstudio-tips"><span class="header-section-number">4.5</span> RStudio tips</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#code-display"><span class="header-section-number">4.5.1</span> Code display</a></li>
+<li><a class="nav-link" href="#document-outline-headings"><span class="header-section-number">4.5.2</span> Document outline &amp; headings</a></li>
+<li><a class="nav-link" href="#viewpipesteps-addin"><span class="header-section-number">4.5.3</span> ViewPipeSteps addin</a></li>
+<li><a class="nav-link" href="#shortcuts"><span class="header-section-number">4.5.4</span> Shortcuts</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#further-resources-2"><span class="header-section-number">4.5</span> Further resources</a></li>
+<li><a class="nav-link" href="#further-resources-2"><span class="header-section-number">4.6</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">

@@ -21,11 +21,12 @@ notebooks
 sql
 vba
 r
-style-guide
+installation
+getting-started-with-r
 pid
 workspace
 passwords
-getting-started-with-r
+style-guide
 rstudio-tips
 code-display
 document-outline-headings
