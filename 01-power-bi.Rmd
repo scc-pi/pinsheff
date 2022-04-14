@@ -2,7 +2,7 @@
 
 # Power BI fundamentals
 
-This Power BI section is likely to be suerseded fairly soon by an MS Teams site being setup by Jess Kavanagh. It will help collate and disseminate the learning shared by Giles Robinson, Sam Jenner, Paul Haine and others.
+This Power BI section is likely to be superseded fairly soon by an MS Teams site being setup by Jess Kavanagh. The Teams site will help collate and disseminate the learning that has been shared by Giles Robinson, Sam Jenner, and others over the last year or so via the SCC **Power BI user group** that is coordinated by Paul Haine.
 
 ## What is Power BI?
 
@@ -10,7 +10,7 @@ Power BI is a tool for combining, analysing, and visualising data, and then shar
 
 Power BI is now the main Council tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. It's similar to ArcGIS being the main Council tool for spatial analysis.
 
-Power BI can be thought of as comprising three main pieces of software:
+The Council's Power BI comprises of three main pieces of software:
 
 1.  Power BI desktop - local install, for designing reports (dashboards).
 2.  Power BI report server - browser based internal report sharing.
@@ -22,37 +22,35 @@ Power BI can be thought of as comprising three main pieces of software:
 
 ## Report server
 
-The **Power BI report server** (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it.
+The **Power BI report server** (<https://sccvmazpbi01.sheffield.gov.uk/reports>) is only available from within the Council's network. It is currently the default Council option for sharing your Power BI reports. Contact Keith Dunk to request a new folder on the Report Server and control of it.
 
-Keep in mind that the Microsoft documentation is geared more towards using Power BI service
+Keep in mind that the Microsoft documentation is geared more towards using Power BI service.
 
-You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). Permissions are added via user ID e.g. LP41455. You can find user IDs in the *Alias* field in the *Global Address List* in Outlook.
+You can upload a report and give permissions just to that report, but will need to share a link to the report. Unless you give them permission to the folder they cannot navigate to it, you can give *browser* access to the folder and the report so they can open it. Click the ... at the side of the folder name and select *manage* and then *security* (this is the same once you have reports uploaded). Permissions are added via user ID e.g. LP41455. User IDs can be found in the *Alias* field in the *Global Address List* in Outlook.
 
 If you want to enable auto-refresh then you need to create the report using a URL not a drive mapping, Paul Haine can advise on this.
 
 ## Desktop
 
-To upload reports to the report server, for version compatibility reasons, you need to use the the May 2021 version of **Power BI desktop**, which is available from the Council's Software Centre on your laptop. If you have a different version, remove it and install the Software Centre version.
+For version compatibility reasons, to upload reports to the report server you need to use the the May 2021 version of **Power BI desktop**. This version is available from the Council's Software Centre on your laptop. If you have a different version, remove it and install the Software Centre version.
 
 ## Roles
 
-A consumer or **business user**, receives content (e.g. dashboards) from colleagues. *Business user* is the term used in Microsoft's Power BI documentation. Similarly, someone who creates content is called a **designer**. Other roles include **administrator**and *developer.*
+A consumer or **business user**, receives content (e.g. dashboards) from colleagues. *Business user* is the term used in Microsoft's Power BI documentation. Similarly, someone who creates content is called a **designer**. Other roles include **administrator** and *developer.*
 
-## User group
-
-Paul Haine coordinates the SCC **Power BI user group** that meets monthly. The user group is aimed at Power BI *designers* and *administrators* rather than *business users*.
+The SCC **Power BI user group** that meets monthly is aimed at Power BI *designers* and *administrators* more than *business users*.
 
 ## Further resources
 
-### Business users
+### For business users
 
-For Power BI reporting server: ...
+Using Power BI reporting server: ...
 
-For Power BI service: [Explore what Power BI can do for you](https://docs.microsoft.com/en-gb/learn/modules/explore-power-bi-service/), a one hours online Microsoft learning module.
+Using Power BI service: [Explore what Power BI can do for you](https://docs.microsoft.com/en-gb/learn/modules/explore-power-bi-service/), a one hour online Microsoft learning module.
 
-### Designers
+### For designers
 
-A good way to quickly get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online workshop, indirectly provided by Microsoft.
+A good way to quickly get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online tutor-led workshop, indirectly provided by Microsoft.
 
 [Create and use analytics reports with Power BI](https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi/) is a self-paced online Microsoft learning path.
 
