@@ -39,10 +39,14 @@ rmd
 r-markdown-vs-markdown
 r-markdown-security-data-protection
 r-notebooks
+quarto
 bookdown
 themes
 publishing
 flexdashboard
+r-markdown-websites
+build
+deploy
 rolldown
 child-r-markdown
 iteration
