@@ -10,7 +10,7 @@ Power BI is a tool for combining, analysing, and visualising data, and then shar
 
 Power BI is now the main Council tool for data analysis. Or rather, if you need something with more data analysis oomph than Excel, Power BI is probably the first tool you should consider. It's similar to ArcGIS being the main Council tool for spatial analysis.
 
-The Council's Power BI comprises of three main pieces of software:
+The Council's current Power BI setup includes three main pieces of software:
 
 1.  Power BI desktop - local install, for designing reports (dashboards).
 2.  Power BI report server - browser based internal report sharing.
