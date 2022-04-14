@@ -23,6 +23,7 @@ vba
 r
 installation
 getting-started-with-r
+library
 pid
 workspace
 passwords
@@ -31,7 +32,8 @@ rstudio-tips
 code-display
 document-outline-headings
 viewpipesteps-addin
-shortcuts
+base-pipe
+keyboard-shortcuts
 further-resources-2
 rmd
 r-markdown-vs-markdown
