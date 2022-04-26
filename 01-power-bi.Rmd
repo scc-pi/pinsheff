@@ -18,7 +18,7 @@ The Council's current Power BI setup includes three main pieces of software:
 
 ## Service
 
-**Power BI service** has more functionality than the report server. The Council's Corporate Performance reporting is via Power BI service, but it doesn't include PID.
+**Power BI service** has more functionality than the report server. The Council's Corporate Performance reporting is via Power BI service, but it doesn't include PID. All Council Officers have a Power BI Pro license but it needs activating by BCIS.
 
 ## Report server
 
@@ -44,13 +44,13 @@ The SCC **Power BI user group** that meets monthly is aimed at Power BI *designe
 
 ### For business users
 
-Using Power BI reporting server: ...
+Using Power BI reporting server: *TODO*
 
 Using Power BI service: [Explore what Power BI can do for you](https://docs.microsoft.com/en-gb/learn/modules/explore-power-bi-service/), a one hour online Microsoft learning module.
 
 ### For designers
 
-A good way to quickly get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) online tutor-led workshop, indirectly provided by Microsoft.
+A good way to quickly get familiar with Power BI is the free [Power BI Dashboard in a Day](https://powerbi.microsoft.com/en-us/diad/) tutor-led online workshop, indirectly provided by Microsoft.
 
 [Create and use analytics reports with Power BI](https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi/) is a self-paced online Microsoft learning path.
 

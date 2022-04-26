@@ -22,4 +22,4 @@ There are many excellent online resources that these notes will point to and wil
 
 Hopefully, others from the Performance & Intelligence Team, or elsewhere in Sheffield City Council, will contribute to these notes. However, currently it's just one person and is biased to one person's recent experience: ETL, geocoding and spatial analysis. Notes about modelling and visualisations are lacking.
 
-As well as the contributors and content, the purpose and scope is open to change. I hope you find the notes useful.
+As well as the contributors and content, the purpose and scope is open to change. I hope you find the notes useful.  

@@ -1,8 +1,8 @@
 # R & RStudio {#r}
 
-R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop.
+R is the scripting language. RStudio is the IDE (Interactive Development Environment), the software, that makes it easier to write and debug R scripts. Both need installing on your laptop.
 
-You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is very good because of its extensibility, and initially it is not as easy to navigate and configure.
+You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is good because of its extensibility, and initially it is not as easy to navigate and configure.
 
 One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. RStudio plays a key role in the R community.
 
@@ -12,13 +12,21 @@ There's some guidance on [Installing R and RStudio](https://rstudio-education.gi
 
 For Council laptops, you want the 64-bit Windows versions of R and RStudio. It's the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council's Software Centre, available from your laptop, but it's currently several versions old. R isn't currently available from the Software Centre.
 
-Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can't, then you need to make a request via the SCC IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
+Depending on what permissions you have on your laptop, you may or may not be able to install and update R and RStudio yourself. If you can't, then you need to make a request via the SCC IT Service Desk. The form to complete is under "Request Something"and is titled "Peripheral & Software Requests". To complete the form you'll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.
 
 RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`. Without this, you'll not be able to use R packages other than those provided with the base R installation. You may also need to add a `R_LIBS_USER` *User Environment Variable* and set it to the R library folder e.g. `C:\Program Files\R\R-4.1.2\library`.
 
+To update R, a method we've found reliable is using the `installr` package. From the R GUI rather than RStudio run:
+
+```{r updater, eval=FALSE}
+#install.packages("installr")
+library(installr) 
+updateR()
+```
+
 ## Getting started with R
 
-I'm not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:
+There's no need to provide advice on getting started with R, other than signposting to the excellent resources listed on the RStudio beginners page:
 
 [RStudio Education - Beginners](https://education.rstudio.com/learn/beginner/)
 
@@ -28,16 +36,18 @@ A re-styled and searchable version of the R documentation that is easier to use 
 
 ## Library
 
-Other languages, such as Python, use the terms *package* and *library* interchangeably. R is more specific. You extend the base R installation of packages to be more useful, by installing other *packages* into your *library*.
+Other languages, such as Python, use the terms *package* and *library* interchangeably. R is more specific. You extend the base R installation of packages to be more useful by installing other *packages* into your *library*.
 
 The *library* is just a local folder on your laptop, usually a sub-folder of your R installation e.g. `C:\Program Files\R\R-4.1.2\library`.
 
 `install.packages("dplyr")` **installs** new packages into your *library*. You only need to do this once per package version and laptop (or version of R).
 
-`library(dplyr)` **loads** the previously installed, non base R package, **from** the *library* into your current R session. You need to do this in every R session you're using the non base R package, usually at the top of your script. Alternatively, you can avoid loading the entire package and make use of the `::` notation, for example:\
-`droids <- dplyr::filter(dplyr::starwars, species == "Droid")`\
-You might do this when writing your own packages or when you want to be explicit in any examples.
+`library(dplyr)` **loads** the previously installed, non base R package, **from** the *library* into your current R session. You need to do this in every R session you're using the non base R package, typically at the top of your script. Alternatively, you can avoid loading the entire package and make use of the `::` notation, for example:  
 
+`droids <- dplyr::filter(dplyr::starwars, species == "Droid")`.  
+
+You might do this when writing your own packages or when you want to be explicit in any examples.
+ 
 ## RStudio security & data protection {#pid}
 
 ### Workspace {#workspace}
