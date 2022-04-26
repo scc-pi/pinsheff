@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 4 R &amp; RStudio | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the software, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 4 R &amp; RStudio | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
+<meta property="og:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the software, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4 R &amp; RStudio | pinsheff">
-<meta name="twitter:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
+<meta name="twitter:description" content="R is the scripting language. RStudio is the IDE (Interactive Development Environment), the software, that makes it easier to write and debug R scripts. Both need installing on your laptop. You can...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -88,8 +88,8 @@
 <h1>
 <span class="header-section-number">4</span> R &amp; RStudio<a class="anchor" aria-label="anchor" href="#r"><i class="fas fa-link"></i></a>
 </h1>
-<p>R is the scripting language. RStudio is the IDE (Interactive Development Environment), the tool, that makes it easier to write and debug R scripts. Both need installing on your laptop.</p>
-<p>You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is very good because of its extensibility, and initially it is not as easy to navigate and configure.</p>
+<p>R is the scripting language. RStudio is the IDE (Interactive Development Environment), the software, that makes it easier to write and debug R scripts. Both need installing on your laptop.</p>
+<p>You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is good because of its extensibility, and initially it is not as easy to navigate and configure.</p>
 <p>One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. RStudio plays a key role in the R community.</p>
 <div id="installation" class="section level2">
 <h2>
@@ -97,14 +97,19 @@
 </h2>
 <p>There’s some guidance on <a href="https://rstudio-education.github.io/hopr/starting.html">Installing R and RStudio</a> in the appendix of the <a href="https://rstudio-education.github.io/hopr/index.html">Hands on Programming with R</a> by Garrett Grolemund.</p>
 <p>For Council laptops, you want the 64-bit Windows versions of R and RStudio. It’s the free open-source license of RStudio Desktop that we currently use. RStudio is included in the Council’s Software Centre, available from your laptop, but it’s currently several versions old. R isn’t currently available from the Software Centre.</p>
-<p>Depending on what permissions you have on your laptop, you may or may not be able to install R and RStudio yourself. If you can’t, then you need to make a request via the SCC IT Service Desk. The form to complete is under “Request Something”and is titled “Peripheral &amp; Software Requests”. To complete the form you’ll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.</p>
+<p>Depending on what permissions you have on your laptop, you may or may not be able to install and update R and RStudio yourself. If you can’t, then you need to make a request via the SCC IT Service Desk. The form to complete is under “Request Something”and is titled “Peripheral &amp; Software Requests”. To complete the form you’ll need a 20 digit business unit (Integra) code and prior verbal approval from the Business Unit Manager. You may also need to follow this process to update R and RStudio.</p>
 <p>RStudio installation is generally straight forward. However, R installation requires write permissions on the R library folder e.g. <code>C:\Program Files\R\R-4.1.2\library</code>. Without this, you’ll not be able to use R packages other than those provided with the base R installation. You may also need to add a <code>R_LIBS_USER</code> <em>User Environment Variable</em> and set it to the R library folder e.g. <code>C:\Program Files\R\R-4.1.2\library</code>.</p>
+<p>To update R, a method we’ve found reliable is using the <code>installr</code> package. From the R GUI rather than RStudio run:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#install.packages("installr")</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://talgalili.github.io/installr/">installr</a></span><span class="op">)</span> 
+<span class="fu">updateR</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="getting-started-with-r" class="section level2">
 <h2>
 <span class="header-section-number">4.2</span> Getting started with R<a class="anchor" aria-label="anchor" href="#getting-started-with-r"><i class="fas fa-link"></i></a>
 </h2>
-<p>I’m not going to provide advice on getting started, other than signposting to the excellent resources listed on the RStudio beginners page:</p>
+<p>There’s no need to provide advice on getting started with R, other than signposting to the excellent resources listed on the RStudio beginners page:</p>
 <p><a href="https://education.rstudio.com/learn/beginner/">RStudio Education - Beginners</a></p>
 <p>Hadley Wickham’s <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> is the main book people use when new to R. However, if you already have some coding experience <a href="http://r-guide.steveharoz.com/index.html">A Succinct Intro to R</a> by Steve Haroz is useful.</p>
 <p>A re-styled and searchable version of the R documentation that is easier to use than the original format is provided by RStudio: <a href="https://rstudio.github.io/r-manuals/">rstudio.github.io/r-manuals</a>.</p>
@@ -113,12 +118,12 @@
 <h2>
 <span class="header-section-number">4.3</span> Library<a class="anchor" aria-label="anchor" href="#library"><i class="fas fa-link"></i></a>
 </h2>
-<p>Other languages, such as Python, use the terms <em>package</em> and <em>library</em> interchangeably. R is more specific. You extend the base R installation of packages to be more useful, by installing other <em>packages</em> into your <em>library</em>.</p>
+<p>Other languages, such as Python, use the terms <em>package</em> and <em>library</em> interchangeably. R is more specific. You extend the base R installation of packages to be more useful by installing other <em>packages</em> into your <em>library</em>.</p>
 <p>The <em>library</em> is just a local folder on your laptop, usually a sub-folder of your R installation e.g. <code>C:\Program Files\R\R-4.1.2\library</code>.</p>
 <p><code>install.packages("dplyr")</code> <strong>installs</strong> new packages into your <em>library</em>. You only need to do this once per package version and laptop (or version of R).</p>
-<p><code><a href="https://dplyr.tidyverse.org">library(dplyr)</a></code> <strong>loads</strong> the previously installed, non base R package, <strong>from</strong> the <em>library</em> into your current R session. You need to do this in every R session you’re using the non base R package, usually at the top of your script. Alternatively, you can avoid loading the entire package and make use of the <code>::</code> notation, for <a href="example:%5C" class="uri">example:\</a>
-<code>droids &lt;- dplyr::filter(dplyr::starwars, species == "Droid")</code><br>
-You might do this when writing your own packages or when you want to be explicit in any examples.</p>
+<p><code><a href="https://dplyr.tidyverse.org">library(dplyr)</a></code> <strong>loads</strong> the previously installed, non base R package, <strong>from</strong> the <em>library</em> into your current R session. You need to do this in every R session you’re using the non base R package, typically at the top of your script. Alternatively, you can avoid loading the entire package and make use of the <code>::</code> notation, for example:</p>
+<p><code>droids &lt;- dplyr::filter(dplyr::starwars, species == "Droid")</code>.</p>
+<p>You might do this when writing your own packages or when you want to be explicit in any examples.</p>
 </div>
 <div id="pid" class="section level2">
 <h2>
@@ -136,7 +141,7 @@ You might do this when writing your own packages or when you want to be explicit
 <span class="header-section-number">4.4.2</span> Passwords<a class="anchor" aria-label="anchor" href="#passwords"><i class="fas fa-link"></i></a>
 </h3>
 <p>It’s poor practice to include login details in code. One option is using the <code>.Renviron</code> file for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">portal_pwd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="st">"portal_pwd"</span><span class="op">)</span>
 <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">portal_pwd</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span><span class="op">{</span>
   <span class="va">portal_pwd</span> <span class="op">&lt;-</span> <span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/rstudioapi/man/askForPassword.html">askForPassword</a></span><span class="op">(</span><span class="st">"Portal password"</span><span class="op">)</span>
@@ -171,7 +176,7 @@ You might do this when writing your own packages or when you want to be explicit
 <span class="header-section-number">4.6.2</span> Document outline &amp; headings<a class="anchor" aria-label="anchor" href="#document-outline-headings"><i class="fas fa-link"></i></a>
 </h3>
 <p>Code sections and subsections are useful:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Prefix a section with a hash tag and suffix with 4 or more dashes ----</span>
 <span class="co">## Subsections have additional hash tags ----</span></code></pre></div>
 <p>The sections can be collapsed and are also listed in the document outline pane:</p>
@@ -182,7 +187,7 @@ You might do this when writing your own packages or when you want to be explicit
 <span class="header-section-number">4.6.3</span> ViewPipeSteps addin<a class="anchor" aria-label="anchor" href="#viewpipesteps-addin"><i class="fas fa-link"></i></a>
 </h3>
 <p>The <a href="https://r4ds.had.co.nz/pipes.html">pipe</a> <code>%&gt;%</code> from the <code>magrittr</code> package is useful for reading and writing code, but can make debugging cumbersome. The <code>ViewPipeSteps</code> addin lets you view the output of your pipe chain after each step. To install:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"daranzolin/ViewPipeSteps"</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ViewPipeSteps</span><span class="op">)</span></code></pre></div>
 <p>To use:</p>
@@ -298,7 +303,7 @@ You might do this when writing your own packages or when you want to be explicit
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-14.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

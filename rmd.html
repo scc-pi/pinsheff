@@ -7,7 +7,7 @@
 <title>Chapter 5 Markdown | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="5.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 5 Markdown | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="5.1 R Markdown vs Markdown Markdown is a markup language for creating formatted text using a plain-text editor. Its main aim is readability, for it to have simple, unobtrusive syntax and be...">
@@ -143,11 +143,11 @@
 <p>These notes are published on <a href="https://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/features/actions">GitHub Actions</a>. A GitHub Action has been configured to start when there’s a push to the <a href="https://github.com/scc-pi/notes">master branch</a>. The Action renders the Rmd files in the master branch to HTML and then deploys the HTML files as a static website to a branch called <code>gh-pages</code>. Alternatives to using GitHub Actions include Travis and Jekyll.</p>
 <p>I used the steps outlined in the following blog post: <a href="https://medium.com/@delucmat/how-to-publish-bookdown-projects-with-github-actions-on-github-pages-6e6aecc7331e">How to publish bookdown projects with GitHub Actions on GitHub Pages</a>. However, I did a lot of the git bash commands manually and there were a couple of fixes I made to the <code>deploy_bookdown.yaml</code> file:</p>
 <p>1. Under …</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="rmd.html#cb4-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="rmd.html#cb5-1"></a><span class="fu">uses</span><span class="kw">:</span><span class="at"> Cecilapp/GitHub-Pages-deploy@master</span></span></code></pre></div>
 <p>… I added …</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="rmd.html#cb5-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
-<span id="cb5-2"><a href="rmd.html#cb5-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
-<span id="cb5-3"><a href="rmd.html#cb5-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="rmd.html#cb6-1"></a><span class="fu">with</span><span class="kw">:</span><span class="at">       </span></span>
+<span id="cb6-2"><a href="rmd.html#cb6-2"></a><span class="at">  </span><span class="fu">build_dir</span><span class="kw">:</span><span class="at"> _book/       </span></span>
+<span id="cb6-3"><a href="rmd.html#cb6-3"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> ${{ secrets.EMAIL }}</span></span></code></pre></div>
 <p>2. I used <code>GITHUB_TOKEN</code> rather than <code>GH_PAT</code>, as per a change to <a href="https://github.com/Cecilapp/GitHub-Pages-deploy#news">GitHub-Pages-deploy</a>.</p>
 </div>
 </div>
@@ -161,6 +161,14 @@
 <p><a href="https://pkgs.rstudio.com/flexdashboard/">pkgs.rstudio.com/flexdashboard</a></p>
 <p>Flexdashboards don’t have the same functionality of Power BI, nor do they allow data input like Shiny. However, they are very simple and quick to create. They can be a good option if the dashboard is unlikely to be maintained beyond a specific project. The flexdashboard output is simply an HTML file, so it’s useful if you need to share the dashboard with a few people outside the organisation. They’re also obviously a good option if you’ve done your data analysis and preparatory work in R. The Council’s imminent upgrade of SharePoint and to fuller MS Teams functionality, could be a really useful way to publish flexdashboards.</p>
 <p><em>TODO: Test whether a flexdashboard can be hosted via our Power BI Report Server in an IFrame.</em></p>
+<ul>
+<li>Add custom visual <em>HTML Content</em>.</li>
+</ul>
+<p>iFrame = “<iframe src="https://scc-pi.github.io/asc-localities-insight/asc_sli_dashboard.html" style="position: fixed; width: 100%; height: 100%"></iframe>”</p>
+<ul>
+<li><p>Try S:/BI Team …etc.</p></li>
+<li><p>Load html to Report server itself? like the pbix?</p></li>
+</ul>
 <p><a href="https://scc-pi.github.io/asc-localities-insight">scc-pi.github.io/asc-localities-insight</a> is an example of flexdashboard. The <code>.html</code> file hosted on GitHub has also been added in the “Adult Health and Social Care Programme” MS Team as a <a href="http://davidgiard.com/2019/01/27/AddingAWebsiteTabToAMicrosoftTeamsChannel.aspx">website tab</a>.</p>
 </div>
 <div id="r-markdown-websites" class="section level2">
@@ -188,7 +196,7 @@
 </h3>
 <p>The build creates a <em>_site</em> folder in the project directory that can be copied whole to a static web server, or failing that a file server. Note that MS Teams and SharePoint aren’t intended to serve static websites of this type.</p>
 <p>We’re not allowed a static web server, so <em>_site</em> is currently copied to: <em>S:/BI Team/project-name</em></p>
-<p>As we’re using a file server rather than a web server, to view the home page for the site we have to specify the <em>index.html</em> in the path that we copy into our browser: *S:/BI Team/project-name/_site/index.html*</p>
+<p>As we’re using a file server rather than a web server, to view the home page for the site we have to specify the <em>index.html</em> in the path that we copy into our browser: <em>S:/BI Team/project-name/_site/index.html</em></p>
 <p>BI Team members have <em>full control</em> permissions for <em>S:/BI Team</em> and can add <em>read</em> permissions for other Council officers so they can access the site (the files in <em>S:/BI Team/project-name</em>).</p>
 <p>After content in the folder is updated, <em>read</em> permission has to be re-applied. This doesn’t involve re-adding all the names of individual officers, but ensuring <em>read</em> is checked and then hitting apply.</p>
 </div>
@@ -301,7 +309,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-14.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -7,7 +7,7 @@
 <title>Chapter 17 Postcodes &amp; addresses | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 17 Postcodes &amp; addresses | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
@@ -101,7 +101,7 @@
 </h2>
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
 <p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">name</span>,    <span class="op">~</span><span class="va">postcode</span>,
@@ -127,7 +127,7 @@
 <p>Other columns are added by including their name in a character vector passed with the <code>other_vars</code> function argument. For example, <code>other_vars=c("ccg_code","lsoa_code")</code>. The list of valid <code>other_vars</code> is defined at <a href="https://docs.ropensci.org/PostcodesioR/#examples">docs.ropensci.org/PostcodesioR/#examples</a>.</p>
 <p>The <code>pcd_name</code> function argument is used to specify the name of the data frame’s postcode column when it isn’t <code>postcode</code>. For example, <code>pcd_name="pupil_pcode"</code>.</p>
 <p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">name</span>,     <span class="op">~</span><span class="va">address</span>,
@@ -243,7 +243,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-14.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
