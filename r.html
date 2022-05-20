@@ -140,10 +140,11 @@
 <h3>
 <span class="header-section-number">4.4.2</span> Passwords<a class="anchor" aria-label="anchor" href="#passwords"><i class="fas fa-link"></i></a>
 </h3>
-<p>It’s poor practice to include login details in code. One option is using the <code>.Renviron</code> file for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. However, if you’re sharing the script you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
+<p>It’s poor practice to include login details in code. One option is using the <code>.Renviron</code> file for <a href="https://db.rstudio.com/best-practices/managing-credentials/#use-environment-variables">securing credentials</a>. <code>usethis::edit_r_environ()</code> will open your user <code>.Renviron</code>.</p>
+<p>If you’re sharing the script, you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">portal_pwd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="st">"portal_pwd"</span><span class="op">)</span>
-<span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">portal_pwd</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span><span class="op">{</span>
+<span class="kw">if</span><span class="op">(</span><span class="va">portal_pwd</span> <span class="op">==</span> <span class="st">""</span><span class="op">)</span><span class="op">{</span>
   <span class="va">portal_pwd</span> <span class="op">&lt;-</span> <span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/rstudioapi/man/askForPassword.html">askForPassword</a></span><span class="op">(</span><span class="st">"Portal password"</span><span class="op">)</span>
 <span class="op">}</span></code></pre></div>
 </div>
@@ -303,7 +304,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-04-26.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-05-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
