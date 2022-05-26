@@ -63,11 +63,25 @@ It's poor practice to include login details in code. One option is using the `.R
 If you're sharing the script, you can anticipate that the environment variable might not be set and use the RStudio API to prompt for credentials. For example:
 
 ```{r credentials, eval=FALSE}
-portal_pwd <- Sys.getenv("portal_pwd")
-if(portal_pwd == ""){
-  portal_pwd <- rstudioapi::askForPassword("Portal password")
-}
+# Connect to OSCAR database via ODBC DSN
+oscar_con <- DBI::dbConnect(
+  odbc::odbc(),
+  dsn = "OSCAR",
+  UID = if (Sys.getenv("oscar_userid") == "") {
+    rstudioapi::askForPassword("OSCAR User ID")
+  } else {
+    Sys.getenv("oscar_userid")
+  },
+  PWD = if (Sys.getenv("oscar_pwd") == "") {
+    rstudioapi::askForPassword("OSCAR Password")
+  } else {
+    Sys.getenv("oscar_pwd")
+  },
+  timeout = 10
+)
 ```
+
+Note that including all the connection logic within a single statement works well with the RStudio *Connections* tab. 
 
 ## Style guide
 
