@@ -28,6 +28,10 @@ When scripting you might make a backup copy of a file, so if your new changes br
 
 When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.
 
+This is a much more engaging explanation:  
+
+[GITHUB FOR SUPPORTING, REUSING, CONTRIBUTING, AND FAILING SAFELY](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/)  
+
 ## GIT
 
 Git is an open-source distributed version control system for tracking changes in source code during software development.
