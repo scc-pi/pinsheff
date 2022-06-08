@@ -26,6 +26,8 @@ Data that's publically available or available via a license to the Council.
 
 More specific to the UK, is spatial data from ONS and Ordnance Survey. There are some notes on accessing this data in the chapter on [Public Data Sources](#public-data) under [Open Geography Portal](#open-geography) and [OS Data Hub](#os-data-hub).
 
+ONS have produced some [Geography for Statistics Training](https://onsgeo.github.io/geospatial-training/) materials that are a good place to start.
+
 ### Ordnance Survey
 
 *TODO*
