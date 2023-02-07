@@ -17,3 +17,5 @@ Data returned from REST APIs are typically provided in a hierarchical structure 
 
 _TODO_   
 scc-pi functions with rectangling e.g. postcode and geocoding  
+
+## API via Council proxy  
