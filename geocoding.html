@@ -7,7 +7,7 @@
 <title>Chapter 17 Postcodes &amp; addresses | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.32 with bs4_book()">
 <meta property="og:title" content="Chapter 17 Postcodes &amp; addresses | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
@@ -16,8 +16,8 @@
 <meta name="twitter:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-binding-2.1.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
@@ -102,25 +102,25 @@
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
 <p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
-  <span class="op">~</span><span class="va">name</span>,    <span class="op">~</span><span class="va">postcode</span>,
-  <span class="st">"SCC"</span>,    <span class="st">"S1 2HH"</span>,
-  <span class="st">"Blades"</span>, <span class="st">"S2 4SU"</span>,
-  <span class="st">"Owls"</span>,   <span class="st">"S6 1SW"</span>
-<span class="op">)</span>
-
-<span class="co"># # Load the function we need</span>
-<span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")</span>
-<span class="co"># </span>
-<span class="co"># # Add postcode related columns to our data frame</span>
-<span class="co"># add_pcd_vars(df,</span>
-<span class="co">#              pcd_name = "postcode",</span>
-<span class="co">#              .admin_district = FALSE,</span>
-<span class="co">#              .lat_long = TRUE,</span>
-<span class="co">#              other_vars = c("admin_ward",</span>
-<span class="co">#                             "msoa_code")) %&gt;%</span>
-<span class="co">#   knitr::kable() #display them in a nice table</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Create a data frame with some example records</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">name</span>,    <span class="op">~</span><span class="va">postcode</span>,</span>
+<span>  <span class="st">"SCC"</span>,    <span class="st">"S1 2HH"</span>,</span>
+<span>  <span class="st">"Blades"</span>, <span class="st">"S2 4SU"</span>,</span>
+<span>  <span class="st">"Owls"</span>,   <span class="st">"S6 1SW"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># # Load the function we need</span></span>
+<span><span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Addresses.R")</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># # Add postcode related columns to our data frame</span></span>
+<span><span class="co"># add_pcd_vars(df,</span></span>
+<span><span class="co">#              pcd_name = "postcode",</span></span>
+<span><span class="co">#              .admin_district = FALSE,</span></span>
+<span><span class="co">#              .lat_long = TRUE,</span></span>
+<span><span class="co">#              other_vars = c("admin_ward",</span></span>
+<span><span class="co">#                             "msoa_code")) %&gt;%</span></span>
+<span><span class="co">#   knitr::kable() #display them in a nice table</span></span></code></pre></div>
 <p><code>admin_district</code> can be used to answer the questions: Is the postcode invalid? Is the postcode in Sheffield? You can anticipate values of <code>NA</code> and <code>Sheffield</code> respectively if the answers are yes. These are common questions so the function has an <code>.admin_district</code> argument.</p>
 <p>Needing the coordinates of the postcode centroid is also common, so the function also has a <code>.lat_long</code> argument that if <code>TRUE</code> returns both a latitude column and a longitude column.</p>
 <p><em>TODO: link to sf example &amp; area stats</em></p>
@@ -128,18 +128,18 @@
 <p>The <code>pcd_name</code> function argument is used to specify the name of the data frame’s postcode column when it isn’t <code>postcode</code>. For example, <code>pcd_name="pupil_pcode"</code>.</p>
 <p>Sometimes, the postcode in a dataset is not included as a separate column, but is at the end of a combined address column. Depending on the format and quality of the combined address column you could extract the postcode like this:</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Create a data frame with some example records</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
-  <span class="op">~</span><span class="va">name</span>,     <span class="op">~</span><span class="va">address</span>,
-  <span class="st">"SCC"</span>,     <span class="st">"Pinstone St, Sheffield City Centre, Sheffield S1 2HH"</span>,
-  <span class="st">"Blades"</span>,  <span class="st">"Bramall Ln, Highfield, Sheffield S2 4SU"</span>,
-  <span class="st">"Owls"</span>,    <span class="st">"76 Penistone Rd N, Sheffield S6 1SW"</span>
-<span class="op">)</span>
-
-<span class="co"># Extract the postcode from the address into a separate column</span>
-<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">df</span>, 
-              postcode <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/word.html">word</a></span><span class="op">(</span><span class="va">address</span>, <span class="op">-</span><span class="fl">2</span>, <span class="op">-</span><span class="fl">1</span>, sep <span class="op">=</span> <span class="st">"[:space:]"</span><span class="op">)</span><span class="op">)</span> |&gt;
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Create a data frame with some example records</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">name</span>,     <span class="op">~</span><span class="va">address</span>,</span>
+<span>  <span class="st">"SCC"</span>,     <span class="st">"Pinstone St, Sheffield City Centre, Sheffield S1 2HH"</span>,</span>
+<span>  <span class="st">"Blades"</span>,  <span class="st">"Bramall Ln, Highfield, Sheffield S2 4SU"</span>,</span>
+<span>  <span class="st">"Owls"</span>,    <span class="st">"76 Penistone Rd N, Sheffield S6 1SW"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract the postcode from the address into a separate column</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">df</span>, </span>
+<span>              postcode <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/word.html">word</a></span><span class="op">(</span><span class="va">address</span>, <span class="op">-</span><span class="fl">2</span>, <span class="op">-</span><span class="fl">1</span>, sep <span class="op">=</span> <span class="st">"[:space:]"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="left">name</th>
@@ -243,7 +243,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-06-08.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

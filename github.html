@@ -7,7 +7,7 @@
 <title>Chapter 8 Version control &amp; GitHub | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.32 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Version control &amp; GitHub | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
@@ -16,8 +16,8 @@
 <meta name="twitter:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-binding-2.1.1/leaflet.js"></script><script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script><script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script><link href="libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
@@ -93,13 +93,13 @@
 <div class="inline-figure"><img src="images/github-edit.png" width="484"></div>
 <p>You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># # Load functions from a public scc-pi repository </span>
-<span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")</span>
-<span class="co"># </span>
-<span class="co"># # Call one of our Sheffield area functions that returns LSOA codes </span>
-<span class="co"># shef_lsoa_codes() %&gt;% </span>
-<span class="co">#   head(5) %&gt;% #only display the first 5 records</span>
-<span class="co">#   knitr::kable() #display them in a nice table </span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># # Load functions from a public scc-pi repository </span></span>
+<span><span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># # Call one of our Sheffield area functions that returns LSOA codes </span></span>
+<span><span class="co"># shef_lsoa_codes() %&gt;% </span></span>
+<span><span class="co">#   head(5) %&gt;% #only display the first 5 records</span></span>
+<span><span class="co">#   knitr::kable() #display them in a nice table </span></span></code></pre></div>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="why-version-control" class="section level2">
 <h2>
@@ -132,8 +132,8 @@
 <span id="cb9-2"><a href="github.html#cb9-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
 <p>As an additional precaution, any projects involving confidential information should be held in a private repository and <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html"><code>.Rdata</code></a> should also be included in the <code>.gitignore</code> file (see the section on <a href="r.html#pid">RStudio security &amp; data protection</a>):</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Session Data files</span>
-<span class="va">.RData</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Session Data files</span></span>
+<span><span class="va">.RData</span></span></code></pre></div>
 <p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment. However, BitBucket currently looks like a more likely solution than GitHub.</p>
 </div>
 <div id="bitbucket" class="section level3">
@@ -216,7 +216,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2022-06-08.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
