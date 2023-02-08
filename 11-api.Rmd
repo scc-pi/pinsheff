@@ -26,7 +26,7 @@ In summary:
 
 1. Run the command `file.edit('~/.Renviron')` within RStudio.   
 
-1. Add the following settings to your `.Renviron` file, amended for your own Council login ID and password.  
+2. Add the following settings to your `.Renviron` file, amended for your own Council login ID and password.  
 
 ```{r renviron-proxy, eval=FALSE}
 http_proxy=http://172.29.2.22:8080
@@ -36,13 +36,13 @@ https_proxy=https://172.29.2.22:8080
 https_proxy_user=lp41455:password123
 ```
 
-1. Uncheck the setting for *Use Internet Explorer library/proxy for HTTP* in *Global Options*:  
+3. Uncheck the setting for *Use Internet Explorer library/proxy for HTTP* in *Global Options*:  
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/proxy-ie.png")
 ```
 
-1. Restart RStudio.
+4. Restart RStudio.
 
 When using AlwaysOn VPN comment out the settings:  
 
@@ -56,6 +56,22 @@ When using AlwaysOn VPN comment out the settings:
 
 These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having change this manually.  
 
+To test it's working you could try the following:  
+
+```{r}
+#install.packages("httr2")
+library(httr2)
+req <-  request("http://api.zippopotam.us/us/90210")
+resp <- req_perform(req)
+resp |> resp_body_html(check_type = FALSE)
+```
+
+Which should show you some content similar to what you see when you just use the same URL ([http://api.zippopotam.us/us/90210](http://api.zippopotam.us/us/90210)) in a browser: 
+
+```{r echo=FALSE}
+knitr::include_graphics("images/api-browser-test.png")
+```
+
 These are the breadcrumbs for determining the proxy server and port:  
 
 * Windows settings  
@@ -64,7 +80,7 @@ These are the breadcrumbs for determining the proxy server and port:
 
 * Type "script address" into Edge i.e. [http://172.29.3.101/proxy.pac](http://172.29.3.101/proxy.pac)  
 
-* Open the downloaded proxy.pac file in a text editor
+* Open the downloaded `proxy.pac` file in a text editor
 
-* Tried some of the proxy and ports listed in proxy.pac  
+* Try some of the proxy servers and ports listed in `proxy.pac`  
 
