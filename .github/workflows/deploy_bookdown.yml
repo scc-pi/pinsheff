@@ -24,7 +24,7 @@ jobs:
       - name: Install spatial
         run: Rscript -e 'install.packages(c("leafem", "PostcodesioR", "mapview"))'
       - name: Install api
-        run: Rscript -e 'install.packages(c("httr","jsonlite"))'
+        run: Rscript -e 'install.packages(c("httr","jsonlite", "httr2"))'
       - name: Install rstudio
         run: Rscript -e 'install.packages("rstudioapi")'
       - name: Install rmarkdown
