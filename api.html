@@ -114,7 +114,40 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <h2>
 <span class="header-section-number">11.4</span> API via Council proxy<a class="anchor" aria-label="anchor" href="#api-via-council-proxy"><i class="fas fa-link"></i></a>
 </h2>
-
+<p>When in Council buildings and connected directly to the Council’s network, rather than via AlwaysOn VPN, you may have difficulty accessing external API’s from RStudio (and installing packages). The following post from Posit outlines a method to resolve this: <a href="https://support.posit.co/hc/en-us/articles/200488488-Configuring-R-to-Use-an-HTTP-or-HTTPS-Proxy">Configuring R to Use an HTTP or HTTPS Proxy</a>.</p>
+<p>In summary:</p>
+<ol style="list-style-type: decimal">
+<li><p>Run the command <code>file.edit('~/.Renviron')</code> within RStudio.</p></li>
+<li><p>Add the following settings to your <code>.Renviron</code> file, amended for your own Council login ID and password.</p></li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="api.html#cb11-1"></a>http_proxy=http<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
+<span id="cb11-2"><a href="api.html#cb11-2"></a>http_proxy_user=lp41455<span class="op">:</span>password123</span>
+<span id="cb11-3"><a href="api.html#cb11-3"></a></span>
+<span id="cb11-4"><a href="api.html#cb11-4"></a>https_proxy=https<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
+<span id="cb11-5"><a href="api.html#cb11-5"></a>https_proxy_user=lp41455<span class="op">:</span>password123</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Uncheck the setting for <em>Use Internet Explorer library/proxy for HTTP</em> in <em>Global Options</em>:</li>
+</ol>
+<div class="inline-figure"><img src="images/proxy-ie.png" width="286"></div>
+<ol style="list-style-type: decimal">
+<li>Restart RStudio.</li>
+</ol>
+<p>When using AlwaysOn VPN comment out the settings:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># http_proxy=http://172.29.2.22:8080</span></span>
+<span><span class="co"># http_proxy_user=lp41455:password123</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># https_proxy=https://172.29.2.22:8080</span></span>
+<span><span class="co"># https_proxy_user=lp41455:password123</span></span></code></pre></div>
+<p>These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having change this manually.</p>
+<p>These are the breadcrumbs for determining the proxy server and port:</p>
+<ul>
+<li><p>Windows settings</p></li>
+<li><p>Proxy settings</p></li>
+<li><p>Type “script address” into Edge i.e. <a href="http://172.29.3.101/proxy.pac">http://172.29.3.101/proxy.pac</a></p></li>
+<li><p>Open the downloaded proxy.pac file in a text editor</p></li>
+<li><p>Tried some of the proxy and ports listed in proxy.pac</p></li>
+</ul>
 </div>
 </div>
   <div class="chapter-nav">
@@ -145,7 +178,7 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-07.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
