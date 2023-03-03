@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 9 Reproducible Analytical Pipelines | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are...">
+<meta name="description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <meta name="generator" content="bookdown 0.32 with bs4_book()">
 <meta property="og:title" content="Chapter 9 Reproducible Analytical Pipelines | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are...">
+<meta property="og:description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 9 Reproducible Analytical Pipelines | pinsheff">
-<meta name="twitter:description" content="Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are...">
+<meta name="twitter:description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -89,14 +89,56 @@
 <h1>
 <span class="header-section-number">9</span> Reproducible Analytical Pipelines<a class="anchor" aria-label="anchor" href="#rap"><i class="fas fa-link"></i></a>
 </h1>
-<blockquote>
-<p>Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.</p>
-</blockquote>
-<div id="government-strategy" class="section level2">
+<div id="principles" class="section level2">
 <h2>
-<span class="header-section-number">9.1</span> Government Strategy<a class="anchor" aria-label="anchor" href="#government-strategy"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.1</span> Principles<a class="anchor" aria-label="anchor" href="#principles"><i class="fas fa-link"></i></a>
 </h2>
-<p>RAPs have evolved from the UK Govenment’s Analysis Function. Their 2022 <a href="https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/">Reproducible Analytical Pipelines (RAP) strategy</a> includes three goals:</p>
+<p>RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 <a href="https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/">Reproducible Analytical Pipelines (RAP) strategy</a> sets out the following principles.</p>
+<p>Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.</p>
+<p>RAPs increase the efficiency of statistical and analytical processes, delivering value. Reproducibility and auditability increase trust in the statistics. The pipelines are easier to quality assure than manual processes, leading to higher quality.</p>
+<p>A RAP will:</p>
+<ul>
+<li><p>improve the quality of the analysis</p></li>
+<li><p>increase trust in the analysis by producers, their managers and users</p></li>
+<li><p>create a more efficient process</p></li>
+<li><p>improve business continuity and knowledge management</p></li>
+</ul>
+<p>To achieve these benefits, at a minimum a RAP must:</p>
+<ul>
+<li><p>minimise manual steps, for example copy-paste, point-click, or drag-drop operation; where it is necessary to include a manual step in the process this must be documented as described in the following bullet points</p></li>
+<li><p>be built using open-source software, which is available to anyone, preferably R or Python</p></li>
+<li><p>deepen technical and quality assurance processes with peer review to ensure that the process is reproducible and that the requirements described in the following bullet points have been met</p></li>
+<li><p>guarantee an audit trail using version control software, preferably Git
+be open to anyone – this can be allowed most easily using file and code sharing platforms</p></li>
+<li><p>follow existing good practice for quality assurance</p></li>
+<li><p>contain well-commented code and have documentation embedded and version controlled within the product, rather than saved elsewhere</p></li>
+</ul>
+<p>Notes:</p>
+<ol style="list-style-type: decimal">
+<li><p>There may be restrictions, such as access to databases, which stop analysis producers building a RAP for their full end-to-end process. In this case, the previously described requirements apply to the selected part of the process.</p></li>
+<li><p>There may be restrictions, such as sensitive or confidential content, which stop analysis producers from sharing their RAP publicly. In this case, it may be possible to share the RAP within a department or organisation instead.</p></li>
+<li><p>It is recommended that where possible a RAP should be built collaboratively – this will improve the quality of the final product and helps to allow knowledge sharing.</p></li>
+</ol>
+<p>There is no specific tool that is required to build a RAP, but both R and Python provide the power and flexibility to carry out end-to-end analytical processes, from data source to final presentation.</p>
+<p>Once the minimum RAP has been implemented, statisticians and analysts should attempt to further develop their pipeline using:</p>
+<ul>
+<li><p>functions or code modularity</p></li>
+<li><p>unit testing of functions</p></li>
+<li><p>error handling for functions</p></li>
+<li><p>documentation of functions</p></li>
+<li><p>packaging</p></li>
+<li><p>code style</p></li>
+<li><p>input data validation</p></li>
+<li><p>logging of data and the analysis</p></li>
+<li><p>continuous integration</p></li>
+<li><p>dependency management</p></li>
+</ul>
+</div>
+<div id="strategy-goals" class="section level2">
+<h2>
+<span class="header-section-number">9.2</span> Strategy Goals<a class="anchor" aria-label="anchor" href="#strategy-goals"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Government’s RAP strategy includes three goals:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>tools</strong> – ensure that analysts have the tools they need to implement RAP principles.</p></li>
 <li><p><strong>capability</strong> – give analysts the guidance, support and learning to be confident implementing the RAPs.</p></li>
@@ -105,12 +147,12 @@
 </div>
 <div id="platforms-for-reproducible-analysis" class="section level2">
 <h2>
-<span class="header-section-number">9.2</span> Platforms for Reproducible Analysis<a class="anchor" aria-label="anchor" href="#platforms-for-reproducible-analysis"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.3</span> Platforms for Reproducible Analysis<a class="anchor" aria-label="anchor" href="#platforms-for-reproducible-analysis"><i class="fas fa-link"></i></a>
 </h2>
 <p>The lists below are from the Government’s RAP strategy and include notes on current SCC status.</p>
 <div id="for-raps-that-meet-the-minimum-criteria" class="section level3">
 <h3>
-<span class="header-section-number">9.2.1</span> For RAPs that meet the minimum criteria<a class="anchor" aria-label="anchor" href="#for-raps-that-meet-the-minimum-criteria"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.3.1</span> For RAPs that meet the minimum criteria<a class="anchor" aria-label="anchor" href="#for-raps-that-meet-the-minimum-criteria"><i class="fas fa-link"></i></a>
 </h3>
 <p>version control software, that is, git<br>
 open-source programming languages and flexibility to add more – Python, R, Julia, JavaScript, C++, Java/Scala and so on<br>
@@ -122,7 +164,7 @@ integrated development environments suitable for the available languages – RSt
 </div>
 <div id="for-further-development-of-raps" class="section level3">
 <h3>
-<span class="header-section-number">9.2.2</span> For further development of RAPs<a class="anchor" aria-label="anchor" href="#for-further-development-of-raps"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.3.2</span> For further development of RAPs<a class="anchor" aria-label="anchor" href="#for-further-development-of-raps"><i class="fas fa-link"></i></a>
 </h3>
 <p>source control platforms, for example, GitHub, GitLab or BitBucket<br>
 continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse<br>
@@ -137,13 +179,13 @@ reproducible infrastructure and containers, for example, docker</p>
 </div>
 <div id="mlops" class="section level2">
 <h2>
-<span class="header-section-number">9.3</span> MLOPs<a class="anchor" aria-label="anchor" href="#mlops"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4</span> MLOPs<a class="anchor" aria-label="anchor" href="#mlops"><i class="fas fa-link"></i></a>
 </h2>
 <p>Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis outputs.</p>
 </div>
 <div id="further-resources-5" class="section level2">
 <h2>
-<span class="header-section-number">9.4</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP)</a>, Government Analysis Function</p>
 <p><a href="https://www.udemy.com/course/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP) using R</a>, 7hr free Udemy course by Matthew Gregory</p>
@@ -163,15 +205,16 @@ reproducible infrastructure and containers, for example, docker</p>
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#rap"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
-<li><a class="nav-link" href="#government-strategy"><span class="header-section-number">9.1</span> Government Strategy</a></li>
+<li><a class="nav-link" href="#principles"><span class="header-section-number">9.1</span> Principles</a></li>
+<li><a class="nav-link" href="#strategy-goals"><span class="header-section-number">9.2</span> Strategy Goals</a></li>
 <li>
-<a class="nav-link" href="#platforms-for-reproducible-analysis"><span class="header-section-number">9.2</span> Platforms for Reproducible Analysis</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#for-raps-that-meet-the-minimum-criteria"><span class="header-section-number">9.2.1</span> For RAPs that meet the minimum criteria</a></li>
-<li><a class="nav-link" href="#for-further-development-of-raps"><span class="header-section-number">9.2.2</span> For further development of RAPs</a></li>
+<a class="nav-link" href="#platforms-for-reproducible-analysis"><span class="header-section-number">9.3</span> Platforms for Reproducible Analysis</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#for-raps-that-meet-the-minimum-criteria"><span class="header-section-number">9.3.1</span> For RAPs that meet the minimum criteria</a></li>
+<li><a class="nav-link" href="#for-further-development-of-raps"><span class="header-section-number">9.3.2</span> For further development of RAPs</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#mlops"><span class="header-section-number">9.3</span> MLOPs</a></li>
-<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.4</span> Further resources</a></li>
+<li><a class="nav-link" href="#mlops"><span class="header-section-number">9.4</span> MLOPs</a></li>
+<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.5</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">

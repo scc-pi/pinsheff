@@ -76,7 +76,8 @@ other-features
 git-rstudio
 further-resources-4
 rap
-government-strategy
+principles
+strategy-goals
 platforms-for-reproducible-analysis
 for-raps-that-meet-the-minimum-criteria
 for-further-development-of-raps
