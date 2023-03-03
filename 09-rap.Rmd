@@ -54,3 +54,4 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 [Reproducible Analytical Pipelines - Master’s of Data Science](https://rap4mads.eu/), by Bruno Rodrigues  
 
 Release August 2023 - [Open Source MLOPs](https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&keywords=Open+Source+MLOPs&qid=1677872361&s=books&sprefix=open+source+mlops%2Cstripbooks%2C172&sr=1-1), by Matthew Upson  
+
