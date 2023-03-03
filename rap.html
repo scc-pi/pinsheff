@@ -92,11 +92,64 @@
 <blockquote>
 <p>Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.</p>
 </blockquote>
+<div id="government-strategy" class="section level2">
+<h2>
+<span class="header-section-number">9.1</span> Government Strategy<a class="anchor" aria-label="anchor" href="#government-strategy"><i class="fas fa-link"></i></a>
+</h2>
+<p>RAPs have evolved from the UK Govenment’s Analysis Function. Their 2022 <a href="https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/">Reproducible Analytical Pipelines (RAP) strategy</a> includes three goals:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>tools</strong> – ensure that analysts have the tools they need to implement RAP principles.</p></li>
+<li><p><strong>capability</strong> – give analysts the guidance, support and learning to be confident implementing the RAPs.</p></li>
+<li><p><strong>culture</strong> – create a culture of robust analysis where the RAP principles are the default for analysis, leaders engage with managing analysis as software, and users of analysis understand why this is important.</p></li>
+</ol>
+</div>
+<div id="platforms-for-reproducible-analysis" class="section level2">
+<h2>
+<span class="header-section-number">9.2</span> Platforms for Reproducible Analysis<a class="anchor" aria-label="anchor" href="#platforms-for-reproducible-analysis"><i class="fas fa-link"></i></a>
+</h2>
+<p>The lists below are from the Government’s RAP strategy and include notes on current SCC status.</p>
+<div id="for-raps-that-meet-the-minimum-criteria" class="section level3">
+<h3>
+<span class="header-section-number">9.2.1</span> For RAPs that meet the minimum criteria<a class="anchor" aria-label="anchor" href="#for-raps-that-meet-the-minimum-criteria"><i class="fas fa-link"></i></a>
+</h3>
+<p>version control software, that is, git<br>
+open-source programming languages and flexibility to add more – Python, R, Julia, JavaScript, C++, Java/Scala and so on<br>
+package and environment managers for each of the available languages<br>
+packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory<br>
+individual storage, for example, home directory<br>
+shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically<br>
+integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on</p>
+</div>
+<div id="for-further-development-of-raps" class="section level3">
+<h3>
+<span class="header-section-number">9.2.2</span> For further development of RAPs<a class="anchor" aria-label="anchor" href="#for-further-development-of-raps"><i class="fas fa-link"></i></a>
+</h3>
+<p>source control platforms, for example, GitHub, GitLab or BitBucket<br>
+continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse<br>
+make-like tools for reproducible workflows, for example, make<br>
+relational database management software, for example, PostgreSQL, that is available to users<br>
+orchestration systems for pipelines and workflows, for example, airflow, NiFi<br>
+internal-facing servers to host html-rendered documentation<br>
+external-facing servers with authentication to host end-products such as web applications or APIs<br>
+big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability<br>
+reproducible infrastructure and containers, for example, docker</p>
+</div>
+</div>
+<div id="mlops" class="section level2">
+<h2>
+<span class="header-section-number">9.3</span> MLOPs<a class="anchor" aria-label="anchor" href="#mlops"><i class="fas fa-link"></i></a>
+</h2>
+<p>Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis outputs.</p>
+</div>
 <div id="further-resources-5" class="section level2">
 <h2>
-<span class="header-section-number">9.1</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP)</a>, Government Analysis Function</p>
+<p><a href="https://www.udemy.com/course/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP) using R</a>, 7hr free Udemy course by Matthew Gregory</p>
+<p><a href="https://ukgovdatascience.github.io/rap_companion/">RAP Companion</a>, by Matthew Gregory &amp; Matthew Upson</p>
+<p><a href="https://rap4mads.eu/">Reproducible Analytical Pipelines - Master’s of Data Science</a>, by Bruno Rodrigues</p>
+<p>Release August 2023 - <a href="https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&amp;keywords=Open+Source+MLOPs&amp;qid=1677872361&amp;s=books&amp;sprefix=open+source+mlops%2Cstripbooks%2C172&amp;sr=1-1">Open Source MLOPs</a>, by Matthew Upson</p>
 
 </div>
 </div>
@@ -110,7 +163,15 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#rap"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
-<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.1</span> Further resources</a></li>
+<li><a class="nav-link" href="#government-strategy"><span class="header-section-number">9.1</span> Government Strategy</a></li>
+<li>
+<a class="nav-link" href="#platforms-for-reproducible-analysis"><span class="header-section-number">9.2</span> Platforms for Reproducible Analysis</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#for-raps-that-meet-the-minimum-criteria"><span class="header-section-number">9.2.1</span> For RAPs that meet the minimum criteria</a></li>
+<li><a class="nav-link" href="#for-further-development-of-raps"><span class="header-section-number">9.2.2</span> For further development of RAPs</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#mlops"><span class="header-section-number">9.3</span> MLOPs</a></li>
+<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.4</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
