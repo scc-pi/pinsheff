@@ -2,7 +2,56 @@
 
 > Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
 
+## Government Strategy  
+
+RAPs have evolved from the UK Govenment's Analysis Function. Their 2022 [Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) includes three goals:  
+
+1. **tools** – ensure that analysts have the tools they need to implement RAP principles.  
+
+1. **capability** – give analysts the guidance, support and learning to be confident implementing the RAPs.  
+
+1. **culture** – create a culture of robust analysis where the RAP principles are the default for analysis, leaders engage with managing analysis as software, and users of analysis understand why this is important.
+
+
+## Platforms for Reproducible Analysis
+
+The lists below are from the Government's RAP strategy and include notes on current SCC status.  
+
+### For RAPs that meet the minimum criteria  
+
+version control software, that is, git  
+open-source programming languages and flexibility to add more – Python, R, Julia, JavaScript, C++, Java/Scala and so on  
+package and environment managers for each of the available languages  
+packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory  
+individual storage, for example, home directory  
+shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically  
+integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on  
+
+### For further development of RAPs  
+
+source control platforms, for example, GitHub, GitLab or BitBucket  
+continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse  
+make-like tools for reproducible workflows, for example, make  
+relational database management software, for example, PostgreSQL, that is available to users  
+orchestration systems for pipelines and workflows, for example, airflow, NiFi  
+internal-facing servers to host html-rendered documentation  
+external-facing servers with authentication to host end-products such as web applications or APIs  
+big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability  
+reproducible infrastructure and containers, for example, docker  
+
+## MLOPs
+
+Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis outputs.   
+
 ## Further resources
 
-[Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function
+[Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function  
+
+[Reproducible Analytical Pipelines (RAP) using R](https://www.udemy.com/course/reproducible-analytical-pipelines/), 7hr free Udemy course by Matthew Gregory  
+
+[RAP Companion](https://ukgovdatascience.github.io/rap_companion/), by Matthew Gregory & Matthew Upson  
+
+[Reproducible Analytical Pipelines - Master’s of Data Science](https://rap4mads.eu/), by Bruno Rodrigues  
+
+Release August 2023 - [Open Source MLOPs](https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&keywords=Open+Source+MLOPs&qid=1677872361&s=books&sprefix=open+source+mlops%2Cstripbooks%2C172&sr=1-1), by Matthew Upson  
 
