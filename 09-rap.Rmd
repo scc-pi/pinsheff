@@ -1,10 +1,73 @@
 # Reproducible Analytical Pipelines {#rap}
 
-> Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
+## Principles
 
-## Government Strategy  
+RAPs have evolved from the UK Govenment's Analysis Function and their 2022 [Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) sets out the following principles.
 
-RAPs have evolved from the UK Govenment's Analysis Function. Their 2022 [Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) includes three goals:  
+Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
+
+RAPs increase the efficiency of statistical and analytical processes, delivering value. Reproducibility and auditability increase trust in the statistics. The pipelines are easier to quality assure than manual processes, leading to higher quality.
+
+A RAP will:
+
+* improve the quality of the analysis  
+
+* increase trust in the analysis by producers, their managers and users  
+
+* create a more efficient process  
+
+* improve business continuity and knowledge management  
+
+To achieve these benefits, at a minimum a RAP must:
+
+* minimise manual steps, for example copy-paste, point-click, or drag-drop operation; where it is necessary to include a manual step in the process this must be documented as described in the following bullet points  
+
+* be built using open-source software, which is available to anyone, preferably R or Python  
+
+* deepen technical and quality assurance processes with peer review to ensure that the process is reproducible and that the requirements described in the following bullet points have been met  
+
+* guarantee an audit trail using version control software, preferably Git
+be open to anyone – this can be allowed most easily using file and code sharing platforms  
+
+* follow existing good practice for quality assurance  
+
+* contain well-commented code and have documentation embedded and version controlled within the product, rather than saved elsewhere
+
+Notes:
+
+1. There may be restrictions, such as access to databases, which stop analysis producers building a RAP for their full end-to-end process. In this case, the previously described requirements apply to the selected part of the process.  
+
+1. There may be restrictions, such as sensitive or confidential content, which stop analysis producers from sharing their RAP publicly. In this case, it may be possible to share the RAP within a department or organisation instead.  
+
+1. It is recommended that where possible a RAP should be built collaboratively – this will improve the quality of the final product and helps to allow knowledge sharing.  
+
+There is no specific tool that is required to build a RAP, but both R and Python provide the power and flexibility to carry out end-to-end analytical processes, from data source to final presentation.
+
+Once the minimum RAP has been implemented, statisticians and analysts should attempt to further develop their pipeline using:
+
+* functions or code modularity  
+
+* unit testing of functions  
+
+* error handling for functions  
+
+* documentation of functions  
+
+* packaging  
+
+* code style  
+
+* input data validation  
+
+* logging of data and the analysis  
+
+* continuous integration  
+
+* dependency management  
+
+## Strategy Goals  
+
+The Government's RAP strategy includes three goals:  
 
 1. **tools** – ensure that analysts have the tools they need to implement RAP principles.  
 
