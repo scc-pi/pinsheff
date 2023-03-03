@@ -75,10 +75,12 @@ forking-pull-requests
 other-features
 git-rstudio
 further-resources-4
+rap
+further-resources-5
 databases
 oscar
 corporate-spatial-database
-further-resources-5
+further-resources-6
 warehouse
 corporate-data-warehouse
 postgres
@@ -111,7 +113,7 @@ desktop-gis
 arcgis-desktop
 arcgis-pro
 qgis
-further-resources-6
+further-resources-7
 gis-with-python
 arcgis-notebooks
 arcgis-python-api
@@ -127,7 +129,7 @@ esri2sf
 r-arcgis-bridge
 leaflet
 rasters
-further-resources-7
+further-resources-8
 geocoding
 uprn
 postcodes

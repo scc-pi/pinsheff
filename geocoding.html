@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 17 Postcodes &amp; addresses | pinsheff</title>
+<title>Chapter 18 Postcodes &amp; addresses | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
 <meta name="generator" content="bookdown 0.32 with bs4_book()">
-<meta property="og:title" content="Chapter 17 Postcodes &amp; addresses | pinsheff">
+<meta property="og:title" content="Chapter 18 Postcodes &amp; addresses | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 17 Postcodes &amp; addresses | pinsheff">
+<meta name="twitter:title" content="Chapter 18 Postcodes &amp; addresses | pinsheff">
 <meta name="twitter:description" content="A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -60,22 +60,23 @@
 <li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="" href="functions-packages.html"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
 <li><a class="" href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="rap.html"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">9</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">10</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">11</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">12</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">10</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">11</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">12</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">13</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">13</span> Spatial data sources</a></li>
-<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">14</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">15</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">16</span> GIS with R</a></li>
-<li><a class="active" href="geocoding.html"><span class="header-section-number">17</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">14</span> Spatial data sources</a></li>
+<li><a class="" href="gis-with-web-desktop-tools.html"><span class="header-section-number">15</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">16</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">17</span> GIS with R</a></li>
+<li><a class="active" href="geocoding.html"><span class="header-section-number">18</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">18</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">19</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -86,18 +87,18 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="geocoding" class="section level1">
 <h1>
-<span class="header-section-number">17</span> Postcodes &amp; addresses<a class="anchor" aria-label="anchor" href="#geocoding"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18</span> Postcodes &amp; addresses<a class="anchor" aria-label="anchor" href="#geocoding"><i class="fas fa-link"></i></a>
 </h1>
 <p>A common use case in our work is to do some spatial analysis on a dataset with addresses. For example, produce a map of certain incidents over the last year, or summarise the number of incidents by Ward.</p>
 <div id="uprn" class="section level2">
 <h2>
-<span class="header-section-number">17.1</span> UPRN<a class="anchor" aria-label="anchor" href="#uprn"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1</span> UPRN<a class="anchor" aria-label="anchor" href="#uprn"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO</em></p>
 </div>
 <div id="postcodes" class="section level2">
 <h2>
-<span class="header-section-number">17.2</span> Postcodes<a class="anchor" aria-label="anchor" href="#postcodes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2</span> Postcodes<a class="anchor" aria-label="anchor" href="#postcodes"><i class="fas fa-link"></i></a>
 </h2>
 <p>If there’s no UPRN, getting a location via the postcode is usually the easiest option. It’s not as accurate as a UPRN or a full address, but often it’s accurate enough for what’s required.</p>
 <p>Below is an example of using our <code>add_pcd_vars()</code> function that builds on the <a href="https://docs.ropensci.org/PostcodesioR/">PostcodesioR</a> package, which itself is a wrapper for the <a href="https://postcodes.io/">postcodes.io</a> API. You pass it a data frame with a postcode column and it returns the data frame with new columns based on the postcode.</p>
@@ -166,27 +167,27 @@
 </table></div>
 <div id="pas-postcode-lookup" class="section level3">
 <h3>
-<span class="header-section-number">17.2.1</span> PAS postcode lookup<a class="anchor" aria-label="anchor" href="#pas-postcode-lookup"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2.1</span> PAS postcode lookup<a class="anchor" aria-label="anchor" href="#pas-postcode-lookup"><i class="fas fa-link"></i></a>
 </h3>
 <p>PAS, the Performance &amp; Analysis Service in the People Porfolio, maintains a postcode lookup table that performs the same role as the <code>add_pcd_vars()</code> function.</p>
 <p><em>TODO: Does it also include Sheffield specific variables e.g. which of the 100 neighbourhoods is the postcode in?</em></p>
 </div>
 <div id="postcode-boundaries" class="section level3">
 <h3>
-<span class="header-section-number">17.2.2</span> Postcode boundaries<a class="anchor" aria-label="anchor" href="#postcode-boundaries"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2.2</span> Postcode boundaries<a class="anchor" aria-label="anchor" href="#postcode-boundaries"><i class="fas fa-link"></i></a>
 </h3>
 <p><em>TODO:</em> <a href="https://longair.net/blog/2021/08/23/open-data-gb-postcode-unit-boundaries/">OPEN DATA GB POSTCODE UNIT BOUNDARIES</a></p>
 </div>
 <div id="split-postcodes" class="section level3">
 <h3>
-<span class="header-section-number">17.2.3</span> Split postcodes<a class="anchor" aria-label="anchor" href="#split-postcodes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2.3</span> Split postcodes<a class="anchor" aria-label="anchor" href="#split-postcodes"><i class="fas fa-link"></i></a>
 </h3>
 <p><em>TODO</em></p>
 </div>
 </div>
 <div id="addresses" class="section level2">
 <h2>
-<span class="header-section-number">17.3</span> Addresses<a class="anchor" aria-label="anchor" href="#addresses"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.3</span> Addresses<a class="anchor" aria-label="anchor" href="#addresses"><i class="fas fa-link"></i></a>
 </h2>
 <p>Anne Tetley has provided the following guidance (on Portal):</p>
 <ul>
@@ -211,27 +212,27 @@
 
 
   <div class="chapter-nav">
-<div class="prev"><a href="gis-with-r.html"><span class="header-section-number">16</span> GIS with R</a></div>
-<div class="next"><a href="other.html"><span class="header-section-number">18</span> Other</a></div>
+<div class="prev"><a href="gis-with-r.html"><span class="header-section-number">17</span> GIS with R</a></div>
+<div class="next"><a href="other.html"><span class="header-section-number">19</span> Other</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#geocoding"><span class="header-section-number">17</span> Postcodes &amp; addresses</a></li>
-<li><a class="nav-link" href="#uprn"><span class="header-section-number">17.1</span> UPRN</a></li>
+<li><a class="nav-link" href="#geocoding"><span class="header-section-number">18</span> Postcodes &amp; addresses</a></li>
+<li><a class="nav-link" href="#uprn"><span class="header-section-number">18.1</span> UPRN</a></li>
 <li>
-<a class="nav-link" href="#postcodes"><span class="header-section-number">17.2</span> Postcodes</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#pas-postcode-lookup"><span class="header-section-number">17.2.1</span> PAS postcode lookup</a></li>
-<li><a class="nav-link" href="#postcode-boundaries"><span class="header-section-number">17.2.2</span> Postcode boundaries</a></li>
-<li><a class="nav-link" href="#split-postcodes"><span class="header-section-number">17.2.3</span> Split postcodes</a></li>
+<a class="nav-link" href="#postcodes"><span class="header-section-number">18.2</span> Postcodes</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#pas-postcode-lookup"><span class="header-section-number">18.2.1</span> PAS postcode lookup</a></li>
+<li><a class="nav-link" href="#postcode-boundaries"><span class="header-section-number">18.2.2</span> Postcode boundaries</a></li>
+<li><a class="nav-link" href="#split-postcodes"><span class="header-section-number">18.2.3</span> Split postcodes</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#addresses"><span class="header-section-number">17.3</span> Addresses</a></li>
+<li><a class="nav-link" href="#addresses"><span class="header-section-number">18.3</span> Addresses</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/17-geocoding.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/17-geocoding.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/18-geocoding.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/18-geocoding.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -243,7 +244,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-08.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-03-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

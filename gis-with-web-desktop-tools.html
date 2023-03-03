@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 14 GIS with web &amp; desktop tools | pinsheff</title>
+<title>Chapter 15 GIS with web &amp; desktop tools | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the...">
 <meta name="generator" content="bookdown 0.32 with bs4_book()">
-<meta property="og:title" content="Chapter 14 GIS with web &amp; desktop tools | pinsheff">
+<meta property="og:title" content="Chapter 15 GIS with web &amp; desktop tools | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 14 GIS with web &amp; desktop tools | pinsheff">
+<meta name="twitter:title" content="Chapter 15 GIS with web &amp; desktop tools | pinsheff">
 <meta name="twitter:description" content="This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -60,22 +60,23 @@
 <li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="" href="functions-packages.html"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
 <li><a class="" href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
+<li><a class="" href="rap.html"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
 <li class="book-part">Accessing data</li>
-<li><a class="" href="databases.html"><span class="header-section-number">9</span> Council data</a></li>
-<li><a class="" href="warehouse.html"><span class="header-section-number">10</span> Databases, warehouses &amp; lakes</a></li>
-<li><a class="" href="api.html"><span class="header-section-number">11</span> APIs</a></li>
-<li><a class="" href="public-data.html"><span class="header-section-number">12</span> External data sources</a></li>
+<li><a class="" href="databases.html"><span class="header-section-number">10</span> Council data</a></li>
+<li><a class="" href="warehouse.html"><span class="header-section-number">11</span> Databases, warehouses &amp; lakes</a></li>
+<li><a class="" href="api.html"><span class="header-section-number">12</span> APIs</a></li>
+<li><a class="" href="public-data.html"><span class="header-section-number">13</span> External data sources</a></li>
 <li class="book-part">Spatial data</li>
-<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">13</span> Spatial data sources</a></li>
-<li><a class="active" href="gis-with-web-desktop-tools.html"><span class="header-section-number">14</span> GIS with web &amp; desktop tools</a></li>
-<li><a class="" href="gis-with-python.html"><span class="header-section-number">15</span> GIS with Python</a></li>
-<li><a class="" href="gis-with-r.html"><span class="header-section-number">16</span> GIS with R</a></li>
-<li><a class="" href="geocoding.html"><span class="header-section-number">17</span> Postcodes &amp; addresses</a></li>
+<li><a class="" href="spatial-data-sources.html"><span class="header-section-number">14</span> Spatial data sources</a></li>
+<li><a class="active" href="gis-with-web-desktop-tools.html"><span class="header-section-number">15</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="" href="gis-with-python.html"><span class="header-section-number">16</span> GIS with Python</a></li>
+<li><a class="" href="gis-with-r.html"><span class="header-section-number">17</span> GIS with R</a></li>
+<li><a class="" href="geocoding.html"><span class="header-section-number">18</span> Postcodes &amp; addresses</a></li>
 <li class="book-part">ETL</li>
 <li class="book-part">Statistical modelling</li>
 <li class="book-part">Visualisation</li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="other.html"><span class="header-section-number">18</span> Other</a></li>
+<li><a class="" href="other.html"><span class="header-section-number">19</span> Other</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -86,16 +87,16 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="gis-with-web-desktop-tools" class="section level1">
 <h1>
-<span class="header-section-number">14</span> GIS with web &amp; desktop tools<a class="anchor" aria-label="anchor" href="#gis-with-web-desktop-tools"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15</span> GIS with web &amp; desktop tools<a class="anchor" aria-label="anchor" href="#gis-with-web-desktop-tools"><i class="fas fa-link"></i></a>
 </h1>
 <p>This section is aimed at Council data analysts with little or no experience of spatial data and GIS. GIS has traditionally been the domain of specialists and this is especially true in the Council. However, the Council’s new web based GIS tools will open up GIS to a wider user base, with better opportunities for data analysts to make use of spatial data without being a GIS specialist.</p>
 <div id="web-maps-dashboards" class="section level2">
 <h2>
-<span class="header-section-number">14.1</span> Web maps &amp; dashboards<a class="anchor" aria-label="anchor" href="#web-maps-dashboards"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.1</span> Web maps &amp; dashboards<a class="anchor" aria-label="anchor" href="#web-maps-dashboards"><i class="fas fa-link"></i></a>
 </h2>
 <div id="arcgis" class="section level3">
 <h3>
-<span class="header-section-number">14.1.1</span> ArcGIS<a class="anchor" aria-label="anchor" href="#arcgis"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.1.1</span> ArcGIS<a class="anchor" aria-label="anchor" href="#arcgis"><i class="fas fa-link"></i></a>
 </h3>
 <p>The Council’s Portal and AGOL are the default home for our spatial data. Similarly, if you’re looking to not just extract spatial data, but to share it or share spatial analysis via a web map or dashboard, then the default tool is also the Council’s Portal and AGOL. To share content on Portal or AGOL you need a Creator license.</p>
 <p>Anne Tetley has provided the following guidance (on Portal) about creating content in Portal and AGOL:</p>
@@ -106,7 +107,7 @@
 </div>
 <div id="power-bi" class="section level3">
 <h3>
-<span class="header-section-number">14.1.2</span> Power BI<a class="anchor" aria-label="anchor" href="#power-bi"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.1.2</span> Power BI<a class="anchor" aria-label="anchor" href="#power-bi"><i class="fas fa-link"></i></a>
 </h3>
 <p>The GIS capabilities of Power BI do not match Portal or AGOL. However, if only a small proportion of the analysis you are sharing is spatial, then Power BI could be a good option. The ArcGIS Power BI integration tool is available to us. Anne Tetley has provided the following guidance (on Portal):</p>
 <ul>
@@ -116,65 +117,65 @@
 </div>
 <div id="desktop-gis" class="section level2">
 <h2>
-<span class="header-section-number">14.2</span> Desktop GIS<a class="anchor" aria-label="anchor" href="#desktop-gis"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.2</span> Desktop GIS<a class="anchor" aria-label="anchor" href="#desktop-gis"><i class="fas fa-link"></i></a>
 </h2>
 <p>For some specialised spatial analysis a desktop GIS is best. However, as we move to sharing spatial information using web maps and dashboards, rather than static PDF maps, desktop GIS is increasingly a tool for GIS specialists.</p>
 <div id="arcgis-desktop" class="section level3">
 <h3>
-<span class="header-section-number">14.2.1</span> ArcGIS Desktop<a class="anchor" aria-label="anchor" href="#arcgis-desktop"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.2.1</span> ArcGIS Desktop<a class="anchor" aria-label="anchor" href="#arcgis-desktop"><i class="fas fa-link"></i></a>
 </h3>
 <p>For the last fifteen, twenty years, the Council’s spatial analysis has largely been done using ArcGIS Desktop from ESRI. This is a powerful piece of software, but for the majority of GIS uses, it’s a sledge hammer to crack a nut. If you’ve not done spatial analysis before, the recommendation is to first try our new, far more intuitive, ArcGIS web GIS tools i.e. our Portal and AGOL.</p>
 <p>ESRI have stopped development of ArcGIS Desktop, though it won’t be retired for some years yet. New functionality will only be added to ArcGIS Pro from now on.</p>
 </div>
 <div id="arcgis-pro" class="section level3">
 <h3>
-<span class="header-section-number">14.2.2</span> ArcGIS Pro<a class="anchor" aria-label="anchor" href="#arcgis-pro"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.2.2</span> ArcGIS Pro<a class="anchor" aria-label="anchor" href="#arcgis-pro"><i class="fas fa-link"></i></a>
 </h3>
 <p>ArcGIS Pro is another desktop GIS application from ESRI. It isn’t as old as ArcGIS Desktop, so has less legacy issues. ArcGIS Pro is 64-bit and is more closely integrated with the ArcGIS Enterprise (Portal) and AGOL. However, the single biggest difference is that the hundreds of nested menu driven options are located in different places to ArcGIS Desktop!</p>
 <p>The Council has an ArcGIS Pro license for every purchased ArcGIS Desktop license.</p>
 </div>
 <div id="qgis" class="section level3">
 <h3>
-<span class="header-section-number">14.2.3</span> QGIS<a class="anchor" aria-label="anchor" href="#qgis"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.2.3</span> QGIS<a class="anchor" aria-label="anchor" href="#qgis"><i class="fas fa-link"></i></a>
 </h3>
 <p>QGIS is an open source alternative to ArcGIS Desktop and ArcGIS Pro.</p>
 </div>
 </div>
-<div id="further-resources-6" class="section level2">
+<div id="further-resources-7" class="section level2">
 <h2>
-<span class="header-section-number">14.3</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.3</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-7"><i class="fas fa-link"></i></a>
 </h2>
 <p><em>TODO - cross-ref database chapter and spatial database content</em></p>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="spatial-data-sources.html"><span class="header-section-number">13</span> Spatial data sources</a></div>
-<div class="next"><a href="gis-with-python.html"><span class="header-section-number">15</span> GIS with Python</a></div>
+<div class="prev"><a href="spatial-data-sources.html"><span class="header-section-number">14</span> Spatial data sources</a></div>
+<div class="next"><a href="gis-with-python.html"><span class="header-section-number">16</span> GIS with Python</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#gis-with-web-desktop-tools"><span class="header-section-number">14</span> GIS with web &amp; desktop tools</a></li>
+<li><a class="nav-link" href="#gis-with-web-desktop-tools"><span class="header-section-number">15</span> GIS with web &amp; desktop tools</a></li>
 <li>
-<a class="nav-link" href="#web-maps-dashboards"><span class="header-section-number">14.1</span> Web maps &amp; dashboards</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#arcgis"><span class="header-section-number">14.1.1</span> ArcGIS</a></li>
-<li><a class="nav-link" href="#power-bi"><span class="header-section-number">14.1.2</span> Power BI</a></li>
+<a class="nav-link" href="#web-maps-dashboards"><span class="header-section-number">15.1</span> Web maps &amp; dashboards</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#arcgis"><span class="header-section-number">15.1.1</span> ArcGIS</a></li>
+<li><a class="nav-link" href="#power-bi"><span class="header-section-number">15.1.2</span> Power BI</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#desktop-gis"><span class="header-section-number">14.2</span> Desktop GIS</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#arcgis-desktop"><span class="header-section-number">14.2.1</span> ArcGIS Desktop</a></li>
-<li><a class="nav-link" href="#arcgis-pro"><span class="header-section-number">14.2.2</span> ArcGIS Pro</a></li>
-<li><a class="nav-link" href="#qgis"><span class="header-section-number">14.2.3</span> QGIS</a></li>
+<a class="nav-link" href="#desktop-gis"><span class="header-section-number">15.2</span> Desktop GIS</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#arcgis-desktop"><span class="header-section-number">15.2.1</span> ArcGIS Desktop</a></li>
+<li><a class="nav-link" href="#arcgis-pro"><span class="header-section-number">15.2.2</span> ArcGIS Pro</a></li>
+<li><a class="nav-link" href="#qgis"><span class="header-section-number">15.2.3</span> QGIS</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#further-resources-6"><span class="header-section-number">14.3</span> Further resources</a></li>
+<li><a class="nav-link" href="#further-resources-7"><span class="header-section-number">15.3</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/14-gis.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/14-gis.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/scc-pi/notes/blob/master/15-gis.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/scc-pi/notes/edit/master/15-gis.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -186,7 +187,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-02-08.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-03-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
