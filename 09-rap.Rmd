@@ -1,0 +1,8 @@
+# Reproducible Analytical Pipelines {#rap}
+
+> Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
+
+## Further resources
+
+[Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function
+

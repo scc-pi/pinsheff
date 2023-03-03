@@ -54,7 +54,7 @@ When using AlwaysOn VPN comment out the settings:
 # https_proxy_user=lp41455:password123
 ```
 
-These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having change this manually.  
+These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having to change this manually.  
 
 To test it's working you could try the following:  
 
