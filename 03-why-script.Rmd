@@ -30,7 +30,7 @@ Probably the single main advantage of scripting, is what was touched upon at the
 
 ## Reproducibility
 
-Scripting is a key component of RAP (Reproducible Analytical Pipelines), which is covered in a separate [chapter on RAP](#rap).
+Scripting is a key component of RAP (Reproducible Analytical Pipelines), which is covered in a separate chapter on RAP.
 
 At the heart of RAP is QA (Quality Assurance) and reducing manual steps in an analytical process. Such "automation" of a process is commonly motivated by time savings. However, with RAP the motivation is because documenting manual steps is difficult and they are more prone to error. The [Reinhart-Rogoff error](https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646) is a good example.
 
