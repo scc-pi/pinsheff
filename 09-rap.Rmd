@@ -82,29 +82,43 @@ The lists below are from the Government's RAP strategy and include notes on curr
 
 ### For RAPs that meet the minimum criteria  
 
-version control software, that is, git  
-open-source programming languages and flexibility to add more – Python, R, Julia, JavaScript, C++, Java/Scala and so on  
-package and environment managers for each of the available languages  
-packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory  
-individual storage, for example, home directory  
-shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically  
-integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on  
+1. version control software, that is, git - *BI Team laptops*  
+
+1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *BI Team laptops & OSCAR desktop*  
+
+1. package and environment managers for each of the available languages - *don't have*
+
+1. packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory   - *BI Team laptops & OSCAR desktop*
+
+1. individual storage, for example, home directory  - *OneDrive - Sheffield City Council* 
+
+1. shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically  - *don't have*  
+
+1. integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on - *BI Team laptops & OSCAR desktop*  
 
 ### For further development of RAPs  
 
-source control platforms, for example, GitHub, GitLab or BitBucket  
-continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse  
-make-like tools for reproducible workflows, for example, make  
-relational database management software, for example, PostgreSQL, that is available to users  
-orchestration systems for pipelines and workflows, for example, airflow, NiFi  
-internal-facing servers to host html-rendered documentation  
-external-facing servers with authentication to host end-products such as web applications or APIs  
-big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability  
-reproducible infrastructure and containers, for example, docker  
+1. source control platforms, for example, GitHub, GitLab or BitBucket - *trialing GitHub organisation [github.com/scc-pi](github.com/scc-pi)*  
+
+1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions*  
+
+1. make-like tools for reproducible workflows, for example, make - *identified [targets](https://books.ropensci.org/targets/) r package but not yet tested it*  
+
+1. relational database management software, for example, PostgreSQL, that is available to users - *corporate solution being investigated and currently there's limited DBMS access available via OSCAR desktop*  
+
+1. orchestration systems for pipelines and workflows, for example, airflow, NiFi - *don't have*  
+
+1. internal-facing servers to host html-rendered documentation - *requested by refused*  
+
+1. external-facing servers with authentication to host end-products such as web applications or APIs - *don't have*    
+
+1. big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability - *don't have*    
+
+1. reproducible infrastructure and containers, for example, docker *docker on BI Team laptops but not tested yet*   
 
 ## MLOPs
 
-Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis outputs.   
+Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis output.   
 
 ## Further resources
 
