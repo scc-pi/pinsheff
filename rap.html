@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 9 Reproducible Analytical Pipelines | pinsheff</title>
+<title>Chapter 9 RAP | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <meta name="generator" content="bookdown 0.32 with bs4_book()">
-<meta property="og:title" content="Chapter 9 Reproducible Analytical Pipelines | pinsheff">
+<meta property="og:title" content="Chapter 9 RAP | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 9 Reproducible Analytical Pipelines | pinsheff">
+<meta name="twitter:title" content="Chapter 9 RAP | pinsheff">
 <meta name="twitter:description" content="9.1 Principles RAPs have evolved from the UK Govenment’s Analysis Function and their 2022 Reproducible Analytical Pipelines (RAP) strategy sets out the following principles. Reproducible...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
 <li><a class="" href="python.html"><span class="header-section-number">6</span> Python</a></li>
 <li><a class="" href="functions-packages.html"><span class="header-section-number">7</span> Functions &amp; packages</a></li>
 <li><a class="" href="github.html"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
-<li><a class="active" href="rap.html"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
+<li><a class="active" href="rap.html"><span class="header-section-number">9</span> RAP</a></li>
 <li class="book-part">Accessing data</li>
 <li><a class="" href="databases.html"><span class="header-section-number">10</span> Council data</a></li>
 <li><a class="" href="warehouse.html"><span class="header-section-number">11</span> Databases, warehouses &amp; lakes</a></li>
@@ -87,7 +87,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rap" class="section level1">
 <h1>
-<span class="header-section-number">9</span> Reproducible Analytical Pipelines<a class="anchor" aria-label="anchor" href="#rap"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9</span> RAP<a class="anchor" aria-label="anchor" href="#rap"><i class="fas fa-link"></i></a>
 </h1>
 <div id="principles" class="section level2">
 <h2>
@@ -162,7 +162,7 @@ be open to anyone – this can be allowed most easily using file and code sharin
 </h3>
 <ol style="list-style-type: decimal">
 <li><p>version control software, that is, git - <em>git on BI Team laptops</em></p></li>
-<li><p>open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - <em>R &amp; Python BI Team laptops, R on OSCAR desktop</em><br></p></li>
+<li><p>open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - <em>R &amp; Python on BI Team laptops, R on OSCAR desktop</em><br></p></li>
 <li><p>package and environment managers for each of the available languages - <em>should have tested <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> for R by now, if extending SCC GIS is needed the current version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments</em></p></li>
 <li><p>packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory - <em>BI Team laptops &amp; OSCAR desktop</em></p></li>
 <li><p>individual storage, for example, home directory - <em>SCC OneDrive</em></p></li>
@@ -170,7 +170,7 @@ be open to anyone – this can be allowed most easily using file and code sharin
 <li><p>integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on - <em>BI Team laptops &amp; OSCAR desktop</em></p></li>
 </ol>
 <blockquote>
-<p>In summary, some SCC data analysts have access to all of these minimum criteria with the exception of shared storage e.g. Azure Blob storage.</p>
+<p><em>In summary, with the exception of shared storage e.g. Azure Blob storage, some SCC data analysts have access to all of these minimum criteria for RAPs.</em></p>
 </blockquote>
 </div>
 <div id="for-further-development-of-raps" class="section level3">
@@ -179,8 +179,8 @@ be open to anyone – this can be allowed most easily using file and code sharin
 </h3>
 <ol style="list-style-type: decimal">
 <li><p>source control platforms, for example, GitHub, GitLab or BitBucket - <em>trialing GitHub organisation <a href="github.com/scc-pi">github.com/scc-pi</a></em></p></li>
-<li><p>continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - <em>trialing GitHub Actions but CI limited by the existing security considerations</em></p></li>
-<li><p>make-like tools for reproducible workflows, for example, make - <em>identified the potential value of <a href="https://books.ropensci.org/targets/">targets</a> r package, but not yet tested it</em></p></li>
+<li><p>continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - <em>trialing GitHub Actions but CI limited by the current GitHub security considerations</em></p></li>
+<li><p>make-like tools for reproducible workflows, for example, make - <em>identified the potential value of <a href="https://books.ropensci.org/targets/">targets</a> r package, but not tested yet</em></p></li>
 <li><p>relational database management software, for example, PostgreSQL, that is available to users - <em>corporate solution being investigated and currently there’s limited DBMS access available via OSCAR desktop</em></p></li>
 <li><p>orchestration systems for pipelines and workflows, for example, airflow, NiFi - <em>don’t have</em></p></li>
 <li><p>internal-facing servers to host html-rendered documentation - <em>request denied</em></p></li>
@@ -189,7 +189,7 @@ be open to anyone – this can be allowed most easily using file and code sharin
 <li><p>reproducible infrastructure and containers, for example, docker - <em>docker on BI Team laptops but not tested yet</em></p></li>
 </ol>
 <blockquote>
-<p>In summary, SCC data analysts don’t have access to most of the platforms needed for further development of RAPs. Docker and targets could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include CI and server requirements. No consideration yet of orchestration systems or big data tools.</p>
+<p><em>In summary, SCC data analysts don’t have access to most of the platforms needed for further development of RAPs. Docker and targets are accessible and could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include the CI and server platform items. No consideration yet of orchestration systems or big data tools.</em></p>
 </blockquote>
 </div>
 </div>
@@ -220,7 +220,7 @@ be open to anyone – this can be allowed most easily using file and code sharin
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#rap"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
+<li><a class="nav-link" href="#rap"><span class="header-section-number">9</span> RAP</a></li>
 <li><a class="nav-link" href="#principles"><span class="header-section-number">9.1</span> Principles</a></li>
 <li><a class="nav-link" href="#strategy-goals"><span class="header-section-number">9.2</span> Strategy Goals</a></li>
 <li><a class="nav-link" href="#how-could-rap-sit-within-scc-data-analysis"><span class="header-section-number">9.3</span> How could RAP sit within SCC data analysis?</a></li>
