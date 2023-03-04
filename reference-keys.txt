@@ -78,6 +78,7 @@ further-resources-4
 rap
 principles
 strategy-goals
+how-could-rap-sit-within-scc-data-analysis
 platforms-for-reproducible-analysis
 for-raps-that-meet-the-minimum-criteria
 for-further-development-of-raps

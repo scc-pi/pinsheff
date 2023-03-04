@@ -145,51 +145,63 @@ be open to anyone – this can be allowed most easily using file and code sharin
 <li><p><strong>culture</strong> – create a culture of robust analysis where the RAP principles are the default for analysis, leaders engage with managing analysis as software, and users of analysis understand why this is important.</p></li>
 </ol>
 </div>
+<div id="how-could-rap-sit-within-scc-data-analysis" class="section level2">
+<h2>
+<span class="header-section-number">9.3</span> How could RAP sit within SCC data analysis?<a class="anchor" aria-label="anchor" href="#how-could-rap-sit-within-scc-data-analysis"><i class="fas fa-link"></i></a>
+</h2>
+<p><em>TODO</em></p>
+</div>
 <div id="platforms-for-reproducible-analysis" class="section level2">
 <h2>
-<span class="header-section-number">9.3</span> Platforms for Reproducible Analysis<a class="anchor" aria-label="anchor" href="#platforms-for-reproducible-analysis"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4</span> Platforms for Reproducible Analysis<a class="anchor" aria-label="anchor" href="#platforms-for-reproducible-analysis"><i class="fas fa-link"></i></a>
 </h2>
-<p>The lists below are from the Government’s RAP strategy and include notes on current SCC status.</p>
+<p>The lists below are from the Government’s RAP strategy, to which we’ve added <em>notes on current SCC status</em>.</p>
 <div id="for-raps-that-meet-the-minimum-criteria" class="section level3">
 <h3>
-<span class="header-section-number">9.3.1</span> For RAPs that meet the minimum criteria<a class="anchor" aria-label="anchor" href="#for-raps-that-meet-the-minimum-criteria"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4.1</span> For RAPs that meet the minimum criteria<a class="anchor" aria-label="anchor" href="#for-raps-that-meet-the-minimum-criteria"><i class="fas fa-link"></i></a>
 </h3>
 <ol style="list-style-type: decimal">
-<li><p>version control software, that is, git - <em>BI Team laptops</em></p></li>
-<li><p>open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - <em>BI Team laptops &amp; OSCAR desktop</em></p></li>
-<li><p>package and environment managers for each of the available languages - <em>don’t have</em></p></li>
+<li><p>version control software, that is, git - <em>git on BI Team laptops</em></p></li>
+<li><p>open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - <em>R &amp; Python BI Team laptops, R on OSCAR desktop</em><br></p></li>
+<li><p>package and environment managers for each of the available languages - <em>should have tested <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> for R by now, if extending SCC GIS is needed the current version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments</em></p></li>
 <li><p>packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory - <em>BI Team laptops &amp; OSCAR desktop</em></p></li>
-<li><p>individual storage, for example, home directory - <em>OneDrive - Sheffield City Council</em></p></li>
-<li><p>shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically - <em>don’t have</em></p></li>
+<li><p>individual storage, for example, home directory - <em>SCC OneDrive</em></p></li>
+<li><p>shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically - <em>don’t have, should we look at Azure Blob storage?</em></p></li>
 <li><p>integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on - <em>BI Team laptops &amp; OSCAR desktop</em></p></li>
 </ol>
+<blockquote>
+<p>In summary, some SCC data analysts have access to all of these minimum criteria with the exception of shared storage e.g. Azure Blob storage.</p>
+</blockquote>
 </div>
 <div id="for-further-development-of-raps" class="section level3">
 <h3>
-<span class="header-section-number">9.3.2</span> For further development of RAPs<a class="anchor" aria-label="anchor" href="#for-further-development-of-raps"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4.2</span> For further development of RAPs<a class="anchor" aria-label="anchor" href="#for-further-development-of-raps"><i class="fas fa-link"></i></a>
 </h3>
 <ol style="list-style-type: decimal">
 <li><p>source control platforms, for example, GitHub, GitLab or BitBucket - <em>trialing GitHub organisation <a href="github.com/scc-pi">github.com/scc-pi</a></em></p></li>
-<li><p>continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - <em>trialing GitHub Actions</em></p></li>
-<li><p>make-like tools for reproducible workflows, for example, make - <em>identified <a href="https://books.ropensci.org/targets/">targets</a> r package but not yet tested it</em></p></li>
+<li><p>continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - <em>trialing GitHub Actions but CI limited by the existing security considerations</em></p></li>
+<li><p>make-like tools for reproducible workflows, for example, make - <em>identified the potential value of <a href="https://books.ropensci.org/targets/">targets</a> r package, but not yet tested it</em></p></li>
 <li><p>relational database management software, for example, PostgreSQL, that is available to users - <em>corporate solution being investigated and currently there’s limited DBMS access available via OSCAR desktop</em></p></li>
 <li><p>orchestration systems for pipelines and workflows, for example, airflow, NiFi - <em>don’t have</em></p></li>
-<li><p>internal-facing servers to host html-rendered documentation - <em>requested by refused</em></p></li>
+<li><p>internal-facing servers to host html-rendered documentation - <em>request denied</em></p></li>
 <li><p>external-facing servers with authentication to host end-products such as web applications or APIs - <em>don’t have</em></p></li>
 <li><p>big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability - <em>don’t have</em></p></li>
-<li><p>reproducible infrastructure and containers, for example, docker <em>docker on BI Team laptops but not tested yet</em></p></li>
+<li><p>reproducible infrastructure and containers, for example, docker - <em>docker on BI Team laptops but not tested yet</em></p></li>
 </ol>
+<blockquote>
+<p>In summary, SCC data analysts don’t have access to most of the platforms needed for further development of RAPs. Docker and targets could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include CI and server requirements. No consideration yet of orchestration systems or big data tools.</p>
+</blockquote>
 </div>
 </div>
 <div id="mlops" class="section level2">
 <h2>
-<span class="header-section-number">9.4</span> MLOPs<a class="anchor" aria-label="anchor" href="#mlops"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.5</span> MLOPs<a class="anchor" aria-label="anchor" href="#mlops"><i class="fas fa-link"></i></a>
 </h2>
 <p>Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis output.</p>
 </div>
 <div id="further-resources-5" class="section level2">
 <h2>
-<span class="header-section-number">9.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.6</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-5"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP)</a>, Government Analysis Function</p>
 <p><a href="https://www.udemy.com/course/reproducible-analytical-pipelines/">Reproducible Analytical Pipelines (RAP) using R</a>, 7hr free Udemy course by Matthew Gregory</p>
@@ -211,14 +223,15 @@ be open to anyone – this can be allowed most easily using file and code sharin
 <li><a class="nav-link" href="#rap"><span class="header-section-number">9</span> Reproducible Analytical Pipelines</a></li>
 <li><a class="nav-link" href="#principles"><span class="header-section-number">9.1</span> Principles</a></li>
 <li><a class="nav-link" href="#strategy-goals"><span class="header-section-number">9.2</span> Strategy Goals</a></li>
+<li><a class="nav-link" href="#how-could-rap-sit-within-scc-data-analysis"><span class="header-section-number">9.3</span> How could RAP sit within SCC data analysis?</a></li>
 <li>
-<a class="nav-link" href="#platforms-for-reproducible-analysis"><span class="header-section-number">9.3</span> Platforms for Reproducible Analysis</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#for-raps-that-meet-the-minimum-criteria"><span class="header-section-number">9.3.1</span> For RAPs that meet the minimum criteria</a></li>
-<li><a class="nav-link" href="#for-further-development-of-raps"><span class="header-section-number">9.3.2</span> For further development of RAPs</a></li>
+<a class="nav-link" href="#platforms-for-reproducible-analysis"><span class="header-section-number">9.4</span> Platforms for Reproducible Analysis</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#for-raps-that-meet-the-minimum-criteria"><span class="header-section-number">9.4.1</span> For RAPs that meet the minimum criteria</a></li>
+<li><a class="nav-link" href="#for-further-development-of-raps"><span class="header-section-number">9.4.2</span> For further development of RAPs</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#mlops"><span class="header-section-number">9.4</span> MLOPs</a></li>
-<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.5</span> Further resources</a></li>
+<li><a class="nav-link" href="#mlops"><span class="header-section-number">9.5</span> MLOPs</a></li>
+<li><a class="nav-link" href="#further-resources-5"><span class="header-section-number">9.6</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
