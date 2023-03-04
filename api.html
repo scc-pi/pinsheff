@@ -145,14 +145,14 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("httr2")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://httr2.r-lib.org">httr2</a></span><span class="op">)</span></span>
-<span><span class="va">req</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://httr2.r-lib.org/reference/request.html">request</a></span><span class="op">(</span><span class="st">"http://api.zippopotam.us/us/90210"</span><span class="op">)</span></span>
+<span><span class="va">req</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://httr2.r-lib.org/reference/request.html">request</a></span><span class="op">(</span><span class="st">"https://data.police.uk/api/forces"</span><span class="op">)</span></span>
 <span><span class="va">resp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://httr2.r-lib.org/reference/req_perform.html">req_perform</a></span><span class="op">(</span><span class="va">req</span><span class="op">)</span></span>
 <span><span class="va">resp</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://httr2.r-lib.org/reference/resp_body_raw.html">resp_body_html</a></span><span class="op">(</span>check_type <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## {html_document}
 ## &lt;html&gt;
-## [1] &lt;body&gt;&lt;p&gt;{"post code": "90210", "country": "United States", "country abbr ...</code></pre>
-<p>Which should show you some content similar to what you see when you just use the same URL (<a href="http://api.zippopotam.us/us/90210">http://api.zippopotam.us/us/90210</a>) in a browser:</p>
-<div class="inline-figure"><img src="images/api-browser-test.png" width="496"></div>
+## [1] &lt;body&gt;&lt;p&gt;[{"id":"avon-and-somerset","name":"Avon and Somerset Constabular ...</code></pre>
+<p>Which should show you some content similar to what you see when you just use the same URL (<a href="https://data.police.uk/api/forces">https://data.police.uk/api/forces</a>) in a browser:</p>
+<div class="inline-figure"><img src="images/api-browser-test.png" width="300"></div>
 <p>These are the breadcrumbs for determining the proxy server and port:</p>
 <ul>
 <li><p>Windows settings</p></li>
