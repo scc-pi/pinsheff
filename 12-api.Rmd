@@ -61,12 +61,12 @@ To test it's working you could try the following:
 ```{r}
 #install.packages("httr2")
 library(httr2)
-req <-  request("http://api.zippopotam.us/us/90210")
+req <-  request("https://data.police.uk/api/forces")
 resp <- req_perform(req)
 resp |> resp_body_html(check_type = FALSE)
 ```
 
-Which should show you some content similar to what you see when you just use the same URL ([http://api.zippopotam.us/us/90210](http://api.zippopotam.us/us/90210)) in a browser: 
+Which should show you some content similar to what you see when you just use the same URL ([https://data.police.uk/api/forces](https://data.police.uk/api/forces)) in a browser: 
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/api-browser-test.png")
