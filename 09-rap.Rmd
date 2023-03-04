@@ -65,7 +65,7 @@ Once the minimum RAP has been implemented, statisticians and analysts should att
 
 * dependency management  
 
-## Strategy Goals  
+## Strategy goals  
 
 The Government's RAP strategy includes three goals:  
 
@@ -130,7 +130,9 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 
 [Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function  
 
-[Reproducible Analytical Pipelines (RAP) using R](https://www.udemy.com/course/reproducible-analytical-pipelines/), 7hr free Udemy course by Matthew Gregory  
+[Introduction to Reproducible Analytical Pipelines (RAP)](https://learninghub.ons.gov.uk/course/view.php?id=662), free online ONS Data Science Campus Learning Hub course ([hub now available to local government analysts](https://www.local.gov.uk/our-support/research-and-data/ons-data-science-training-now-available-local-government-analysts))
+
+[Reproducible Analytical Pipelines (RAP) using R](https://www.udemy.com/course/reproducible-analytical-pipelines/), 7hr free online Udemy course by Matthew Gregory  
 
 [RAP Companion](https://ukgovdatascience.github.io/rap_companion/), by Matthew Gregory & Matthew Upson  
 
