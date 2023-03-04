@@ -75,46 +75,52 @@ The Government's RAP strategy includes three goals:
 
 1. **culture** – create a culture of robust analysis where the RAP principles are the default for analysis, leaders engage with managing analysis as software, and users of analysis understand why this is important.
 
+## How could RAP sit within SCC data analysis?
+
+*TODO*
 
 ## Platforms for Reproducible Analysis
 
-The lists below are from the Government's RAP strategy and include notes on current SCC status.  
+The lists below are from the Government's RAP strategy, to which we've added *notes on current SCC status*.  
 
 ### For RAPs that meet the minimum criteria  
 
-1. version control software, that is, git - *BI Team laptops*  
+1. version control software, that is, git - *git on BI Team laptops*  
 
-1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *BI Team laptops & OSCAR desktop*  
+1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *R & Python BI Team laptops, R on OSCAR desktop*  
+1. package and environment managers for each of the available languages - *should have tested [renv](https://rstudio.github.io/renv/articles/renv.html) for R by now, if extending SCC GIS is needed the current version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments*
 
-1. package and environment managers for each of the available languages - *don't have*
+1. packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory - *BI Team laptops & OSCAR desktop*
 
-1. packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory   - *BI Team laptops & OSCAR desktop*
+1. individual storage, for example, home directory - *SCC OneDrive* 
 
-1. individual storage, for example, home directory  - *OneDrive - Sheffield City Council* 
-
-1. shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically  - *don't have*  
+1. shared storage, for example, s3, cloud storage, with fine-grained access control, accessible programmatically  - *don't have, should we look at Azure Blob storage?*  
 
 1. integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on - *BI Team laptops & OSCAR desktop*  
+
+> In summary, some SCC data analysts have access to all of these minimum criteria with the exception of shared storage e.g. Azure Blob storage.
 
 ### For further development of RAPs  
 
 1. source control platforms, for example, GitHub, GitLab or BitBucket - *trialing GitHub organisation [github.com/scc-pi](github.com/scc-pi)*  
 
-1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions*  
+1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions but CI limited by the existing security considerations*  
 
-1. make-like tools for reproducible workflows, for example, make - *identified [targets](https://books.ropensci.org/targets/) r package but not yet tested it*  
+1. make-like tools for reproducible workflows, for example, make - *identified the potential value of [targets](https://books.ropensci.org/targets/) r package, but not yet tested it*  
 
 1. relational database management software, for example, PostgreSQL, that is available to users - *corporate solution being investigated and currently there's limited DBMS access available via OSCAR desktop*  
 
 1. orchestration systems for pipelines and workflows, for example, airflow, NiFi - *don't have*  
 
-1. internal-facing servers to host html-rendered documentation - *requested by refused*  
+1. internal-facing servers to host html-rendered documentation - *request denied*  
 
 1. external-facing servers with authentication to host end-products such as web applications or APIs - *don't have*    
 
 1. big data tool, for example, Presto or Athena, Spark, dask and so on, or access to large memory capability - *don't have*    
 
-1. reproducible infrastructure and containers, for example, docker *docker on BI Team laptops but not tested yet*   
+1. reproducible infrastructure and containers, for example, docker - *docker on BI Team laptops but not tested yet* 
+
+> In summary, SCC data analysts don't have access to most of the platforms needed for further development of RAPs. Docker and targets could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include CI and server requirements. No consideration yet of orchestration systems or big data tools.   
 
 ## MLOPs
 
