@@ -1,4 +1,4 @@
-# Reproducible Analytical Pipelines {#rap}
+# RAP {#rap}
 
 ## Principles
 
@@ -87,7 +87,7 @@ The lists below are from the Government's RAP strategy, to which we've added *no
 
 1. version control software, that is, git - *git on BI Team laptops*  
 
-1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *R & Python BI Team laptops, R on OSCAR desktop*  
+1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *R & Python on BI Team laptops, R on OSCAR desktop*  
 1. package and environment managers for each of the available languages - *should have tested [renv](https://rstudio.github.io/renv/articles/renv.html) for R by now, if extending SCC GIS is needed the current version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments*
 
 1. packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory - *BI Team laptops & OSCAR desktop*
@@ -98,15 +98,15 @@ The lists below are from the Government's RAP strategy, to which we've added *no
 
 1. integrated development environments suitable for the available languages – RStudio for R, Visual Studio Code for Python and so on - *BI Team laptops & OSCAR desktop*  
 
-> In summary, some SCC data analysts have access to all of these minimum criteria with the exception of shared storage e.g. Azure Blob storage.
+> *In summary, with the exception of shared storage e.g. Azure Blob storage, some SCC data analysts have access to all of these minimum criteria for RAPs.*  
 
 ### For further development of RAPs  
 
 1. source control platforms, for example, GitHub, GitLab or BitBucket - *trialing GitHub organisation [github.com/scc-pi](github.com/scc-pi)*  
 
-1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions but CI limited by the existing security considerations*  
+1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions but CI limited by the current GitHub security considerations*  
 
-1. make-like tools for reproducible workflows, for example, make - *identified the potential value of [targets](https://books.ropensci.org/targets/) r package, but not yet tested it*  
+1. make-like tools for reproducible workflows, for example, make - *identified the potential value of [targets](https://books.ropensci.org/targets/) r package, but not tested yet*  
 
 1. relational database management software, for example, PostgreSQL, that is available to users - *corporate solution being investigated and currently there's limited DBMS access available via OSCAR desktop*  
 
@@ -120,7 +120,7 @@ The lists below are from the Government's RAP strategy, to which we've added *no
 
 1. reproducible infrastructure and containers, for example, docker - *docker on BI Team laptops but not tested yet* 
 
-> In summary, SCC data analysts don't have access to most of the platforms needed for further development of RAPs. Docker and targets could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include CI and server requirements. No consideration yet of orchestration systems or big data tools.   
+> *In summary, SCC data analysts don't have access to most of the platforms needed for further development of RAPs. Docker and targets are accessible and could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include the CI and server platform items. No consideration yet of orchestration systems or big data tools.*    
 
 ## MLOPs
 
