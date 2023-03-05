@@ -123,7 +123,7 @@ The two lists below are from the Government's RAP strategy, to which we've added
 
 *NB This sub-section is currently from the perspective of one individual. It needs a broader perspective, particularly from more experienced colleagues in PAS and data analysis team managers.*
 
-```{r echo=FALSE, out.width="100%"}
+```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("images/data-analysis-supports.png")
 ```
 
