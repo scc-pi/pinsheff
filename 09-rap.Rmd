@@ -2,9 +2,9 @@
 
 ## Principles
 
-RAPs have evolved from the UK Govenment's Analysis Function and their 2022 [Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) sets out the following principles.
+Reproducible Analytical Pipelines (RAPs) have evolved from the UK Govenment's Analysis Function and their 2022 [Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) sets out the following principles.
 
-Reproducible Analytical Pipelines (RAPs) are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
+"RAPs are automated statistical and analytical processes. They incorporate elements of software engineering best practice to ensure that the pipelines are reproducible, auditable, efficient, and high quality.  
 
 RAPs increase the efficiency of statistical and analytical processes, delivering value. Reproducibility and auditability increase trust in the statistics. The pipelines are easier to quality assure than manual processes, leading to higher quality.
 
@@ -63,7 +63,7 @@ Once the minimum RAP has been implemented, statisticians and analysts should att
 
 * continuous integration  
 
-* dependency management  
+* dependency management"  
 
 ## Strategy goals  
 
@@ -75,20 +75,17 @@ The Government's RAP strategy includes three goals:
 
 1. **culture** – create a culture of robust analysis where the RAP principles are the default for analysis, leaders engage with managing analysis as software, and users of analysis understand why this is important.
 
-## How could RAP sit within SCC data analysis?
-
-*TODO*
-
 ## Platforms for Reproducible Analysis
 
-The lists below are from the Government's RAP strategy, to which we've added *notes on current SCC status*.  
+The two lists below are from the Government's RAP strategy, to which we've added *notes on current SCC status*.  
 
 ### For RAPs that meet the minimum criteria  
 
-1. version control software, that is, git - *git on BI Team laptops*  
+1. version control software, that is, git - *BI Team laptops & OSCAR desktop*  
 
 1. open-source programming languages and flexibility to add more (Python, R, Julia, JavaScript, C++, Java/Scala etc.) - *R & Python on BI Team laptops, R on OSCAR desktop*  
-1. package and environment managers for each of the available languages - *should have tested [renv](https://rstudio.github.io/renv/articles/renv.html) for R by now, if extending SCC GIS is needed the current version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments*
+
+1. package and environment managers for each of the available languages - *should have tested [renv](https://rstudio.github.io/renv/articles/renv.html) for R by now, if extending Council GIS the version of ArcGIS Pro we use has restrictive Conda use e.g. no virtual environments*
 
 1. packages and libraries for open-source programming languages, either through direct access to well-known libraries, for example, npm, PyPI, CRAN, or through a proxy repository system, for example, Artifactory - *BI Team laptops & OSCAR desktop*
 
@@ -102,13 +99,13 @@ The lists below are from the Government's RAP strategy, to which we've added *no
 
 ### For further development of RAPs  
 
-1. source control platforms, for example, GitHub, GitLab or BitBucket - *trialing GitHub organisation [github.com/scc-pi](github.com/scc-pi)*  
+1. source control platforms, for example, GitHub, GitLab or BitBucket - *trialing GitHub organisation ([github.com/scc-pi](github.com/scc-pi))*  
 
-1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions but CI limited by the current GitHub security considerations*  
+1. continuous integration tools, for example, GitHub Actions, GitLab CI, Travis CI, Jenkins, Concourse - *trialing GitHub Actions but CI limited by the current GitHub security considerations ([GitHub security & data protection](#github-security))*  
 
 1. make-like tools for reproducible workflows, for example, make - *identified the potential value of [targets](https://books.ropensci.org/targets/) r package, but not tested yet*  
 
-1. relational database management software, for example, PostgreSQL, that is available to users - *corporate solution being investigated and currently there's limited DBMS access available via OSCAR desktop*  
+1. relational database management software, for example, PostgreSQL, that is available to users - *corporate solution being investigated and there's some DBMS access available via OSCAR desktop*  
 
 1. orchestration systems for pipelines and workflows, for example, airflow, NiFi - *don't have*  
 
@@ -120,11 +117,25 @@ The lists below are from the Government's RAP strategy, to which we've added *no
 
 1. reproducible infrastructure and containers, for example, docker - *docker on BI Team laptops but not tested yet* 
 
-> *In summary, SCC data analysts don't have access to most of the platforms needed for further development of RAPs. Docker and targets are accessible and could be trialled. GitHub is being trialled and purchasing would ease some current security restrictions and could include the CI and server platform items. No consideration yet of orchestration systems or big data tools.*    
+> *In summary, SCC data analysts don't have most of the platforms needed for further development of RAPs. Docker and targets are accessible and could be trialed. GitHub is being trialed and purchasing would ease some current security restrictions and could include the CI and server platform items. No consideration yet of orchestration systems or big data tools.*    
+
+## How could RAP sit within SCC data analysis?
+
+*NB This sub-section is currently from the perspective of one individual. It needs a much broader perspective, particularly from more experienced colleagues in PAS and managers of data analysis teams.*
+
+```{r echo=FALSE}
+knitr::include_graphics("images/data-analysis-supports.png")
+```
+
+Sheffield City Council has aspirations to be data-driven, to make more evidence based decisions. Data analysis can support organisational change decisions on, for example, Planning Policy, Corporate Strategy, and changes to the operating model for Early Help in Children's Services. Data analysis can also support continuous improvement under BAU (Business As Usual), helping managers understand how best to deploy their resources over the next month, highlighting issues that arose last week, and reporting performance metrics to senior managers.     
+
+The efficiencies from the automation aspect of RAPs may suit more repetitive (e.g. monthly) data analysis outputs that support BAU. The quality assurance aspect of RAPs may be more important for complex data analysis that support major organisation change decisions. In practice, team culture and individual capability may have more to do with adopting RAP than the type or purpose of data analysis output. For example, an individual may be more likely to adopt RAP if they have a  software development background and they work in the BI Team that was initially experimental in nature. 
+
+Elements of RAP have been used by SCC data analysts, but a full RAP has not yet been developed. The Council could pilot one or two RAPs. These should be done collaboratively i.e. with members of different data analysis teams. One could be a re-engineering of an existing process, another could be a new piece of data analysis.  
 
 ## MLOPs
 
-Machine Learning Operations (MLOPs) is more specifically about automating the building and deployment of models. RAPs covers a broader range of data analysis output.   
+Machine Learning Operations (MLOPs) is more specifically about automating the building, training, deployment, maintenance, and further development of models. RAPs cover a broader range of data analysis output.   
 
 ## Further resources
 
