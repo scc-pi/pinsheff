@@ -26,8 +26,9 @@ To achieve these benefits, at a minimum a RAP must:
 
 * deepen technical and quality assurance processes with peer review to ensure that the process is reproducible and that the requirements described in the following bullet points have been met  
 
-* guarantee an audit trail using version control software, preferably Git
-be open to anyone – this can be allowed most easily using file and code sharing platforms  
+* guarantee an audit trail using version control software, preferably Git  
+
+* be open to anyone – this can be allowed most easily using file and code sharing platforms  
 
 * follow existing good practice for quality assurance  
 
