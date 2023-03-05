@@ -121,17 +121,17 @@ The two lists below are from the Government's RAP strategy, to which we've added
 
 ## How could RAP sit within SCC data analysis?
 
-*NB This sub-section is currently from the perspective of one individual. It needs a much broader perspective, particularly from more experienced colleagues in PAS and managers of data analysis teams.*
+*NB This sub-section is currently from the perspective of one individual. It needs a broader perspective, particularly from more experienced colleagues in PAS and data analysis team managers.*
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.height="100%"}
 knitr::include_graphics("images/data-analysis-supports.png")
 ```
 
-Sheffield City Council has aspirations to be data-driven, to make more evidence based decisions. Data analysis can support organisational change decisions on, for example, Planning Policy, Corporate Strategy, and changes to the operating model for Early Help in Children's Services. Data analysis can also support continuous improvement under BAU (Business As Usual), helping managers understand how best to deploy their resources over the next month, highlighting issues that arose last week, and reporting performance metrics to senior managers.     
+Sheffield City Council has aspirations to be data-driven, to make better evidence based decisions. Data analysis can support organisational change decisions on, for example, Planning Policy, Corporate Strategy, and changes to the operating model for Early Help in Children's Services. Data analysis can also support continuous improvement under BAU (Business As Usual), helping managers understand how best to deploy their resources over the next month, highlighting issues that arose last week, and reporting performance metrics to senior managers.     
 
-The efficiencies from the automation aspect of RAPs may suit more repetitive (e.g. monthly) data analysis outputs that support BAU. The quality assurance aspect of RAPs may be more important for complex data analysis that support major organisation change decisions. In practice, team culture and individual capability may have more to do with adopting RAP than the type or purpose of data analysis output. For example, an individual may be more likely to adopt RAP if they have a  software development background and they work in the BI Team that was initially experimental in nature. 
+The efficiencies from the automation aspect of RAPs may suit more repetitive (e.g. monthly) data analysis outputs that support BAU. The quality assurance aspect of RAPs may be more important for complex data analysis that support major organisation change decisions. In practice, team culture and individual capability may have more to do with adopting RAP than the type or purpose of data analysis output. For example, an individual may be more likely to pursue RAP if they have a software development background and they work in the BI Team that was initially experimental in nature. 
 
-Elements of RAP have been used by SCC data analysts, but a full RAP has not yet been developed. The Council could pilot one or two RAPs. These should be done collaboratively i.e. with members of different data analysis teams. One could be a re-engineering of an existing process, another could be a new piece of data analysis.  
+Elements of RAP have been used by SCC data analysts, but a full RAP has not yet been developed. The Council could pilot one or two RAPs. These should be done collaboratively i.e. with members of different data analysis teams. One could be re-engineering an existing process, another could be a new piece of data analysis.  
 
 ## MLOPs
 
