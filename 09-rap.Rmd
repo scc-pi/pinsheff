@@ -142,7 +142,11 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 
 [Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function  
 
-[Introduction to Reproducible Analytical Pipelines (RAP)](https://learninghub.ons.gov.uk/course/view.php?id=662), free online ONS Data Science Campus Learning Hub course ([hub now available to local government analysts](https://www.local.gov.uk/our-support/research-and-data/ons-data-science-training-now-available-local-government-analysts))
+[Introduction to Reproducible Analytical Pipelines (RAP)](https://learninghub.ons.gov.uk/course/view.php?id=662), free online ONS Data Science Campus Learning Hub course ([hub now available to local government analysts](https://www.local.gov.uk/our-support/research-and-data/ons-data-science-training-now-available-local-government-analysts))  
+
+[RAP Community of Practice](https://nhsdigital.github.io/rap-community-of-practice/), NHS Digital  
+
+[Quality assurance of code for analysis and research - the Quack book](https://best-practice-and-impact.github.io/qa-of-code-guidance/checklist_higher.html), ONS  
 
 [Reproducible Analytical Pipelines (RAP) using R](https://www.udemy.com/course/reproducible-analytical-pipelines/), 7hr free online Udemy course by Matthew Gregory  
 

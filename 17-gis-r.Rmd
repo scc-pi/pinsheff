@@ -164,6 +164,8 @@ The `arc.check_product()` to define a desktop license means that the results of 
 
 [Geocomputation with R](https://geocompr.robinlovelace.net/), by Robin Lovelace
 
+[Introduction to GIS in R](https://onsgeo.github.io/geospatial-training/docs/intro_to_gis_in_r), 2-3hr course by ONS Geo (geography teams in ONS). 
+
 [mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
 
 [Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
