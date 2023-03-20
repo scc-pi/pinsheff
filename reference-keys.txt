@@ -84,6 +84,13 @@ for-further-development-of-raps
 how-could-rap-sit-within-scc-data-analysis
 mlops
 further-resources-5
+guidance
+training
+books
+blogs
+slack
+examples
+github-templates
 databases
 oscar
 corporate-spatial-database
