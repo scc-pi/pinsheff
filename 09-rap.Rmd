@@ -140,19 +140,34 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 
 ## Further resources
 
+### Guidance
 [Reproducible Analytical Pipelines (RAP)](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/), Government Analysis Function  
-
-[Introduction to Reproducible Analytical Pipelines (RAP)](https://learninghub.ons.gov.uk/course/view.php?id=662), free online ONS Data Science Campus Learning Hub course ([hub now available to local government analysts](https://www.local.gov.uk/our-support/research-and-data/ons-data-science-training-now-available-local-government-analysts))  
-
+[Reproducible Analytical Pipelines (RAP) strategy](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/), Government Analysis Function
 [RAP Community of Practice](https://nhsdigital.github.io/rap-community-of-practice/), NHS Digital  
+[Choose tools and infrastructure to make better use of your data, Central Digital and Data Office](https://www.gov.uk/guidance/choose-tools-and-infrastructure-to-make-better-use-of-your-data), Cabinet Office  
 
-[Quality assurance of code for analysis and research - the Quack book](https://best-practice-and-impact.github.io/qa-of-code-guidance/checklist_higher.html), ONS  
-
+### Training
+[Introduction to Reproducible Analytical Pipelines (RAP)](https://learninghub.ons.gov.uk/course/view.php?id=662), free online ONS Data Science Campus Learning Hub course ([hub now available to local government analysts](https://www.local.gov.uk/our-support/research-and-data/ons-data-science-training-now-available-local-government-analysts))  
 [Reproducible Analytical Pipelines (RAP) using R](https://www.udemy.com/course/reproducible-analytical-pipelines/), 7hr free online Udemy course by Matthew Gregory  
 
-[RAP Companion](https://ukgovdatascience.github.io/rap_companion/), by Matthew Gregory & Matthew Upson  
+### Books
+[RAP Companion](https://ukgovdatascience.github.io/rap_companion/), by Matthew Gregory & Matthew Upson   
+[Reproducible Analytical Pipelines - Master’s of Data Science](https://rap4mads.eu/), by Bruno Rodrigues   
+Release August 2023 - [Open Source MLOPs](https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&keywords=Open+Source+MLOPs&qid=1677872361&s=books&sprefix=open+source+mlops%2Cstripbooks%2C172&sr=1-1), by Matthew Upson   
+[Quality assurance of code for analysis and research - the Quack book](https://best-practice-and-impact.github.io/qa-of-code-guidance/checklist_higher.html), ONS  
 
-[Reproducible Analytical Pipelines - Master’s of Data Science](https://rap4mads.eu/), by Bruno Rodrigues  
+### Blogs
+[Why we’re getting our data teams to RAP](https://digital.nhs.uk/blog/data-points-blog/2023/why-were-getting-our-data-teams-to-rap), 
+[Transforming the process of producing official statistics](https://dataingovernment.blog.gov.uk/2017/11/27/transforming-the-process-of-producing-official-statistics/), Civil Service  
+[Econometrics and Free Software](https://www.brodrigues.co/), Bruno Rodrigues  
+[Data Version Control for Reproducible Analytical Pipelines](https://medium.com/mantisnlp/data-version-control-for-reproducible-analytical-pipelines-5255782d355d), Matthew Upson    
 
-Release August 2023 - [Open Source MLOPs](https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&keywords=Open+Source+MLOPs&qid=1677872361&s=books&sprefix=open+source+mlops%2Cstripbooks%2C172&sr=1-1), by Matthew Upson  
+### Slack
+[rap_collaboration - Gov Data Science - Slack](https://app.slack.com/client/T06SLTMFD/C6H22U3H9)  
 
+### Examples  
+[NHS Sickness Absence Rates](https://github.com/NHSDigital/absence-rates)  
+
+### GitHub templates  
+[NHSDigital/rap-package-template](https://github.com/NHSDigital/rap-package-template)  
+[govcookiecutter: A template for data science projects](https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/)  
