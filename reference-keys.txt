@@ -83,7 +83,7 @@ for-raps-that-meet-the-minimum-criteria
 for-further-development-of-raps
 how-could-rap-sit-within-scc-data-analysis
 mlops
-further-resources-5
+further-resources-rap
 guidance
 training
 books
@@ -94,7 +94,7 @@ github-templates
 databases
 oscar
 corporate-spatial-database
-further-resources-6
+further-resources-5
 warehouse
 corporate-data-warehouse
 postgres
@@ -127,7 +127,7 @@ desktop-gis
 arcgis-desktop
 arcgis-pro
 qgis
-further-resources-7
+further-resources-6
 gis-with-python
 arcgis-notebooks
 arcgis-python-api
@@ -143,7 +143,7 @@ esri2sf
 r-arcgis-bridge
 leaflet
 rasters
-further-resources-8
+further-resources-7
 geocoding
 uprn
 postcodes
