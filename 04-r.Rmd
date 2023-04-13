@@ -4,7 +4,7 @@ R is the scripting language. RStudio is the IDE (Interactive Development Environ
 
 You can choose to use a different IDE with R. VS Code would be the recommended alternative. However, VS Code is good because of its extensibility, and initially it is not as easy to navigate and configure.
 
-One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. RStudio plays a key role in the R community.
+One of the stand-out aspects of R is its user community, who are amazingly helpful and supportive. Posit, the company that makes RStudio, plays a key role in the R community.
 
 ## Installation
 

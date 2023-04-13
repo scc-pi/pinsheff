@@ -162,9 +162,11 @@ The `arc.check_product()` to define a desktop license means that the results of 
 
 ## Further resources
 
-[Geocomputation with R](https://geocompr.robinlovelace.net/), by Robin Lovelace
+[Introduction to GIS in R](https://onsgeo.github.io/geospatial-training/docs/intro_to_gis_in_r), 2-3hr course by ONS Geo (geography teams in ONS)
 
-[Introduction to GIS in R](https://onsgeo.github.io/geospatial-training/docs/intro_to_gis_in_r), 2-3hr course by ONS Geo (geography teams in ONS). 
+[Geocomputation with R](https://geocompx.org/r.html), by Robin Lovelace,  Jakub Nowosad, & Jannes Muenchow
+
+[Spatial Data Science with applications in R](https://r-spatial.org/book/), by Edzer Pebesma & Roger Bivand
 
 [mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
 

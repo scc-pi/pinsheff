@@ -24,7 +24,7 @@ There's an element of self-documentation with scripting, so it's easier to retur
 
 Scripting is not always better than using GUI tools. There's a good reason why more people use Mac OS and Windows than Unix Bash. Scripting or GUI tools is a horses for courses question, and some GUI workflow tools that the Council has licenses for (e.g. FME, Simul8 and ModelBuilder in ArcGIS) sit somewhere in the middle.
 
-RStudio makes the (slightly biased?) case for scripting in an hour long webinar on [Why Your Enterprise Needs Code-First Data Science](https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/).
+Posit makes the (slightly biased?) case for scripting in an hour long webinar on [Why Your Enterprise Needs Code-First Data Science](https://www.rstudio.com/resources/why-your-enterprise-needs-code-first-data-science/).
 
 Probably the single main advantage of scripting, is what was touched upon at the start of this sub-heading i.e. reproducibility.
 
