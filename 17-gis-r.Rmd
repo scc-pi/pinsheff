@@ -168,8 +168,6 @@ The `arc.check_product()` to define a desktop license means that the results of 
 
 [Spatial Data Science with applications in R](https://r-spatial.org/book/), by Edzer Pebesma & Roger Bivand
 
-[mapview basics](https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html) vignette
+[mapview basics](https://r-spatial.github.io/mapview/articles/mapview_01-basics.html) vignette
 
 [Geographic vs Projected Coordinate Systems](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/), Heather Smith, ArcGIS Blog (27 February 2020)
-
-[EPSG 4326 vs EPSG 3857](https://lyzidiamond.com/posts/4326-vs-3857#:~:text=EPSG%3A3857%20(Pseudo%2DMercator),-The%20projected%20Pseudo&text=This%20projection%20was%20first%20introduced,the%20coordinates%20onto%20a%20sphere.), Lyzi Diamond (26 May 2017)
