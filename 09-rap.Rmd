@@ -153,9 +153,9 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 
 ### Books
 [RAP Companion](https://ukgovdatascience.github.io/rap_companion/), by Matthew Gregory & Matthew Upson   
-[Reproducible Analytical Pipelines - Master’s of Data Science](https://rap4mads.eu/), by Bruno Rodrigues   
+[Building reproducible analytical pipelines with R](https://raps-with-r.dev/), by Bruno Rodrigues   
+[The Turing Way: Handbook to Reproducible, Ethical and Collaborative Data Science](https://the-turing-way.netlify.app/index.html), by the Turing Way Community  
 [Open Source MLOPs](https://www.amazon.co.uk/Open-Source-MLOPs-Automation-Pipelines-ebook/dp/B0BJ5791TK/ref=sr_1_1?crid=1MU50QRTECXIZ&keywords=Open+Source+MLOPs&qid=1677872361&s=books&sprefix=open+source+mlops%2Cstripbooks%2C172&sr=1-1), by Matthew Upson (release August 2023)   
-[The Turing Way handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/index.html), by the Turing Way Community  
 [Quality assurance of code for analysis and research - the Quack book](https://best-practice-and-impact.github.io/qa-of-code-guidance/checklist_higher.html), ONS  
 
 ### Blogs
