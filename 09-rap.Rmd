@@ -171,5 +171,6 @@ Machine Learning Operations (MLOPs) is more specifically about automating the bu
 [NHS Sickness Absence Rates](https://github.com/NHSDigital/absence-rates)  
 
 ### GitHub templates  
+[rapR-package-template](https://github.com/craig-shenton/rapR-package-template), Craig Shenton  
 [NHSDigital/rap-package-template](https://github.com/NHSDigital/rap-package-template)  
 [govcookiecutter: A template for data science projects](https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/)  
