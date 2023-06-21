@@ -88,12 +88,36 @@ There are also other GitHub features to explore.
 
 ## Git & RStudio
 
-[Introduction to GitHub](https://lab.github.com/githubtraining/introduction-to-github) on the GitHub [Learning Lab](https://lab.github.com/) is a good place to get started and become familiar with some initial concepts and the GitHub website.
+[Introduction to GitHub](https://github.com/skills/introduction-to-github) and the GitHub [Learning Lab](https://github.com/apps/github-learning-lab) are good places to get started and become familiar with some initial concepts.
 
-To use GitHub with RStudio there's a [cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf) and a thorough step-by-step guide, [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. The main recommendation is to setup the connection using keys for [SSH](https://happygitwithr.com/ssh-keys.html). This connection method by-passes issues with the Council's proxy server and using the HTTPS connection method. Since August 2021 [GitHub token authentication is required](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) (e.g. SSH) and some of the steps in the Jenny Bryan's book (e.g. chapters 9 and 10 on connecting and HTTPS) are out of date. As of October 2021 this is the case, but if [issue \#181](https://github.com/jennybc/happy-git-with-r/issues/181) gets closed in the [Happy Git with R GitHub repo](https://github.com/jennybc/happy-git-with-r), then it's been fixed. Until then the recommendation is to skip chapters 9 and 10 and focus on 11 and 15 (SSH and New project, GitHub first).
+To use GitHub with RStudio there's a [cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf) and a thorough step-by-step guide, [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan. 
 
-I frequently return to Jenny Bryan's book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I've mainly stuck with [Chapter 15 New project, GitHub first](https://happygitwithr.com/new-github-first.html).
+Over the last few years we've followed Jenny's recommendations:  
+
+* Initially to use HTTPS.  
+* Then to use SSH whilst GitHub was introducing their PAT requirement.  
+* Now back to HTTPS, but with PAT. 
+
+Our recommendation is to follow the following chapters in Happy Git with R:  
+
+* [9 Personal access token for HTTPS](https://happygitwithr.com/https-pat.html)  
+* [11 Connect to GitHub](https://happygitwithr.com/push-pull-github.html)  
+* [12 Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github.html)  
+
+Chapters 15, 16 and 17 of Happy Git with R cover different ways of setting up a local RStudio project connected to GitHub. So far, we've stuck with [Chapter 15 New project, GitHub first](https://happygitwithr.com/new-github-first.html).  
+
+To change an existing local repo from SSH to HTTPS:  
+
+* Make sure all your repo changes are committed and pushed to GitHub.  
+* Rename the local repo folder.  
+* Create the local RStudio project anew, but this time using the HTTPS url for the GitHub repo.  
+
+If you know a better way than this please let us know!  
+
+When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, the SSH will never work when in the office because the Council's proxy doesn't support SSH. It works when out of the office because when connected via AlwaysOn VPN not all traffic is routed via the Council and it's proxy.  
+
+*TODO:* Test and liase with James Grande about proxy https://happygitwithr.com/rstudio-git-github.html and .pac file. This issue is related to accessing APIs and install R packages when in the office.   
 
 ## Further resources
 
-[Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop), RStudio Support
+[Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop), Posit Support
