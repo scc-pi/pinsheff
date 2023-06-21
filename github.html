@@ -7,7 +7,7 @@
 <title>Chapter 8 Version control &amp; GitHub | pinsheff</title>
 <meta name="author" content="Laurie Platt">
 <meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
-<meta name="generator" content="bookdown 0.33 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Version control &amp; GitHub | pinsheff">
 <meta property="og:type" content="book">
 <meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
@@ -166,15 +166,44 @@
 <h2>
 <span class="header-section-number">8.4</span> Git &amp; RStudio<a class="anchor" aria-label="anchor" href="#git-rstudio"><i class="fas fa-link"></i></a>
 </h2>
-<p><a href="https://lab.github.com/githubtraining/introduction-to-github">Introduction to GitHub</a> on the GitHub <a href="https://lab.github.com/">Learning Lab</a> is a good place to get started and become familiar with some initial concepts and the GitHub website.</p>
-<p>To use GitHub with RStudio there’s a <a href="https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf">cheatsheet</a> and a thorough step-by-step guide, <a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan. The main recommendation is to setup the connection using keys for <a href="https://happygitwithr.com/ssh-keys.html">SSH</a>. This connection method by-passes issues with the Council’s proxy server and using the HTTPS connection method. Since August 2021 <a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">GitHub token authentication is required</a> (e.g. SSH) and some of the steps in the Jenny Bryan’s book (e.g. chapters 9 and 10 on connecting and HTTPS) are out of date. As of October 2021 this is the case, but if <a href="https://github.com/jennybc/happy-git-with-r/issues/181">issue #181</a> gets closed in the <a href="https://github.com/jennybc/happy-git-with-r">Happy Git with R GitHub repo</a>, then it’s been fixed. Until then the recommendation is to skip chapters 9 and 10 and focus on 11 and 15 (SSH and New project, GitHub first).</p>
-<p>I frequently return to Jenny Bryan’s book, especially for chapters 15, 16 and 17 on different ways of setting up a local RStudio project connected to GitHub. So far, I’ve mainly stuck with <a href="https://happygitwithr.com/new-github-first.html">Chapter 15 New project, GitHub first</a>.</p>
+<p><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a> and the GitHub <a href="https://github.com/apps/github-learning-lab">Learning Lab</a> are good places to get started and become familiar with some initial concepts.</p>
+<p>To use GitHub with RStudio there’s a <a href="https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf">cheatsheet</a> and a thorough step-by-step guide, <a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan.</p>
+<p>Over the last few years we’ve followed Jenny’s recommendations:</p>
+<ul>
+<li>Initially to use HTTPS.<br>
+</li>
+<li>Then to use SSH whilst GitHub was introducing their PAT requirement.<br>
+</li>
+<li>Now back to HTTPS, but with PAT.</li>
+</ul>
+<p>Our recommendation is to follow the following chapters in Happy Git with R:</p>
+<ul>
+<li>
+<a href="https://happygitwithr.com/https-pat.html">9 Personal access token for HTTPS</a><br>
+</li>
+<li>
+<a href="https://happygitwithr.com/push-pull-github.html">11 Connect to GitHub</a><br>
+</li>
+<li><a href="https://happygitwithr.com/rstudio-git-github.html">12 Connect RStudio to Git and GitHub</a></li>
+</ul>
+<p>Chapters 15, 16 and 17 of Happy Git with R cover different ways of setting up a local RStudio project connected to GitHub. So far, we’ve stuck with <a href="https://happygitwithr.com/new-github-first.html">Chapter 15 New project, GitHub first</a>.</p>
+<p>To change an existing local repo from SSH to HTTPS:</p>
+<ul>
+<li>Make sure all your repo changes are committed and pushed to GitHub.<br>
+</li>
+<li>Rename the local repo folder.<br>
+</li>
+<li>Create the local RStudio project anew, but this time using the HTTPS url for the GitHub repo.</li>
+</ul>
+<p>If you know a better way than this please let us know!</p>
+<p>When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, the SSH will never work when in the office because the Council’s proxy doesn’t support SSH. It works when out of the office because when connected via AlwaysOn VPN not all traffic is routed via the Council and it’s proxy.</p>
+<p><em>TODO:</em> Test and liase with James Grande about proxy <a href="https://happygitwithr.com/rstudio-git-github.html" class="uri">https://happygitwithr.com/rstudio-git-github.html</a> and .pac file. This issue is related to accessing APIs and install R packages when in the office.</p>
 </div>
 <div id="further-resources-4" class="section level2">
 <h2>
 <span class="header-section-number">8.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-4"><i class="fas fa-link"></i></a>
 </h2>
-<p><a href="https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&amp;mode=desktop">Version Control with Git and SVN</a>, RStudio Support</p>
+<p><a href="https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&amp;mode=desktop">Version Control with Git and SVN</a>, Posit Support</p>
 
 </div>
 </div>
@@ -214,7 +243,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-04-27.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-06-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
