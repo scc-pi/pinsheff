@@ -96,7 +96,7 @@
 <p>When scripting you might make a backup copy of a file, so if your new changes break what was previously working you can revert to the backup copy. If you’re collating contributions to a document from different people you might use their initials in the file names to indicate and keep track of who’s made contributions in what version e.g. “BI_Principles-GR.docx” and “BI_Principles-NM.docx”. These are both examples of manual version control.</p>
 <p>When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit-trail/collaboration thing.</p>
 <p>This is a much more engaging explanation:</p>
-<p><a href="https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/">GITHUB FOR SUPPORTING, REUSING, CONTRIBUTING, AND FAILING SAFELY</a></p>
+<p><a href="https://www.openscapes.org/blog/2022-05-27-github-illustrated-series/index.html">GITHUB FOR SUPPORTING, REUSING, CONTRIBUTING, AND FAILING SAFELY</a></p>
 </div>
 <div id="git" class="section level2">
 <h2>
@@ -110,7 +110,7 @@
 <span class="header-section-number">8.3</span> Transparency<a class="anchor" aria-label="anchor" href="#transparency"><i class="fas fa-link"></i></a>
 </h2>
 <p>The benefits of publishing open data are well understood and accepted as good practice. Less well known is the similar best practice of publishing source code that generates data analysis output. There are circumstances when this is not possible, usually because of confidentiality reasons. For example, with <a href="https://raps-with-r.dev/lit_prog.html">literate programming</a> where code chunks, narrative text, and analysis outputs are combined, there may be a risk of including PID (Person Identifiable Data).</p>
-<p>An option for balancing transparency and security is:</p>
+<p>One option for balancing transparency and security in a version control implementation is:</p>
 <ol style="list-style-type: decimal">
 <li>Initially host a new repository in a secure, private, enterprise platform.<br>
 </li>
@@ -138,7 +138,7 @@
 <h3>
 <span class="header-section-number">8.4.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
 </h3>
-<p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations.Storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is a no-no.</p>
+<p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file specifies the folders and files you want to exclude from the repository i.e. it lists what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="github.html#cb8-1"></a><span class="co"># data directory</span></span>
 <span id="cb8-2"><a href="github.html#cb8-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
