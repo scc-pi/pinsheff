@@ -98,7 +98,7 @@ Our recommendation is to follow these chapters in Happy Git with R:
 
 Chapters 15, 16 and 17 of Happy Git with R cover different ways of setting up a local RStudio project connected to GitHub. So far, we've stuck with [Chapter 15 New project, GitHub first](https://happygitwithr.com/new-github-first.html).  
 
-To change an existing local repo from SSH to HTTPS:  
+Once you've setup your PAT for HTTPS, to change an existing local repo from SSH to HTTPS:  
 
 * Make sure all changes in your repo are committed and pushed to GitHub.  
 * Delete the local repo folder.  
