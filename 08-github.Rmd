@@ -1,22 +1,10 @@
 # Version control & GitHub {#github}
 
-You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories.
-
-These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi). Then you can edit directly in GitHub via your browser.
-
-```{r echo=FALSE}
-knitr::include_graphics("images/github-edit.png")
-```
-
-You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function.
-
-Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
-
 ## Why version control?
 
 When scripting you might make a backup copy of a file, so if your new changes break what was previously working you can revert to the backup copy. If you're collating contributions to a document from different people you might use their initials in the file names to indicate and keep track of who's made contributions in what version e.g. "BI_Principles-GR.docx" and "BI_Principles-NM.docx". These are both examples of manual version control.
 
-When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit trail/collaboration thing.
+When we talk about version control and scripting we typically mean a version control system. A tool that assists with tracking changes to files over time and by different people. Such systems also usually include reasons for the changes, and file, or rather version, comparison functionality. So a version control system is a backup/audit-trail/collaboration thing.
 
 This is a much more engaging explanation:  
 
@@ -32,7 +20,8 @@ GitHub is a product that offers Git-based source control repositories. Other pro
 
 The benefits of publishing open data are well understood and accepted as good practice. Less well known is the similar best practice of publishing source code that generates data analysis output. There are circumstances when this is not possible, usually because of confidentiality reasons. For example, with [literate programming](https://raps-with-r.dev/lit_prog.html) where code chunks, narrative text, and analysis outputs are combined, there may be a risk of including PID (Person Identifiable Data).
 
-An option for balancing transparency and security is:  
+An option for balancing transparency and security is:   
+
 1. Initially host a new repository in a secure, private, enterprise platform.  
 1. Review whether repository is fit-for-publishing.  
 1. Publish repository if fit.  
@@ -42,19 +31,20 @@ A fuller explanation of the benefits of source code transparency and how it can 
 For public repositories, GitHub is undoubtedly the market leader. For private repositories it's not as clear cut. There's a GitHub option for private repositories, but it's more expensive than for example BitBucket. Azure DevOps obviously has the advantage of being part of the Azure infrastructure that the Council is investing in. 
 
 Adopting data analysis version control and transparency practices within the Council is work-in-progress. In terms of the implementation listed above, this is our current status:  
+
 1. Trialing 2 free licenses of Azure DevOps for private repository hosting.  
 1. No checklist or process to support reviewing whether repository is fit-for-publishing.  
-1. Publish repository on GitHub.  
+1. Repositories published on GitHub.  
 
 ## GitHub
 
-Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.
+Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. 
 
 ### GitHub security & data protection {#github-security}
 
-GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Plus, we've not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.
+GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations.Storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is a no-no.
 
-The [`.gitignore`](https://git-scm.com/docs/gitignore) file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they're original or transformed, in a `/data` sub-folder, makes it simple to exclude data from the repository by adding the following to the `.gitignore` file:
+The [`.gitignore`](https://git-scm.com/docs/gitignore) file specifies the folders and files you want to exclude from the repository i.e. it lists what you want to ignore. Holding any file based data (e.g. CSV files), whether they're original or transformed, in a `/data` sub-folder, makes it simple to exclude data from the repository by adding the following to the `.gitignore` file:
 
 ```{r eval=FALSE, include=TRUE}
 # data directory
@@ -78,11 +68,11 @@ GitHub [forking](https://guides.github.com/activities/forking/) and pull request
 
 ### Other features
 
-GitHub now allows private repositories on [free organisation accounts](https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts), but not all GitHub features are available.
+GitHub include private repositories on [free organisation accounts](https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts), but not all GitHub features are available.
 
 The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub [issue](https://guides.github.com/features/issues/). You can link a commit to an issue by including the issue number prefixed by `#` in the commit message.
 
-I've used a GitHub [project](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards) to organise our private [C19Surveillance](https://github.com/scc-pi/C19Surveillance) repository as a kanban board. However, a project is not restricted to issues or a single repository.
+We've used a GitHub [project](https://github.com/orgs/scc-pi/projects/2) as a kanban board to organise our work on the [community-knowledge-profiles](https://github.com/scc-pi/community-knowledge-profiles) repository. However, a project is not restricted to issues or a single repository.
 
 GitHub [pages](https://pages.github.com/) and [actions](https://github.com/features/actions) have been used to [publish these notes](#publishing).
 
@@ -122,7 +112,7 @@ When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH co
 
 ## Azure DevOps  
 
-We are hopeful that Azure DevOps will become the new default for the Council's data analysis source code repositories. However, a first trial is still ongoing.  
+We are hopeful that Azure DevOps will become the new default for the Council's data analysis source code repositories. A first trial is underway.  
 
 Azure DevOps costs £5 per user per month.  
 
