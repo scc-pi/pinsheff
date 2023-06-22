@@ -121,11 +121,11 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <li><p>Run the command <code>file.edit('~/.Renviron')</code> within RStudio.</p></li>
 <li><p>Add the following settings to your <code>.Renviron</code> file, amended for your own Council login ID and password.</p></li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="api.html#cb11-1"></a>http_proxy=http<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
-<span id="cb11-2"><a href="api.html#cb11-2"></a>http_proxy_user=lp41455<span class="op">:</span>password123</span>
-<span id="cb11-3"><a href="api.html#cb11-3"></a></span>
-<span id="cb11-4"><a href="api.html#cb11-4"></a>https_proxy=https<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
-<span id="cb11-5"><a href="api.html#cb11-5"></a>https_proxy_user=lp41455<span class="op">:</span>password123</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="api.html#cb10-1"></a>http_proxy=http<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
+<span id="cb10-2"><a href="api.html#cb10-2"></a>http_proxy_user=lp41455<span class="op">:</span>password123</span>
+<span id="cb10-3"><a href="api.html#cb10-3"></a></span>
+<span id="cb10-4"><a href="api.html#cb10-4"></a>https_proxy=https<span class="op">:</span><span class="er">//</span><span class="dv">172</span>.<span class="dv">29</span>.<span class="fl">2.22</span><span class="op">:</span><span class="dv">8080</span></span>
+<span id="cb10-5"><a href="api.html#cb10-5"></a>https_proxy_user=lp41455<span class="op">:</span>password123</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Uncheck the setting for <em>Use Internet Explorer library/proxy for HTTP</em> in <em>Global Options</em>:</li>
 </ol>
@@ -134,7 +134,7 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <li>Restart RStudio.</li>
 </ol>
 <p>When using AlwaysOn VPN comment out the settings:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># http_proxy=http://172.29.2.22:8080</span></span>
 <span><span class="co"># http_proxy_user=lp41455:password123</span></span>
 <span><span class="co"># </span></span>
@@ -142,7 +142,7 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <span><span class="co"># https_proxy_user=lp41455:password123</span></span></code></pre></div>
 <p>These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having to change this manually.</p>
 <p>To test it’s working you could try the following:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("httr2")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://httr2.r-lib.org">httr2</a></span><span class="op">)</span></span>
 <span><span class="va">req</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://httr2.r-lib.org/reference/request.html">request</a></span><span class="op">(</span><span class="st">"https://data.police.uk/api/forces"</span><span class="op">)</span></span>
@@ -191,7 +191,7 @@ scc-pi functions with rectangling e.g. postcode and geocoding</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-06-21.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-06-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

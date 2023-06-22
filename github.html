@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 8 Version control &amp; GitHub | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
+<meta name="description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. These notes are public, but to contribute i.e. edit them,...">
 <meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Version control &amp; GitHub | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
+<meta property="og:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. These notes are public, but to contribute i.e. edit them,...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 8 Version control &amp; GitHub | pinsheff">
-<meta name="twitter:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. If you’re new to scripting and R, then visualisations or...">
+<meta name="twitter:description" content="You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the scc-pi repositories. These notes are public, but to contribute i.e. edit them,...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -89,18 +89,10 @@
 <h1>
 <span class="header-section-number">8</span> Version control &amp; GitHub<a class="anchor" aria-label="anchor" href="#github"><i class="fas fa-link"></i></a>
 </h1>
-<p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories. If you’re <a href="r.html#getting-started-with-r">new to scripting and R</a>, then visualisations or using R Markdown are better starting points than version control.</p>
-<p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a> (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.</p>
+<p>You don’t have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the <a href="https://github.com/scc-pi">scc-pi</a> repositories.</p>
+<p>These notes are public, but to contribute i.e. <a href="https://github.com/scc-pi/notes">edit them</a>, you need a <a href="https://github.com/join">GitHub account</a> and to be granted permission by an owner of <a href="https://github.com/scc-pi">scc-pi</a>. Then you can edit directly in GitHub via your browser.</p>
 <div class="inline-figure"><img src="images/github-edit.png" width="484"></div>
-<p>You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># # Load functions from a public scc-pi repository </span></span>
-<span><span class="co"># source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># # Call one of our Sheffield area functions that returns LSOA codes </span></span>
-<span><span class="co"># shef_lsoa_codes() %&gt;% </span></span>
-<span><span class="co">#   head(5) %&gt;% #only display the first 5 records</span></span>
-<span><span class="co">#   knitr::kable() #display them in a nice table </span></span></code></pre></div>
+<p>You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy &amp; paste code, or source and use a function.</p>
 <p>Try raising an <a href="https://guides.github.com/features/issues/">issue</a> if you spot a problem, have a suggestion or a question.</p>
 <div id="why-version-control" class="section level2">
 <h2>
@@ -113,47 +105,56 @@
 </div>
 <div id="git" class="section level2">
 <h2>
-<span class="header-section-number">8.2</span> GIT<a class="anchor" aria-label="anchor" href="#git"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2</span> Git<a class="anchor" aria-label="anchor" href="#git"><i class="fas fa-link"></i></a>
 </h2>
 <p>Git is an open-source distributed version control system for tracking changes in source code during software development.</p>
+<p>GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
+</div>
+<div id="transparency" class="section level2">
+<h2>
+<span class="header-section-number">8.3</span> Transparency<a class="anchor" aria-label="anchor" href="#transparency"><i class="fas fa-link"></i></a>
+</h2>
+<p>The benefits of publishing open data are well understood and accepted as good practice. Less well known is the similar best practice of publishing source code that generates data analysis output. There are circumstances when this is not possible, usually because of confidentiality reasons. For example, with <a href="https://raps-with-r.dev/lit_prog.html">literate programming</a> where code chunks, narrative text, and analysis outputs are combined, there may be a risk of including PID (Person Identifiable Data).</p>
+<p>An option for balancing transparency and security is:<br>
+1. Initially host a new repository in a secure, private, enterprise platform.<br>
+1. Review whether repository is fit-for-publishing.<br>
+1. Publish repository if fit.</p>
+<p>A fuller explanation of the benefits of source code transparency and how it can be implemented is available from <a href="https://nhsdigital.github.io/rap-community-of-practice/implementing_RAP/how-to-publish-your-code-in-the-open/">How to Publish your Code in the Open, NHS RAP Community of Practice</a>.</p>
+<p>For public repositories, GitHub is undoubtedly the market leader. For private repositories it’s not as clear cut. There’s a GitHub option for private repositories, but it’s more expensive than for example BitBucket. Azure DevOps obviously has the advantage of being part of the Azure infrastructure that the Council is investing in.</p>
+<p>Adopting data analysis version control and transparency practices within the Council is work-in-progress. In terms of the implementation listed above, this is our current status:<br>
+1. Trialing 2 free licenses of Azure DevOps for private repository hosting.<br>
+1. No checklist or process to support reviewing whether repository is fit-for-publishing.<br>
+1. Publish repository on GitHub.</p>
 </div>
 <div id="github-1" class="section level2">
 <h2>
-<span class="header-section-number">8.3</span> GitHub<a class="anchor" aria-label="anchor" href="#github-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4</span> GitHub<a class="anchor" aria-label="anchor" href="#github-1"><i class="fas fa-link"></i></a>
 </h2>
-<p>GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.</p>
 <p>Our <a href="https://github.com/scc-pi">scc-pi</a> GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.</p>
 <div id="github-security" class="section level3">
 <h3>
-<span class="header-section-number">8.3.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.1</span> GitHub security &amp; data protection<a class="anchor" aria-label="anchor" href="#github-security"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub.com is hosted in the US, which is an issue in terms of our data protection obligations. Plus, we’ve not checked compliance with Information Governance, so storing PID (Person Identifiable Data), or anything commercially confidential or politically sensitive, on GitHub.com is currently a no-no.</p>
 <p>The <a href="https://git-scm.com/docs/gitignore"><code>.gitignore</code></a> file lists the folders and files you want to exclude from the repository i.e. it specifies what you want to ignore. Holding any file based data (e.g. CSV files), whether they’re original or transformed, in a <code>/data</code> sub-folder, makes it simple to exclude data from the repository by adding the following to the <code>.gitignore</code> file:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="github.html#cb9-1"></a><span class="co"># data directory</span></span>
-<span id="cb9-2"><a href="github.html#cb9-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="github.html#cb8-1"></a><span class="co"># data directory</span></span>
+<span id="cb8-2"><a href="github.html#cb8-2"></a><span class="op">/</span>data<span class="op">/</span></span></code></pre></div>
 <p>As an additional precaution, any projects involving confidential information should be held in a private repository and <a href="https://bookdown.org/ndphillips/YaRrr/rdata-files.html"><code>.Rdata</code></a> should also be included in the <code>.gitignore</code> file (see the section on <a href="r.html#pid">RStudio security &amp; data protection</a>):</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Session Data files</span></span>
 <span><span class="va">.RData</span></span></code></pre></div>
-<p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment. However, BitBucket currently looks like a more likely solution than GitHub.</p>
-</div>
-<div id="bitbucket" class="section level3">
-<h3>
-<span class="header-section-number">8.3.2</span> BitBucket<a class="anchor" aria-label="anchor" href="#bitbucket"><i class="fas fa-link"></i></a>
-</h3>
-<p>BitBucket is Council approved and used by Digital Services, the only team in the Council that uses version control for code. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories (our main use case), whereas GitHub is more popular with open source projects. Fundamentally, the two have very similar functionality. One difference is the narrower scope of BitBucket, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.</p>
-<p>If the current BI Team GitHub trial comes to the conclusion that version control is something we need, we have to have a conversation with Information Governance and TDA about BitBucket. We also need to keep in touch with Digital Services who may switch to an alternative version control provider in July 2022. I need to verify my expectation that using BitBucket with RStudio is the same experience as using GitHub.</p>
+<p>Microsoft own GitHub and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview">GitHub Enterprise Server</a> is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.</p>
 </div>
 <div id="forking-pull-requests" class="section level3">
 <h3>
-<span class="header-section-number">8.3.3</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2</span> Forking &amp; pull requests<a class="anchor" aria-label="anchor" href="#forking-pull-requests"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub <a href="https://guides.github.com/activities/forking/">forking</a> and pull requests are common workflows when collaborating on a repository.</p>
 <p><em>TODO - we’ll have more to add on this once we’ve collaborated on a repository</em></p>
 </div>
 <div id="other-features" class="section level3">
 <h3>
-<span class="header-section-number">8.3.4</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.3</span> Other features<a class="anchor" aria-label="anchor" href="#other-features"><i class="fas fa-link"></i></a>
 </h3>
 <p>GitHub now allows private repositories on <a href="https://docs.github.com/en/github/getting-started-with-github/types-of-github-accounts#organization-accounts">free organisation accounts</a>, but not all GitHub features are available.</p>
 <p>The evolution of a repository is captured by commits i.e. the changes to files in the repository. However, the original issue, ideas or discussion surrounding a commit is captured in a GitHub <a href="https://guides.github.com/features/issues/">issue</a>. You can link a commit to an issue by including the issue number prefixed by <code>#</code> in the commit message.</p>
@@ -161,11 +162,10 @@
 <p>GitHub <a href="https://pages.github.com/">pages</a> and <a href="https://github.com/features/actions">actions</a> have been used to <a href="rmd.html#publishing">publish these notes</a>.</p>
 <p>There are also other GitHub features to explore.</p>
 </div>
-</div>
-<div id="git-rstudio" class="section level2">
-<h2>
-<span class="header-section-number">8.4</span> Git &amp; RStudio<a class="anchor" aria-label="anchor" href="#git-rstudio"><i class="fas fa-link"></i></a>
-</h2>
+<div id="github-rstudio" class="section level3">
+<h3>
+<span class="header-section-number">8.4.4</span> GitHub &amp; RStudio<a class="anchor" aria-label="anchor" href="#github-rstudio"><i class="fas fa-link"></i></a>
+</h3>
 <p><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a> and the GitHub <a href="https://github.com/apps/github-learning-lab">Learning Lab</a> are good places to get started and become familiar with some initial concepts.</p>
 <p>To use GitHub with RStudio there’s a <a href="https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf">cheatsheet</a> and a thorough step-by-step guide, <a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan.</p>
 <p>Over the last few years we’ve followed Jenny’s recommendations:</p>
@@ -176,7 +176,7 @@
 </li>
 <li>Now back to HTTPS, but with PAT.</li>
 </ul>
-<p>Our recommendation is to follow the following chapters in Happy Git with R:</p>
+<p>Our recommendation is to follow these chapters in Happy Git with R:</p>
 <ul>
 <li>
 <a href="https://happygitwithr.com/https-pat.html">9 Personal access token for HTTPS</a><br>
@@ -189,19 +189,33 @@
 <p>Chapters 15, 16 and 17 of Happy Git with R cover different ways of setting up a local RStudio project connected to GitHub. So far, we’ve stuck with <a href="https://happygitwithr.com/new-github-first.html">Chapter 15 New project, GitHub first</a>.</p>
 <p>To change an existing local repo from SSH to HTTPS:</p>
 <ul>
-<li>Make sure all your repo changes are committed and pushed to GitHub.<br>
+<li>Make sure all changes in your repo are committed and pushed to GitHub.<br>
 </li>
-<li>Rename the local repo folder.<br>
+<li>Delete the local repo folder.<br>
 </li>
-<li>Create the local RStudio project anew, but this time using the HTTPS url for the GitHub repo.</li>
+<li>Create the local repo anew via RStudio &gt; New Project &gt; Version Control. However, this time use the HTTPS URL from the GitHub repo.</li>
 </ul>
 <p>If you know a better way than this please let us know!</p>
-<p>When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, the SSH will never work when in the office because the Council’s proxy doesn’t support SSH. It works when out of the office because when connected via AlwaysOn VPN not all traffic is routed via the Council and it’s proxy.</p>
-<p><em>TODO:</em> Test and liase with James Grande about proxy <a href="https://happygitwithr.com/rstudio-git-github.html" class="uri">https://happygitwithr.com/rstudio-git-github.html</a> and .pac file. This issue is related to accessing APIs and install R packages when in the office.</p>
+<p>When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, SSH will never work when in the office because the Council’s proxy doesn’t support SSH. It works when out of the office because when connected via AlwaysOn VPN, not all traffic is routed via the Council and its proxy.</p>
+<p><em>TODO: Test and liase with James Grande about proxy and .pac file. This issue is related to accessing APIs and install R packages when in the office.</em></p>
+</div>
+</div>
+<div id="azure-devops" class="section level2">
+<h2>
+<span class="header-section-number">8.5</span> Azure DevOps<a class="anchor" aria-label="anchor" href="#azure-devops"><i class="fas fa-link"></i></a>
+</h2>
+<p>We are hopeful that Azure DevOps will become the new default for the Council’s data analysis source code repositories. However, a first trial is still ongoing.</p>
+<p>Azure DevOps costs £5 per user per month.</p>
+</div>
+<div id="bitbucket" class="section level2">
+<h2>
+<span class="header-section-number">8.6</span> BitBucket<a class="anchor" aria-label="anchor" href="#bitbucket"><i class="fas fa-link"></i></a>
+</h2>
+<p>BitBucket was used by Digital Services but they now piggy-back on a digital partner’s version control implementation. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories. BitBucket has a narrower scope than GitHub, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.</p>
 </div>
 <div id="further-resources-4" class="section level2">
 <h2>
-<span class="header-section-number">8.5</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7</span> Further resources<a class="anchor" aria-label="anchor" href="#further-resources-4"><i class="fas fa-link"></i></a>
 </h2>
 <p><a href="https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&amp;mode=desktop">Version Control with Git and SVN</a>, Posit Support</p>
 
@@ -215,17 +229,19 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#github"><span class="header-section-number">8</span> Version control &amp; GitHub</a></li>
 <li><a class="nav-link" href="#why-version-control"><span class="header-section-number">8.1</span> Why version control?</a></li>
-<li><a class="nav-link" href="#git"><span class="header-section-number">8.2</span> GIT</a></li>
+<li><a class="nav-link" href="#git"><span class="header-section-number">8.2</span> Git</a></li>
+<li><a class="nav-link" href="#transparency"><span class="header-section-number">8.3</span> Transparency</a></li>
 <li>
-<a class="nav-link" href="#github-1"><span class="header-section-number">8.3</span> GitHub</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#github-security"><span class="header-section-number">8.3.1</span> GitHub security &amp; data protection</a></li>
-<li><a class="nav-link" href="#bitbucket"><span class="header-section-number">8.3.2</span> BitBucket</a></li>
-<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">8.3.3</span> Forking &amp; pull requests</a></li>
-<li><a class="nav-link" href="#other-features"><span class="header-section-number">8.3.4</span> Other features</a></li>
+<a class="nav-link" href="#github-1"><span class="header-section-number">8.4</span> GitHub</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#github-security"><span class="header-section-number">8.4.1</span> GitHub security &amp; data protection</a></li>
+<li><a class="nav-link" href="#forking-pull-requests"><span class="header-section-number">8.4.2</span> Forking &amp; pull requests</a></li>
+<li><a class="nav-link" href="#other-features"><span class="header-section-number">8.4.3</span> Other features</a></li>
+<li><a class="nav-link" href="#github-rstudio"><span class="header-section-number">8.4.4</span> GitHub &amp; RStudio</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#git-rstudio"><span class="header-section-number">8.4</span> Git &amp; RStudio</a></li>
-<li><a class="nav-link" href="#further-resources-4"><span class="header-section-number">8.5</span> Further resources</a></li>
+<li><a class="nav-link" href="#azure-devops"><span class="header-section-number">8.5</span> Azure DevOps</a></li>
+<li><a class="nav-link" href="#bitbucket"><span class="header-section-number">8.6</span> BitBucket</a></li>
+<li><a class="nav-link" href="#further-resources-4"><span class="header-section-number">8.7</span> Further resources</a></li>
 </ul>
 
       <div class="book-extra">
@@ -243,7 +259,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-06-21.</p>
+    <p>"<strong>pinsheff</strong>" was written by Laurie Platt. It was last built on 2023-06-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

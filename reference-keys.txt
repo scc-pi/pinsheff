@@ -68,12 +68,14 @@ installing-packages
 github
 why-version-control
 git
+transparency
 github-1
 github-security
-bitbucket
 forking-pull-requests
 other-features
-git-rstudio
+github-rstudio
+azure-devops
+bitbucket
 further-resources-4
 rap
 principles
