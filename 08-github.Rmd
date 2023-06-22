@@ -1,24 +1,14 @@
 # Version control & GitHub {#github}
 
-You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories. If you're [new to scripting and R](#getting-started-with-r), then visualisations or using R Markdown are better starting points than version control.
+You don't have to be familiar with version control, Git and GitHub to make use of these notes or the contents of the [scc-pi](https://github.com/scc-pi) repositories.
 
-These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi) (try Laurie first, but Giles and Anne could help too). Then you can edit directly in GitHub via your browser.
+These notes are public, but to contribute i.e. [edit them](https://github.com/scc-pi/notes), you need a [GitHub account](https://github.com/join) and to be granted permission by an owner of [scc-pi](https://github.com/scc-pi). Then you can edit directly in GitHub via your browser.
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/github-edit.png")
 ```
 
-You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function:
-
-```{r message=FALSE, warning=FALSE}
-# # Load functions from a public scc-pi repository 
-# source("https://raw.githubusercontent.com/scc-pi/functions/main/Examples.R")
-# 
-# # Call one of our Sheffield area functions that returns LSOA codes 
-# shef_lsoa_codes() %>% 
-#   head(5) %>% #only display the first 5 records
-#   knitr::kable() #display them in a nice table 
-```
+You also need a GitHub account and permission to access one of our private repositories, but not for our public repositories, to download a file, copy & paste code, or source and use a function.
 
 Try raising an [issue](https://guides.github.com/features/issues/) if you spot a problem, have a suggestion or a question.
 
@@ -32,13 +22,31 @@ This is a much more engaging explanation:
 
 [GITHUB FOR SUPPORTING, REUSING, CONTRIBUTING, AND FAILING SAFELY](https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/)  
 
-## GIT
+## Git  
 
 Git is an open-source distributed version control system for tracking changes in source code during software development.
 
-## GitHub
-
 GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
+
+## Transparency  
+
+The benefits of publishing open data are well understood and accepted as good practice. Less well known is the similar best practice of publishing source code that generates data analysis output. There are circumstances when this is not possible, usually because of confidentiality reasons. For example, with [literate programming](https://raps-with-r.dev/lit_prog.html) where code chunks, narrative text, and analysis outputs are combined, there may be a risk of including PID (Person Identifiable Data).
+
+An option for balancing transparency and security is:  
+1. Initially host a new repository in a secure, private, enterprise platform.  
+1. Review whether repository is fit-for-publishing.  
+1. Publish repository if fit.  
+
+A fuller explanation of the benefits of source code transparency and how it can be implemented is available from [How to Publish your Code in the Open, NHS RAP Community of Practice](https://nhsdigital.github.io/rap-community-of-practice/implementing_RAP/how-to-publish-your-code-in-the-open/).
+
+For public repositories, GitHub is undoubtedly the market leader. For private repositories it's not as clear cut. There's a GitHub option for private repositories, but it's more expensive than for example BitBucket. Azure DevOps obviously has the advantage of being part of the Azure infrastructure that the Council is investing in. 
+
+Adopting data analysis version control and transparency practices within the Council is work-in-progress. In terms of the implementation listed above, this is our current status:  
+1. Trialing 2 free licenses of Azure DevOps for private repository hosting.  
+1. No checklist or process to support reviewing whether repository is fit-for-publishing.  
+1. Publish repository on GitHub.  
+
+## GitHub
 
 Our [scc-pi](https://github.com/scc-pi) GitHub organisation is a free account. It has had no approval as such. If using it proves successful we will need to discuss approval with BCIS.
 
@@ -60,13 +68,7 @@ As an additional precaution, any projects involving confidential information sho
 .RData
 ```
 
-Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment. However, BitBucket currently looks like a more likely solution than GitHub.  
-
-### BitBucket  
-
-BitBucket is Council approved and used by Digital Services, the only team in the Council that uses version control for code. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories (our main use case), whereas GitHub is more popular with open source projects. Fundamentally, the two have very similar functionality. One difference is the narrower scope of BitBucket, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.
-
-If the current BI Team GitHub trial comes to the conclusion that version control is something we need, we have to have a conversation with Information Governance and TDA about BitBucket. We also need to keep in touch with Digital Services who may switch to an alternative version control provider in July 2022. I need to verify my expectation that using BitBucket with RStudio is the same experience as using GitHub. 
+Microsoft own GitHub and [GitHub Enterprise Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/github.githubenterprise?tab=overview) is the on-premises deployment of GitHub.com that could be hosted on our own Azure environment.
 
 ### Forking & pull requests
 
@@ -86,7 +88,7 @@ GitHub [pages](https://pages.github.com/) and [actions](https://github.com/featu
 
 There are also other GitHub features to explore.
 
-## Git & RStudio
+### GitHub & RStudio
 
 [Introduction to GitHub](https://github.com/skills/introduction-to-github) and the GitHub [Learning Lab](https://github.com/apps/github-learning-lab) are good places to get started and become familiar with some initial concepts.
 
@@ -98,7 +100,7 @@ Over the last few years we've followed Jenny's recommendations:
 * Then to use SSH whilst GitHub was introducing their PAT requirement.  
 * Now back to HTTPS, but with PAT. 
 
-Our recommendation is to follow the following chapters in Happy Git with R:  
+Our recommendation is to follow these chapters in Happy Git with R:  
 
 * [9 Personal access token for HTTPS](https://happygitwithr.com/https-pat.html)  
 * [11 Connect to GitHub](https://happygitwithr.com/push-pull-github.html)  
@@ -108,15 +110,25 @@ Chapters 15, 16 and 17 of Happy Git with R cover different ways of setting up a 
 
 To change an existing local repo from SSH to HTTPS:  
 
-* Make sure all your repo changes are committed and pushed to GitHub.  
-* Rename the local repo folder.  
-* Create the local RStudio project anew, but this time using the HTTPS url for the GitHub repo.  
+* Make sure all changes in your repo are committed and pushed to GitHub.  
+* Delete the local repo folder.  
+* Create the local repo anew via RStudio > New Project > Version Control. However, this time use the HTTPS URL from the GitHub repo.  
 
 If you know a better way than this please let us know!  
 
-When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, the SSH will never work when in the office because the Council's proxy doesn't support SSH. It works when out of the office because when connected via AlwaysOn VPN not all traffic is routed via the Council and it's proxy.  
+When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, SSH will never work when in the office because the Council's proxy doesn't support SSH. It works when out of the office because when connected via AlwaysOn VPN, not all traffic is routed via the Council and its proxy.  
 
-*TODO:* Test and liase with James Grande about proxy https://happygitwithr.com/rstudio-git-github.html and .pac file. This issue is related to accessing APIs and install R packages when in the office.   
+*TODO: Test and liase with James Grande about proxy and .pac file. This issue is related to accessing APIs and install R packages when in the office.*     
+
+## Azure DevOps  
+
+We are hopeful that Azure DevOps will become the new default for the Council's data analysis source code repositories. However, a first trial is still ongoing.  
+
+Azure DevOps costs £5 per user per month.  
+
+## BitBucket  
+
+BitBucket was used by Digital Services but they now piggy-back on a digital partner's version control implementation. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories. BitBucket has a narrower scope than GitHub, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.
 
 ## Further resources
 
