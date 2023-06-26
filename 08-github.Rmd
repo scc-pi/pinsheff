@@ -12,7 +12,7 @@ This is a much more engaging explanation:
 
 ## Git  
 
-Git is an open-source distributed version control system for tracking changes in source code during software development.
+Git is an open-source distributed version control system for tracking changes in source code during software development. There are other version control tools, such as SVN, but Git is the most popular.
 
 GitHub is a product that offers Git-based source control repositories. Other products also offer Git-based repositories, such as GitLab, BitBucket, and Azure DevOps.
 
@@ -118,8 +118,10 @@ Azure DevOps costs £5 per user per month.
 
 ## BitBucket  
 
-BitBucket was used by Digital Services but they now piggy-back on a digital partner's version control implementation. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories. BitBucket has a narrower scope than GitHub, which instead chooses to focus on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.
+BitBucket was used by Digital Services but they now piggy-back on a digital partner's version control implementation. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories. BitBucket has a narrower scope than GitHub. Instead, BitBucket focuses on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.
 
 ## Further resources
 
-[Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop), Posit Support
+[Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop), Posit Support  
+[Ch.4 Version control with Git, Building reproducible analytical pipelines with R, Bruno Rodrigues](https://raps-with-r.dev/git.html)  
+
