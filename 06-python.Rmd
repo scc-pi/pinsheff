@@ -1,15 +1,79 @@
 # Python {#python}
 
+## ArcGIS & API wrappers
+
+The Council's ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on [ArcGIS R & Python packages](#arcgisr) for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API "wrappers" that make it easier to obtain data (see the section on [wrappers](#wrappers) for further notes about this). In both cases, `reticulate` allows us to leverage Python packages from within R.  
+
 ## Reticulate
 
 The [reticulate](https://rstudio.github.io/reticulate/) R package allows R to integrate with Python. RStudio has embedded `reticulate` into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.
-
-## ArcGIS & API wrappers
-
-The Council's ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on [ArcGIS R & Python packages](#arcgisr) for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API "wrappers" that make it easier to obtain data (see the section on [wrappers](#wrappers) for further notes about this). In both cases, `reticulate` allows us to leverage Python packages from within R.
 
 ## Spyder IDE
 
 There are feature rich IDEs for working with Python such as PyCharm, RStudio and VS Code. At the other end of the feature scale is the default Python editor IDLE that is installed with every version of Python.  
 
 Spyder is not as feature rich as many IDEs, but probably has more than enough to satisfy your initial needs without being too complicated. Spyder installs as a Python package. This makes it a good option for working with ArcGIS via Python and the simplest solution for handling the ArcGIS licensing requirements and related Python package management. Installing Spyder requires cloning the default Python environment for ArcGIS Pro and adding Spyder using conda. Other IDEs can have issues handling virtual environments.
+
+## Development environment  
+
+PAS and the BI Team (Roland Lovatt and Laurie Platt) have collaborated on a first attempt at a Python based, ArcGIS Pro independent, development environment that includes:  
+
+* Python  
+* Conda  
+* VS Code  
+* Git  
+* Azure DevOps  
+
+!(images/py-dev-env.png)
+
+As stated, we've only made one attempt, which included mistakes and did not include complete understanding of all the components and they they integrate. Consequently, we expect the guidance below to improve as further attempts are made.   
+
+### Local installs
+
+The main local installations are: 
+
+* VS Code
+* [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* Git
+* [Quarto](https://quarto.org/docs/download/)  
+
+### VS Code extensions
+
+Extensions added in VS Code include:  
+
+* Python  
+* Python Environment Manager  
+* Jupyter  
+* Quarto  
+* Markdown Preview Enhanced  
+* Stata Enhanced  
+* Oracle Developer Tools for VS Code (SQL and PL/SQL)  
+* Docs View  
+
+### Python Environment
+
+If you've got ArcGIS Pro installed which includes a restricted installation of Conda.  
+
+Removed this Conda instance from our PATH in User Environment Variables  
+	`C:\Users\lp41455\AppData\Local\Programs\ArcGIS\Pro\bin\Python`  
+Installed Miniconda with all install option including adding to user PATH   
+	`C:\Users\lp41455\AppData\Local\miniconda3`  
+
+**Try these from Command Prompt**
+
+`conda --version`  
+`conda info --envs`  
+`conda create --prefix "C:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"`  
+`conda activate "C:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"`  
+`conda install numpy`  
+
+**Other commands**
+
+`conda deactivate`  
+`conda env remove -p "c:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"`   
+
+### Azure DevOps
+
+Azure DevOps is being trialed and we've created Azure DevOps Organisation [dev.azure.com/scc-pi](https://dev.azure.com/scc-pi/). If the trial is successful, purchasing licenses will be considered so others in SCC can use Azure DevOps.  
+
+We completed the Get started with [Azure DevOps learning path - Training | Microsoft Learn](https://learn.microsoft.com/en-gb/training/paths/evolve-your-devops-practices/).  

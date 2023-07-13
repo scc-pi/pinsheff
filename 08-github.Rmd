@@ -124,7 +124,7 @@ Git needs to be configured to use the Council's proxy server.
 
 From the Git CMD app you need to run the Git command immediately below. First though, you need to substitute in the command your Council (not your GitHub) username and password, plus the proxy server IP address.
 
-> `git config --global http.proxy http://SCC\username:password@proxyip:8080`  
+`git config --global http.proxy http://SCC\username:password@proxyip:8080`  
 
 NB: When you update your Council password you'll need to rerun the command with your new password. 
 
