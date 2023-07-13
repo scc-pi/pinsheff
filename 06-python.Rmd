@@ -24,7 +24,7 @@ PAS and the BI Team (Roland Lovatt and Laurie Platt) have collaborated on a firs
 * Git  
 * Azure DevOps  
 
-!(images/py-dev-env.png)
+![](images/py-dev-env.png)
 
 As stated, we've only made one attempt, which included mistakes and did not include complete understanding of all the components and they they integrate. Consequently, we expect the guidance below to improve as further attempts are made.   
 
