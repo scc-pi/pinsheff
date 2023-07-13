@@ -26,7 +26,7 @@ One option for balancing transparency and security in a version control implemen
 1. Review whether repository is fit-for-publishing.  
 1. Publish repository if fit.  
 
-A fuller explanation of the benefits of source code transparency and how it can be implemented is available from [How to Publish your Code in the Open, NHS RAP Community of Practice](https://nhsdigital.github.io/rap-community-of-practice/implementing_RAP/how-to-publish-your-code-in-the-open/).
+A fuller explanation of the benefits of source code transparency and how it can be implemented is available from [How to Publish your Code in the Open, NHS RAP Community of Practice](https://nhsdigital.github.io/rap-community-of-practice/implementing_RAP/how-to-publish-your-code-in-the-open/). There's similar guidance on [open sourcing analytical code, from the Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/open-sourcing-analytical-code/).
 
 For public repositories, GitHub is undoubtedly the market leader. For private repositories it's not as clear cut. There's a GitHub option for private repositories, but it's more expensive than for example BitBucket. Azure DevOps obviously has the advantage of being part of the Azure infrastructure that the Council is investing in. 
 
@@ -106,10 +106,6 @@ Once you've setup your PAT for HTTPS, to change an existing local repo from SSH 
 
 If you know a better way than this please let us know!  
 
-When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods should work. However, SSH will never work when in the office because the Council's proxy doesn't support SSH. It works when out of the office because when connected via AlwaysOn VPN, not all traffic is routed via the Council and its proxy.  
-
-*TODO: Test and liase with James Grande about proxy and .pac file. This issue is related to accessing APIs and install R packages when in the office.*     
-
 ## Azure DevOps  
 
 We are hopeful that Azure DevOps will become the new default for the Council's data analysis source code repositories. A first trial is underway.  
@@ -120,8 +116,20 @@ Azure DevOps costs £5 per user per month.
 
 BitBucket was used by Digital Services but they now piggy-back on a digital partner's version control implementation. BitBucket has an EU hosting option and is cheaper than GitHub. It is more popular with organisations needing private repositories. BitBucket has a narrower scope than GitHub. Instead, BitBucket focuses on stronger integration with other software, in particular other Atlassian products such as Trello, Jira and Confluence.
 
+## Proxy server  
+
+When out of the office and connected via AlwaysOn VPN, both the HTTPS and SSH connection methods for GitHub and Azure DevOps should work. However, SSH will never work when in the office because the Council's proxy server doesn't support SSH. It works when out of the office because when connected via AlwaysOn VPN, not all traffic is routed via the Council and its proxy server.  
+
+Git needs to be configured to use the Council's proxy server.  
+
+From the Git CMD app you need to run the Git command immediately below. First though, you need to substitute in the command your Council (not your GitHub) username and password, plus the proxy server IP address.
+
+> `git config --global http.proxy http://SCC\username:password@proxyip:8080`  
+
+NB: When you update your Council password you'll need to rerun the command with your new password. 
+
 ## Further resources
 
 [Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077?version=1.4.1103&mode=desktop), Posit Support  
-[Ch.4 Version control with Git, Building reproducible analytical pipelines with R, Bruno Rodrigues](https://raps-with-r.dev/git.html)  
+[Ch.4 Version control with Git, Building reproducible analytical pipelines with R](https://raps-with-r.dev/git.html), by Bruno Rodrigues  
 
