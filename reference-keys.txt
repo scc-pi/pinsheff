@@ -55,9 +55,14 @@ markdown-visual-editor
 chunk-named-setup
 further-resources-3
 python
-reticulate
 arcgis-api-wrappers
+reticulate
 spyder-ide
+development-environment
+local-installs
+vs-code-extensions
+python-environment
+azure-devops
 functions-packages
 r-functions
 lazy-tidy-evaluation
@@ -74,7 +79,7 @@ github-security
 forking-pull-requests
 other-features
 github-rstudio
-azure-devops
+azure-devops-1
 bitbucket
 proxy-server
 further-resources-4

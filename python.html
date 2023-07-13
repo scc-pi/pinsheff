@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Python | pinsheff</title>
 <meta name="author" content="Laurie Platt">
-<meta name="description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
+<meta name="description" content="6.1 ArcGIS &amp; API wrappers The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on ArcGIS R &amp; Python packages for further notes about this)....">
 <meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Python | pinsheff">
 <meta property="og:type" content="book">
-<meta property="og:description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
+<meta property="og:description" content="6.1 ArcGIS &amp; API wrappers The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on ArcGIS R &amp; Python packages for further notes about this)....">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Python | pinsheff">
-<meta name="twitter:description" content="6.1 Reticulate The reticulate R package allows R to integrate with Python. RStudio has embedded reticulate into the IDE. For example, you can define a default Python environment under Global...">
+<meta name="twitter:description" content="6.1 ArcGIS &amp; API wrappers The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on ArcGIS R &amp; Python packages for further notes about this)....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -89,17 +89,17 @@
 <h1>
 <span class="header-section-number">6</span> Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
 </h1>
-<div id="reticulate" class="section level2">
-<h2>
-<span class="header-section-number">6.1</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
-</h2>
-<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
-</div>
 <div id="arcgis-api-wrappers" class="section level2">
 <h2>
-<span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> ArcGIS &amp; API wrappers<a class="anchor" aria-label="anchor" href="#arcgis-api-wrappers"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Council’s ArcGIS software from ESRI has a much stronger integration with Python than R (see the section on <a href="gis-with-r.html#arcgisr">ArcGIS R &amp; Python packages</a> for further notes about this). Similarly, you may find Python packages but no corresponding R package for REST API “wrappers” that make it easier to obtain data (see the section on <a href="api.html#wrappers">wrappers</a> for further notes about this). In both cases, <code>reticulate</code> allows us to leverage Python packages from within R.</p>
+</div>
+<div id="reticulate" class="section level2">
+<h2>
+<span class="header-section-number">6.2</span> Reticulate<a class="anchor" aria-label="anchor" href="#reticulate"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <a href="https://rstudio.github.io/reticulate/">reticulate</a> R package allows R to integrate with Python. RStudio has embedded <code>reticulate</code> into the IDE. For example, you can define a default Python environment under Global Options or Project Options. You can also now inspect Python objects in the RStudio Environment pane.</p>
 </div>
 <div id="spyder-ide" class="section level2">
 <h2>
@@ -107,7 +107,80 @@
 </h2>
 <p>There are feature rich IDEs for working with Python such as PyCharm, RStudio and VS Code. At the other end of the feature scale is the default Python editor IDLE that is installed with every version of Python.</p>
 <p>Spyder is not as feature rich as many IDEs, but probably has more than enough to satisfy your initial needs without being too complicated. Spyder installs as a Python package. This makes it a good option for working with ArcGIS via Python and the simplest solution for handling the ArcGIS licensing requirements and related Python package management. Installing Spyder requires cloning the default Python environment for ArcGIS Pro and adding Spyder using conda. Other IDEs can have issues handling virtual environments.</p>
+</div>
+<div id="development-environment" class="section level2">
+<h2>
+<span class="header-section-number">6.4</span> Development environment<a class="anchor" aria-label="anchor" href="#development-environment"><i class="fas fa-link"></i></a>
+</h2>
+<p>PAS and the BI Team (Roland Lovatt and Laurie Platt) have collaborated on a first attempt at a Python based, ArcGIS Pro independent, development environment that includes:</p>
+<ul>
+<li>Python<br>
+</li>
+<li>Conda<br>
+</li>
+<li>VS Code<br>
+</li>
+<li>Git<br>
+</li>
+<li>Azure DevOps</li>
+</ul>
+<p>!(images/py-dev-env.png)</p>
+<p>As stated, we’ve only made one attempt, which included mistakes and did not include complete understanding of all the components and they they integrate. Consequently, we expect the guidance below to improve as further attempts are made.</p>
+<div id="local-installs" class="section level3">
+<h3>
+<span class="header-section-number">6.4.1</span> Local installs<a class="anchor" aria-label="anchor" href="#local-installs"><i class="fas fa-link"></i></a>
+</h3>
+<p>The main local installations are:</p>
+<ul>
+<li>VS Code</li>
+<li><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></li>
+<li>Git</li>
+<li><a href="https://quarto.org/docs/download/">Quarto</a></li>
+</ul>
+</div>
+<div id="vs-code-extensions" class="section level3">
+<h3>
+<span class="header-section-number">6.4.2</span> VS Code extensions<a class="anchor" aria-label="anchor" href="#vs-code-extensions"><i class="fas fa-link"></i></a>
+</h3>
+<p>Extensions added in VS Code include:</p>
+<ul>
+<li>Python<br>
+</li>
+<li>Python Environment Manager<br>
+</li>
+<li>Jupyter<br>
+</li>
+<li>Quarto<br>
+</li>
+<li>Markdown Preview Enhanced<br>
+</li>
+<li>Stata Enhanced<br>
+</li>
+<li>Oracle Developer Tools for VS Code (SQL and PL/SQL)<br>
+</li>
+<li>Docs View</li>
+</ul>
+</div>
+<div id="python-environment" class="section level3">
+<h3>
+<span class="header-section-number">6.4.3</span> Python Environment<a class="anchor" aria-label="anchor" href="#python-environment"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you’ve got ArcGIS Pro installed which includes a restricted installation of Conda.</p>
+<p>Removed this Conda instance from our PATH in User Environment Variables<br><code>C:\Users\lp41455\AppData\Local\Programs\ArcGIS\Pro\bin\Python</code><br>
+Installed Miniconda with all install option including adding to user PATH<br><code>C:\Users\lp41455\AppData\Local\miniconda3</code></p>
+<p><strong>Try these from Command Prompt</strong></p>
+<p><code>conda --version</code><br><code>conda info --envs</code><br><code>conda create --prefix "C:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"</code><br><code>conda activate "C:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"</code><br><code>conda install numpy</code></p>
+<p><strong>Other commands</strong></p>
+<p><code>conda deactivate</code><br><code>conda env remove -p "c:\Users\lp41455\OneDrive - Sheffield City Council\DevOps\Sheffield Inclusion Centre Dashboard\.conda"</code></p>
+</div>
+<div id="azure-devops" class="section level3">
+<h3>
+<span class="header-section-number">6.4.4</span> Azure DevOps<a class="anchor" aria-label="anchor" href="#azure-devops"><i class="fas fa-link"></i></a>
+</h3>
+<p>Azure DevOps is being trialed and we’ve created Azure DevOps Organisation <a href="https://dev.azure.com/scc-pi/">dev.azure.com/scc-pi</a>. If the trial is successful, purchasing licenses will be considered so others in SCC can use Azure DevOps.</p>
+<p>We completed the Get started with <a href="https://learn.microsoft.com/en-gb/training/paths/evolve-your-devops-practices/">Azure DevOps learning path - Training | Microsoft Learn</a>.</p>
 
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -117,9 +190,17 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#python"><span class="header-section-number">6</span> Python</a></li>
-<li><a class="nav-link" href="#reticulate"><span class="header-section-number">6.1</span> Reticulate</a></li>
-<li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">6.2</span> ArcGIS &amp; API wrappers</a></li>
+<li><a class="nav-link" href="#arcgis-api-wrappers"><span class="header-section-number">6.1</span> ArcGIS &amp; API wrappers</a></li>
+<li><a class="nav-link" href="#reticulate"><span class="header-section-number">6.2</span> Reticulate</a></li>
 <li><a class="nav-link" href="#spyder-ide"><span class="header-section-number">6.3</span> Spyder IDE</a></li>
+<li>
+<a class="nav-link" href="#development-environment"><span class="header-section-number">6.4</span> Development environment</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#local-installs"><span class="header-section-number">6.4.1</span> Local installs</a></li>
+<li><a class="nav-link" href="#vs-code-extensions"><span class="header-section-number">6.4.2</span> VS Code extensions</a></li>
+<li><a class="nav-link" href="#python-environment"><span class="header-section-number">6.4.3</span> Python Environment</a></li>
+<li><a class="nav-link" href="#azure-devops"><span class="header-section-number">6.4.4</span> Azure DevOps</a></li>
+</ul>
+</li>
 </ul>
 
       <div class="book-extra">
