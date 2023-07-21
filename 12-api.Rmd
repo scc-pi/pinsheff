@@ -29,11 +29,11 @@ In summary:
 2. Add the following settings to your `.Renviron` file, amended for your own Council login ID and password.  
 
 ```{r renviron-proxy, eval=FALSE}
-http_proxy=http://172.29.2.22:8080
-http_proxy_user=lp41455:password123
+http_proxy=<proxyip>
+http_proxy_user=<username>:<password>
 
-https_proxy=https://172.29.2.22:8080
-https_proxy_user=lp41455:password123
+https_proxy=<proxyip>
+https_proxy_user=<username>:<password>
 ```
 
 3. Uncheck the setting for *Use Internet Explorer library/proxy for HTTP* in *Global Options*:  
@@ -47,11 +47,11 @@ knitr::include_graphics("images/proxy-ie.png")
 When using AlwaysOn VPN comment out the settings:  
 
 ```{r renviron-proxy-vpn, eval=FALSE}
-# http_proxy=http://172.29.2.22:8080
-# http_proxy_user=lp41455:password123
+# http_proxy=<proxyip>
+# http_proxy_user=<username>:<password>
 # 
-# https_proxy=https://172.29.2.22:8080
-# https_proxy_user=lp41455:password123
+# https_proxy=<proxyip>
+# https_proxy_user=<username>:<password>
 ```
 
 These notes will be updated if we get to figuring out a setting that automatically toggles the proxy setting rather than you having to change this manually.  
